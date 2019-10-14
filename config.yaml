@@ -1,0 +1,10 @@
+baseURL: https://blog.nce.re/
+footnoteReturnLinkContents: ↩
+params:
+  AuthorName: Benoit Petit
+  GitHubUser: bpetit
+  SidebarRecentLimit: 5
+permalinks:
+  posts: /:year/:month/:title/
+title: Blog of the late anticipation
+publishDir: docs
