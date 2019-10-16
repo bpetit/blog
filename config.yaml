@@ -1,4 +1,4 @@
-baseURL: https://blog.nce.re/
+baseURL: https://bpetit.github.io/
 footnoteReturnLinkContents: ↩
 params:
   AuthorName: Benoit Petit
@@ -6,7 +6,7 @@ params:
   SidebarRecentLimit: 5
 permalinks:
   posts: /:year/:month/:title/
-title: Blog of the late anticipation
+title: Tales of the late anticipation
 publishDir: docs
 theme: "tale"
 pygmentsCodeFences: true
