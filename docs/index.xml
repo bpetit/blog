@@ -5,9 +5,21 @@
     <link>https://blog.nce.re/</link>
     <description>Recent content on Blog of the late anticipation</description>
     <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Thu, 27 Jul 2017 21:44:12 +0200</lastBuildDate>
     
 	<atom:link href="https://blog.nce.re/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Make Ansible Run on Debian 9</title>
+      <link>https://blog.nce.re/2017/07/make-ansible-run-on-debian-9/</link>
+      <pubDate>Thu, 27 Jul 2017 21:44:12 +0200</pubDate>
+      
+      <guid>https://blog.nce.re/2017/07/make-ansible-run-on-debian-9/</guid>
+      <description>How to make ansible run on debian 9 ? Posted on Thu 27 July 2017 in Automation
+Ansible version running: 2.3.1.0
+Recently I upgraded personnal servers to debian stretch, as it is the new stable version. By default, the only python version installed on stretch is python3 which is not ok for ansible playbooks to execute properly. I already met that kind of issue (like everyone else) on Ubuntu above version 16.</description>
+    </item>
     
   </channel>
 </rss>

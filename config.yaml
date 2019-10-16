@@ -9,3 +9,5 @@ permalinks:
 title: Blog of the late anticipation
 publishDir: docs
 theme: "tale"
+pygmentsCodeFences: true
+pygmentsStyle: "native"
