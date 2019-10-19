@@ -1,4 +1,4 @@
-baseURL: https://bpetit.github.io/
+baseURL: https://bpetit.github.io/blog
 footnoteReturnLinkContents: ↩
 params:
   AuthorName: Benoit Petit
@@ -8,6 +8,6 @@ permalinks:
   posts: /:year/:month/:title/
 title: Tales of the late anticipation
 publishDir: docs
-theme: "tale"
+theme: "beautifulhugo"
 pygmentsCodeFences: true
 pygmentsStyle: "native"

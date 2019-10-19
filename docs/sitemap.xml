@@ -3,26 +3,26 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://blog.nce.re/</loc>
+    <loc>https://bpetit.github.io/blog/2017/07/make-ansible-run-on-debian-9/</loc>
     <lastmod>2017-07-27T21:44:12+02:00</lastmod>
   </url>
   
   <url>
-    <loc>https://blog.nce.re/2017/07/make-ansible-run-on-debian-9/</loc>
+    <loc>https://bpetit.github.io/blog/posts/</loc>
     <lastmod>2017-07-27T21:44:12+02:00</lastmod>
   </url>
   
   <url>
-    <loc>https://blog.nce.re/posts/</loc>
+    <loc>https://bpetit.github.io/blog/</loc>
     <lastmod>2017-07-27T21:44:12+02:00</lastmod>
   </url>
   
   <url>
-    <loc>https://blog.nce.re/categories/</loc>
+    <loc>https://bpetit.github.io/blog/categories/</loc>
   </url>
   
   <url>
-    <loc>https://blog.nce.re/tags/</loc>
+    <loc>https://bpetit.github.io/blog/tags/</loc>
   </url>
   
 </urlset>
