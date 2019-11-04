@@ -1,0 +1,15 @@
+baseURL: localhost:1313
+DefaultContentLanguage: en
+languageCode: "en-us"
+languageName: English
+title: "Tales of the late anticipation"
+theme: "beautifulhugo"
+params:
+  AuthorName: Benoit Petit
+  GitHubUser: bpetit
+  SidebarRecentLimit: 5
+permalinks:
+  posts: /:year/:month/:title/
+pygmentsCodeFences: true
+pygmentsStyle: "native"
+publishDir: docs
