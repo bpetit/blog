@@ -3,41 +3,41 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>bpetit.github.io/blog/2018/03/automating-web-applications-proxying-dns-registration-and-tls-termination-with-ansible/</loc>
+    <loc>/2018/03/automating-web-applications-proxying-dns-registration-and-tls-termination-with-ansible/</loc>
     <lastmod>2018-03-17T20:12:45+02:00</lastmod>
   </url>
   
   <url>
-    <loc>bpetit.github.io/blog/posts/</loc>
+    <loc>/posts/</loc>
     <lastmod>2018-03-17T20:12:45+02:00</lastmod>
   </url>
   
   <url>
-    <loc>bpetit.github.io/blog/</loc>
+    <loc>/</loc>
     <lastmod>2018-03-17T20:12:45+02:00</lastmod>
   </url>
   
   <url>
-    <loc>bpetit.github.io/blog/2017/11/how-to-build-a-simplistic-private-cloud-piece-by-piece/</loc>
+    <loc>/2017/11/how-to-build-a-simplistic-private-cloud-piece-by-piece/</loc>
     <lastmod>2017-11-21T20:44:12+02:00</lastmod>
   </url>
   
   <url>
-    <loc>bpetit.github.io/blog/2017/09/automate-your-virtual-machine-templates-creation-with-packer/</loc>
+    <loc>/2017/09/automate-your-virtual-machine-templates-creation-with-packer/</loc>
     <lastmod>2017-09-01T19:44:12+02:00</lastmod>
   </url>
   
   <url>
-    <loc>bpetit.github.io/blog/2017/07/make-ansible-run-on-debian-9/</loc>
+    <loc>/2017/07/make-ansible-run-on-debian-9/</loc>
     <lastmod>2017-07-27T21:44:12+02:00</lastmod>
   </url>
   
   <url>
-    <loc>bpetit.github.io/blog/categories/</loc>
+    <loc>/categories/</loc>
   </url>
   
   <url>
-    <loc>bpetit.github.io/blog/tags/</loc>
+    <loc>/tags/</loc>
   </url>
   
 </urlset>
