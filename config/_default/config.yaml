@@ -8,6 +8,7 @@ params:
   AuthorName: Benoit Petit
   GitHubUser: bpetit
   SidebarRecentLimit: 5
+  selfHosted: true
 permalinks:
   posts: /:year/:month/:title/
 pygmentsCodeFences: true
