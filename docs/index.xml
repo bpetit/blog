@@ -2,23 +2,53 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tales of the late anticipation</title>
-    <link>https://bpetit.github.io/blog/</link>
+    <link>bpetit.github.io/blog/</link>
     <description>Recent content on Tales of the late anticipation</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Thu, 27 Jul 2017 21:44:12 +0200</lastBuildDate>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 17 Mar 2018 20:12:45 +0200</lastBuildDate>
     
-	<atom:link href="https://bpetit.github.io/blog/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="bpetit.github.io/blog/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
+      <title>Automating web applications proxying, DNS registration and TLS termination with ansible</title>
+      <link>bpetit.github.io/blog/2018/03/automating-web-applications-proxying-dns-registration-and-tls-termination-with-ansible/</link>
+      <pubDate>Sat, 17 Mar 2018 20:12:45 +0200</pubDate>
+      
+      <guid>bpetit.github.io/blog/2018/03/automating-web-applications-proxying-dns-registration-and-tls-termination-with-ansible/</guid>
+      <description>For the needs of an incoming project, that I&amp;rsquo;ll describe in a later post, I needed to automate public access configuration for existing web applications. In other words, I needed to automate, proxy vhost configuration, tls termination and dns registration on a given domain. What is presented here has been used on a simple libvirt/KVM architecture (managed as described in my latest post).
+The workflow is this one:
+ deploy the DNS entry deploy nginx vhost for the given webapp and domain name (allowing access to .</description>
+    </item>
+    
+    <item>
+      <title>How to build a simplistic private cloud piece by piece</title>
+      <link>bpetit.github.io/blog/2017/11/how-to-build-a-simplistic-private-cloud-piece-by-piece/</link>
+      <pubDate>Tue, 21 Nov 2017 20:44:12 +0200</pubDate>
+      
+      <guid>bpetit.github.io/blog/2017/11/how-to-build-a-simplistic-private-cloud-piece-by-piece/</guid>
+      <description>I you are, like me, concerned about privacy, you may be the administrator of a few physical servers, either at home or rented to some dedicated server providers. Virtual machine instances (or VPS) bought in public clouds are great, but if you can&amp;rsquo;t configure yourself the underlying network and the hypervisors, where is the fun ? (just kidding, there is so much to do above a cloud-like infrastructure too). Here I&amp;rsquo;ll describe a little configuration I made for my own needs.</description>
+    </item>
+    
+    <item>
+      <title>Automate your virtual machine templates creation with Packer</title>
+      <link>bpetit.github.io/blog/2017/09/automate-your-virtual-machine-templates-creation-with-packer/</link>
+      <pubDate>Fri, 01 Sep 2017 19:44:12 +0200</pubDate>
+      
+      <guid>bpetit.github.io/blog/2017/09/automate-your-virtual-machine-templates-creation-with-packer/</guid>
+      <description>Context If you operate an IaaS infrastructure, either private (OpenStack, OpenNebula, &amp;hellip;) or public cloud (AWS, GCP, &amp;hellip;), you certainly already wondered how to properly bootstrap your first virtual machines templates. IaaS solutions are often linked to a public repository of basic virtual machines images that can be used to quickly start deploying instances. If this is good for initial tests, it&amp;rsquo;s not that safe to bootstrap all your instances from a guest operating system someone you don&amp;rsquo;t has built for you.</description>
+    </item>
+    
+    <item>
       <title>Make Ansible Run on Debian 9</title>
-      <link>https://bpetit.github.io/blog/2017/07/make-ansible-run-on-debian-9/</link>
+      <link>bpetit.github.io/blog/2017/07/make-ansible-run-on-debian-9/</link>
       <pubDate>Thu, 27 Jul 2017 21:44:12 +0200</pubDate>
       
-      <guid>https://bpetit.github.io/blog/2017/07/make-ansible-run-on-debian-9/</guid>
-      <description>How to make ansible run on debian 9 ? Posted on Thu 27 July 2017 in Automation
-Ansible version running: 2.3.1.0
-Recently I upgraded personnal servers to debian stretch, as it is the new stable version. By default, the only python version installed on stretch is python3 which is not ok for ansible playbooks to execute properly. I already met that kind of issue (like everyone else) on Ubuntu above version 16.</description>
+      <guid>bpetit.github.io/blog/2017/07/make-ansible-run-on-debian-9/</guid>
+      <description>How to make ansible run on debian 9 ? Ansible version running: 2.3.1.0
+Recently I upgraded personnal servers to debian stretch, as it is the new stable version. By default, the only python version installed on stretch is python3 which is not ok for ansible playbooks to execute properly. I already met that kind of issue (like everyone else) on Ubuntu above version 16.04.
+Obviously the solution is to install python2.</description>
     </item>
     
   </channel>

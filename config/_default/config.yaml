@@ -1,4 +1,4 @@
-baseURL: localhost:1313
+baseURL: bpetit.github.io/blog
 DefaultContentLanguage: en
 languageCode: "en-us"
 languageName: English
