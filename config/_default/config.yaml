@@ -1,4 +1,4 @@
-baseURL: bpetit.github.io/blog
+baseURL: https://bpetit.github.io/blog
 DefaultContentLanguage: en
 languageCode: "en-us"
 languageName: English
