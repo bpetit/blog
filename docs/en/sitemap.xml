@@ -38,6 +38,11 @@
   </url>
   
   <url>
+    <loc>https://bpetit.nce.re/2017/09/automate-your-virtual-machine-templates-creation-with-packer/</loc>
+    <lastmod>2017-09-01T19:44:12+02:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://bpetit.nce.re/2017/07/make-ansible-run-on-debian-9/</loc>
     <lastmod>2017-07-27T21:44:12+02:00</lastmod>
   </url>
