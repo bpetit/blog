@@ -3,17 +3,17 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://bpetit.nce.re/fr/automate-your-virtual-machine-templates-creation-with-packer/</loc>
+    <loc>https://bpetit.nce.re/fr/2017/09/automate-your-virtual-machine-templates-creation-with-packer/</loc>
     <lastmod>2017-09-01T19:44:12+02:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://bpetit.nce.re/automate-your-virtual-machine-templates-creation-with-packer/"
+                href="https://bpetit.nce.re/2017/09/automate-your-virtual-machine-templates-creation-with-packer/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="fr"
-                href="https://bpetit.nce.re/fr/automate-your-virtual-machine-templates-creation-with-packer/"
+                href="https://bpetit.nce.re/fr/2017/09/automate-your-virtual-machine-templates-creation-with-packer/"
                 />
   </url>
   
@@ -29,6 +29,21 @@
                 rel="alternate"
                 hreflang="fr"
                 href="https://bpetit.nce.re/fr/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://bpetit.nce.re/fr/posts/</loc>
+    <lastmod>2017-09-01T19:44:12+02:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://bpetit.nce.re/posts/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="fr"
+                href="https://bpetit.nce.re/fr/posts/"
                 />
   </url>
   

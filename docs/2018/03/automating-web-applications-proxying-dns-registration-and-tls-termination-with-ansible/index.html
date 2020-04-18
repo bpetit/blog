@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+<html lang="en" itemscope itemtype="http://schema.org/WebPage">
+  <head>
+    
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+
+  <title>Automating web applications proxying, DNS registration and TLS termination with ansible - The cloud is a lie</title>
+  <meta name="description" content="For the needs of an incoming project, that I&rsquo;ll describe in a later post, I needed to automate public access configuration for existing web applications. In other words, I needed to automate, proxy vhost configuration, tls termination and dns registration on a given domain. What is presented here has been used on a simple libvirt/KVM architecture (managed as described in my latest post).
+The workflow is this one:
+ deploy the DNS entry deploy nginx vhost for the given webapp and domain name (allowing access to .">
+  <meta name="author" content="Benoit Petit"/><script type="application/ld+json">
+{
+    "@context": "http://schema.org",
+    "@type": "WebSite",
+    "name": "The cloud is a lie",
+    
+    "url": "https:\/\/bpetit.nce.re"
+}
+</script><script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Organization",
+  "name": "",
+  "url": "https:\/\/bpetit.nce.re"
+  
+  
+  
+  
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [{
+        "@type": "ListItem",
+        "position": 1,
+        "item": {
+          "@id": "https:\/\/bpetit.nce.re",
+          "name": "home"
+        }
+    },{
+        "@type": "ListItem",
+        "position": 3,
+        "item": {
+          "@id": "https:\/\/bpetit.nce.re\/2018\/03\/automating-web-applications-proxying-dns-registration-and-tls-termination-with-ansible\/",
+          "name": "Automating web applications proxying, d n s registration and t l s termination with ansible"
+        }
+    }]
+}
+</script><script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Article",
+  "author": {
+    "name" : "Benoit Petit"
+  },
+  "headline": "Automating web applications proxying, DNS registration and TLS termination with ansible",
+  "description" : "For the needs of an incoming project, that I\x26rsquo;ll describe in a later post, I needed to automate public access configuration for existing web applications. In other words, I needed to automate, proxy vhost configuration, tls termination and dns registration on a given domain. What is presented here has been used on a simple libvirt\/KVM architecture (managed as described in my latest post).\nThe workflow is this one:\n deploy the DNS entry deploy nginx vhost for the given webapp and domain name (allowing access to .",
+  "inLanguage" : "en",
+  "wordCount":  1472 ,
+  "datePublished" : "2018-03-17T20:12:45",
+  "dateModified" : "2018-03-17T20:12:45",
+  "image" : "https:\/\/bpetit.nce.re",
+  "keywords" : [ "" ],
+  "mainEntityOfPage" : "https:\/\/bpetit.nce.re\/2018\/03\/automating-web-applications-proxying-dns-registration-and-tls-termination-with-ansible\/",
+  "publisher" : {
+    "@type": "Organization",
+    "name" : "https:\/\/bpetit.nce.re",
+    "logo" : {
+        "@type" : "ImageObject",
+        "url" : "https:\/\/bpetit.nce.re",
+        "height" :  60 ,
+        "width" :  60
+    }
+  }
+}
+</script>
+
+<meta property="og:title" content="Automating web applications proxying, DNS registration and TLS termination with ansible" />
+<meta property="og:description" content="For the needs of an incoming project, that I&rsquo;ll describe in a later post, I needed to automate public access configuration for existing web applications. In other words, I needed to automate, proxy vhost configuration, tls termination and dns registration on a given domain. What is presented here has been used on a simple libvirt/KVM architecture (managed as described in my latest post).
+The workflow is this one:
+ deploy the DNS entry deploy nginx vhost for the given webapp and domain name (allowing access to .">
+<meta property="og:url" content="https://bpetit.nce.re/2018/03/automating-web-applications-proxying-dns-registration-and-tls-termination-with-ansible/" />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="The cloud is a lie" />
+
+  <meta name="twitter:title" content="Automating web applications proxying, DNS registration and TLS …" />
+  <meta name="twitter:description" content="For the needs of an incoming project, that I&rsquo;ll describe in a later post, I needed to automate public access configuration for existing web applications. In other words, I needed to automate, …">
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:site" content="@bpetit_" />
+  <meta name="twitter:creator" content="@bpetit_" />
+  <meta name="generator" content="Hugo 0.69.0" />
+  <link rel="alternate" href="https://bpetit.nce.re/index.xml" type="application/rss+xml" title="The cloud is a lie"><link rel="stylesheet" href="https://bpetit.nce.re/css/katex.min.css" />
+  <link rel="stylesheet" href="https://bpetit.nce.re/fontawesome/css/all.css" />
+  <link rel="stylesheet" href="https://bpetit.nce.re/css/bootstrap.min.css" /><link rel="stylesheet" href="https://bpetit.nce.re/css/main.css" /><link rel="stylesheet" href="https://bpetit.nce.re/css/fonts.css" /><link rel="stylesheet" href="https://bpetit.nce.re/css/syntax.css" /><link rel="stylesheet" href="https://bpetit.nce.re/css/codeblock.css" /><link rel="stylesheet" href="https://bpetit.nce.re/css/photoswipe.min.css" />
+  <link rel="stylesheet" href="https://bpetit.nce.re/css/photoswipe.default-skin.min.css" />
+
+
+
+  </head>
+  <body>
+    <nav class="navbar navbar-default navbar-fixed-top navbar-custom">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#main-navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="https://bpetit.nce.re">The cloud is a lie</a>
+    </div>
+
+    <div class="collapse navbar-collapse" id="main-navbar">
+      <ul class="nav navbar-nav navbar-right">
+        
+
+        
+          
+            <li>
+              
+                
+              
+                
+                  <a href="/fr" lang="fr">Français</a>
+                
+              
+            </li>
+          
+        
+
+        
+      </ul>
+    </div>
+
+    
+
+  </div>
+</nav>
+
+
+
+
+    
+
+
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+<div class="pswp__bg"></div>
+
+<div class="pswp__scroll-wrap">
+    
+    <div class="pswp__container">
+      <div class="pswp__item"></div>
+      <div class="pswp__item"></div>
+      <div class="pswp__item"></div>
+    </div>
+    
+    <div class="pswp__ui pswp__ui--hidden">
+    <div class="pswp__top-bar">
+      
+      <div class="pswp__counter"></div>
+      <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+      <button class="pswp__button pswp__button--share" title="Share"></button>
+      <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+      <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+      
+      
+      <div class="pswp__preloader">
+        <div class="pswp__preloader__icn">
+          <div class="pswp__preloader__cut">
+            <div class="pswp__preloader__donut"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+      <div class="pswp__share-tooltip"></div>
+    </div>
+    <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+    </button>
+    <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+    </button>
+    <div class="pswp__caption">
+      <div class="pswp__caption__center"></div>
+    </div>
+    </div>
+    </div>
+</div>
+
+
+  
+  
+  
+
+
+
+
+
+
+  
+
+  <header class="header-section ">
+    
+    <div class="intro-header no-img">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+            <div class="posts-heading">
+              
+                <h1>Automating web applications proxying, DNS registration and TLS termination with ansible</h1>
+              
+              
+                <hr class="small">
+              
+              
+              
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+
+    
+<div class="container" role="main">
+  <div class="row">
+    <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+      <article role="main" class="blog-post">
+        <p>For the needs of an incoming project, that I&rsquo;ll describe in a later post, I needed to automate public access configuration for existing web applications. In other words, I needed to automate, proxy vhost configuration, tls termination and dns registration on a given domain. What is presented here has been used on a simple libvirt/KVM architecture (managed as described in my latest post).</p>
+<p>The workflow is this one:</p>
+<ul>
+<li>deploy the DNS entry</li>
+<li>deploy nginx vhost for the given webapp and domain name (allowing access to .well-known directory for letsencrypt http based authentication and authorization)</li>
+<li>ask for letsencrypt certificate</li>
+<li>retrieve certificate and configure tcp/443 vhost with tls</li>
+</ul>
+<p>Here are the components I used:</p>
+<ul>
+<li>nginx: the well known reverse proxy and web server</li>
+<li>letsencrypt: the tls certificates delivering authority and API</li>
+<li>knot DNS: as an authoritative DNS server on my base domain name</li>
+<li>ansible: to deploy everything</li>
+</ul>
+<p>The following setup is a proof of concept. It surely has flaws and will be improved later. As always, I&rsquo;d be really happy to read your tips or hints for improvement in the comments.</p>
+<h2 id="1-automating-dns-configuration">1. Automating DNS configuration</h2>
+<p>All configurations seen here are ansible (yaml) playbooks and variables files. That being said, configuration templates can be, after small changes, used to configure an equivalent setup manually (but this has no interest in my case).</p>
+<p>As specified earlier, I choosed knot DNS to do the job. This DNS (authoritative only) server is famous for its performances. It is also very easy to configure. To deploy and configure knot with ansible I used an existing role. Here is my fork: <a href="https://github.com/bpetit/ansible-role-knotauth">https://github.com/bpetit/ansible-role-knotauth</a> (I definitely have to make a PR and try to resynchronize with upstream, this is on my todo). Basically the role worked very well from the beginning to install knot and deploy basic configuration. All I wanted in addition was to be able to deploy zone files from ansible.</p>
+<p>I don&rsquo;t detail the initial and necessary part, which was about registering my domain to a registrar and specify my DNS server as the first authoritative DNS server of the domain.</p>
+<p>Let&rsquo;s have a look to the way the role has to be called:</p>
+<div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml">- <span style="color:#6ab825;font-weight:bold">hosts</span>:<span style="color:#666"> </span>dns<span style="color:#666">
+</span><span style="color:#666">  </span><span style="color:#6ab825;font-weight:bold">roles</span>:<span style="color:#666">
+</span><span style="color:#666">    </span>- knot</code></pre></div>
+<p>This is as simple as that, but it is required to fill variables for the role in the host vars file of the dns server:</p>
+<div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml"><span style="color:#999;font-style:italic">############################</span><span style="color:#666">
+</span><span style="color:#666"></span><span style="color:#999;font-style:italic">## knot DNS configuration</span><span style="color:#666">
+</span><span style="color:#666">
+</span><span style="color:#666"></span><span style="color:#6ab825;font-weight:bold">knot_user</span>:<span style="color:#666"> </span>knot<span style="color:#666">
+</span><span style="color:#666"></span><span style="color:#6ab825;font-weight:bold">knot_group</span>:<span style="color:#666"> </span>knot<span style="color:#666">
+</span><span style="color:#666"></span><span style="color:#6ab825;font-weight:bold">knot_interfaces</span>:<span style="color:#666">
+</span><span style="color:#666">  </span>- <span style="color:#3677a9">127.0.0.1</span><span style="color:#666">
+</span><span style="color:#666">  </span>- <span style="color:#ed9d13">&#34;{{ ansible_default_ipv4.address }}&#34;</span><span style="color:#666">
+</span><span style="color:#666"></span><span style="color:#6ab825;font-weight:bold">knot_zones</span>:<span style="color:#666">
+</span><span style="color:#666">  </span>- {<span style="color:#666"> </span><span style="color:#6ab825;font-weight:bold">name: &#39;nc42.fr&#39;, storage</span>:<span style="color:#666"> </span><span style="color:#ed9d13">&#34;{{ knot_install_dir }}/etc/knot/zones&#34;</span><span style="color:#6ab825;font-weight:bold">, file</span>:<span style="color:#666"> </span><span style="color:#ed9d13">&#34;nc42.fr.zone&#34;</span><span style="color:#6ab825;font-weight:bold">, src_file</span>:<span style="color:#666"> </span><span style="color:#ed9d13">&#39;files/nc42.fr.zone&#39;</span><span style="color:#666"> </span>}</code></pre></div>
+<p>And the zone file looks like this (currently, this is a file, but will be a template in next commits):</p>
+<div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#40ffff">$TTL</span> <span style="color:#3677a9">1</span>
+
+<span style="color:#40ffff">$ORIGIN</span> nc42.fr.
+nc42.fr. <span style="color:#3677a9">600</span> IN SOA ns1.nc42.fr. (
+  hostmaster.nc42.fr.
+  <span style="color:#3677a9">2018021801</span>
+  <span style="color:#3677a9">86400</span>
+  <span style="color:#3677a9">7200</span>
+  <span style="color:#3677a9">604800</span>
+  <span style="color:#3677a9">86400</span>
+)
+
+<span style="color:#40ffff">$TTL</span> <span style="color:#3677a9">86400</span>
+
+@       NS      ns1.nc42.fr.
+@       NS      ns2.nc42.fr.
+
+mysuperapp     A    192.0.2.3
+mysuperapp2     A   192.0.2.4
+mysuperapp3     A   192.0.2.5</code></pre></div>
+<p>For now, I need to edit the zone file each time I need to create a new domain name and rerun the ansible playbook. This is ok, but will be improved with a template, using host vars.</p>
+<h2 id="2-nginx-proxy-configuration-and-webroot-setup-for-le-http-validation">2. Nginx proxy configuration and webroot setup for LE http validation</h2>
+<p>Now we need to configure the nginx vhost that will:</p>
+<ul>
+<li>serve the files used by letsencrypt to validate the domain</li>
+<li>behave as a proxy for the application behind</li>
+<li>permit the tls encryption of the communication with the clients</li>
+</ul>
+<p>Let&rsquo;s see what we have in <code>host_vars/proxy1</code>:</p>
+<div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">webroot: /var/www
+
+domains:
+  - { <span style="color:#ed9d13">&#34;name&#34;</span>: <span style="color:#ed9d13">&#34;myapp3.nc42.fr&#34;</span>, <span style="color:#ed9d13">&#34;renew&#34;</span>: True, <span style="color:#ed9d13">&#34;template&#34;</span>: <span style="color:#ed9d13">&#34;templates/nginx_vhost.j2&#34;</span> }
+
+nginx_templatized_vhosts: <span style="color:#ed9d13">&#34;{{ domains }}&#34;</span>
+
+letsencrypt_path: /etc/letsencrypt/live
+
+nginx_delete_default_site: True</code></pre></div>
+<p>Here is the template <code>nginx_vhosts.j2</code>:</p>
+<div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-jinja" data-lang="jinja">server {
+    listen 80;
+    listen [::]:80;
+    server_name <span style="color:#cd2828;font-weight:bold">{{</span> <span style="color:#40ffff">item.name</span> <span style="color:#cd2828;font-weight:bold">}}</span> ;
+    access_log /var/log/nginx/<span style="color:#cd2828;font-weight:bold">{{</span> <span style="color:#40ffff">item.name</span> <span style="color:#cd2828;font-weight:bold">}}</span>_access.log;
+    error_log /var/log/nginx/<span style="color:#cd2828;font-weight:bold">{{</span> <span style="color:#40ffff">item.name</span> <span style="color:#cd2828;font-weight:bold">}}</span>_error.log;
+    root /var/www/<span style="color:#cd2828;font-weight:bold">{{</span> <span style="color:#40ffff">item.name</span> <span style="color:#cd2828;font-weight:bold">}}</span>;
+    location / {
+        rewrite ^/(.*)$ https://$host$request_uri;
+    }
+    location /.well-known/acme-challenge/ {
+        alias /var/www/<span style="color:#cd2828;font-weight:bold">{{</span> <span style="color:#40ffff">item.name</span> <span style="color:#cd2828;font-weight:bold">}}</span>/.well-known/acme-challenge/;
+        allow all;
+    }
+}
+server {
+    listen 443;
+    listen [::]:443;
+    server_name <span style="color:#cd2828;font-weight:bold">{{</span> <span style="color:#40ffff">item.name</span> <span style="color:#cd2828;font-weight:bold">}}</span>;
+    access_log /var/log/nginx/<span style="color:#cd2828;font-weight:bold">{{</span> <span style="color:#40ffff">item.name</span> <span style="color:#cd2828;font-weight:bold">}}</span>_access.log;
+    error_log /var/log/nginx/<span style="color:#cd2828;font-weight:bold">{{</span> <span style="color:#40ffff">item.name</span> <span style="color:#cd2828;font-weight:bold">}}</span>_error.log;
+    ssl on;
+    ssl_certificate <span style="color:#cd2828;font-weight:bold">{{</span> <span style="color:#40ffff">letsencrypt_path</span> <span style="color:#cd2828;font-weight:bold">}}</span>/<span style="color:#cd2828;font-weight:bold">{{</span> <span style="color:#40ffff">item.name</span> <span style="color:#cd2828;font-weight:bold">}}</span>/<span style="color:#cd2828;font-weight:bold">{{</span> <span style="color:#40ffff">item.name</span> <span style="color:#cd2828;font-weight:bold">}}</span>.crt;
+    ssl_certificate_key <span style="color:#cd2828;font-weight:bold">{{</span> <span style="color:#40ffff">letsencrypt_path</span> <span style="color:#cd2828;font-weight:bold">}}</span>/<span style="color:#cd2828;font-weight:bold">{{</span> <span style="color:#40ffff">item.name</span> <span style="color:#cd2828;font-weight:bold">}}</span>/<span style="color:#cd2828;font-weight:bold">{{</span> <span style="color:#40ffff">item.name</span> <span style="color:#cd2828;font-weight:bold">}}</span>.key;
+    ssl_protocols      TLSv1.1 TLSv1.2;
+    ssl_ciphers kEECDH+ECDSA:kEECDH:kEDH:HIGH:SHA256:!RC4:!aNULL:!eNULL:!LOW:!3DES:!MD5:!EXP:!DSS:!PSK:!SRP:!CAMELLIA;
+    ssl_prefer_server_ciphers on;
+    location /.well-known/acme-challenge/ {
+        alias /var/www/<span style="color:#cd2828;font-weight:bold">{{</span> <span style="color:#40ffff">item.name</span> <span style="color:#cd2828;font-weight:bold">}}</span>/.well-known/acme-challenge/;
+        allow all;
+    }
+
+    # TODO: proxy configuration
+
+    root <span style="color:#cd2828;font-weight:bold">{{</span> <span style="color:#40ffff">webroot</span> <span style="color:#cd2828;font-weight:bold">}}</span>/<span style="color:#cd2828;font-weight:bold">{{</span> <span style="color:#40ffff">item.name</span> <span style="color:#cd2828;font-weight:bold">}}</span>;
+}</code></pre></div>
+<p>Here&rsquo;s what the beginning of the playbook looks like:</p>
+<div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml">- <span style="color:#6ab825;font-weight:bold">hosts</span>:<span style="color:#666"> </span>proxy<span style="color:#666">
+</span><span style="color:#666">  </span><span style="color:#6ab825;font-weight:bold">pre_tasks</span>:<span style="color:#666">
+</span><span style="color:#666">    </span>- <span style="color:#6ab825;font-weight:bold">name</span>:<span style="color:#666"> </span>ensure<span style="color:#666"> </span>web<span style="color:#666"> </span>directories<span style="color:#666"> </span>exist<span style="color:#666"> </span>(<span style="color:#3677a9">1</span>)<span style="color:#666">
+</span><span style="color:#666">      </span><span style="color:#6ab825;font-weight:bold">file</span>:<span style="color:#666">
+</span><span style="color:#666">        </span><span style="color:#6ab825;font-weight:bold">state</span>:<span style="color:#666"> </span>directory<span style="color:#666">
+</span><span style="color:#666">        </span><span style="color:#6ab825;font-weight:bold">path</span>:<span style="color:#666"> </span><span style="color:#ed9d13">&#34;{{ webroot }}/{{ item.name }}&#34;</span><span style="color:#666">
+</span><span style="color:#666">        </span><span style="color:#6ab825;font-weight:bold">owner</span>:<span style="color:#666"> </span>www-data<span style="color:#666">
+</span><span style="color:#666">        </span><span style="color:#6ab825;font-weight:bold">group</span>:<span style="color:#666"> </span>www-data<span style="color:#666">
+</span><span style="color:#666">      </span><span style="color:#6ab825;font-weight:bold">with_items</span>:<span style="color:#666">
+</span><span style="color:#666">        </span>- <span style="color:#ed9d13">&#34;{{ domains }}&#34;</span><span style="color:#666">
+</span><span style="color:#666">    </span>- <span style="color:#6ab825;font-weight:bold">name</span>:<span style="color:#666"> </span>ensure<span style="color:#666"> </span>letsencrypt<span style="color:#666"> </span>paths<span style="color:#666"> </span>exists<span style="color:#666"> </span>(<span style="color:#3677a9">2</span>)<span style="color:#666">
+</span><span style="color:#666">      </span><span style="color:#6ab825;font-weight:bold">file</span>:<span style="color:#666">
+</span><span style="color:#666">        </span><span style="color:#6ab825;font-weight:bold">state</span>:<span style="color:#666"> </span>directory<span style="color:#666">
+</span><span style="color:#666">        </span><span style="color:#6ab825;font-weight:bold">path</span>:<span style="color:#666"> </span><span style="color:#ed9d13">&#34;{{ letsencrypt_path }}/{{ item.name }}&#34;</span><span style="color:#666">
+</span><span style="color:#666">      </span><span style="color:#6ab825;font-weight:bold">with_items</span>:<span style="color:#666">
+</span><span style="color:#666">        </span>- <span style="color:#ed9d13">&#34;{{ domains }}&#34;</span><span style="color:#666">
+</span><span style="color:#666">    </span>- <span style="color:#6ab825;font-weight:bold">name</span>:<span style="color:#666"> </span>prepare<span style="color:#666"> </span>tls<span style="color:#666"> </span>private<span style="color:#666"> </span>keys<span style="color:#666"> </span>(<span style="color:#3677a9">3</span>)<span style="color:#666">
+</span><span style="color:#666">      </span><span style="color:#6ab825;font-weight:bold">shell</span>:<span style="color:#666"> </span><span style="color:#ed9d13">&#34;! [ -e {{ letsencrypt_path }}/{{ item.name }}/{{ item.name }}.key ] &amp;&amp; openssl genrsa -out {{ letsencrypt_path }}/{{ item.name }}/{{ item.name }}.key 4096&#34;</span><span style="color:#666">
+</span><span style="color:#666">      </span><span style="color:#6ab825;font-weight:bold">with_items</span>:<span style="color:#666">
+</span><span style="color:#666">        </span>- <span style="color:#ed9d13">&#34;{{ domains }}&#34;</span><span style="color:#666">
+</span><span style="color:#666">      </span><span style="color:#6ab825;font-weight:bold">ignore_errors</span>:<span style="color:#666"> </span>True<span style="color:#666">
+</span><span style="color:#666">    </span>- <span style="color:#6ab825;font-weight:bold">name</span>:<span style="color:#666"> </span>prepare<span style="color:#666"> </span>account<span style="color:#666"> </span>keys<span style="color:#666"> </span>(<span style="color:#3677a9">4</span>)<span style="color:#666">
+</span><span style="color:#666">      </span><span style="color:#6ab825;font-weight:bold">shell</span>:<span style="color:#666"> </span><span style="color:#ed9d13">&#34;! [ -e {{ letsencrypt_path }}/{{ item.name }}/{{ item.name }}_account.key ] &amp;&amp; openssl genrsa -out {{ letsencrypt_path }}/{{ item.name }}/{{ item.name }}_account.key 4096&#34;</span><span style="color:#666">
+</span><span style="color:#666">      </span><span style="color:#6ab825;font-weight:bold">with_items</span>:<span style="color:#666">
+</span><span style="color:#666">        </span>- <span style="color:#ed9d13">&#34;{{ domains }}&#34;</span><span style="color:#666">
+</span><span style="color:#666">      </span><span style="color:#6ab825;font-weight:bold">ignore_errors</span>:<span style="color:#666"> </span>True<span style="color:#666">
+</span><span style="color:#666">    </span>- <span style="color:#6ab825;font-weight:bold">name</span>:<span style="color:#666"> </span>prepare<span style="color:#666"> </span>tls<span style="color:#666"> </span>CSRs<span style="color:#666"> </span>(<span style="color:#3677a9">5</span>)<span style="color:#666">
+</span><span style="color:#666">      </span><span style="color:#6ab825;font-weight:bold">shell</span>:<span style="color:#666"> </span><span style="color:#ed9d13">&#34;openssl req -new -key {{ letsencrypt_path }}/{{ item.name }}/{{ item.name }}.key -subj \&#34;/C=FR/ST=IDF/L=Paris/O=arawbase.com/OU=Hosting services/CN={{ item.name }}\&#34; -out {{ letsencrypt_path }}/{{ item.name }}/{{ item.name }}.csr&#34;</span><span style="color:#666">
+</span><span style="color:#666">      </span><span style="color:#6ab825;font-weight:bold">when</span>:<span style="color:#666"> </span><span style="color:#ed9d13">&#34;item.renew is defined and item.renew&#34;</span><span style="color:#666">
+</span><span style="color:#666">      </span><span style="color:#6ab825;font-weight:bold">with_items</span>:<span style="color:#666">
+</span><span style="color:#666">        </span>- <span style="color:#ed9d13">&#34;{{ domains }}&#34;</span><span style="color:#666">
+</span><span style="color:#666">    </span>- <span style="color:#6ab825;font-weight:bold">name</span>:<span style="color:#666"> </span>generate<span style="color:#666"> </span>auto-signed<span style="color:#666"> </span>certificate<span style="color:#666"> </span>if<span style="color:#666"> </span>it<span style="color:#666"> </span>doesn&#39;t<span style="color:#666"> </span>exist<span style="color:#666"> </span>(<span style="color:#3677a9">6</span>)<span style="color:#666">
+</span><span style="color:#666">      </span><span style="color:#6ab825;font-weight:bold">shell</span>:<span style="color:#666"> </span><span style="color:#ed9d13">&#34;! [ -e {{ letsencrypt_path }}/{{ item.name }}/{{ item.name }}.crt ] &amp;&amp; openssl x509 -req -days 365 -in {{ letsencrypt_path }}/{{ item.name }}/{{ item.name }}.csr -sign key {{ letsencrypt_path }}/{{ item.name }}/{{ item.name }}.key -out {{ letsencrypt_path }}/{{ item.name }}/{{ item.name }}.crt&#34;</span><span style="color:#666">
+</span><span style="color:#666">      </span><span style="color:#6ab825;font-weight:bold">with_items</span>:<span style="color:#666">
+</span><span style="color:#666">        </span>- <span style="color:#ed9d13">&#34;{{ domains }}&#34;</span><span style="color:#666">
+</span><span style="color:#666">      </span><span style="color:#6ab825;font-weight:bold">ignore_errors</span>:<span style="color:#666"> </span>True<span style="color:#666">
+</span><span style="color:#666"></span><span style="color:#6ab825;font-weight:bold">roles</span>:<span style="color:#666"> </span><span style="color:#999;font-style:italic"># (7)</span><span style="color:#666">
+</span><span style="color:#666">  </span>- nginx<span style="color:#666">
+</span><span style="color:#666"></span><span style="color:#6ab825;font-weight:bold">post_tasks</span>:<span style="color:#666">
+</span><span style="color:#666">  </span>- <span style="color:#6ab825;font-weight:bold">service</span>:<span style="color:#666"> </span><span style="color:#999;font-style:italic"># (8)</span><span style="color:#666">
+</span><span style="color:#666">      </span><span style="color:#6ab825;font-weight:bold">name</span>:<span style="color:#666"> </span>nginx<span style="color:#666">
+</span><span style="color:#666">      </span><span style="color:#6ab825;font-weight:bold">state</span>:<span style="color:#666"> </span>reloaded</code></pre></div>
+<p>Let&rsquo;s detail whats going on here. First we write the list of our domains/applications to configure in the hosts vars file. For each item (dictionnary describing a domain) of this list, we will:</p>
+<ul>
+<li>create the directory (webroot) dedicated to that domain on the proxy server, to store letsenrypt files (used for validation, not key/certificate files)</li>
+<li>ensure the letsencrypt path for that domain exists, to store key and certificate files</li>
+<li>generate a private key, using openssl (that part is stil a bit dirty, as we use the shell module which is not idempotent)</li>
+<li>generate a provate key for the letsencrypt account (we need to generate seperate keys for the certificate generation and the account authentication, otherwise letsencrypt refuses the certificate validation)</li>
+<li>generate the CSR (Certificate Signing Request) we will send to LE to get the final certificate</li>
+<li>generate a self signed tls certificate, in order to permit to the nginx vhost to work until the LE certificate is retrieved</li>
+<li>call the nginx role, that will install the software and configure the vhost base on the template we specified, we will see this in the next part</li>
+<li>ensure nginx is reloaded to consider our changes</li>
+</ul>
+<h2 id="3-nginx-configuration">3. Nginx configuration</h2>
+<p>I use this role: <a href="https://github.com/bpetit/Stouts.nginx">https://github.com/bpetit/Stouts.nginx</a> which is a fork (of <a href="https://github.com/Stouts/Stouts.nginx)">https://github.com/Stouts/Stouts.nginx)</a>. Same as earlier, next steps include proposing a PR with my changes, and resynchronize with upstream. I only wanted to permit inclusion of external templates for vhost configurations. (Templates are called by the <code>nginx_templatized_vhosts</code> variable in the host vars file)</p>
+<h2 id="4-letsencrypt-validation-and-deployment">4. Letsencrypt validation and deployment</h2>
+<p>In the same main playbook I include a tasks file dedicated to this part, with the domain list as a parameter:</p>
+<div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml">- <span style="color:#6ab825;font-weight:bold">hosts</span>:<span style="color:#666"> </span>proxy<span style="color:#666">
+</span><span style="color:#666">  </span><span style="color:#6ab825;font-weight:bold">tasks</span>:<span style="color:#666">
+</span><span style="color:#666">    </span>- <span style="color:#6ab825;font-weight:bold">name</span>:<span style="color:#666"> </span>include<span style="color:#666"> </span>letsencrypt<span style="color:#666"> </span>tasks<span style="color:#666">
+</span><span style="color:#666">      </span><span style="color:#6ab825;font-weight:bold">include_tasks</span>:<span style="color:#666"> </span>letsencrypt.yml<span style="color:#666">
+</span><span style="color:#666">      </span><span style="color:#6ab825;font-weight:bold">with_items</span>:<span style="color:#666">
+</span><span style="color:#666">        </span>- <span style="color:#ed9d13">&#34;{{ domains }}&#34;</span><span style="color:#666">
+</span><span style="color:#666">    </span>- <span style="color:#6ab825;font-weight:bold">service</span>:<span style="color:#666">
+</span><span style="color:#666">        </span><span style="color:#6ab825;font-weight:bold">name</span>:<span style="color:#666"> </span>nginx<span style="color:#666">
+</span><span style="color:#666">        </span><span style="color:#6ab825;font-weight:bold">state</span>:<span style="color:#666"> </span>reloaded</code></pre></div>
+<p>Here is the included file:</p>
+<div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml">- <span style="color:#6ab825;font-weight:bold">name</span>:<span style="color:#666"> </span>ensure<span style="color:#666"> </span>well-known<span style="color:#666"> </span>directory<span style="color:#666"> </span>exists<span style="color:#666"> </span>(<span style="color:#3677a9">1</span>)<span style="color:#666">
+</span><span style="color:#666">  </span><span style="color:#6ab825;font-weight:bold">file</span>:<span style="color:#666">
+</span><span style="color:#666">    </span><span style="color:#6ab825;font-weight:bold">path</span>:<span style="color:#666"> </span><span style="color:#ed9d13">&#34;{{ webroot }}/{{ item.name }}/.well-known/acme-challenge&#34;</span><span style="color:#666">
+</span><span style="color:#666">    </span><span style="color:#6ab825;font-weight:bold">state</span>:<span style="color:#666"> </span>directory<span style="color:#666">
+</span><span style="color:#666">    </span><span style="color:#6ab825;font-weight:bold">recurse</span>:<span style="color:#666"> </span>yes<span style="color:#666">
+</span><span style="color:#666">    </span><span style="color:#6ab825;font-weight:bold">owner</span>:<span style="color:#666"> </span>www-data<span style="color:#666">
+</span><span style="color:#666">    </span><span style="color:#6ab825;font-weight:bold">group</span>:<span style="color:#666"> </span>www-data<span style="color:#666">
+</span><span style="color:#666"></span>- <span style="color:#6ab825;font-weight:bold">name</span>:<span style="color:#666"> </span>request<span style="color:#666"> </span>letsencrypt<span style="color:#666"> </span>for<span style="color:#666"> </span>a<span style="color:#666"> </span>challenge<span style="color:#666"> </span>(<span style="color:#3677a9">2</span>)<span style="color:#666">
+</span><span style="color:#666">  </span><span style="color:#6ab825;font-weight:bold">letsencrypt</span>:<span style="color:#666">
+</span><span style="color:#666">    </span><span style="color:#6ab825;font-weight:bold">account_key</span>:<span style="color:#666"> </span><span style="color:#ed9d13">&#34;{{ letsencrypt_path }}/{{ item.name }}/{{ item.name }}_account.key&#34;</span><span style="color:#666">
+</span><span style="color:#666">    </span><span style="color:#6ab825;font-weight:bold">csr</span>:<span style="color:#666"> </span><span style="color:#ed9d13">&#34;{{ letsencrypt_path }}/{{ item.name }}/{{ item.name }}.csr&#34;</span><span style="color:#666">
+</span><span style="color:#666">    </span><span style="color:#6ab825;font-weight:bold">dest</span>:<span style="color:#666"> </span><span style="color:#ed9d13">&#34;{{ letsencrypt_path }}/{{ item.name }}/{{ item.name }}.crt&#34;</span><span style="color:#666">
+</span><span style="color:#666">    </span><span style="color:#6ab825;font-weight:bold">agreement</span>:<span style="color:#666"> </span>https://letsencrypt.org/documents/LE-SA-v1<span style="color:#3677a9">.2</span>-November<span style="color:#3677a9">-15-2017.</span>pdf<span style="color:#666">
+</span><span style="color:#666">    </span><span style="color:#6ab825;font-weight:bold">account_email</span>:<span style="color:#666"> </span><span style="color:#ed9d13">&#34;bpetit@b0rk.in&#34;</span><span style="color:#666">
+</span><span style="color:#666">    </span><span style="color:#6ab825;font-weight:bold">remaining_days</span>:<span style="color:#666"> </span><span style="color:#3677a9">365</span><span style="color:#666">
+</span><span style="color:#666">    </span><span style="color:#999;font-style:italic">#acme_directory: https://acme-v01.api.letsencrypt.org/directory</span><span style="color:#666">
+</span><span style="color:#666">  </span><span style="color:#6ab825;font-weight:bold">register</span>:<span style="color:#666"> </span>le_challenge<span style="color:#666">
+</span><span style="color:#666">  </span><span style="color:#6ab825;font-weight:bold">when</span>:<span style="color:#666"> </span><span style="color:#ed9d13">&#34;item.renew is defined and item.renew&#34;</span><span style="color:#666">
+</span><span style="color:#666"></span>- <span style="color:#6ab825;font-weight:bold">name</span>:<span style="color:#666"> </span>create<span style="color:#666"> </span>the<span style="color:#666"> </span>data<span style="color:#666"> </span>of<span style="color:#666"> </span>the<span style="color:#666"> </span>challenge<span style="color:#666"> </span>in<span style="color:#666"> </span>a<span style="color:#666"> </span>file<span style="color:#666"> </span>on<span style="color:#666"> </span>the<span style="color:#666"> </span>webroot<span style="color:#666"> </span>of<span style="color:#666"> </span>the<span style="color:#666"> </span>domain<span style="color:#666"> </span>(<span style="color:#3677a9">3</span>)<span style="color:#666">
+</span><span style="color:#666">  </span><span style="color:#6ab825;font-weight:bold">copy</span>:<span style="color:#666">
+</span><span style="color:#666">    </span><span style="color:#6ab825;font-weight:bold">dest</span>:<span style="color:#666"> </span><span style="color:#ed9d13">&#34;{{ webroot }}/{{ item.name }}/{{ le_challenge[&#39;challenge_data&#39;][item.name][&#39;http-01&#39;][&#39;resource&#39;] }}&#34;</span><span style="color:#666">
+</span><span style="color:#666">    </span><span style="color:#6ab825;font-weight:bold">content</span>:<span style="color:#666"> </span><span style="color:#ed9d13">&#34;{{ le_challenge[&#39;challenge_data&#39;][item.name][&#39;http-01&#39;][&#39;resource_value&#39;] }}&#34;</span><span style="color:#666">
+</span><span style="color:#666">    </span><span style="color:#6ab825;font-weight:bold">owner</span>:<span style="color:#666"> </span>www-data<span style="color:#666">
+</span><span style="color:#666">    </span><span style="color:#6ab825;font-weight:bold">group</span>:<span style="color:#666"> </span>www-data<span style="color:#666">
+</span><span style="color:#666">  </span><span style="color:#6ab825;font-weight:bold">when</span>:<span style="color:#666"> </span>le_challenge|changed<span style="color:#666">
+</span><span style="color:#666"></span>- <span style="color:#6ab825;font-weight:bold">name</span>:<span style="color:#666"> </span>ask<span style="color:#666"> </span>LE<span style="color:#666"> </span>to<span style="color:#666"> </span>create<span style="color:#666"> </span>the<span style="color:#666"> </span>certificate<span style="color:#666"> </span>file<span style="color:#666"> </span>and<span style="color:#666"> </span>retrieve<span style="color:#666"> </span>it<span style="color:#666"> </span>(<span style="color:#3677a9">4</span>)<span style="color:#666">
+</span><span style="color:#666">  </span><span style="color:#6ab825;font-weight:bold">letsencrypt</span>:<span style="color:#666">
+</span><span style="color:#666">    </span><span style="color:#6ab825;font-weight:bold">account_key</span>:<span style="color:#666"> </span><span style="color:#ed9d13">&#34;{{ letsencrypt_path }}/{{ item.name }}/{{ item.name }}_account.key&#34;</span><span style="color:#666">
+</span><span style="color:#666">    </span><span style="color:#6ab825;font-weight:bold">csr</span>:<span style="color:#666"> </span><span style="color:#ed9d13">&#34;{{ letsencrypt_path }}/{{ item.name }}/{{ item.name }}.csr&#34;</span><span style="color:#666">
+</span><span style="color:#666">    </span><span style="color:#6ab825;font-weight:bold">dest</span>:<span style="color:#666"> </span><span style="color:#ed9d13">&#34;{{ letsencrypt_path }}/{{ item.name }}/{{ item.name }}.crt&#34;</span><span style="color:#666">
+</span><span style="color:#666">    </span><span style="color:#6ab825;font-weight:bold">data</span>:<span style="color:#666"> </span><span style="color:#ed9d13">&#34;{{ le_challenge }} &#34;</span><span style="color:#666">
+</span><span style="color:#666">    </span><span style="color:#6ab825;font-weight:bold">agreement</span>:<span style="color:#666"> </span>https://letsencrypt.org/documents/LE-SA-v1<span style="color:#3677a9">.2</span>-November<span style="color:#3677a9">-15-2017.</span>pdf<span style="color:#666">
+</span><span style="color:#666">    </span><span style="color:#6ab825;font-weight:bold">account_email</span>:<span style="color:#666"> </span><span style="color:#ed9d13">&#34;bpetit@b0rk.in&#34;</span><span style="color:#666">
+</span><span style="color:#666">    </span><span style="color:#6ab825;font-weight:bold">remaining_days</span>:<span style="color:#666"> </span><span style="color:#3677a9">365</span><span style="color:#666">
+</span><span style="color:#666">    </span><span style="color:#999;font-style:italic">#acme_directory: https://acme-v01.api.letsencrypt.org/directory</span><span style="color:#666">
+</span><span style="color:#666">  </span><span style="color:#6ab825;font-weight:bold">register</span>:<span style="color:#666"> </span>result<span style="color:#666">
+</span><span style="color:#666">  </span><span style="color:#6ab825;font-weight:bold">when</span>:<span style="color:#666"> </span><span style="color:#ed9d13">&#34;item.renew is defined and item.renew and le_challenge|changed&#34;</span></code></pre></div>
+<p>Let&rsquo;s detail the steps:</p>
+<ul>
+<li>we check that the well-known folder exist in the webroot</li>
+<li>we request LE for challenge data</li>
+<li>challenge data is stored in a file (served by nginx, remember) that will be accessed by LE http validation service</li>
+<li>we trigger the validation and retrieve the certificate file, we place that file in the right location (overriding the self signed certificate)</li>
+</ul>
+<p>In the main playbook, we reload a last time nginx to present the new certificate to the clients.</p>
+<p><strong>WARNING</strong>: you certainly noticed the acme_directory parameter was commented. This way you use the default value which is the testing service of letsencrypt. Certificate retrieved won&rsquo;t be valid. It is good to test your setup works without hitting the letsencrypt service quotas (limited number of certificate requests per month for a given account). If you are sure your setup is okay and want real certificates, uncomment those 2 lines to hit the production servers.</p>
+<p><strong>WARNING 2</strong>: the agreement parameter is really important. The default value points to an outdated agreement document. LE service won&rsquo;t validate your certificate this way. Be sure to point to a recent version of the document.
+Conclusion</p>
+<p>I had simple needs here, configure proxy, DNS and tls for existing web applications, using infrastructure as code. Ansible is just great for that. Playbooks are really fast and easy to write (the complexity depending on the modules and roles you use) and easy to debug.</p>
+<p>I now have to improve this setup and the roles by making PRs to upstream. I&rsquo;ll also merge those playbooks in an incoming ansible role. This role will be the base of configuration for the future nc42 infrastructure. This will shortly and obviously be open source.</p>
+
+
+        
+
+        
+
+        
+      </article>
+
+      
+        <ul class="pager blog-pager">
+          
+            <li class="previous">
+              <a href="https://bpetit.nce.re/2017/11/how-to-build-a-simplistic-private-cloud-piece-by-piece/" data-toggle="tooltip" data-placement="top" title="How to build a simplistic private cloud piece by piece">&larr; Previous Post</a>
+            </li>
+          
+          
+        </ul>
+      
+
+
+      
+
+    </div>
+  </div>
+</div>
+
+      
+<footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <ul class="list-inline text-center footer-links">
+          
+              <li>
+                <a href="https://github.com/bpetit" title="GitHub">
+                  <span class="fa-stack fa-lg">
+                    <i class="fas fa-circle fa-stack-2x"></i>
+                    <i class="fab fa-github fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="https://twitter.com/bpetit_" title="Twitter">
+                  <span class="fa-stack fa-lg">
+                    <i class="fas fa-circle fa-stack-2x"></i>
+                    <i class="fab fa-twitter fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="https://linkedin.com/in/bepetit" title="LinkedIn">
+                  <span class="fa-stack fa-lg">
+                    <i class="fas fa-circle fa-stack-2x"></i>
+                    <i class="fab fa-linkedin fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+          
+          <li>
+            <a href="" title="RSS">
+              <span class="fa-stack fa-lg">
+                <i class="fas fa-circle fa-stack-2x"></i>
+                <i class="fas fa-rss fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          
+        </ul>
+        <p class="credits copyright text-muted">
+          
+            
+              Benoit Petit
+            
+          
+
+          &nbsp;&bull;&nbsp;&copy;
+          
+            2018
+          
+
+          
+            &nbsp;&bull;&nbsp;
+            <a href="https://bpetit.nce.re">The cloud is a lie</a>
+          
+        </p>
+        
+        <p class="credits theme-by text-muted">
+          <a href="https://gohugo.io">Hugo v0.69.0</a> powered &nbsp;&bull;&nbsp; Theme <a href="https://github.com/halogenica/beautifulhugo">Beautiful Hugo</a> adapted from <a href="https://deanattali.com/beautiful-jekyll/">Beautiful Jekyll</a>
+          
+        </p>
+      </div>
+    </div>
+  </div>
+</footer><script src="https://bpetit.nce.re/js/katex.min.js"></script>
+<script src="https://bpetit.nce.re/js/auto-render.min.js"></script>
+<script src="https://bpetit.nce.re/js/jquery.min.js"></script>
+<script src="https://bpetit.nce.re/js/bootstrap.min.js"></script>
+
+<script src="https://bpetit.nce.re/js/main.js"></script><script> renderMathInElement(document.body); </script><script src="https://bpetit.nce.re/js/photoswipe.min.js"></script>
+<script src="https://bpetit.nce.re/js/photoswipe-ui-default.min.js"></script><script src="https://bpetit.nce.re/js/load-photoswipe.js"></script>
+
+
+
+
+
+
+
+
+
+    
+  </body>
+</html>
+

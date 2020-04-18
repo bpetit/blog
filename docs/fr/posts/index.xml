@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Le nuage n&#39;existe pas</title>
-    <link>https://bpetit.nce.re/fr/</link>
-    <description>Recent content on Le nuage n&#39;existe pas</description>
+    <title>Posts on Le nuage n&#39;existe pas</title>
+    <link>https://bpetit.nce.re/fr/posts/</link>
+    <description>Recent content in Posts on Le nuage n&#39;existe pas</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Fri, 01 Sep 2017 19:44:12 +0200</lastBuildDate>
     
-	<atom:link href="https://bpetit.nce.re/fr/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://bpetit.nce.re/fr/posts/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>

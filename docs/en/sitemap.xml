@@ -3,8 +3,23 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://bpetit.nce.re/web-application-proxxy-dns-registration-and-tls-termination-with-ansible/</loc>
+    <loc>https://bpetit.nce.re/2018/03/automating-web-applications-proxying-dns-registration-and-tls-termination-with-ansible/</loc>
     <lastmod>2018-03-17T20:12:45+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://bpetit.nce.re/posts/</loc>
+    <lastmod>2018-03-17T20:12:45+02:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="fr"
+                href="https://bpetit.nce.re/fr/posts/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://bpetit.nce.re/posts/"
+                />
   </url>
   
   <url>
@@ -23,27 +38,27 @@
   </url>
   
   <url>
-    <loc>https://bpetit.nce.re/how-to-build-a-private-iaas-piece-by-piece/</loc>
+    <loc>https://bpetit.nce.re/2017/11/how-to-build-a-simplistic-private-cloud-piece-by-piece/</loc>
     <lastmod>2017-11-21T20:44:12+02:00</lastmod>
   </url>
   
   <url>
-    <loc>https://bpetit.nce.re/automate-your-virtual-machine-templates-creation-with-packer/</loc>
+    <loc>https://bpetit.nce.re/2017/09/automate-your-virtual-machine-templates-creation-with-packer/</loc>
     <lastmod>2017-09-01T19:44:12+02:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="fr"
-                href="https://bpetit.nce.re/fr/automate-your-virtual-machine-templates-creation-with-packer/"
+                href="https://bpetit.nce.re/fr/2017/09/automate-your-virtual-machine-templates-creation-with-packer/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://bpetit.nce.re/automate-your-virtual-machine-templates-creation-with-packer/"
+                href="https://bpetit.nce.re/2017/09/automate-your-virtual-machine-templates-creation-with-packer/"
                 />
   </url>
   
   <url>
-    <loc>https://bpetit.nce.re/make-ansible-run-on-debian-9/</loc>
+    <loc>https://bpetit.nce.re/2017/07/make-ansible-run-on-debian-9/</loc>
     <lastmod>2017-07-27T21:44:12+02:00</lastmod>
   </url>
   
