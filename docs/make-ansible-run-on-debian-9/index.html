@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en" itemscope itemtype="http://schema.org/WebPage">
+  <head>
+    
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+
+  <title>Make Ansible Run on Debian 9 - The cloud is a lie</title>
+  <meta name="description" content="How to make ansible run on debian 9 ? Ansible version running: 2.3.1.0
+Recently I upgraded personnal servers to debian stretch, as it is the new stable version. By default, the only python version installed on stretch is python3 which is not ok for ansible playbooks to execute properly. I already met that kind of issue (like everyone else) on Ubuntu above version 16.04.
+Obviously the solution is to install python2.">
+  <meta name="author" content="Benoit Petit"/><script type="application/ld+json">
+{
+    "@context": "http://schema.org",
+    "@type": "WebSite",
+    "name": "The cloud is a lie",
+    
+    "url": "https:\/\/bpetit.nce.re"
+}
+</script><script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Organization",
+  "name": "",
+  "url": "https:\/\/bpetit.nce.re"
+  
+  
+  
+  
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [{
+        "@type": "ListItem",
+        "position": 1,
+        "item": {
+          "@id": "https:\/\/bpetit.nce.re",
+          "name": "home"
+        }
+    },{
+        "@type": "ListItem",
+        "position": 3,
+        "item": {
+          "@id": "https:\/\/bpetit.nce.re\/make-ansible-run-on-debian-9\/",
+          "name": "Make ansible run on debian 9"
+        }
+    }]
+}
+</script><script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Article",
+  "author": {
+    "name" : "Benoit Petit"
+  },
+  "headline": "Make Ansible Run on Debian 9",
+  "description" : "How to make ansible run on debian 9 ? Ansible version running: 2.3.1.0\nRecently I upgraded personnal servers to debian stretch, as it is the new stable version. By default, the only python version installed on stretch is python3 which is not ok for ansible playbooks to execute properly. I already met that kind of issue (like everyone else) on Ubuntu above version 16.04.\nObviously the solution is to install python2.",
+  "inLanguage" : "en",
+  "wordCount":  196 ,
+  "datePublished" : "2017-07-27T21:44:12",
+  "dateModified" : "2017-07-27T21:44:12",
+  "image" : "https:\/\/bpetit.nce.re",
+  "keywords" : [ "" ],
+  "mainEntityOfPage" : "https:\/\/bpetit.nce.re\/make-ansible-run-on-debian-9\/",
+  "publisher" : {
+    "@type": "Organization",
+    "name" : "https:\/\/bpetit.nce.re",
+    "logo" : {
+        "@type" : "ImageObject",
+        "url" : "https:\/\/bpetit.nce.re",
+        "height" :  60 ,
+        "width" :  60
+    }
+  }
+}
+</script>
+
+<meta property="og:title" content="Make Ansible Run on Debian 9" />
+<meta property="og:description" content="How to make ansible run on debian 9 ? Ansible version running: 2.3.1.0
+Recently I upgraded personnal servers to debian stretch, as it is the new stable version. By default, the only python version installed on stretch is python3 which is not ok for ansible playbooks to execute properly. I already met that kind of issue (like everyone else) on Ubuntu above version 16.04.
+Obviously the solution is to install python2.">
+<meta property="og:url" content="https://bpetit.nce.re/make-ansible-run-on-debian-9/" />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="The cloud is a lie" />
+
+  <meta name="twitter:title" content="Make Ansible Run on Debian 9" />
+  <meta name="twitter:description" content="How to make ansible run on debian 9 ? Ansible version running: 2.3.1.0
+Recently I upgraded personnal servers to debian stretch, as it is the new stable version. By default, the only python version …">
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:site" content="@bpetit_" />
+  <meta name="twitter:creator" content="@bpetit_" />
+  <meta name="generator" content="Hugo 0.69.0" />
+  <link rel="alternate" href="https://bpetit.nce.re/index.xml" type="application/rss+xml" title="The cloud is a lie"><link rel="stylesheet" href="https://bpetit.nce.re/css/katex.min.css" />
+  <link rel="stylesheet" href="https://bpetit.nce.re/fontawesome/css/all.css" />
+  <link rel="stylesheet" href="https://bpetit.nce.re/css/bootstrap.min.css" /><link rel="stylesheet" href="https://bpetit.nce.re/css/main.css" /><link rel="stylesheet" href="https://bpetit.nce.re/css/fonts.css" /><link rel="stylesheet" href="https://bpetit.nce.re/css/syntax.css" /><link rel="stylesheet" href="https://bpetit.nce.re/css/codeblock.css" /><link rel="stylesheet" href="https://bpetit.nce.re/css/photoswipe.min.css" />
+  <link rel="stylesheet" href="https://bpetit.nce.re/css/photoswipe.default-skin.min.css" />
+
+
+
+  </head>
+  <body>
+    <nav class="navbar navbar-default navbar-fixed-top navbar-custom">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#main-navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="https://bpetit.nce.re">The cloud is a lie</a>
+    </div>
+
+    <div class="collapse navbar-collapse" id="main-navbar">
+      <ul class="nav navbar-nav navbar-right">
+        
+
+        
+          
+            <li>
+              
+                
+              
+                
+                  <a href="/fr" lang="fr">Français</a>
+                
+              
+            </li>
+          
+        
+
+        
+      </ul>
+    </div>
+
+    
+
+  </div>
+</nav>
+
+
+
+
+    
+
+
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+<div class="pswp__bg"></div>
+
+<div class="pswp__scroll-wrap">
+    
+    <div class="pswp__container">
+      <div class="pswp__item"></div>
+      <div class="pswp__item"></div>
+      <div class="pswp__item"></div>
+    </div>
+    
+    <div class="pswp__ui pswp__ui--hidden">
+    <div class="pswp__top-bar">
+      
+      <div class="pswp__counter"></div>
+      <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+      <button class="pswp__button pswp__button--share" title="Share"></button>
+      <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+      <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+      
+      
+      <div class="pswp__preloader">
+        <div class="pswp__preloader__icn">
+          <div class="pswp__preloader__cut">
+            <div class="pswp__preloader__donut"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+      <div class="pswp__share-tooltip"></div>
+    </div>
+    <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+    </button>
+    <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+    </button>
+    <div class="pswp__caption">
+      <div class="pswp__caption__center"></div>
+    </div>
+    </div>
+    </div>
+</div>
+
+
+  
+  
+  
+
+
+
+
+
+
+  
+
+  <header class="header-section ">
+    
+    <div class="intro-header no-img">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+            <div class="page-heading">
+              
+                <h1>Make Ansible Run on Debian 9</h1>
+              
+              
+                <hr class="small">
+              
+              
+              
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+
+    
+<div class="container" role="main">
+  <div class="row">
+    <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+      <article role="main" class="blog-post">
+        <h2 id="how-to-make-ansible-run-on-debian-9-">How to make ansible run on debian 9 ?</h2>
+<p>Ansible version running: 2.3.1.0</p>
+<p>Recently I upgraded personnal servers to debian stretch, as it is the new stable version. By default, the only python version installed on stretch is python3 which is not ok for ansible playbooks to execute properly. I already met that kind of issue (like everyone else) on Ubuntu above version 16.04.</p>
+<p>Obviously the solution is to install python2.7 before running playbooks. I prefer to do that with ansible, so I have to avoid gathering_facts and run a dirty raw task on the remote host:</p>
+<div class="highlight"><div style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">3
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">4
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">5
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml">- <span style="color:#6ab825;font-weight:bold">hosts</span>:<span style="color:#666"> </span>all<span style="color:#666">
+</span><span style="color:#666">  </span><span style="color:#6ab825;font-weight:bold">gather_facts</span>:<span style="color:#666"> </span>no<span style="color:#666">
+</span><span style="color:#666">  </span><span style="color:#6ab825;font-weight:bold">tasks</span>:<span style="color:#666">
+</span><span style="color:#666">    </span>- <span style="color:#6ab825;font-weight:bold">name</span>:<span style="color:#666"> </span>install<span style="color:#666"> </span>python<span style="color:#666"> </span><span style="color:#3677a9">2</span><span style="color:#666">
+</span><span style="color:#666">      </span><span style="color:#6ab825;font-weight:bold">raw</span>:<span style="color:#666"> </span>test<span style="color:#666"> </span>-e<span style="color:#666"> </span>/usr/bin/python<span style="color:#666"> </span>||<span style="color:#666"> </span>(apt<span style="color:#666"> </span>-y<span style="color:#666"> </span>update<span style="color:#666"> </span><span style="color:#cd2828;font-weight:bold">&amp;&amp;</span><span style="color:#666"> </span>apt<span style="color:#666"> </span>install<span style="color:#666"> </span>-y<span style="color:#666"> </span>python-minimal)</code></pre></td></tr></table>
+</div>
+</div>
+<p>This solution is ok with ubuntu 16.04 and above, but here, another error can appear on the first task you run with gather_facts: yes, like:</p>
+<div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml"><span style="color:#6ab825;font-weight:bold">Import</span>:<span style="color:#666"> </span>no<span style="color:#666"> </span>module<span style="color:#666"> </span>named<span style="color:#666"> </span>zipfile</code></pre></div>
+<p>There is certainly a difference between debian and ubuntu python2 packages which explains that zipfile module isn&rsquo;t shipped with python-minimal in debian stretch whereas it is in ubuntu. (I didn&rsquo;t dig more deeply on that topic for now)</p>
+<p>The solution here is to install a more complete version of python2.7, the tiny playbook looks like this now:</p>
+<div class="highlight"><div style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">3
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">4
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">5
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml">- <span style="color:#6ab825;font-weight:bold">hosts</span>:<span style="color:#666"> </span>all<span style="color:#666">
+</span><span style="color:#666">  </span><span style="color:#6ab825;font-weight:bold">gather_facts</span>:<span style="color:#666"> </span>no<span style="color:#666">
+</span><span style="color:#666">  </span><span style="color:#6ab825;font-weight:bold">tasks</span>:<span style="color:#666">
+</span><span style="color:#666">    </span>- <span style="color:#6ab825;font-weight:bold">name</span>:<span style="color:#666"> </span>install<span style="color:#666"> </span>python<span style="color:#666"> </span><span style="color:#3677a9">2</span><span style="color:#666">
+</span><span style="color:#666">      </span><span style="color:#6ab825;font-weight:bold">raw</span>:<span style="color:#666"> </span>test<span style="color:#666"> </span>-e<span style="color:#666"> </span>/usr/bin/python<span style="color:#666"> </span>||<span style="color:#666"> </span>(apt<span style="color:#666"> </span>-y<span style="color:#666"> </span>update<span style="color:#666"> </span><span style="color:#cd2828;font-weight:bold">&amp;&amp;</span><span style="color:#666"> </span>apt<span style="color:#666"> </span>install<span style="color:#666"> </span>-y<span style="color:#666"> </span>python2<span style="color:#3677a9">.7</span><span style="color:#666"> </span>python-minimal)</code></pre></td></tr></table>
+</div>
+</div>
+
+
+        
+
+        
+
+        
+      </article>
+
+      
+
+
+      
+
+    </div>
+  </div>
+</div>
+
+      
+    <div class="page-meta">
+  
+  
+  
+</div>
+
+
+  
+<footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <ul class="list-inline text-center footer-links">
+          
+              <li>
+                <a href="https://github.com/bpetit" title="GitHub">
+                  <span class="fa-stack fa-lg">
+                    <i class="fas fa-circle fa-stack-2x"></i>
+                    <i class="fab fa-github fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="https://twitter.com/bpetit_" title="Twitter">
+                  <span class="fa-stack fa-lg">
+                    <i class="fas fa-circle fa-stack-2x"></i>
+                    <i class="fab fa-twitter fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="https://linkedin.com/in/bepetit" title="LinkedIn">
+                  <span class="fa-stack fa-lg">
+                    <i class="fas fa-circle fa-stack-2x"></i>
+                    <i class="fab fa-linkedin fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+          
+          <li>
+            <a href="" title="RSS">
+              <span class="fa-stack fa-lg">
+                <i class="fas fa-circle fa-stack-2x"></i>
+                <i class="fas fa-rss fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          
+        </ul>
+        <p class="credits copyright text-muted">
+          
+            
+              Benoit Petit
+            
+          
+
+          &nbsp;&bull;&nbsp;&copy;
+          
+            2018
+          
+
+          
+            &nbsp;&bull;&nbsp;
+            <a href="https://bpetit.nce.re">The cloud is a lie</a>
+          
+        </p>
+        
+        <p class="credits theme-by text-muted">
+          <a href="https://gohugo.io">Hugo v0.69.0</a> powered &nbsp;&bull;&nbsp; Theme <a href="https://github.com/halogenica/beautifulhugo">Beautiful Hugo</a> adapted from <a href="https://deanattali.com/beautiful-jekyll/">Beautiful Jekyll</a>
+          
+        </p>
+      </div>
+    </div>
+  </div>
+</footer><script src="https://bpetit.nce.re/js/katex.min.js"></script>
+<script src="https://bpetit.nce.re/js/auto-render.min.js"></script>
+<script src="https://bpetit.nce.re/js/jquery.min.js"></script>
+<script src="https://bpetit.nce.re/js/bootstrap.min.js"></script>
+
+<script src="https://bpetit.nce.re/js/main.js"></script><script> renderMathInElement(document.body); </script><script src="https://bpetit.nce.re/js/photoswipe.min.js"></script>
+<script src="https://bpetit.nce.re/js/photoswipe-ui-default.min.js"></script><script src="https://bpetit.nce.re/js/load-photoswipe.js"></script>
+
+
+
+
+
+
+
+
+
+    
+  </body>
+</html>
+

@@ -17,12 +17,12 @@ params:
 languages:
   en:
     title: "The cloud is a lie"
-    contentDir: content/en
+    contentDir: content/posts/en
     languageName: English
     weight: 1
   fr:
     title: "Le nuage n'existe pas"
-    contentDir: content/fr
+    contentDir: content/posts/fr
     languageName: Français
     weight: 2
 permalinks:

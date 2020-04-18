@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="fr" itemscope itemtype="http://schema.org/WebPage">
+  <head>
+    
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+
+  <title>Automate your virtual machine templates creation with Packer - Le nuage n&#39;existe pas</title>
+  <meta name="description" content="Context If you operate an IaaS infrastructure, either private (OpenStack, OpenNebula, &hellip;) or public cloud (AWS, GCP, &hellip;), you certainly already wondered how to properly bootstrap your first virtual machines templates. IaaS solutions are often linked to a public repository of basic virtual machines images that can be used to quickly start deploying instances. If this is good for initial tests, it&rsquo;s not that safe to bootstrap all your instances from a guest operating system someone you don&rsquo;t has built for you.">
+  <meta name="author" content="Benoit Petit"/><script type="application/ld+json">
+{
+    "@context": "http://schema.org",
+    "@type": "WebSite",
+    "name": "Le nuage n\x27existe pas",
+    
+    "url": "https:\/\/bpetit.nce.re"
+}
+</script><script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Organization",
+  "name": "",
+  "url": "https:\/\/bpetit.nce.re"
+  
+  
+  
+  
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [{
+        "@type": "ListItem",
+        "position": 1,
+        "item": {
+          "@id": "https:\/\/bpetit.nce.re",
+          "name": "home"
+        }
+    },{
+        "@type": "ListItem",
+        "position": 3,
+        "item": {
+          "@id": "https:\/\/bpetit.nce.re\/fr\/automate-your-virtual-machine-templates-creation-with-packer\/",
+          "name": "Automate your virtual machine templates creation with packer"
+        }
+    }]
+}
+</script><script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Article",
+  "author": {
+    "name" : "Benoit Petit"
+  },
+  "headline": "Automate your virtual machine templates creation with Packer",
+  "description" : "Context If you operate an IaaS infrastructure, either private (OpenStack, OpenNebula, \x26hellip;) or public cloud (AWS, GCP, \x26hellip;), you certainly already wondered how to properly bootstrap your first virtual machines templates. IaaS solutions are often linked to a public repository of basic virtual machines images that can be used to quickly start deploying instances. If this is good for initial tests, it\x26rsquo;s not that safe to bootstrap all your instances from a guest operating system someone you don\x26rsquo;t has built for you.",
+  "inLanguage" : "fr",
+  "wordCount":  1254 ,
+  "datePublished" : "2017-09-01T19:44:12",
+  "dateModified" : "2017-09-01T19:44:12",
+  "image" : "https:\/\/bpetit.nce.re",
+  "keywords" : [ "" ],
+  "mainEntityOfPage" : "https:\/\/bpetit.nce.re\/fr\/automate-your-virtual-machine-templates-creation-with-packer\/",
+  "publisher" : {
+    "@type": "Organization",
+    "name" : "https:\/\/bpetit.nce.re",
+    "logo" : {
+        "@type" : "ImageObject",
+        "url" : "https:\/\/bpetit.nce.re",
+        "height" :  60 ,
+        "width" :  60
+    }
+  }
+}
+</script>
+
+<meta property="og:title" content="Automate your virtual machine templates creation with Packer" />
+<meta property="og:description" content="Context If you operate an IaaS infrastructure, either private (OpenStack, OpenNebula, &hellip;) or public cloud (AWS, GCP, &hellip;), you certainly already wondered how to properly bootstrap your first virtual machines templates. IaaS solutions are often linked to a public repository of basic virtual machines images that can be used to quickly start deploying instances. If this is good for initial tests, it&rsquo;s not that safe to bootstrap all your instances from a guest operating system someone you don&rsquo;t has built for you.">
+<meta property="og:url" content="https://bpetit.nce.re/fr/automate-your-virtual-machine-templates-creation-with-packer/" />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Le nuage n&#39;existe pas" />
+
+  <meta name="twitter:title" content="Automate your virtual machine templates creation with Packer" />
+  <meta name="twitter:description" content="Context If you operate an IaaS infrastructure, either private (OpenStack, OpenNebula, &hellip;) or public cloud (AWS, GCP, &hellip;), you certainly already wondered how to properly bootstrap your …">
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:site" content="@bpetit_" />
+  <meta name="twitter:creator" content="@bpetit_" />
+  <meta name="generator" content="Hugo 0.69.0" />
+  <link rel="alternate" href="https://bpetit.nce.re/fr/index.xml" type="application/rss+xml" title="Le nuage n&#39;existe pas"><link rel="stylesheet" href="https://bpetit.nce.re/css/katex.min.css" />
+  <link rel="stylesheet" href="https://bpetit.nce.re/fontawesome/css/all.css" />
+  <link rel="stylesheet" href="https://bpetit.nce.re/css/bootstrap.min.css" /><link rel="stylesheet" href="https://bpetit.nce.re/css/main.css" /><link rel="stylesheet" href="https://bpetit.nce.re/css/fonts.css" /><link rel="stylesheet" href="https://bpetit.nce.re/css/syntax.css" /><link rel="stylesheet" href="https://bpetit.nce.re/css/codeblock.css" /><link rel="stylesheet" href="https://bpetit.nce.re/css/photoswipe.min.css" />
+  <link rel="stylesheet" href="https://bpetit.nce.re/css/photoswipe.default-skin.min.css" />
+
+
+
+  </head>
+  <body>
+    <nav class="navbar navbar-default navbar-fixed-top navbar-custom">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#main-navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="https://bpetit.nce.re/fr/">Le nuage n&#39;existe pas</a>
+    </div>
+
+    <div class="collapse navbar-collapse" id="main-navbar">
+      <ul class="nav navbar-nav navbar-right">
+        
+
+        
+          
+            <li>
+              
+                
+                  <a href="/en" lang="en">English</a>
+                
+              
+                
+              
+            </li>
+          
+        
+
+        
+      </ul>
+    </div>
+
+    
+
+  </div>
+</nav>
+
+
+
+
+    
+
+
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+<div class="pswp__bg"></div>
+
+<div class="pswp__scroll-wrap">
+    
+    <div class="pswp__container">
+      <div class="pswp__item"></div>
+      <div class="pswp__item"></div>
+      <div class="pswp__item"></div>
+    </div>
+    
+    <div class="pswp__ui pswp__ui--hidden">
+    <div class="pswp__top-bar">
+      
+      <div class="pswp__counter"></div>
+      <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+      <button class="pswp__button pswp__button--share" title="Share"></button>
+      <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+      <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+      
+      
+      <div class="pswp__preloader">
+        <div class="pswp__preloader__icn">
+          <div class="pswp__preloader__cut">
+            <div class="pswp__preloader__donut"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+      <div class="pswp__share-tooltip"></div>
+    </div>
+    <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+    </button>
+    <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+    </button>
+    <div class="pswp__caption">
+      <div class="pswp__caption__center"></div>
+    </div>
+    </div>
+    </div>
+</div>
+
+
+  
+  
+  
+
+
+
+
+
+
+  
+
+  <header class="header-section ">
+    
+    <div class="intro-header no-img">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+            <div class="page-heading">
+              
+                <h1>Automate your virtual machine templates creation with Packer</h1>
+              
+              
+                <hr class="small">
+              
+              
+              
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+
+    
+<div class="container" role="main">
+  <div class="row">
+    <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+      <article role="main" class="blog-post">
+        <h2 id="context">Context</h2>
+<p>If you operate an IaaS infrastructure, either private (OpenStack, OpenNebula, &hellip;) or public cloud (AWS, GCP, &hellip;), you certainly already wondered how to properly bootstrap your first virtual machines templates. IaaS solutions are often linked to a public repository of basic virtual machines images that can be used to quickly start deploying instances. If this is good for initial tests, it&rsquo;s not that safe to bootstrap all your instances from a guest operating system someone you don&rsquo;t has built for you. You then certainly want to build your own images and you want that part to be automated to (why running a fully automated infrastructure and still provisioning guest OS by hand ?). Why not use PXE for this ? Well, you&rsquo;d have to deploy and maintain a dhcp and http server just for that purpose. Deploying new distributions and their releases on that server is not that cumfortable neither.</p>
+<p>At this point you could really be interested by Packer. The purpose of packer is to permit generating virtual machines (or containers) images templates from a simple json file. It is developed by Hashicorp, the same company who provides Vagrant, Terraform, Vault, Nomad, etc&hellip; Yes, they are really good people. What&rsquo;s interesting in this product is that you can now versionize your templates of templates (json file is called a template) and let&rsquo;s say have a git repository with all those templates. Pretty cool isn&rsquo;t it ? There&rsquo;s more: Packer has a plugin system, so every component I&rsquo;ll talk about in this article can be extended to fit your custom needs.</p>
+<h2 id="behavior">Behavior</h2>
+<p>Packer has multiple components, most of them are managed in sections of the json template. You can define variables, that will be used in other sections, in the variables section (surprise !). The builders section defines for which platform the image will be build, and how it will be done (image format, size, parameters for the embedded http server, commands to use on boot, &hellip;). This section is the only one mandatory. The provisionners section defines what actions to run after the virtual machine is up and reachable by Packer and before it is shut off to become a static template. Post-processors section defines what to do with artifacts. Artifacts are the files resulting from the build (including the template itself).</p>
+<p><img src="../../../packer.png" alt="packer configuration overview"></p>
+<p>Builders are multiple: OpenStack, Amazon EC2, GCP, Qemu, Virtualbox, Docker, LXC, &hellip; you can find more about them here. Provisioners exist for Ansible, Puppet, Chef, shell scripts and so on&hellip; Post-processors permit to push images to Vagrant Atlas, Amazon, Google cloud, Docker public images repository&hellip; As I said, you can create custom builders, provisioners and post-processors thanks to the Packer plugin system.
+Usage</p>
+<p>Here I&rsquo;ll describe an sample build for a debian 9 image on Qemu/KVM. This is a very simple example that doesn&rsquo;t require any variable, provisioner or post-processor, but you can find a lot of more complete examples on github.</p>
+<p>You need two files: the json template and a preseed file (because it is debian):</p>
+<div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ tree
+.
+├── debian9-kvm.json
+├── http
+│   └── preseed.cfg
+└── packer_cache
+    ├── 9a83cac10fb8aeb1f51ac47aaa6e942d971db3fa8be45f88da37ae832a681f15.iso
+    └── b91b9345dfc29da84058f9f1ee1ab4c27c22efd48a43b54b5432ddc0693e4ab2.iso</code></pre></div>
+<p>Here we put the preseed file in a separate http folder. Notice the packer_cache folder, it&rsquo;s where packer puts iso images he already downloaded, to avoid downloading them a second time.</p>
+<p>I&rsquo;ve not tested every Builder available in Packer, but in this example (Qemu/KVM builder) the workflow is approximatively the following:</p>
+<ul>
+<li>Packer downloads an iso file you specified in the template</li>
+<li>A small http server is bootstraped, hosting the preseed file</li>
+<li>Packer boots the virtual machine with the iso attached</li>
+<li>A tiny VNC client is launched and attached to the virtual machine</li>
+<li>Packer passes boot commands specified in the template</li>
+<li>Packer attempts regularily to connect via ssh to the Virtual Machine, until the ssh timeout is reached (you can change this in the template)</li>
+<li>After successful ssh connection, the provisionners are ran, in this example there are none</li>
+<li>Artifacts are generated: here it&rsquo;s only the template, that goes in the debian9-template folder</li>
+<li>Post-processors are called, here there is nothing to do</li>
+</ul>
+<p>Here is the json template:</p>
+<div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json">{
+    <span style="color:#6ab825;font-weight:bold">&#34;builders&#34;</span>:
+    [
+        {
+            <span style="color:#6ab825;font-weight:bold">&#34;type&#34;</span>: <span style="color:#ed9d13">&#34;qemu&#34;</span>,
+            <span style="color:#6ab825;font-weight:bold">&#34;iso_url&#34;</span>: <span style="color:#ed9d13">&#34;http://cdimage.debian.org/pub/debian-cd/current/amd64/iso-cd/debian-9.2.1-amd64-netinst.iso&#34;</span>,
+            <span style="color:#6ab825;font-weight:bold">&#34;iso_checksum&#34;</span>: <span style="color:#ed9d13">&#34;ddd8f6542dae8baf410e90b9ae0fe986&#34;</span>,
+            <span style="color:#6ab825;font-weight:bold">&#34;iso_checksum_type&#34;</span>: <span style="color:#ed9d13">&#34;none&#34;</span>,
+            <span style="color:#6ab825;font-weight:bold">&#34;output_directory&#34;</span>: <span style="color:#ed9d13">&#34;debian9-kvm&#34;</span>,
+            <span style="color:#6ab825;font-weight:bold">&#34;shutdown_command&#34;</span>: <span style="color:#ed9d13">&#34;shutdown -P now&#34;</span>,
+            <span style="color:#6ab825;font-weight:bold">&#34;disk_size&#34;</span>: <span style="color:#3677a9">5000</span>,
+            <span style="color:#6ab825;font-weight:bold">&#34;format&#34;</span>: <span style="color:#ed9d13">&#34;qcow2&#34;</span>,
+            <span style="color:#6ab825;font-weight:bold">&#34;headless&#34;</span>: <span style="color:#6ab825;font-weight:bold">false</span>,
+            <span style="color:#6ab825;font-weight:bold">&#34;accelerator&#34;</span>: <span style="color:#ed9d13">&#34;kvm&#34;</span>,
+            <span style="color:#6ab825;font-weight:bold">&#34;http_directory&#34;</span>: <span style="color:#ed9d13">&#34;http&#34;</span>,
+            <span style="color:#6ab825;font-weight:bold">&#34;http_port_min&#34;</span>: <span style="color:#3677a9">10082</span>,
+            <span style="color:#6ab825;font-weight:bold">&#34;http_port_max&#34;</span>: <span style="color:#3677a9">10089</span>,
+            <span style="color:#6ab825;font-weight:bold">&#34;ssh_host_port_min&#34;</span>: <span style="color:#3677a9">2222</span>,
+            <span style="color:#6ab825;font-weight:bold">&#34;ssh_host_port_max&#34;</span>: <span style="color:#3677a9">2229</span>,
+            <span style="color:#6ab825;font-weight:bold">&#34;ssh_username&#34;</span>: <span style="color:#ed9d13">&#34;root&#34;</span>,
+            <span style="color:#6ab825;font-weight:bold">&#34;ssh_password&#34;</span>: <span style="color:#ed9d13">&#34;root&#34;</span>,
+            <span style="color:#6ab825;font-weight:bold">&#34;ssh_port&#34;</span>: <span style="color:#3677a9">22</span>,
+            <span style="color:#6ab825;font-weight:bold">&#34;ssh_wait_timeout&#34;</span>: <span style="color:#ed9d13">&#34;10000s&#34;</span>,
+            <span style="color:#6ab825;font-weight:bold">&#34;vm_name&#34;</span>: <span style="color:#ed9d13">&#34;debian9-template&#34;</span>,
+            <span style="color:#6ab825;font-weight:bold">&#34;net_device&#34;</span>: <span style="color:#ed9d13">&#34;virtio-net&#34;</span>,
+            <span style="color:#6ab825;font-weight:bold">&#34;disk_interface&#34;</span>: <span style="color:#ed9d13">&#34;virtio&#34;</span>,
+            <span style="color:#6ab825;font-weight:bold">&#34;boot_wait&#34;</span>: <span style="color:#ed9d13">&#34;5s&#34;</span>,
+            <span style="color:#6ab825;font-weight:bold">&#34;boot_command&#34;</span>: [
+                <span style="color:#ed9d13">&#34;&lt;esc&gt;&lt;wait&gt;&#34;</span>,
+                <span style="color:#ed9d13">&#34;install &lt;wait&gt;&#34;</span>,
+                <span style="color:#ed9d13">&#34;preseed/url=http://{{ .HTTPIP }}:{{ .HTTPPort }}/preseed.cfg &lt;wait&gt;&#34;</span>,
+                <span style="color:#ed9d13">&#34;debian-installer=en_US &lt;wait&gt;&#34;</span>,
+                <span style="color:#ed9d13">&#34;locale=en_US &lt;wait&gt;&#34;</span>,
+                <span style="color:#ed9d13">&#34;auto &lt;wait&gt;&#34;</span>,
+                <span style="color:#ed9d13">&#34;kbd-chooser/method=us &lt;wait&gt;&#34;</span>,
+                <span style="color:#ed9d13">&#34;keyboard-configuration/xkb-keymap=fr &lt;wait&gt;&#34;</span>,
+                <span style="color:#ed9d13">&#34;netcfg/get_hostname={{ .Name }} &lt;wait&gt;&#34;</span>,
+                <span style="color:#ed9d13">&#34;netcfg/get_domain=b0rk.in &lt;wait&gt;&#34;</span>,
+                <span style="color:#ed9d13">&#34;fb=false &lt;wait&gt;&#34;</span>,
+                <span style="color:#ed9d13">&#34;debconf/frontend=noninteractive &lt;wait&gt;&#34;</span>,
+                <span style="color:#ed9d13">&#34;console-setup/ask_detect=false &lt;wait&gt;&#34;</span>,
+                <span style="color:#ed9d13">&#34;console-keymaps-at/keymap=fr &lt;wait&gt;&#34;</span>,
+                <span style="color:#ed9d13">&#34;&lt;enter&gt;&lt;wait&gt;&#34;</span>
+            ]
+        }
+    ]
+}</code></pre></div>
+<p>And the preseed file:</p>
+<div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">d-i pkgsel/install-language-support boolean <span style="color:#24909d">false</span>
+
+<span style="color:#999;font-style:italic"># locale</span>
+d-i debian-installer/locale string en_US.UTF-8
+
+<span style="color:#999;font-style:italic"># keyboard</span>
+d-i keyboard-configuration/xkb-keymap   <span style="color:#6ab825;font-weight:bold">select</span>  fr
+
+<span style="color:#999;font-style:italic"># timezone</span>
+d-i time/zone string Europe/Paris
+
+<span style="color:#999;font-style:italic"># Controls whether to use NTP to set the clock during the install</span>
+d-i clock-setup/ntp boolean <span style="color:#24909d">true</span>
+
+<span style="color:#999;font-style:italic"># apt</span>
+d-i mirror/country string manual
+d-i mirror/http/hostname string ftp.fr.debian.org
+d-i mirror/http/directory string /debian
+d-i mirror/http/proxy string
+d-i apt-setup/use_mirror boolean <span style="color:#24909d">true</span>
+
+<span style="color:#999;font-style:italic"># users</span>
+d-i passwd/root-password password root
+d-i passwd/root-password-again password root
+d-i passwd/make-user boolean <span style="color:#24909d">false</span>
+
+<span style="color:#999;font-style:italic"># partitioning</span>
+d-i partman-auto/method string regular
+d-i partman-auto/choose_recipe <span style="color:#6ab825;font-weight:bold">select</span> atomic
+d-i partman-partitioning/confirm_write_new_label boolean <span style="color:#24909d">true</span>
+d-i partman/choose_partition <span style="color:#6ab825;font-weight:bold">select</span> finish
+d-i partman/confirm boolean <span style="color:#24909d">true</span>
+d-i partman/confirm_nooverwrite boolean <span style="color:#24909d">true</span>
+
+apt-cdrom-setup apt-setup/cdrom/set-first boolean <span style="color:#24909d">false</span>
+
+<span style="color:#999;font-style:italic"># software</span>
+tasksel tasksel/first multiselect standard
+d-i pkgsel/include string htop munin-node mtr-tiny ntp openssh-server postfix tcpdump tmux vim
+popularity-contest popularity-contest/participate boolean <span style="color:#24909d">false</span>
+
+<span style="color:#999;font-style:italic"># postfix</span>
+
+postfix postfix/main_mailer_type    <span style="color:#6ab825;font-weight:bold">select</span>  Internet Site
+postfix postfix/mailname    string  test.b0rk.in
+
+<span style="color:#999;font-style:italic"># grub</span>
+d-i grub-installer/only_debian boolean <span style="color:#24909d">true</span>
+d-i grub-installer/bootdev  string /dev/vda
+
+<span style="color:#999;font-style:italic"># script</span>
+d-i preseed/late_command in-target sed -i <span style="color:#ed9d13">&#39;s/#PermitRootLogin prohibit-password/PermitRootLogin yes/&#39;</span> /target/etc/ssh/sshd_config
+
+<span style="color:#999;font-style:italic"># finish</span>
+d-i finish-install/reboot_in_progress note</code></pre></div>
+<p>To run this example you simply need to type:</p>
+<div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">packer build debian9-kvm.json</code></pre></div>
+<p>You should then get a VNC client window showing the installation process. The output on your terminal should be, in the end of the build:</p>
+<div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">qemu output will be in this color.
+
+Warnings <span style="color:#6ab825;font-weight:bold">for</span> build <span style="color:#ed9d13">&#39;qemu&#39;</span>:
+
+* A checksum <span style="color:#24909d">type</span> of <span style="color:#ed9d13">&#39;none&#39;</span> was specified. Since ISO files are so big,
+a checksum is highly recommended.
+
+==&gt; qemu: Downloading or copying ISO
+        qemu: Downloading or copying: http://cdimage.debian.org/pub/debian-cd/current/amd64/iso-cd/debian-9.2.1-amd64-netinst.iso
+==&gt; qemu: Creating hard drive...
+==&gt; qemu: Starting HTTP server on port <span style="color:#40ffff">10084</span>
+==&gt; qemu: Found port <span style="color:#6ab825;font-weight:bold">for</span> communicator (SSH, WinRM, etc): 2225.
+==&gt; qemu: Looking <span style="color:#6ab825;font-weight:bold">for</span> available port between <span style="color:#3677a9">5900</span> and <span style="color:#3677a9">6000</span> on 127.0.0.1
+==&gt; qemu: Starting VM, booting from CD-ROM
+==&gt; qemu: Waiting 5s <span style="color:#6ab825;font-weight:bold">for</span> boot...
+==&gt; qemu: Connecting to VM via <span style="color:#40ffff">VNC</span>
+==&gt; qemu: Typing the boot <span style="color:#24909d">command</span> over VNC...
+==&gt; qemu: Waiting <span style="color:#6ab825;font-weight:bold">for</span> SSH to become available...
+==&gt; qemu: Connected to SSH!
+==&gt; qemu: Gracefully halting virtual machine...
+==&gt; qemu: Converting hard drive...
+Build <span style="color:#ed9d13">&#39;qemu&#39;</span> finished.
+
+==&gt; Builds finished. The artifacts of successful builds are:
+--&gt; qemu: VM files in directory: debian9-kvm</code></pre></div>
+<p>If you have run this example you certainly noticed the crappy sed command in my preseed file, the purpose is to allow Packer to connect via ssh as root user. This is bad, but it is a basic example, feel free to do things better (you should).</p>
+<p>You may also have noticed that the beginning of the installation, passing the boot commands is a bit long (characters are typed one by one with a perceptible time between them). That&rsquo;s because of the instructions from the template. It can surely by tweaked to get a bit faster, however, it seems necessarily to prevent VNC lags from skipping characters and make the installation fail. I&rsquo;d like to find a way to do this faster but properly.</p>
+<p>Hope it helps !</p>
+
+
+        
+
+        
+
+        
+      </article>
+
+      
+
+
+      
+
+    </div>
+  </div>
+</div>
+
+      
+    <div class="page-meta">
+  
+  
+  
+</div>
+
+
+  
+<footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <ul class="list-inline text-center footer-links">
+          
+              <li>
+                <a href="https://github.com/bpetit" title="GitHub">
+                  <span class="fa-stack fa-lg">
+                    <i class="fas fa-circle fa-stack-2x"></i>
+                    <i class="fab fa-github fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="https://twitter.com/bpetit_" title="Twitter">
+                  <span class="fa-stack fa-lg">
+                    <i class="fas fa-circle fa-stack-2x"></i>
+                    <i class="fab fa-twitter fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="https://linkedin.com/in/bepetit" title="LinkedIn">
+                  <span class="fa-stack fa-lg">
+                    <i class="fas fa-circle fa-stack-2x"></i>
+                    <i class="fab fa-linkedin fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+          
+          <li>
+            <a href="" title="RSS">
+              <span class="fa-stack fa-lg">
+                <i class="fas fa-circle fa-stack-2x"></i>
+                <i class="fas fa-rss fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          
+        </ul>
+        <p class="credits copyright text-muted">
+          
+            
+              Benoit Petit
+            
+          
+
+          &nbsp;&bull;&nbsp;&copy;
+          
+            2017
+          
+
+          
+            &nbsp;&bull;&nbsp;
+            <a href="https://bpetit.nce.re/fr/">Le nuage n&#39;existe pas</a>
+          
+        </p>
+        
+        <p class="credits theme-by text-muted">
+          Carbure avec <a href="https://gohugo.io">Hugo v0.69.0</a>&nbsp;&bull;&nbsp; Avec le Theme <a href="https://github.com/halogenica/beautifulhugo">Beautiful Hugo</a> adapté de <a href="https://deanattali.com/beautiful-jekyll/">Beautiful Jekyll</a>
+          
+        </p>
+      </div>
+    </div>
+  </div>
+</footer><script src="https://bpetit.nce.re/js/katex.min.js"></script>
+<script src="https://bpetit.nce.re/js/auto-render.min.js"></script>
+<script src="https://bpetit.nce.re/js/jquery.min.js"></script>
+<script src="https://bpetit.nce.re/js/bootstrap.min.js"></script>
+
+<script src="https://bpetit.nce.re/js/main.js"></script><script> renderMathInElement(document.body); </script><script src="https://bpetit.nce.re/js/photoswipe.min.js"></script>
+<script src="https://bpetit.nce.re/js/photoswipe-ui-default.min.js"></script><script src="https://bpetit.nce.re/js/load-photoswipe.js"></script>
+
+
+
+
+
+
+
+
+
+    
+  </body>
+</html>
+

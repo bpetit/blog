@@ -3,6 +3,51 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://bpetit.nce.re/web-application-proxxy-dns-registration-and-tls-termination-with-ansible/</loc>
+    <lastmod>2018-03-17T20:12:45+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://bpetit.nce.re/</loc>
+    <lastmod>2018-03-17T20:12:45+02:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="fr"
+                href="https://bpetit.nce.re/fr/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://bpetit.nce.re/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://bpetit.nce.re/how-to-build-a-private-iaas-piece-by-piece/</loc>
+    <lastmod>2017-11-21T20:44:12+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://bpetit.nce.re/automate-your-virtual-machine-templates-creation-with-packer/</loc>
+    <lastmod>2017-09-01T19:44:12+02:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="fr"
+                href="https://bpetit.nce.re/fr/automate-your-virtual-machine-templates-creation-with-packer/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://bpetit.nce.re/automate-your-virtual-machine-templates-creation-with-packer/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://bpetit.nce.re/make-ansible-run-on-debian-9/</loc>
+    <lastmod>2017-07-27T21:44:12+02:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://bpetit.nce.re/categories/</loc>
     <xhtml:link
                 rel="alternate"
@@ -27,20 +72,6 @@
                 rel="alternate"
                 hreflang="en"
                 href="https://bpetit.nce.re/tags/"
-                />
-  </url>
-  
-  <url>
-    <loc>https://bpetit.nce.re/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="fr"
-                href="https://bpetit.nce.re/fr/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://bpetit.nce.re/"
                 />
   </url>
   

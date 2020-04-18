@@ -3,6 +3,36 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://bpetit.nce.re/fr/automate-your-virtual-machine-templates-creation-with-packer/</loc>
+    <lastmod>2017-09-01T19:44:12+02:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://bpetit.nce.re/automate-your-virtual-machine-templates-creation-with-packer/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="fr"
+                href="https://bpetit.nce.re/fr/automate-your-virtual-machine-templates-creation-with-packer/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://bpetit.nce.re/fr/</loc>
+    <lastmod>2017-09-01T19:44:12+02:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://bpetit.nce.re/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="fr"
+                href="https://bpetit.nce.re/fr/"
+                />
+  </url>
+  
+  <url>
     <loc>https://bpetit.nce.re/fr/categories/</loc>
     <xhtml:link
                 rel="alternate"
@@ -13,20 +43,6 @@
                 rel="alternate"
                 hreflang="fr"
                 href="https://bpetit.nce.re/fr/categories/"
-                />
-  </url>
-  
-  <url>
-    <loc>https://bpetit.nce.re/fr/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://bpetit.nce.re/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="fr"
-                href="https://bpetit.nce.re/fr/"
                 />
   </url>
   
