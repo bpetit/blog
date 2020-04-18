@@ -2,7 +2,7 @@ baseURL: https://bpetit.nce.re/blog
 DefaultContentLanguage: en
 languageCode: "en-us"
 languageName: English
-title: "The cloud is a lie"
+title: "\xE2\x98\x81 The cloud is a lie"
 theme: "beautifulhugo"
 Author:
   twitter: bpetit_
