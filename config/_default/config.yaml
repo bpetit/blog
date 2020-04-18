@@ -2,7 +2,6 @@ baseURL: https://bpetit.nce.re
 DefaultContentLanguage: en
 languageCode: "en-us"
 languageName: English
-title: "The cloud is a lie"
 theme: "beautifulhugo"
 Author:
   twitter: bpetit_
@@ -17,10 +16,10 @@ params:
   rss: true
 languages:
   en:
-    title: "The cloud is a lie"
+    title: "&#9729; The cloud is a lie"
     weight: 1
   fr:
-    title: "Bienvenue sur l'ordinateur de quelqu'un d'autre"
+    title: "&#9729; Le nuage n'existe pas"
     weight: 2
 permalinks:
   posts: /:year/:month/:title/

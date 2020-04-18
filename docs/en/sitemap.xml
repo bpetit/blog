@@ -3,16 +3,6 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://bpetit.nce.re/2018/03/automating-web-applications-proxying-dns-registration-and-tls-termination-with-ansible/</loc>
-    <lastmod>2018-03-17T20:12:45+02:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://bpetit.nce.re/posts/</loc>
-    <lastmod>2018-03-17T20:12:45+02:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://bpetit.nce.re/</loc>
     <lastmod>2018-03-17T20:12:45+02:00</lastmod>
     <xhtml:link
@@ -25,6 +15,16 @@
                 hreflang="en"
                 href="https://bpetit.nce.re/"
                 />
+  </url>
+  
+  <url>
+    <loc>https://bpetit.nce.re/2018/03/automating-web-applications-proxying-dns-registration-and-tls-termination-with-ansible/</loc>
+    <lastmod>2018-03-17T20:12:45+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://bpetit.nce.re/posts/</loc>
+    <lastmod>2018-03-17T20:12:45+02:00</lastmod>
   </url>
   
   <url>
