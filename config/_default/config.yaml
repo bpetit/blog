@@ -16,10 +16,14 @@ params:
   rss: true
 languages:
   en:
-    title: "&#9729; The cloud is a lie"
+    title: "The cloud is a lie"
+    contentDir: content/en
+    languageName: English
     weight: 1
   fr:
-    title: "&#9729; Le nuage n'existe pas"
+    title: "Le nuage n'existe pas"
+    contentDir: content/fr
+    languageName: Français
     weight: 2
 permalinks:
   posts: /:year/:month/:title/
