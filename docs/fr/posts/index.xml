@@ -6,6 +6,8 @@
     <description>Recent content in Posts on Le nuage n&#39;existe pas</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
+    <managingEditor>bpetit@b0rk.in (Benoit Petit)</managingEditor>
+    <webMaster>bpetit@b0rk.in (Benoit Petit)</webMaster>
     <lastBuildDate>Fri, 01 Sep 2017 19:44:12 +0200</lastBuildDate>
     
 	<atom:link href="https://bpetit.nce.re/fr/posts/index.xml" rel="self" type="application/rss+xml" />
@@ -15,7 +17,7 @@
       <title>Automate your virtual machine templates creation with Packer</title>
       <link>https://bpetit.nce.re/fr/2017/09/automate-your-virtual-machine-templates-creation-with-packer/</link>
       <pubDate>Fri, 01 Sep 2017 19:44:12 +0200</pubDate>
-      
+      <author>bpetit@b0rk.in (Benoit Petit)</author>
       <guid>https://bpetit.nce.re/fr/2017/09/automate-your-virtual-machine-templates-creation-with-packer/</guid>
       <description>Context If you operate an IaaS infrastructure, either private (OpenStack, OpenNebula, &amp;hellip;) or public cloud (AWS, GCP, &amp;hellip;), you certainly already wondered how to properly bootstrap your first virtual machines templates. IaaS solutions are often linked to a public repository of basic virtual machines images that can be used to quickly start deploying instances. If this is good for initial tests, it&amp;rsquo;s not that safe to bootstrap all your instances from a guest operating system someone you don&amp;rsquo;t has built for you.</description>
     </item>
