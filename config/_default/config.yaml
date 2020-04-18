@@ -14,7 +14,7 @@ params:
   GitHubUser: bpetit
   SidebarRecentLimit: 5
   selfHosted: true
-  rss: true
+  rss: false
 permalinks:
   posts: /:year/:month/:title/
 pygmentsCodeFences: true
