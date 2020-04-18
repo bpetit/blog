@@ -15,6 +15,13 @@ params:
   SidebarRecentLimit: 5
   selfHosted: true
   rss: true
+languages:
+  en:
+    title: "The cloud is a lie"
+    weight: 1
+  fr:
+    title: "Bienvenue sur l'ordinateur de quelqu'un d'autre"
+    weight: 2
 permalinks:
   posts: /:year/:month/:title/
 pygmentsCodeFences: true
