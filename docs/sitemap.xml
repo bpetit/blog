@@ -3,41 +3,41 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://bpetit.nce.re/2018/03/automating-web-applications-proxying-dns-registration-and-tls-termination-with-ansible/</loc>
+    <loc>https://bpetit.nce.re/blog/2018/03/automating-web-applications-proxying-dns-registration-and-tls-termination-with-ansible/</loc>
     <lastmod>2018-03-17T20:12:45+02:00</lastmod>
   </url>
   
   <url>
-    <loc>https://bpetit.nce.re/posts/</loc>
+    <loc>https://bpetit.nce.re/blog/posts/</loc>
     <lastmod>2018-03-17T20:12:45+02:00</lastmod>
   </url>
   
   <url>
-    <loc>https://bpetit.nce.re/</loc>
+    <loc>https://bpetit.nce.re/blog/</loc>
     <lastmod>2018-03-17T20:12:45+02:00</lastmod>
   </url>
   
   <url>
-    <loc>https://bpetit.nce.re/2017/11/how-to-build-a-simplistic-private-cloud-piece-by-piece/</loc>
+    <loc>https://bpetit.nce.re/blog/2017/11/how-to-build-a-simplistic-private-cloud-piece-by-piece/</loc>
     <lastmod>2017-11-21T20:44:12+02:00</lastmod>
   </url>
   
   <url>
-    <loc>https://bpetit.nce.re/2017/09/automate-your-virtual-machine-templates-creation-with-packer/</loc>
+    <loc>https://bpetit.nce.re/blog/2017/09/automate-your-virtual-machine-templates-creation-with-packer/</loc>
     <lastmod>2017-09-01T19:44:12+02:00</lastmod>
   </url>
   
   <url>
-    <loc>https://bpetit.nce.re/2017/07/make-ansible-run-on-debian-9/</loc>
+    <loc>https://bpetit.nce.re/blog/2017/07/make-ansible-run-on-debian-9/</loc>
     <lastmod>2017-07-27T21:44:12+02:00</lastmod>
   </url>
   
   <url>
-    <loc>https://bpetit.nce.re/categories/</loc>
+    <loc>https://bpetit.nce.re/blog/categories/</loc>
   </url>
   
   <url>
-    <loc>https://bpetit.nce.re/tags/</loc>
+    <loc>https://bpetit.nce.re/blog/tags/</loc>
   </url>
   
 </urlset>
