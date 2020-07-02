@@ -19,13 +19,13 @@ params:
 languages:
   en:
     title: "Benoit Petit"
-    homeTitle: "Blog"
+    homeTitle: "Welcome on my blog"
     subtitle: "Pragmatic utopist, I build IT infrastructures. Striving for transparency and measurability. Nothing is virtual."
     languageName: English
     weight: 1
   fr:
     title: "Benoit Petit"
-    homeTitle: "Blog"
+    homeTitle: "Bienvenue sur mon blog"
     subtitle: "Utopiste pragmatique, je construit des infrastructures informatiques. En quête de transparence et de mesurabilité. Rien n'est immatériel."
     languageName: Français
     weight: 2
