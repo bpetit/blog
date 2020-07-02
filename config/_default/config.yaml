@@ -18,11 +18,13 @@ params:
   rss: true
 languages:
   en:
-    title: "The cloud is a lie"
+    title: "Benoit Petit"
+    subtitle: "Pragmatic utopist, I build IT infrastructures. Striving for transparency and measurability. Nothing is virtual."
     languageName: English
     weight: 1
   fr:
-    title: "Le nuage n'existe pas"
+    title: "Benoit Petit"
+    subtitle: "Utopiste pragmatique, je construit des infrastructures numériques. En quête de transparence et de mesurabilité. Rien n'est immatériel."
     languageName: Français
     weight: 2
 permalinks:
