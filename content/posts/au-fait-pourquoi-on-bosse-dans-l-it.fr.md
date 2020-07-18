@@ -22,9 +22,9 @@ Bien sûr il y a des exceptions, certains ont créé leur entreprise et s'y sont
 
   Il y a aussi les libristes (j'en fait *un peu* partie) qui défendent des valeurs magnifiques de partage, de transparence. Mais il me semble que ce sont des **manières de faire** le numérique, pas une raison de le faire.
 
-  Certaines personnes ont un métier qui me parait, d'un point de vue personnel, très structurant et déterminant pour la société et même plus. C'est le cas du secteur des télécoms et des réseaux, qui est un socle nécessaire à tellement d'éléments (qui nous paraissent souvent acquis) indispensables à notre société aujourd'hui que je ne me lancerai pas dans une liste. Mais est ce que ces personnes formulent la chose ainsi, lorsqu'ils sont réunis, ou même lorsqu'ils parlent de leur métier à des profanes ? N'ayant plus mis les pieds au frnog depuis longtemps (ou autre rassemblement notable) j'aurai du mal à énoncer des vérités à ce sujet. Ce billet de blog est plutôt une réflexion à voix haute.
+  Certaines personnes ont un métier qui me parait, d'un point de vue personnel, très structurant et déterminant pour la société et même plus. C'est le cas du secteur des télécoms et des réseaux par exemple, qui est un socle nécessaire à tellement d'éléments (qui nous paraissent souvent acquis) indispensables à notre société aujourd'hui que je ne me lancerai pas dans une liste. Mais est ce que ces personnes formulent la chose ainsi, lorsqu'ils sont réunis, ou même lorsqu'ils parlent de leur métier à des profanes ? N'ayant plus mis les pieds au frnog depuis longtemps (ou autre rassemblement notable) j'aurai du mal à énoncer des vérités à ce sujet. Ce billet de blog est plutôt une réflexion à voix haute.
 
-## Se rapeller ou trouver le **pourquoi**
+## Se rappeler ou trouver le **pourquoi**
 
 Plus globalement qu'est ce qui nous a poussé à faire de l'informatique ? Qu'est ce qui nous fait aimer notre métier ? Avons nous toujours conscience que ce que nous faisons peut avoir une incidence sur ce qui nous entoure, sur le monde ? Bien sûr une énième application web de e-commerce mise en production la semaine dernière ne produira aucun effet notable sur la société (ce qui ne la rend pas inutile pour autant), mais que dire d'un projet comme [electricity map](https://www.electricitymap.org) ou [linkedout](https://www.linkedout.fr) ?
 
