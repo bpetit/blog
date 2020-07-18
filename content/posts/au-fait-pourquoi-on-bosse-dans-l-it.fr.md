@@ -10,13 +10,13 @@ tags:
 author: Benoit Petit
 ---
 
-Voilà environ deux ans que la perception que j'ai de mon métier évolue énormément. Je souhaite partager ici mes réflexions, d'abord car écrire les choses permet de mieux les appréhender, puis, si par chance vous lisez ce texte et partager mes questionnements, nous pourront peut être en discuter.
+Voilà environ deux ans que la perception que j'ai de mon métier évolue énormément. Je souhaite partager ici mes réflexions, d'abord car écrire les choses permet de mieux les appréhender, puis, si par chance vous lisez ce texte et partager mes questionnements, nous pourrons peut être en discuter.
 
 ## Des communautés obnubilées par le **comment** ?
 
 A chaque conférence technique ce sentiment reste intact. Celui d'appartenir à une même communauté. Les conversations sont fluides et j'adore échanger longuement sur les problématiques du quotidien, les technos à la mode, les bonnes pratiques. On apprend alors que intel a changé de boite, ou qu'un autre est passé freelance...
 
-Les changements de bannière font maintenant partie du paysage. Moi-même je n'ai jamais passé plus de trois ans dans une même entreprise et cette tendance était sûrement là bien avant que je devienne actif dans ce métier. Qu'est ce qui fait que si peu (pour ne pas dire aucune) de mes connaissances professionelles ne m'aient parlé de la vision qui défini son entreprise et à quel point celle-ci lui donne de la matière pour penser l'avenir, son avenir, dans cette entreprise et au-delà ? Pourquoi je rencontre si peu de personnes dans ce domaine qui me parlent de projet de société et du rôle qu'ils pensent pouvoir y jouer à travers leur travail ?
+Les changements de bannière font maintenant partie du paysage. Moi-même je n'ai jamais passé plus de trois ans dans une même entreprise et cette tendance était sûrement là bien avant que je devienne actif dans ce métier. Qu'est ce qui fait que si peu (pour ne pas dire aucune) de mes connaissances professionelles ne m'aient parlé de la vision qui défini leur entreprise et à quel point celle-ci leur donne de la matière pour penser l'avenir, leur avenir, dans cette entreprise et au-delà ? Pourquoi je rencontre si peu de personnes dans ce domaine qui me parlent de projet de société et du rôle qu'ils pensent pouvoir y jouer à travers leur travail ?
 
 Bien sûr il y a des exceptions, certains ont créé leur entreprise et s'y sont investis corps et âme. Leur discours est parfois un peu différent... en tout cas au début. Mais rarement le but recherché dépasse la simple rentabilité (je suis bien conscient qu'atteindre la rentabilité est déjà un énorme défi en soit et je ne blâme personne de vouloir manger).
 
