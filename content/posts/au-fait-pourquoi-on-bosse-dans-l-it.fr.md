@@ -1,7 +1,12 @@
 ---
 title: "Au fait, pourquoi on bosse dans l'IT ?"
-date: 2020-07-18T14:35:55+02:00
-tags: humeur, emploi, numérique, écologie, société
+date: 2020-07-18T14:30:55+02:00
+tags:
+  - humeur
+  - emploi
+  - numérique
+  - écologie
+  - société
 author: Benoit Petit
 ---
 

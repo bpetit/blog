@@ -34,3 +34,5 @@ permalinks:
 pygmentsCodeFences: true
 pygmentsStyle: "native"
 publishDir: docs
+taxonomies:
+  tag: tags

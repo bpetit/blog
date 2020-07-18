@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Posts on Benoit Petit</title>
-    <link>https://bpetit.nce.re/fr/posts/</link>
-    <description>Recent content in Posts on Benoit Petit</description>
+    <title>numérique on Benoit Petit</title>
+    <link>https://bpetit.nce.re/fr/tags/num%C3%A9rique/</link>
+    <description>Recent content in numérique on Benoit Petit</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <managingEditor>bpetit@b0rk.in (Benoit Petit)</managingEditor>
     <webMaster>bpetit@b0rk.in (Benoit Petit)</webMaster>
     <lastBuildDate>Sat, 18 Jul 2020 14:30:55 +0200</lastBuildDate>
     
-	<atom:link href="https://bpetit.nce.re/fr/posts/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://bpetit.nce.re/fr/tags/num%C3%A9rique/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>

@@ -3,7 +3,13 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://bpetit.nce.re/fr/2020/07/au-fait-pourquoi-on-bosse-dans-lit/</loc>
+    <lastmod>2020-07-18T14:30:55+02:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://bpetit.nce.re/fr/</loc>
+    <lastmod>2020-07-18T14:30:55+02:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -17,21 +23,43 @@
   </url>
   
   <url>
-    <loc>https://bpetit.nce.re/fr/categories/</loc>
+    <loc>https://bpetit.nce.re/fr/tags/emploi/</loc>
+    <lastmod>2020-07-18T14:30:55+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://bpetit.nce.re/fr/tags/humeur/</loc>
+    <lastmod>2020-07-18T14:30:55+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://bpetit.nce.re/fr/tags/num%C3%A9rique/</loc>
+    <lastmod>2020-07-18T14:30:55+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://bpetit.nce.re/fr/posts/</loc>
+    <lastmod>2020-07-18T14:30:55+02:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://bpetit.nce.re/categories/"
+                href="https://bpetit.nce.re/posts/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="fr"
-                href="https://bpetit.nce.re/fr/categories/"
+                href="https://bpetit.nce.re/fr/posts/"
                 />
   </url>
   
   <url>
+    <loc>https://bpetit.nce.re/fr/tags/soci%C3%A9t%C3%A9/</loc>
+    <lastmod>2020-07-18T14:30:55+02:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://bpetit.nce.re/fr/tags/</loc>
+    <lastmod>2020-07-18T14:30:55+02:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -42,6 +70,11 @@
                 hreflang="fr"
                 href="https://bpetit.nce.re/fr/tags/"
                 />
+  </url>
+  
+  <url>
+    <loc>https://bpetit.nce.re/fr/tags/%C3%A9cologie/</loc>
+    <lastmod>2020-07-18T14:30:55+02:00</lastmod>
   </url>
   
 </urlset>

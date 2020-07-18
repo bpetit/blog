@@ -25,6 +25,16 @@
   <url>
     <loc>https://bpetit.nce.re/posts/</loc>
     <lastmod>2018-03-17T20:12:45+02:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="fr"
+                href="https://bpetit.nce.re/fr/posts/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://bpetit.nce.re/posts/"
+                />
   </url>
   
   <url>
@@ -40,20 +50,6 @@
   <url>
     <loc>https://bpetit.nce.re/2017/07/make-ansible-run-on-debian-9/</loc>
     <lastmod>2017-07-27T21:44:12+02:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://bpetit.nce.re/categories/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="fr"
-                href="https://bpetit.nce.re/fr/categories/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://bpetit.nce.re/categories/"
-                />
   </url>
   
   <url>
