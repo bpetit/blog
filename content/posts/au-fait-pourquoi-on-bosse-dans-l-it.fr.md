@@ -26,7 +26,7 @@ Bien sûr il y a des exceptions, certains ont créé leur entreprise et s'y sont
 
 ## Trouver son *pourquoi*
 
-Plus globalement qu'est ce qui nous a poussé à faire de l'informatique ? Qu'est ce qui nous fait aimer notre métier ? Avons nous toujours conscience que ce que nous faisons peut avoir une incidence sur ce qui nous entoure, sur le monde ? Bien sûr une énième application web de e-commerce mise en production la semaine dernière ne produira aucun effet notable sur la société (ce qui ne la rend pas inutile pour autant), mais que dire d'un projet comme [electricity map](https://www.electricitymap.org) ou [linkedout](https://www.linkedout.fr) ?
+Qu'est ce qui nous a poussé à faire de l'informatique ? Qu'est ce qui nous fait aimer notre métier ? Avons nous toujours conscience que ce que nous faisons peut avoir une incidence sur ce qui nous entoure, sur le monde ? Bien sûr une énième application web de e-commerce mise en production la semaine dernière ne produira aucun effet notable sur la société (ce qui ne la rend pas inutile pour autant), mais que dire d'un projet comme [electricity map](https://www.electricitymap.org) ou [linkedout](https://www.linkedout.fr) ?
 
   Au-delà des actions individuelles ou limitées à l'échelle d'une entreprise, le mouvement induit par les actions de l'ensemble des professionels de l'IT n'est il pas sous-estimé ? Par le public et le reste de la société, certainement, mais avant tout et surtout par nous-même ? Sommes nous les simples pantins du modèle économique dans lequel nous sommes nés ? Ou bien notre expertise et nos leviers d'actions sur, ou par, les technologies qui ont transformé (en bien ou en mal) ce même modèle n'ont ils pas un rôle, **conscient**, à jouer ? Pourrait on choisir ce rôle ? Devrait on le faire ?
 
