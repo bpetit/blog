@@ -14,7 +14,7 @@ Voilà environ deux ans que la perception que j'ai de mon métier évolue énorm
 
 ## Des communautés obnubilées par le *comment* ?
 
-A chaque conférence technique ce sentiment reste intact. Celui d'appartenir à une même communauté. Les conversations sont fluides et j'adore échanger longuement sur les problématiques du quotidien, les technos à la mode, les bonnes pratiques. On apprend alors que intel a changé de boite, ou qu'un autre est passé freelance...
+A chaque conférence technique ce sentiment reste intact. Celui d'appartenir à une même communauté. Les conversations sont fluides et j'adore échanger longuement sur les problématiques du quotidien, les technos à la mode, les bonnes pratiques. On apprend alors que intel a changé de boite ou qu'un autre est passé freelance...
 
 Les changements de bannière font maintenant partie du paysage. Moi-même je n'ai jamais passé plus de trois ans dans une même entreprise et cette tendance était sûrement là bien avant que je devienne actif dans ce métier. Qu'est ce qui fait que si peu (pour ne pas dire aucune) de mes connaissances professionelles ne m'aient parlé de la vision qui défini leur entreprise et à quel point celle-ci leur donne de la matière pour penser l'avenir, leur avenir, dans cette entreprise et au-delà ? Pourquoi je rencontre si peu de personnes dans ce domaine qui me parlent de projet de société et du rôle qu'ils pensent pouvoir y jouer à travers leur travail ?
 
@@ -34,6 +34,6 @@ Plus globalement qu'est ce qui nous a poussé à faire de l'informatique ? Qu'es
 
 ## Des questions "de riche" ?
 
-Oui. Quiconque travaille dans notre secteur sait que nous sommes *plutôt* bien lotis. Et justement, si des personnes avec le ventre plein, de potentiels leviers d'action et suffisamment chanceuses pour pouvoir tenter de faire quelque chose qui ait du sens ne le font pas, qui le fera ? De plus, cette question est pertinente et fait partie de ma réflexion. Prendre conscience de notre chance, mais également que bien d'autres n'en ont pas autant, est selon moi une piste.
+Oui. Quiconque travaille dans notre secteur sait que nous sommes *plutôt* bien lotis. Et justement, si des personnes avec le ventre plein, de potentiels leviers d'action et suffisamment chanceuses pour pouvoir faire quelque chose qui ait du sens ne le font pas, qui le fera ? De plus, cette question est pertinente et fait partie de ma réflexion. Prendre conscience de notre chance, mais également que bien d'autres n'en ont pas autant, est selon moi une piste.
 
 Et vous ? Vous posez vous cette question ? Pourquoi faites vous votre métier ? Quel est votre idéal de société et quel rôle voudriez vous y jouer ?
