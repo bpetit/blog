@@ -18,7 +18,7 @@ A chaque conférence technique ce sentiment reste intact. Celui d'appartenir à 
 
 Les changements de bannière font maintenant partie du paysage. Moi-même je n'ai jamais passé plus de trois ans dans une même entreprise et cette tendance était sûrement là bien avant que je devienne actif dans ce métier. Qu'est ce qui fait que si peu (pour ne pas dire aucune) de mes connaissances professionelles ne m'aient parlé de la vision qui défini leur entreprise et à quel point celle-ci leur donne de la matière pour penser l'avenir, leur avenir, dans cette entreprise et au-delà ? Pourquoi je rencontre si peu de personnes dans ce domaine qui me parlent de projet de société et du rôle qu'ils pensent pouvoir y jouer à travers leur travail ?
 
-Bien sûr il y a des exceptions, certains ont créé leur entreprise et s'y sont investis corps et âme. Leur discours est parfois un peu différent... en tout cas au début. Mais rarement le but recherché dépasse la simple rentabilité (je suis bien conscient qu'atteindre la rentabilité est déjà un énorme défi en soit et je ne blâme personne de vouloir manger).
+Bien sûr il y a des exceptions, certains ont créé leur entreprise et s'y sont investis corps et âme. Leur discours est parfois un peu différent... en tout cas au début. Mais le but recherché dépasse rarement la simple rentabilité (je suis bien conscient qu'atteindre la rentabilité est déjà un énorme défi en soit et je ne blâme personne de vouloir manger).
 
   Il y a aussi les libristes (j'en fait *un peu* partie) qui défendent des valeurs magnifiques de partage, de transparence. Mais il me semble que ce sont des **manières de faire** le numérique, pas une raison de le faire.
 
