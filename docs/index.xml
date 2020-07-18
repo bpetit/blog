@@ -53,5 +53,14 @@ Recently I upgraded personnal servers to debian stretch, as it is the new stable
 Obviously the solution is to install python2.</description>
     </item>
     
+    <item>
+      <title></title>
+      <link>https://bpetit.nce.re/1/01/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <author>bpetit@b0rk.in (Benoit Petit)</author>
+      <guid>https://bpetit.nce.re/1/01/</guid>
+      <description></description>
+    </item>
+    
   </channel>
 </rss>
