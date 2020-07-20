@@ -14,7 +14,7 @@ Voilà environ deux ans que la perception que j'ai de mon métier évolue énorm
 
 ## Des communautés obnubilées par le *comment* ?
 
-A chaque conférence technique, le sentiment d'appartenir à une même communauté reste intact. Les conversations sont fluides et j'adore échanger longuement sur les problématiques du quotidien, les technos à la mode, les bonnes pratiques. On apprend alors que untel a changé de boite ou qu'un autre est passé freelance...
+A chaque conférence technique, le sentiment d'appartenir à une même communauté reste intact. Les conversations sont fluides et j'adore échanger longuement sur les problématiques du quotidien, les technos à la mode, les bonnes pratiques. On apprend alors qu'untel a changé de boite ou qu'un autre est passé freelance...
 
 Les changements de bannière font maintenant partie du paysage. Moi-même je n'ai jamais passé plus de trois ans dans une même entreprise et cette tendance était sûrement là bien avant que je devienne actif dans ce métier. Les discussions tournent bien souvent autour des conditions de travail, du challenge technique, du salaire. Tout ceci me semble bien sûr légitime, mais quelque chose me perturbe. Qu'est ce qui fait que si peu (pour ne pas dire aucune) de mes connaissances professionelles ne m'aient parlé de la vision qui défini leur entreprise et à quel point celle-ci leur donne de la matière pour penser l'avenir, leur avenir, dans cette entreprise et au-delà ? Pourquoi je rencontre si peu de personnes dans ce domaine qui me parlent de projet de société et du rôle qu'ils pensent pouvoir y jouer à travers leur travail ?
 
