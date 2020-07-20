@@ -20,7 +20,7 @@ Les changements de bannière font maintenant partie du paysage. Moi-même je n'a
 
 Bien sûr il y a des exceptions, certains ont créé leur entreprise et s'y sont investis corps et âme. Leur discours est parfois un peu différent... en tout cas au début. Mais le but recherché dépasse rarement la simple rentabilité (je suis bien conscient qu'atteindre la rentabilité est déjà un énorme défi en soit et je ne blâme personne de vouloir manger).
 
-  Il y a aussi les libristes (j'en fait *un peu* partie) qui défendent des valeurs magnifiques de partage, de transparence. Mais il me semble que ce sont des **manières de faire** le numérique, pas **une raison** de le faire.
+  Il y a aussi les libristes (j'en fait *un peu* partie) qui défendent des valeurs magnifiques de partage, de transparence. Mais il me semble que ce sont également des **manières de faire** le numérique et non des **raisons** de le faire.
 
   Certaines personnes ont un métier qui me parait, d'un point de vue personnel, très structurant et déterminant pour la société et même plus. C'est le cas du secteur des télécoms et des réseaux par exemple, qui est un socle nécessaire à tellement d'éléments (qui nous paraissent souvent acquis) indispensables à notre société aujourd'hui que je ne me lancerai pas dans une liste. Mais est ce que ces personnes formulent la chose ainsi, lorsqu'ils sont réunis, ou même lorsqu'ils parlent de leur métier à des profanes ? N'ayant plus mis les pieds au frnog depuis longtemps (ou autre rassemblement notable) j'aurai du mal à énoncer des vérités à ce sujet. Ce billet de blog est plutôt une réflexion à voix haute.
 
