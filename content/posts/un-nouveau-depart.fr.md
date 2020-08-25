@@ -7,7 +7,6 @@ tags:
   - numérique
   - écologie
   - société
-draft: true
 image: temperature-anomaly.svg
 thumbnail: temperature-anomaly.svg
 author: Benoit Petit
@@ -15,7 +14,7 @@ author: Benoit Petit
 
 Voilà un peu plus de deux semaines que j'ai officiellement quitté mon emploi (Ingénieur cloud/SRE, dans une scale-up française). Ce travail avait pourtant beaucoup d'arguments: le luxe de la croissance, d'excellentes conditions de travail, beaucoup d'autonomie, un très bon salaire, beaucoup de moyens investis pour le bien être des employés. Ca ne faisait pas tout à fait deux ans que j'avais commencé ce travail et le moins que l'on puisse dire c'est que je n'avais rien à reprocher concrêtement à mon employeur.
 
-Comme je l'évoquais dans un [précédent article](), la finalité de mon travail est devenue très importante à mes yeux ces dernières années. Je me suis longtemps concentré, comme bon nombre de mes confrères, sur le défi technique, les conditions de travail et le salaire. En considérant mes critères d'alors, accepter ce poste était un très bon choix.
+Comme je l'évoquais dans un [précédent article](https://bpetit.nce.re/fr/2020/07/au-fait-pourquoi-on-bosse-dans-lit/index.html), la finalité de mon travail est devenue très importante à mes yeux ces dernières années. Je me suis longtemps concentré, comme bon nombre de mes confrères, sur le défi technique, les conditions de travail et le salaire. En considérant mes critères d'alors, accepter ce poste était un très bon choix.
 
 Je vais tenter d'expliquer, en quoi et pourquoi mes aspirations ont changé.
 

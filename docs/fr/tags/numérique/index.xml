@@ -8,10 +8,19 @@
     <language>en-us</language>
     <managingEditor>bpetit@b0rk.in (Benoit Petit)</managingEditor>
     <webMaster>bpetit@b0rk.in (Benoit Petit)</webMaster>
-    <lastBuildDate>Sat, 18 Jul 2020 14:30:55 +0200</lastBuildDate>
+    <lastBuildDate>Thu, 30 Jul 2020 18:30:55 +0200</lastBuildDate>
     
 	<atom:link href="https://bpetit.nce.re/fr/tags/num%C3%A9rique/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Changer de vie, pour changer de modèle</title>
+      <link>https://bpetit.nce.re/fr/2020/07/changer-de-vie-pour-changer-de-mod%C3%A8le/</link>
+      <pubDate>Thu, 30 Jul 2020 18:30:55 +0200</pubDate>
+      <author>bpetit@b0rk.in (Benoit Petit)</author>
+      <guid>https://bpetit.nce.re/fr/2020/07/changer-de-vie-pour-changer-de-mod%C3%A8le/</guid>
+      <description>Voilà un peu plus de deux semaines que j&amp;rsquo;ai officiellement quitté mon emploi (Ingénieur cloud/SRE, dans une scale-up française). Ce travail avait pourtant beaucoup d&amp;rsquo;arguments: le luxe de la croissance, d&amp;rsquo;excellentes conditions de travail, beaucoup d&amp;rsquo;autonomie, un très bon salaire, beaucoup de moyens investis pour le bien être des employés. Ca ne faisait pas tout à fait deux ans que j&amp;rsquo;avais commencé ce travail et le moins que l&amp;rsquo;on puisse dire c&amp;rsquo;est que je n&amp;rsquo;avais rien à reprocher concrêtement à mon employeur.</description>
+    </item>
     
     <item>
       <title>Au fait, pourquoi on bosse dans l&#39;IT ?</title>
