@@ -1,5 +1,5 @@
 ---
-title: "La pilule rouge"
+title: "Changer de vie, pour changer de modèle"
 date: 2020-07-30T18:30:55+02:00
 tags:
   - humeur
@@ -70,7 +70,7 @@ Cette étude reprend la méthodologie d'une [autre étude](https://eta.lbl.gov/p
 - elle concerne uniquement les USA
 - n'ayant pas accès à des données de consommation réelles, l'utilisation moyenne de la capacité des machines est supposée, il est donc dit dans les conclusions de l'étude qu'il y a certainement un écart avec les faits.  
 
-De plus il est dit dans les conclusions des deux papiers, que cette "absorbtion" du pic de traffic de cette dernière décénnie ne doit pas être considéréer comme durable. Les chercheurs des deux équipes mettent en garde sur les limites des optimisations qui ont permis cette absorbtion (meilleur PUE, meilleure performance énergétique des nouvelles gammes d'équipements, etc...). Cette limitation de l'impact du cloud sur la consommation énergétique ne pourrait être qu'un plateau avant une nouvelle augmentation significative sur la prochaine décénnie.
+De plus il est dit dans les conclusions des deux papiers, que cette "absorbtion" du pic de traffic de cette dernière décénnie ne doit pas être considéréer comme durable. Les chercheurs des deux équipes mettent en garde sur les limites des optimisations qui ont permis cette absorbtion (meilleur PUE, meilleure performance énergétique des nouvelles gammes d'équipements, etc...). Cette limitation de l'impact du cloud sur la consommation énergétique ne pourrait être qu'un plateau avant une nouvelle augmentation significative sur la prochaine décénnie. Il ne faut pas oublier, que les avantages du cloud, ne viennent pas sans un effet rebond.
 
 Ces conclusions sont restées discrêtes dans les articles que j'ai pu lire, traitant du sujet. La "bonne nouvelle" a fait les gros titres et les mises en garde sont restées cantonnées à une ou deux lignes. Or pour réduire l'impact du secteur, comme pour le reste, il me semble impératif de mesurer.
    
