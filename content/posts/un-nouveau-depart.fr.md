@@ -40,7 +40,7 @@ J'ai également peu à peu [élargi](https://www.goodreads.com/book/show/2778703
 
 Nous sommes face à **des** risques majeurs pour la **survie l'espèce humaine** (car c'est bien de celà qu'il s'agit, l'idée n'est pas de sauver les arbres et les abeilles juste que c'est joli). La complexité de ce problème n'a d'égal que notre schyzophrénie sur le sujet. J'ai moi même durant trop longtemps été en pleine dissonance cognitive. Certes, je réduis mes déchets, maximise mes trajets en vélo ou en train et ne consomme plus de viande. D'un autre côté, jusqu'ici je continuais de travailler en occultant ces problématiques et le lien entre mon travail et note avenir.  A quoi sert mon travail ? En quoi contribue l'entreprise dans laquelle je travaille à l'avenir de notre société ? du monde ? Je n'ai jamais travaillé pour une entreprise ayant un impact négatif évident, mais je n'ai jamais oeuvré, ni pour mes convictions politiques, ni pour un avenir plus doux.  
   
-  Bien sûr que je suis une goutte d'eau dans l'océan mais je préferre faire partie du bon courant et pouvoir me regarder dans une glace quand 
+  Bien sûr que je suis une goutte d'eau dans l'océan mais je préferre faire partie du bon courant et pouvoir me regarder dans une glace dans 20 ans.
 
 ![Concentration de CO2 dans l'atmosphère à long terme](/co2-concentration-long-term.svg)
 
