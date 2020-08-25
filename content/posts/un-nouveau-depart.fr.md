@@ -7,6 +7,8 @@ tags:
   - numérique
   - écologie
   - société
+images:
+  - temperature-anomaly.svg
 author: Benoit Petit
 ---
 
@@ -59,7 +61,7 @@ On parle même du rôle positif du numérique pour une meilleure utilisation de 
 
 # Le cas du cloud
 
-Je parlais dans la section précédente de l'hégémonie du cloud (et non par les sources d'énergie sollicités). En terme de consommation énergétique et donc d'émissions de GES, le cloud est plutôt une bonne chose de par l'hypercentralisation des infrastructures. Comme le montre [cette étude](https://science.sciencemag.org/content/367/6481/984) qui fut [reprise](https://www.iea.org/reports/data-centres-and-data-transmission-networks) dans [plusieurs](https://www.nytimes.com/2020/02/27/technology/cloud-computing-energy-usage.html?referringSource=articleShare) articles début 2020, la centralisation des infrastructures a du bon, puisqu'elle permet une optimisation de la consommation énergétique globale des serveurs qui est impossible lorsque le même nombre de serveurs se trouve disséminé dans des datacenters distants. Le [PUE](https://fr.wikipedia.org/wiki/Indicateur_d%27efficacit%C3%A9_%C3%A9nerg%C3%A9tique) est notamment meilleur dans les grand centres de données gérés par une même entreprise qui met les moyens nécessaires pour réduire sa facture d'électricité. A ces explications s'ajoute les progrès en terme d'efficacité énergétique des équipements réseaux et des serveurs au fil des générations. Le tout a permis, d'après cette étude, de 2010 à 2019, d'avoir une consommation énergétique globale stagnante des datacenters non proportionelle à l'augmentation des usages.
+Je parlais dans la section précédente de l'hégémonie du cloud . En terme de consommation énergétique et donc d'émissions de GES, le cloud est plutôt une bonne chose de par l'hypercentralisation des infrastructures (et non par les sources d'énergie sollicités). Comme le montre [cette étude](https://science.sciencemag.org/content/367/6481/984) qui fut [reprise](https://www.iea.org/reports/data-centres-and-data-transmission-networks) dans [plusieurs](https://www.nytimes.com/2020/02/27/technology/cloud-computing-energy-usage.html?referringSource=articleShare) articles début 2020, la centralisation des infrastructures a du bon, puisqu'elle permet une optimisation de la consommation énergétique globale des serveurs qui est impossible lorsque le même nombre de serveurs se trouve disséminé dans des datacenters distants. Le [PUE](https://fr.wikipedia.org/wiki/Indicateur_d%27efficacit%C3%A9_%C3%A9nerg%C3%A9tique) est notamment meilleur dans les grand centres de données gérés par une même entreprise qui met les moyens nécessaires pour réduire sa facture d'électricité. A ces explications s'ajoute les progrès en terme d'efficacité énergétique des équipements réseaux et des serveurs au fil des générations. Le tout a permis, d'après cette étude, de 2010 à 2019, d'avoir une consommation énergétique globale stagnante des datacenters non proportionelle à l'augmentation des usages.
 
 Cette étude reprend la méthodologie d'une [autre étude](https://eta.lbl.gov/publications/united-states-data-center-energy), dont il me semble important de noter les limites:
 
