@@ -7,8 +7,9 @@ tags:
   - numérique
   - écologie
   - société
-images:
-  - temperature-anomaly.svg
+draft: true
+image: temperature-anomaly.svg
+thumbnail: temperature-anomaly.svg
 author: Benoit Petit
 ---
 
@@ -75,7 +76,7 @@ Ces conclusions sont restées discrêtes dans les articles que j'ai pu lire, tra
    
 # Mesurer, itérer, vérifier, comprendre
 
-Vous l'aurez compris, pour parler de l'impact du numérique sur l'environnement, on manque de données et de projections fiables. C'est exactement le projet dans lequel je me lance aujourd'hui. Je souhaite proposer une solution de mesure efficace des clients des plateformes de cloud, en particulier pour les machines virtuelles et les conteneurs. La première partie du projet consiste à créer une solution, open source, de mesure, simple à installer et à opérer pour collecter les métriques de consommation, à destination des hébergeurs, fournisseurs de cloud ou entreprises gérant des infrastructures *on premise*. La seconde consiste à créer un fournisseur de cloud, transparent et éthique, qui propose ces métriques à ses clients et des pistes pour réduire l'impact de leur consommation. L'idée est d'abord faire une preuve par l'exemple et de créer un effet boule de neige. 
+Vous l'aurez compris, pour parler de l'impact du numérique sur l'environnement, on manque de données et de projections fiables. C'est exactement le projet dans lequel je me lance aujourd'hui. Je souhaite proposer une solution à ce manque. L'objectif est de permettre aux clients des services de cloud, de mesurer l'impact de leur consommation. La première partie du projet consiste à créer une solution, open source, de mesure, simple à installer et à opérer pour collecter les métriques de consommation, à destination des hébergeurs, fournisseurs de cloud ou entreprises gérant des infrastructures *on premise*. La seconde consiste à créer un fournisseur de cloud, transparent et éthique, qui propose ces métriques à ses clients et des pistes pour réduire l'impact de leur consommation. L'idée est d'abord faire une preuve par l'exemple et de créer un effet boule de neige. 
   
   Peut être que je rêve éveillé, mais si on ne suit jamais ses rêves, à quoi sert de vivre ?
   
