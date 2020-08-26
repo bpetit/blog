@@ -1,5 +1,5 @@
 ---
-title: "Pourquoi j'ai quitté un job qui a"
+title: "Pourquoi j'ai quitté mon job (qui avait tout pour plaire)"
 date: 2020-08-26T14:30:24+02:00
 tags:
   - humeur
