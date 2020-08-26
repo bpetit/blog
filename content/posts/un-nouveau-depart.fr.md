@@ -1,5 +1,5 @@
 ---
-title: "Changer de vie, pour changer de modèle"
+title: "Pourquoi j'ai quitté un job qui a"
 date: 2020-08-26T14:30:24+02:00
 tags:
   - humeur

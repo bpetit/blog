@@ -7,7 +7,7 @@ tags:
   - numérique
   - écologie
   - société
-image: /temperature-anomaly.png
+image: /temperature-anomaly.svg
 thumbnail: /temperature-anomaly.png
 share_img: /temperature-anomaly.png
 author: Benoit Petit
