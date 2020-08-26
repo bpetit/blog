@@ -12,7 +12,7 @@ thumbnail: temperature-anomaly.svg
 author: Benoit Petit
 ---
 
-Voilà un peu moins d'un mois que j'ai officiellement quitté mon emploi (Ingénieur cloud/SRE, dans une scale-up française). Ce travail avait pourtant beaucoup d'arguments: le luxe de la croissance, d'excellentes conditions de travail, beaucoup d'autonomie, un bon salaire, beaucoup de moyens investis pour le bien-être des employés. Ca ne faisait pas tout à fait deux ans que j'avais commencé ce travail et je n'avais rien à reprocher concrètement à mon employeur. Alors pourquoi partir ?
+Ca fait un peu moins d'un mois que j'ai quitté mon emploi (ingénieur cloud/SRE, dans une scale-up française). Ce travail avait pourtant beaucoup d'arguments: le luxe de la croissance, d'excellentes conditions de travail, beaucoup d'autonomie, un bon salaire, beaucoup de moyens investis pour le bien-être des employés. Ca ne faisait pas tout à fait deux ans que j'avais commencé ce travail et je n'avais rien à reprocher concrètement à mon employeur. Alors pourquoi partir ?
 
 Comme je l'évoquais dans un [précédent article](https://bpetit.nce.re/fr/2020/07/au-fait-pourquoi-on-bosse-dans-lit/index.html), la finalité de mon travail est devenue très importante à mes yeux ces dernières années. Je me suis contenté, pendant plusieurs années, de baser mes critères sur le défi technique, les conditions de travail et le salaire. Dans ce contexte, accepter ce poste était un très bon choix.
 
