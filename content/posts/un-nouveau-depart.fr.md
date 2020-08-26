@@ -83,4 +83,4 @@ Vous l'aurez compris, pour parler de l'impact du numérique sur l'environnement,
   
   Je veux contribuer à un effet boule de neige, que notre secteur devienne plus responsable, transparent et d'utilité publique. Peut-être que je rêve éveillé, mais il faut essayer. **Au pire, ça marche**.  
     
-  Si vous m'avez lu jusque là, bravo et merci ! Je serai ravi d'en discuter par le moyen de votre choix parmis ceux proposés en dessous :)
+  *Si vous m'avez lu jusque là, bravo et merci ! Je serai ravi d'en discuter par le moyen de votre choix parmis ceux proposés en dessous :)*
