@@ -79,7 +79,7 @@ Ces conclusions sont restées discrêtes dans les articles que j'ai pu lire, tra
 
 Pour effectivement réduire, ou au moins plafonner l'impact du secteur, il me semble impératif de mesurer la consommation réelle et les autres impacts (extraction miniaire et ses conséquences, recyclage et pollution liés aux déchets électroniques, etc...) et de se baser sur des données vérifiables.
 
-# Mesurer, itérer, vérifier, comprendre
+# Mesurer, itérer, comprendre... et changer
 
 Vous l'aurez compris, pour parler de l'impact du numérique sur l'environnement, on manque de données et de projections fiables. C'est exactement le projet dans lequel je me lance aujourd'hui. Je veux proposer une solution à ce manque. L'objectif est de permettre aux clients des services cloud, de mesurer l'impact de leur consommation. La première partie du projet consiste à créer une solution, open source, de mesure, simple à installer et à piloter pour collecter les métriques de consommation, à destination des hébergeurs, fournisseurs de cloud ou entreprises gérant des infrastructures *on premise*. La seconde consiste à créer un fournisseur de cloud, transparent et éthique, qui propose ces métriques à ses clients et des pistes pour réduire l'impact de leur consommation. 
   
