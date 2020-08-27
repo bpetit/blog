@@ -18,7 +18,7 @@ Voilà maintenant un peu moins d'un mois que j'ai quitté mon emploi (ingénieur
 Je me suis contenté, jusqu'à récemment, de baser mes critères sur le défi technique, les conditions de travail et le salaire. Dans ce contexte, accepter ce poste était un très bon choix. Je vais tenter d'expliquer en quoi et pourquoi mes aspirations ont progressivement changé.
 
   
-# Vie privée, démocratie, souveraineté numérique, éthique, cloud et logiciel libre
+# Vie privée, souveraineté numérique, éthique, cloud et logiciel libre
 
 Dès le début de mes études supérieures (2009), j'ai vite été plongé dans ce conflit latent, entre l'utopie numérique portée par les libristes, le [monde cynique](https://www.zdnet.fr/actualites/rachat-de-sun-par-oracle-inquietude-chez-les-pros-du-logiciel-libre-39393070.htm) des grandes entreprises du secteur et le gouvernement [visiblement dépassé](https://www.numerama.com/magazine/12508-albanel-le-ministere-de-la-culture-a-comme-pare-feu-open-office-maj.html) par le sujet, mais tout de même prompt à légiférer à tour de bras. La vie privée en ligne, l'accès au code source et la question de la souveraineté numérique sont des sujets qui m'ont été chers dès le départ et sont devenus [incontournables](https://fr.wikipedia.org/wiki/PRISM_%28programme_de_surveillance%29) [au cours de ma carrière](https://fr.wikipedia.org/wiki/CLOUD_Act).
 
