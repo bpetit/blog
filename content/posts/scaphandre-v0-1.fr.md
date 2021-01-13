@@ -30,7 +30,7 @@ Je me suis alors rendu compte que dans un tel contexte, **la ressource IT** (CPU
 
 Comment alors, rendre visible l'invisible ?  
 Comment remettre **au centre de l'attention** des entreprises, à commencer par les gens comme moi qui y travaill(ai)ent, **l'impact** de ces pratiques ?  
-Comment les inciter à réduire réduire cet impact ?   
+Comment les inciter à réduire cet impact ?   
 (voire à changer de modèle mais c'est un autre débat)
 
 ## Le pouvoir des graphes
