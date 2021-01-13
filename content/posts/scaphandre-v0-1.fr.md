@@ -1,6 +1,6 @@
 ---
 title: "Scaphandre v0.1.1: mesurer la consommation d'énergie (des coulisses) du numérique"
-date: 2021-01-13T11:30:24+02:00
+date: 2021-01-13T15:20:24+02:00
 tags:
   - numérique
   - écologie
@@ -78,7 +78,7 @@ Et par la suite:
 - estimation de la consommation d'énergie, lorsque [la mesure n'est pas possible](https://medium.com/teads-engineering/evaluating-the-carbon-footprint-of-a-software-platform-hosted-in-the-cloud-e716e14e060c) (cloud public)
 - envoi des métriques dans [warp10](https://www.warp10.io/)
 
-Le projet est écrit en [Rust](https://www.rust-lang.org/), mais il est déjà acté dans la [roadmap](https://github.com/hubblo-org/scaphandre/projects/1) de permettre aux contributeurs et utilisateurs de créer des "plugins" dans d'autres langages. Le possible support de MacOS est étudié ainsi que des processeurs ARM... affaire à suivre. Pour prendre connaissance du reste, ou proposer une fonctionnalité qui vous serait utile, c'est [ici](https://github.com/hubblo-org/scaphandre/issues) !
+Le projet est écrit en [Rust](https://www.rust-lang.org/), mais il est déjà acté dans la [roadmap](https://github.com/hubblo-org/scaphandre/projects/1) de permettre aux contributeurs et utilisateurs de créer des "plugins" dans d'autres langages. Le possible support de MacOS est étudié ainsi que des processeurs ARM... affaire à suivre. Pour prendre connaissance du reste, ou proposer une fonctionnalité qui vous serait utile pour comprendre la consommation d'énergie d'un projet IT, c'est [ici](https://github.com/hubblo-org/scaphandre/issues) !
 
 ## Petites précisions de rigueur
 
