@@ -45,7 +45,7 @@ Vous l'aurez compris, pour que la "tech" agisse sur son impact carbonne, en comm
 
 Venons en au sujet de cet article qui est de vous présenter [scaphandre](https://github.com/hubblo-org/scaphandre), un logiciel open-source de mesure de la consommation d'énergie d'un serveur informatique ou ordinateur, mais aussi des services et applications qu'il exécute. Plus précisément, scaphandre est à la fois un outil utilisable en ligne de commande et un démon (service).
 
-Le projet a notamment pour objectif de rendre la mesure de consommation d'énergie suffisament simple pour que ça devienne "un basique", au même titre que le nombre de requêtes par seconde ou la latence pour un développeur, le temps CPU consommé ou la RAM pour un SRE, etc..  
+Le projet a notamment pour objectif de rendre la mesure de consommation d'énergie suffisament simple pour que ça devienne "un basique", au même titre que le nombre de requêtes par seconde ou la latence, le temps CPU consommé ou la RAM, etc..  
   
   Scaphandre est **extensible**, il peut faire appel à différentes "logiques" pour collecter les métriques (*[sensors](https://hubblo-org.github.io/scaphandre/explanations/internal-structure.html#sensors)*) et différentes logiques pour envoyer ou exposer ces métriques (*[exporters](https://hubblo-org.github.io/scaphandre/explanations/internal-structure.html#exporters)*). Cependant, il n'éxecute qu'un *sensor* et qu'un *exporter* à la fois (rien n'empêche de lancer plusieurs instances de scaphandre pour répondre à des besoins différents).
   
