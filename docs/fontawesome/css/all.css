@@ -1801,6 +1801,12 @@ readers do not read off random characters that represent icons */
 .fa-golf-ball:before {
   content: "\f450"; }
 
+.fa-goodreads:before {
+  content: "\f3a8"; }
+
+.fa-goodreads-g:before {
+  content: "\f3a9"; }
+
 .fa-google:before {
   content: "\f1a0"; }
 
