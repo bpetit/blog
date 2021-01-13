@@ -28,9 +28,10 @@ Si l'on est un peu "éveillé" sur le fait que [l'avenir de l'humanité](https:/
 J'étais moi-même incapable à cette époque de mesurer les conséquences de ces projets. Nous utilisions notamment des systèmes d'*auto-scaling* et nous étions sur un cloud public (évidemment), où la ressource est **virtuellement infinie**. Lancer de nouvelles machines, lors d'une montée en charge, ne nécessitait aucune action humaine (grâce à l'auto-scaling).
 Je me suis alors rendu compte que dans un tel contexte, **la ressource IT** (CPU/RAM/GPU/...) n'a plus **aucun lien** "cognitif" avec le **monde réel**. Il est impossible en l'état de se représenter ne serait-ce qu'un ordre de grandeur de ce que le service que l'on opère consomme en terme d'énergie. Impossible alors de se rendre compte de son impact sur le climat.
 
-Comment alors, rendre visible l'invisible ?  
-Comment remettre **au centre de l'attention** des entreprises, à commencer par les gens comme moi qui y travaill(ai)ent, **l'impact** de ces pratiques ?  
-Comment les inciter à réduire cet impact ?   
+Comment alors :
+* rendre visible l'invisible ?  
+* remettre **au centre de l'attention** des entreprises, à commencer par les gens comme moi qui y travaill(ai)ent, **l'impact** de ces pratiques ?  
+* les inciter à réduire cet impact ?  
 (voire à changer de modèle mais c'est un autre débat)
 
 ## Le pouvoir des graphes
@@ -73,7 +74,7 @@ Voici à quoi s'attendre dans les jours/semaines à venir :
 - envoi des métriques dans [riemann](http://riemann.io/)
 - mesure de la consommation d'énergie d'un cluster [kubernetes](https://kubernetes.io/) ainsi que des conteneurs et services qui tournent dessus
 
-Et par la suite:
+Et par la suite :
 
 - estimation de la consommation d'énergie, lorsque [la mesure n'est pas possible](https://medium.com/teads-engineering/evaluating-the-carbon-footprint-of-a-software-platform-hosted-in-the-cloud-e716e14e060c) (cloud public)
 - envoi des métriques dans [warp10](https://www.warp10.io/)
