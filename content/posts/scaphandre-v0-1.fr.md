@@ -30,7 +30,7 @@ Je me suis alors rendu compte que dans un tel contexte, **la ressource IT** (CPU
 
 Comment alors :
 * rendre visible l'invisible ?  
-* remettre **au centre de l'attention** des entreprises, à commencer par les gens comme moi qui y travaill(ai)ent, **l'impact** de ces pratiques ?  
+* remettre **au centre de l'attention** des entreprises, à commencer par les gens comme moi qui y travaill([ai](https://bpetit.nce.re/fr/2020/08/pourquoi-jai-quitt%C3%A9-mon-job-qui-avait-tout-pour-plaire/))ent, **l'impact** de ces pratiques ?  
 * les inciter à réduire cet impact ?  
 (voire à changer de modèle mais c'est un autre débat)
 
