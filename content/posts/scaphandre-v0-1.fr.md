@@ -39,7 +39,7 @@ Si vous êtes habitués à voir des graphes, à recevoir des alertes, ou même �
 
 En d'autres termes plus sérieux, on ne comprend ni n'agit **que sur ce que l'on mesure**.
 
-Vous l'aurez compris, pour que la "tech" agisse sur son impact carbonne, en commençant par sa consommation d'énergie ([secondaire](#petites-précisions-de-rigueur)), il faut qu'elle ait ces données sous les yeux. Il faut également qu'elle puisse s'assurer qu'une action ou une décision visant plus de sobriété a bien l'effet escompté (dommage pour ces après midi à nettoyer les boites mails).
+Vous l'aurez compris, pour que la "tech" agisse sur son impact carbone, en commençant par sa consommation d'énergie ([secondaire](#petites-précisions-de-rigueur)), il faut qu'elle ait ces données sous les yeux. Il faut également qu'elle puisse s'assurer qu'une action ou une décision visant plus de sobriété a bien l'effet escompté (dommage pour ces après-midi à nettoyer les boites mails).
 
 ## Descendre sous la surface
 
@@ -51,9 +51,9 @@ Le projet a notamment pour objectif de rendre la mesure de consommation d'énerg
   
   Il peut donc être mis en place dans une infrastructure, **quelque soit la stack de monitoring**, puisqu'il est possible de développer un nouvel exporter pour votre [TSDB](https://blog.octo.com/introduction-aux-bases-de-donnees-temporelles/) ou outil d'analyse de données préferré, si l'*exporter* en question n'existe pas déjà. L'idée sous-jacente est que pour que ces mesures soient faites et exploitées par une majorité d'informaticiens, l'outil doit **s'adapter à l'existant** et non l'inverse.
 
-Scaphandre est de plus développé pour être le plus léger possible, à la fois en terme de ressources et de consommation d'énergie (l'inverse serait dommageable). Sa configuration est simpliste de manière à ne pas ajouter de charge de travail supplémentaire aux personnes qui opèrent l'infrastructure.
+Scaphandre est de plus développé pour être le plus léger possible, à la fois en terme de ressources et de consommation d'énergie (l'inverse serait dommageable). Sa configuration est simplissime de manière à ne pas ajouter de charge de travail supplémentaire aux personnes qui opèrent l'infrastructure.
 
-J'ai beaucoup utilisé le mot infrastructure, jusque là, mais scaphandre peut également être utilisé pour le développement, de manière à savoir, par exemple, si d'une **release** à une autre, une **application** est plus ou moins **énergivore**.
+Son usage ne s'arrête pas à l'"infrastructure". Scaphandre peut également être utilisé pour le développement, de manière à savoir, par exemple, si d'une **release** à une autre, une **application** est plus ou moins **énergivore**.
 
 ## Etat et évolution
 
