@@ -58,7 +58,7 @@ Son usage ne s'arrête pas à l'"infrastructure". Scaphandre peut également êt
 
 ## Etat et évolution
 
-Le projet, démarré en octobre 2020, en est à sa version 0.1.1, comprenant les fonctionnalités suivantes :
+Le projet, sous license Apache-2.0, démarré en octobre 2020, en est à sa version 0.1.1. Il comprend les fonctionnalités suivantes :
 
 - mesure de la consommation d'énergie sur une machine physique x86, sous GNU/Linux
 - mesure de la consommation d'énergie des machines virtuelles présentes sur cette même machine (fonctionne pour Qemu/KVM seulement pour le moment)
