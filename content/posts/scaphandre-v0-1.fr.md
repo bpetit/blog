@@ -8,6 +8,7 @@ tags:
   - cloud
   - scaphandre
   - open-source
+  - rust
 image: /scaphandre.large.cleaned.png
 thumbnail: /scaphandre.large.cleaned.png
 share_img: /scaphandre.large.cleaned.png
@@ -44,7 +45,7 @@ Vous l'aurez compris, pour que la "tech" agisse sur son impact carbone, en comme
 
 ## Descendre sous la surface
 
-Venons en au sujet de cet article qui est de vous présenter [scaphandre](https://github.com/hubblo-org/scaphandre), un logiciel open-source de mesure de la consommation d'énergie d'un serveur informatique ou ordinateur, mais aussi des services et applications qu'il exécute. Plus précisément, scaphandre est à la fois un outil utilisable en ligne de commande et un démon (service).
+Venons en au sujet de cet article qui est de vous présenter [scaphandre](https://github.com/hubblo-org/scaphandre), un logiciel open-source de **mesure de la consommation d'énergie d'un serveur informatique** ou ordinateur, **mais aussi des services et applications qu'il exécute**. Plus précisément, scaphandre est à la fois un outil utilisable en ligne de commande et un **démon** (service).
 
 Le projet a notamment pour objectif de rendre la mesure de consommation d'énergie suffisamment simple pour que ça devienne "un basique", au même titre que le nombre de requêtes par seconde ou la latence, le temps CPU consommé ou la RAM, etc...  
   
@@ -69,7 +70,7 @@ Le projet, sous license Apache-2.0, démarré en octobre 2020, en est à sa vers
 
 Vous trouverez [ici](https://metrics.hubblo.org) un exemple de dashboard construit avec les métriques provenant de scaphandre.
 
-Voici à quoi s'attendre dans les jours/semaines à venir :
+Voici les fonctionnalités auxquelles s'attendre dans les jours/semaines à venir :
 
 - envoi des métriques dans [riemann](http://riemann.io/)
 - mesure de la consommation d'énergie d'un cluster [kubernetes](https://kubernetes.io/) ainsi que des conteneurs et services qui tournent dessus
