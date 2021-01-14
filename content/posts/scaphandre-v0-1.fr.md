@@ -26,7 +26,7 @@ Si l'on est conscient que [l'avenir de l'humanité](https://bpetit.nce.re/fr/202
 ## Mais alors pourquoi rien n'est fait ?
 
 J'étais moi-même incapable à cette époque de mesurer les conséquences de ces projets. Nous utilisions notamment des systèmes d'*auto-scaling* et nous étions sur un cloud public (évidemment), où la ressource est **virtuellement infinie**. Lancer de nouvelles machines, lors d'une montée en charge, ne nécessitait aucune action humaine (grâce à l'auto-scaling).
-Je me suis alors rendu compte que dans un tel contexte, **la ressource IT** (CPU/RAM/GPU/...) n'a plus **aucun lien** "cognitif" avec le **monde réel**. Il est impossible en l'état de se représenter ne serait-ce qu'un ordre de grandeur de ce que le service que l'on opère consomme en terme d'énergie. Impossible alors de se rendre compte de son impact sur le climat.
+Je me suis rendu compte que dans un tel contexte, **la ressource IT** (CPU/RAM/GPU/...) n'a plus **aucun lien** "cognitif" avec le **monde réel**. Il est impossible en l'état de se représenter ne serait-ce qu'un ordre de grandeur de ce que le service que l'on opère consomme en terme d'énergie. Impossible alors de se rendre compte de son impact sur le climat.
 
 Comment alors :
 * rendre visible l'invisible ?  

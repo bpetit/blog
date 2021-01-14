@@ -21,12 +21,12 @@ author: Benoit Petit
 Comme d'autres petites mains de la "startup nation", j'ai été amené à travailler sur des projets à "gros volume" (tout est relatif). Je pense par exemple à des projets mettant en oeuvre des modèles de machine learning, bien souvent pour montrer la bonne publicité à la bonne personne, au bon moment. Entraîner ces modèles nécessite beaucoup de ressources (CPU, RAM, GPU, etc.). Il en va de même pour les API qui collectent des données (qui bien souvent vont permettre d'entrainer ces mêmes modèles de ML). Ces APIs, selon le nombre de *clients* qui les contactent, peuvent recevoir jusqu'à quelques milliards de requêtes par jour (voire plus, mais je n'ai pas eu l'occasion de travailler sur plus "gros").
 
 J'ai remarqué alors que nous étions souvent très heureux du défi technique que ces systèmes représentent, mais rarement critiques du nombre de machines nécessaires.
-Si l'on est un peu "éveillé" sur le fait que [l'avenir de l'humanité](https://bpetit.nce.re/fr/2020/08/pourquoi-jai-quitt%C3%A9-mon-job-qui-avait-tout-pour-plaire/#relever-la-t%C3%AAte-de-l%C3%A9cran) dépend de notre capacité à réguler et faire évoluer nos pratiques (pas qu'en informatique bien entendu), on peut se poser la question de ce qu'implique le fonctionnement de telles infrastructures et services sur le climat (et bien plus).
+Si l'on est conscient que [l'avenir de l'humanité](https://bpetit.nce.re/fr/2020/08/pourquoi-jai-quitt%C3%A9-mon-job-qui-avait-tout-pour-plaire/#relever-la-t%C3%AAte-de-l%C3%A9cran) dépend de notre capacité à réguler et faire évoluer nos pratiques (pas qu'en informatique bien entendu), on peut se poser la question de ce qu'implique le fonctionnement de telles infrastructures et services sur le climat (et bien plus).
 
 ## Mais alors pourquoi rien n'est fait ?
 
 J'étais moi-même incapable à cette époque de mesurer les conséquences de ces projets. Nous utilisions notamment des systèmes d'*auto-scaling* et nous étions sur un cloud public (évidemment), où la ressource est **virtuellement infinie**. Lancer de nouvelles machines, lors d'une montée en charge, ne nécessitait aucune action humaine (grâce à l'auto-scaling).
-Je me suis alors rendu compte que dans un tel contexte, **la ressource IT** (CPU/RAM/GPU/...) n'a plus **aucun lien** "cognitif" avec le **monde réel**. Il est impossible en l'état de se représenter ne serait-ce qu'un ordre de grandeur de ce que le service que l'on opère consomme en terme d'énergie. Impossible alors de se rendre compte de son impact sur le climat.
+Je me suis rendu compte que dans un tel contexte, **la ressource IT** (CPU/RAM/GPU/...) n'a plus **aucun lien** "cognitif" avec le **monde réel**. Il est impossible en l'état de se représenter ne serait-ce qu'un ordre de grandeur de ce que le service que l'on opère consomme en terme d'énergie. Impossible alors de se rendre compte de son impact sur le climat.
 
 Comment alors :
 * rendre visible l'invisible ?  
