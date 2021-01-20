@@ -19,15 +19,15 @@ author: Benoit Petit
 
 ## The roots of the project
 
-As many other tech workers in startups, I've worked on pretty large scale projects (even if that's subjective). I'm talking about projects involving machine learning, for example, that are often about showing the right advertisment to the right person at the right moment. Training the machine learning models for that requires a lot of resources (CPU, RAM, GPU, etc.). The same is true with APIs that are in charge of collecting data from the clients (which will very often be used to train the ML models). Those APIs, depending on how many clients are contacting them, will receive up to several billions requests per day (or even more, but I only speak about what I've seen).
+As many other tech workers in startups, I've worked on pretty large scale projects (even if that's subjective). I'm talking about projects involving machine learning, for example, that are often about showing the right advertisment to the right person at the right moment. Training the machine learning models for that requires a lot of resources (CPU, RAM, GPU, etc.). The same is true with APIs that are in charge of collecting data from the clients (the data will very often be used to train the ML models). Those APIs, depending on how many clients are contacting them, will receive up to several billions requests per day (or even more, but I only speak about what I've seen).
 
 I noticed at that time, that we were often proud and happy of the technical challenge that those systems represented, but we were very less concerned about how many machines were needed to run them.
-If you are aware that [our](https://www.reuters.com/article/global-threats-biodiversity-climate-chan-idUSL8N2JO34K) [future](http://web.archive.org/web/20210113085907/https://amp.theguardian.com/environment/2021/jan/13/top-scientists-warn-of-ghastly-future-of-mass-extinction-and-climate-disruption-aoe) will depend on our ability to deeply change our usages and practices (not only in tech, obviously), you may wonder about what it means to have such energy hungry systems running on the climate (and much more).
+If you are aware that [our](https://www.reuters.com/article/global-threats-biodiversity-climate-chan-idUSL8N2JO34K) [future](http://web.archive.org/web/20210113085907/https://amp.theguardian.com/environment/2021/jan/13/top-scientists-warn-of-ghastly-future-of-mass-extinction-and-climate-disruption-aoe) will depend on our ability to deeply change our usages and practices (not only in tech, obviously), you may wonder about what it means to have such energy hungry systems running for the climate (and much more).
 
 ## So, why is nothing done about it ?
 
 I was myself, pretty much unable to understand the importance of the consequences of those projects. One of the reasons was that we were using *auto-scaling* systems and we were running on public clouds (you guessed it), where tech resource is **virtually infinite**. Running new machines, to absorb a traffic surge or train a model, didn't require any human action (thanks to the auto-scaling).
-I noticed then, that **tech resources** (CPU/RAM/GPU/...) **don't have any cognitive relationship** with the **real world**. It's almost impossible in that situation to visualize even a sketch of how much energy is consumed. It's even harder then to understand the consequences on climate.
+I noticed then, that **tech resources** (CPU/RAM/GPU/...) **don't have any cognitive relationship** with the **real world**. It's almost impossible in that situation to visualize even a sketch of how much energy is consumed. It's even harder then to understand the consequences on the climate.
 
 How then :
 * make the invisible visible ?  
