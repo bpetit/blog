@@ -84,6 +84,6 @@ Scaphandre is written in [Rust](https://www.rust-lang.org/), but we have added t
 
 ## Some precisions
 
-* The energy consumption is only one of the vectors of greenhouse gazes emissions of an industry, among other, of course. The others are beyond the scope of this article.
+* The energy consumption is only one of the vectors of greenhouse gazes emissions of an industry, among others, of course. The others are beyond the scope of this article.
 
 * Electricity is a **secondary** energy, different from the primary energies (gaz, oil, nuclear, wind, etc.) which are used to produce it. To measure the greenhouse gazes emissions resulting from consuming electricity, you need to know the primary energies used (and how much, for each of them), which is very different [from one country to another](https://www.electricitymap.org/map). Scaphandre only gives the first item needed to get the climate impact of the design or the usage of a tech service, which is the secondary energy consumption.
