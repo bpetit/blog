@@ -26,7 +26,7 @@ If you are aware that [our](https://www.reuters.com/article/global-threats-biodi
 
 ## So, why is nothing done about it ?
 
-I was myself, pretty much unable to understand the importance of the consequences of those projects. One of the reasons was that we were using *auto-scaling* systems and we were running on public clouds (you guessed it), where tech resource is **virtually infinite**. Running new machines, to absorb a traffic surge or train a model, didn't require any human action (thanks to the auto-scaling).
+I was unable myself to understand the importance of the consequences of those projects. One of the reasons was that we were using *auto-scaling* systems and we were running on public clouds (you guessed it), where tech resource is **virtually infinite**. Running new machines, to absorb a traffic surge or train a model, didn't require any human action (thanks to the auto-scaling).
 I noticed then, that **tech resources** (CPU/RAM/GPU/...) **don't have any cognitive relationship** with the **real world**. It's almost impossible in that situation to visualize even a sketch of how much energy is consumed. It's even harder then to understand the consequences on the climate.
 
 How then :
@@ -84,6 +84,6 @@ Scaphandre is written in [Rust](https://www.rust-lang.org/), but we have added t
 
 ## Some precisions
 
-* The energy consumption is only one of the vector of greenhouse gazes emissions of an industrie, of course. The others are beyond the scope of this article.
+* The energy consumption is only one of the vectors of greenhouse gazes emissions of an industry, among other, of course. The others are beyond the scope of this article.
 
 * Electricity is a **secondary** energy, different from the primary energies (gaz, oil, nuclear, wind, etc.) which are used to produce it. To measure the greenhouse gazes emissions resulting from consuming electricity, you need to know the primary energies used (and how much, for each of them), which is very different [from one country to another](https://www.electricitymap.org/map). Scaphandre only gives the first item needed to get the climate impact of the design or the usage of a tech service, which is the secondary energy consumption.
