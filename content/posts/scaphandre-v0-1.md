@@ -41,7 +41,7 @@ If you are used to graphs, to receive alarms, or even to do on-call shifts, you 
 
 In other more serious words, we only act on what we **measure**.
 
-To have the tech industry reflect and act on its own climate impact, starting with its ([secondary](#petites-précisions-de-rigueur)) energy consumption , it needs to have its impact on sight and understand it. It's also very important that the efficacity of decisions and actions targeting tech sufficiency can me measured.
+To have the tech industry reflect and act on its own climate impact, starting with its ([secondary](#petites-précisions-de-rigueur)) energy consumption , it needs to see its impact and understand it. It's also very important that the efficacity of decisions and actions targeting tech sufficiency can me measured.
 
 ## Going under the surface
 
@@ -55,7 +55,7 @@ This project intends to be simple enough to setup and use, so that power consump
 
 Scaphandre aims to be as light as possible, both in terms of ressources and of energy consumption (the opposite would be sad). Its configuration is very simple to not add extra work to the people using it.
 
-Its usage doesn't stop at the infrastructure level, as it can be used to track the power consumption of an applicatio, from one **release** to the other, to see if things are getting better, or worse.
+Its usage doesn't stop at the infrastructure level, as it can be used to track the power consumption of an application, from one **release** to the other, to see if things are getting better, or worse.
 
 ## State and evolution
 
@@ -80,7 +80,7 @@ And a bit later :
 - estimating the energy consumption when [measuring is not an option](https://medium.com/teads-engineering/evaluating-the-carbon-footprint-of-a-software-platform-hosted-in-the-cloud-e716e14e060c) (public cloud)
 - sending the metric to [warp10](https://www.warp10.io/)
 
-Scaphandre is written in [Rust](https://www.rust-lang.org/), but we have added to the [roadmap](https://github.com/hubblo-org/scaphandre/projects/1) to allow contributors to write plugins in other languages. Being able to measure on MacOS and on ARM CPUs is also being studied... stay tuned. To read about the other items of the roadmap, or speak about a feature that may help you track and shrink the energy consumption of a tech project, [please keep in touch](https://github.com/hubblo-org/scaphandre) !
+Scaphandre is written in [Rust](https://www.rust-lang.org/), but we have added to the [roadmap](https://github.com/hubblo-org/scaphandre/projects/1) to allow contributors to write plugins in other languages. Being able to measure on MacOS and on ARM CPUs is also being studied... stay tuned. To read about the other items of the roadmap, or speak about a feature that may help you track and shrink the energy consumption of a tech project, [please reach us](https://github.com/hubblo-org/scaphandre) !
 
 ## Some precisions
 
