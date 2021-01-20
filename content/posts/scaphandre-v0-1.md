@@ -37,7 +37,7 @@ How then :
 
 ## The power of graphs
 
-If you are used to graphs, to receive alarms, or even to do on-call shifts, you know what I'll call **the power of graphs**. This principle (I've almost written theorem but that wouldn't be very accurate), whose basement is very real, can be summarized like this: "if a user knows (s)he is concerned with a graph, will do something about it, even if (s)he doesn't know yet what it means".
+If you are used to graphs, to receive alarms, or even to do on-call shifts, you know what I'll call **the power of graphs**. This principle (I've almost written "theorem" but that would be a bit exagerated), whose base is very real, can be summarized like this: "if a user knows (s)he is concerned with a graph, will do something about it, even if (s)he doesn't know yet what it means".
 
 In other more serious words, we only act on what we **measure**.
 
