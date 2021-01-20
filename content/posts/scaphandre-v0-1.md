@@ -26,7 +26,7 @@ If you are aware that [our](https://www.reuters.com/article/global-threats-biodi
 
 ## So, why is nothing done about it ?
 
-I was myself, pretty much unable to understand the importance of the consequences of those projects. One of the reasons was that we were using *auto-scaling* systems and we were running on public clouds (you guessed it), where tech resource is **virtually infinite**. Running new machines, to absorb a traffic surge or train a model, didn't require any human action (thanks to the auto-scaling).
+I was unable myself to understand the importance of the consequences of those projects. One of the reasons was that we were using *auto-scaling* systems and we were running on public clouds (you guessed it), where tech resource is **virtually infinite**. Running new machines, to absorb a traffic surge or train a model, didn't require any human action (thanks to the auto-scaling).
 I noticed then, that **tech resources** (CPU/RAM/GPU/...) **don't have any cognitive relationship** with the **real world**. It's almost impossible in that situation to visualize even a sketch of how much energy is consumed. It's even harder then to understand the consequences on the climate.
 
 How then :
