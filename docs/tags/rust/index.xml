@@ -8,17 +8,17 @@
     <language>en-us</language>
     <managingEditor>bpetit@nce.re (Benoit Petit)</managingEditor>
     <webMaster>bpetit@nce.re (Benoit Petit)</webMaster>
-    <lastBuildDate>Wed, 13 Jan 2021 15:20:24 +0200</lastBuildDate>
+    <lastBuildDate>Wed, 20 Jan 2021 11:10:24 +0200</lastBuildDate>
     
 	<atom:link href="https://bpetit.nce.re/tags/rust/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>Scaphandre v0.1.1: measuring energy consumption (of backstages) of the tech industry</title>
-      <link>https://bpetit.nce.re/2021/01/scaphandre-v0.1.1-measuring-energy-consumption-of-backstages-of-the-tech-industry/</link>
-      <pubDate>Wed, 13 Jan 2021 15:20:24 +0200</pubDate>
+      <title>Scaphandre v0.1.1: measuring the energy consumption of the tech industry (backstages)</title>
+      <link>https://bpetit.nce.re/2021/01/scaphandre-v0.1.1-measuring-the-energy-consumption-of-the-tech-industry-backstages/</link>
+      <pubDate>Wed, 20 Jan 2021 11:10:24 +0200</pubDate>
       <author>bpetit@nce.re (Benoit Petit)</author>
-      <guid>https://bpetit.nce.re/2021/01/scaphandre-v0.1.1-measuring-energy-consumption-of-backstages-of-the-tech-industry/</guid>
+      <guid>https://bpetit.nce.re/2021/01/scaphandre-v0.1.1-measuring-the-energy-consumption-of-the-tech-industry-backstages/</guid>
       <description>The roots of the project As many other tech workers in startups, I&amp;rsquo;ve worked on pretty large scale projects (even if that&amp;rsquo;s subjective). I&amp;rsquo;m talking about projects involving machine learning, for example, that are often about showing the mright ad to the right person at the right moment. Training the machine learning models for that requires a lot of resources (CPU, RAM, GPU, etc.). The same is true with APIs that are in charge of collecting data from the clients (which will very often be used to train the ML models).</description>
     </item>
     
