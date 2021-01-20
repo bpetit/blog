@@ -1,6 +1,6 @@
 ---
 title: "Scaphandre v0.1.1: measuring the energy consumption of the tech industry (backstages)"
-date: 2021-01-13T15:20:24+02:00
+date: 2021-01-20T11:10:24+02:00
 tags:
   - tech
   - ecology
@@ -19,7 +19,7 @@ author: Benoit Petit
 
 ## The roots of the project
 
-As many other tech workers in startups, I've worked on pretty large scale projects (even if that's subjective). I'm talking about projects involving machine learning, for example, that are often about showing the mright ad to the right person at the right moment. Training the machine learning models for that requires a lot of resources (CPU, RAM, GPU, etc.). The same is true with APIs that are in charge of collecting data from the clients (which will very often be used to train the ML models). Those APIs, depending on how many clients are contacting them, will receive up to several billions requests per day (or even more, but I only speak about what I've seen).
+As many other tech workers in startups, I've worked on pretty large scale projects (even if that's subjective). I'm talking about projects involving machine learning, for example, that are often about showing the right advertismen to the right person at the right moment. Training the machine learning models for that requires a lot of resources (CPU, RAM, GPU, etc.). The same is true with APIs that are in charge of collecting data from the clients (which will very often be used to train the ML models). Those APIs, depending on how many clients are contacting them, will receive up to several billions requests per day (or even more, but I only speak about what I've seen).
 
 I noticed at that time, that we were often proud and happy of the technical challenge that those systems represented, but we were very less concerned about how many machines were needed to run them.
 If you are aware that [our](https://www.reuters.com/article/global-threats-biodiversity-climate-chan-idUSL8N2JO34K) [future](http://web.archive.org/web/20210113085907/https://amp.theguardian.com/environment/2021/jan/13/top-scientists-warn-of-ghastly-future-of-mass-extinction-and-climate-disruption-aoe) will depend on our ability to deeply change our usages and practices (not only in tech, obviously), you may wonder about what it means to have such energy hungry systems running on the climate (and much more).
