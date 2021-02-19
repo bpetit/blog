@@ -22,11 +22,12 @@ Connaissez vous les pratiques SRE (et non pas RSE) ? Ce sont des pratiques mises
 
 ## DevOps, SRE, quelle différence ?
 
-Puisque nous avons mis un pied dans le dangereux royaume des buzzwords, tentons d'y voir plus clair avant de continuer. Si vous êtes déjà familiers avec le DevOps et les pratiques SRE, vous pouvez passer directement [à la suite de cet article](#mesure-feedback-et-action). a quelques point communs avec le mouvement DevOps.
+Puisque nous avons mis un pied dans le dangereux royaume des buzzwords, tentons d'y voir plus clair avant de continuer. Si vous êtes déjà familiers avec le DevOps et les pratiques SRE, vous pouvez passer directement [à la suite de cet article](#sli-slo-et-le-budget-derreur). a quelques point communs avec le mouvement DevOps, notamment :
 
 - **Le changement est nécessaire pour s'améliorer**: adopter les méthodes DevOps ou les pratiques SRE, c'est l'inverse de l'immobilisme et des gels de déploiements sur une infrastructure. Dans les deux cas, identifier les axes d'amélioration, modifier et apprendre de ses erreurs est essentiel. Pour que cette philosophie fonctionne, il est indispensable que les incidents
 - **Casser les silos** : contrairement au monde décrit dans [IT crowd](https://fr.wikipedia.org/wiki/The_IT_Crowd), les pratiques DevOps comme SRE encouragent une collaboration régulière et systématique entre les développeurs, le produit et l'infrastructure, à chaque étape d'un projet. La litterature SRE parle même de "shared ownership model" ou modèle de responsabilité partagé. Dans ce contexte, les responsables produit sont tout autant **responsables** (et donc **investis**) que les développeurs ou que les SRE, lors de la mise en place d'un changement dans un service ou une application.
 - **De petits changements, fréquents** sont préferrés à de grosses mise à jour issues de plusieurs mois de développements. Ceci permet une plus grande fiabilité, en particulier si chacun d'entre eux est testé automatiquement, ce qui contribue à la [**feedback loop**](https://devops.com/faster-feedback/).
+- **Un incident ou un échec n'est jamais la faute d'une seule personne** : il convient donc de comprendre l'explication systémique d'un problème (le bouton dangereux dans l'interface X n'est pas assez rouge et on ne demande pas à l'utilisateur Michel si il est sûr de lui), plutôt que de chercher un coupable (c'est la faut de Michel).
 
 ## SLI, SLO et le budget d'erreur
 

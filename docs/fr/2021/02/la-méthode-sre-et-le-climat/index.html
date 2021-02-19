@@ -59,7 +59,7 @@
   "headline": "La méthode SRE et le climat",
   "description" : "Connaissez vous les pratiques SRE (et non pas RSE) ? Ce sont des pratiques mises en avant par Google, notamment depuis la sortie du premier livre \x26ldquo;référence\x26rdquo; intitulé \x26ldquo;Site Reliability Engineering\x26rdquo; en 2016. L\x26rsquo;\x26ldquo;ingénierie de la fiabilité des sites\x26rdquo;, en bon français (traduction brillament osée par les contributeurs de Wikipedia), a pour objectif au sein d\x26rsquo;une organisation de s\x26rsquo;assurer que les systèmes et services logiciels qui y sont créés sont évolutifs et surtout très fiables.",
   "inLanguage" : "fr",
-  "wordCount":  1341 ,
+  "wordCount":  1400 ,
   "datePublished" : "2021-02-19T19:25:24",
   "dateModified" : "2021-02-19T19:25:24",
   "image" : "https:\/\/bpetit.nce.re",
@@ -232,11 +232,12 @@
       <article role="main" class="blog-post">
         <p>Connaissez vous les pratiques SRE (et non pas RSE) ? Ce sont des pratiques mises en avant par Google, notamment depuis la sortie du premier livre &ldquo;référence&rdquo; intitulé &ldquo;<a href="https://sre.google/sre-book/table-of-contents/">Site Reliability Engineering</a>&rdquo; en 2016.   L&rsquo;&ldquo;ingénierie de la fiabilité des sites&rdquo;, en bon français (traduction brillament osée par les contributeurs de Wikipedia), a pour objectif au sein d&rsquo;une organisation de s&rsquo;assurer que les systèmes et services logiciels qui y sont créés sont évolutifs et surtout <strong>très fiables</strong>. Pour ce faire, de nombreux aspects de l&rsquo;ingénierie logicielle sont appliqués aux problèmes d&rsquo;infrastructure.</p>
 <h2 id="devops-sre-quelle-différence-">DevOps, SRE, quelle différence ?</h2>
-<p>Puisque nous avons mis un pied dans le dangereux royaume des buzzwords, tentons d&rsquo;y voir plus clair avant de continuer. Si vous êtes déjà familiers avec le DevOps et les pratiques SRE, vous pouvez passer directement <a href="#mesure-feedback-et-action">à la suite de cet article</a>. a quelques point communs avec le mouvement DevOps.</p>
+<p>Puisque nous avons mis un pied dans le dangereux royaume des buzzwords, tentons d&rsquo;y voir plus clair avant de continuer. Si vous êtes déjà familiers avec le DevOps et les pratiques SRE, vous pouvez passer directement <a href="#sli-slo-et-le-budget-derreur">à la suite de cet article</a>. a quelques point communs avec le mouvement DevOps, notamment :</p>
 <ul>
 <li><strong>Le changement est nécessaire pour s&rsquo;améliorer</strong>: adopter les méthodes DevOps ou les pratiques SRE, c&rsquo;est l&rsquo;inverse de l&rsquo;immobilisme et des gels de déploiements sur une infrastructure. Dans les deux cas, identifier les axes d&rsquo;amélioration, modifier et apprendre de ses erreurs est essentiel. Pour que cette philosophie fonctionne, il est indispensable que les incidents</li>
 <li><strong>Casser les silos</strong> : contrairement au monde décrit dans <a href="https://fr.wikipedia.org/wiki/The_IT_Crowd">IT crowd</a>, les pratiques DevOps comme SRE encouragent une collaboration régulière et systématique entre les développeurs, le produit et l&rsquo;infrastructure, à chaque étape d&rsquo;un projet. La litterature SRE parle même de &ldquo;shared ownership model&rdquo; ou modèle de responsabilité partagé. Dans ce contexte, les responsables produit sont tout autant <strong>responsables</strong> (et donc <strong>investis</strong>) que les développeurs ou que les SRE, lors de la mise en place d&rsquo;un changement dans un service ou une application.</li>
 <li><strong>De petits changements, fréquents</strong> sont préferrés à de grosses mise à jour issues de plusieurs mois de développements. Ceci permet une plus grande fiabilité, en particulier si chacun d&rsquo;entre eux est testé automatiquement, ce qui contribue à la <a href="https://devops.com/faster-feedback/"><strong>feedback loop</strong></a>.</li>
+<li><strong>Un incident ou un échec n&rsquo;est jamais la faute d&rsquo;une seule personne</strong> : il convient donc de comprendre l&rsquo;explication systémique d&rsquo;un problème (le bouton dangereux dans l&rsquo;interface X n&rsquo;est pas assez rouge et on ne demande pas à l&rsquo;utilisateur Michel si il est sûr de lui), plutôt que de chercher un coupable (c&rsquo;est la faut de Michel).</li>
 </ul>
 <h2 id="sli-slo-et-le-budget-derreur">SLI, SLO et le budget d&rsquo;erreur</h2>
 <p>L&rsquo;un des pilliers parmis ces pratiques sont les fameux SLI et SLO, pour Service Level Indicators and Service Level Objectives.</p>
