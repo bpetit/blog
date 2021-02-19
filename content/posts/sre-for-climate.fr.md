@@ -1,6 +1,6 @@
 ---
 title: "La méthode SRE et le climat"
-date: 2021-01-20T11:10:24+02:00
+date: 2021-02-19T19:25:24+02:00
 tags:
   - sre
   - automatisation
