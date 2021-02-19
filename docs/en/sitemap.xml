@@ -135,6 +135,21 @@
   <url>
     <loc>https://bpetit.nce.re/tags/tech/</loc>
     <lastmod>2021-01-20T11:10:24+02:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="fr"
+                href="https://bpetit.nce.re/fr/tags/tech/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://bpetit.nce.re/tags/tech/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://bpetit.nce.re/tags/ansible/</loc>
+    <lastmod>2018-03-17T20:12:45+02:00</lastmod>
   </url>
   
   <url>
@@ -143,12 +158,82 @@
   </url>
   
   <url>
+    <loc>https://bpetit.nce.re/tags/automation/</loc>
+    <lastmod>2018-03-17T20:12:45+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://bpetit.nce.re/tags/cd/</loc>
+    <lastmod>2018-03-17T20:12:45+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://bpetit.nce.re/tags/dns/</loc>
+    <lastmod>2018-03-17T20:12:45+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://bpetit.nce.re/tags/knot/</loc>
+    <lastmod>2018-03-17T20:12:45+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://bpetit.nce.re/tags/letsencrypt/</loc>
+    <lastmod>2018-03-17T20:12:45+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://bpetit.nce.re/tags/tls/</loc>
+    <lastmod>2018-03-17T20:12:45+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://bpetit.nce.re/tags/cloud-init/</loc>
+    <lastmod>2017-11-21T20:44:12+02:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://bpetit.nce.re/2017/11/how-to-build-a-simplistic-private-cloud-piece-by-piece/</loc>
     <lastmod>2017-11-21T20:44:12+02:00</lastmod>
   </url>
   
   <url>
+    <loc>https://bpetit.nce.re/tags/kvm/</loc>
+    <lastmod>2017-11-21T20:44:12+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://bpetit.nce.re/tags/libvirt/</loc>
+    <lastmod>2017-11-21T20:44:12+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://bpetit.nce.re/tags/openvswitch/</loc>
+    <lastmod>2017-11-21T20:44:12+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://bpetit.nce.re/tags/qemu/</loc>
+    <lastmod>2017-11-21T20:44:12+02:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://bpetit.nce.re/2017/09/automate-your-virtual-machine-templates-creation-with-packer/</loc>
+    <lastmod>2017-09-01T19:44:12+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://bpetit.nce.re/tags/debian/</loc>
+    <lastmod>2017-09-01T19:44:12+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://bpetit.nce.re/tags/packer/</loc>
+    <lastmod>2017-09-01T19:44:12+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://bpetit.nce.re/tags/virtualization/</loc>
     <lastmod>2017-09-01T19:44:12+02:00</lastmod>
   </url>
   

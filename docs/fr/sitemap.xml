@@ -3,8 +3,13 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://bpetit.nce.re/fr/tags/automatisation/</loc>
+    <lastmod>2021-01-20T11:10:24+02:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://bpetit.nce.re/fr/</loc>
-    <lastmod>2021-01-13T15:20:24+02:00</lastmod>
+    <lastmod>2021-01-20T11:10:24+02:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -14,6 +19,126 @@
                 rel="alternate"
                 hreflang="fr"
                 href="https://bpetit.nce.re/fr/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://bpetit.nce.re/fr/tags/climat/</loc>
+    <lastmod>2021-01-20T11:10:24+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://bpetit.nce.re/fr/tags/devops/</loc>
+    <lastmod>2021-01-20T11:10:24+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://bpetit.nce.re/fr/tags/energie/</loc>
+    <lastmod>2021-01-20T11:10:24+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://bpetit.nce.re/fr/2021/01/la-m%C3%A9thode-sre-et-le-climat/</loc>
+    <lastmod>2021-01-20T11:10:24+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://bpetit.nce.re/fr/tags/open-source/</loc>
+    <lastmod>2021-01-20T11:10:24+02:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://bpetit.nce.re/tags/open-source/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="fr"
+                href="https://bpetit.nce.re/fr/tags/open-source/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://bpetit.nce.re/fr/posts/</loc>
+    <lastmod>2021-01-20T11:10:24+02:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://bpetit.nce.re/posts/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="fr"
+                href="https://bpetit.nce.re/fr/posts/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://bpetit.nce.re/fr/tags/rust/</loc>
+    <lastmod>2021-01-20T11:10:24+02:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://bpetit.nce.re/tags/rust/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="fr"
+                href="https://bpetit.nce.re/fr/tags/rust/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://bpetit.nce.re/fr/tags/r%C3%A9silience/</loc>
+    <lastmod>2021-01-20T11:10:24+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://bpetit.nce.re/fr/tags/scaphandre/</loc>
+    <lastmod>2021-01-20T11:10:24+02:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://bpetit.nce.re/tags/scaphandre/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="fr"
+                href="https://bpetit.nce.re/fr/tags/scaphandre/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://bpetit.nce.re/fr/tags/sre/</loc>
+    <lastmod>2021-01-20T11:10:24+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://bpetit.nce.re/fr/tags/</loc>
+    <lastmod>2021-01-20T11:10:24+02:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://bpetit.nce.re/tags/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="fr"
+                href="https://bpetit.nce.re/fr/tags/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://bpetit.nce.re/fr/tags/tech/</loc>
+    <lastmod>2021-01-20T11:10:24+02:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://bpetit.nce.re/tags/tech/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="fr"
+                href="https://bpetit.nce.re/fr/tags/tech/"
                 />
   </url>
   
@@ -38,66 +163,6 @@
   </url>
   
   <url>
-    <loc>https://bpetit.nce.re/fr/tags/open-source/</loc>
-    <lastmod>2021-01-13T15:20:24+02:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://bpetit.nce.re/tags/open-source/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="fr"
-                href="https://bpetit.nce.re/fr/tags/open-source/"
-                />
-  </url>
-  
-  <url>
-    <loc>https://bpetit.nce.re/fr/posts/</loc>
-    <lastmod>2021-01-13T15:20:24+02:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://bpetit.nce.re/posts/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="fr"
-                href="https://bpetit.nce.re/fr/posts/"
-                />
-  </url>
-  
-  <url>
-    <loc>https://bpetit.nce.re/fr/tags/rust/</loc>
-    <lastmod>2021-01-13T15:20:24+02:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://bpetit.nce.re/tags/rust/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="fr"
-                href="https://bpetit.nce.re/fr/tags/rust/"
-                />
-  </url>
-  
-  <url>
-    <loc>https://bpetit.nce.re/fr/tags/scaphandre/</loc>
-    <lastmod>2021-01-13T15:20:24+02:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://bpetit.nce.re/tags/scaphandre/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="fr"
-                href="https://bpetit.nce.re/fr/tags/scaphandre/"
-                />
-  </url>
-  
-  <url>
     <loc>https://bpetit.nce.re/fr/2021/01/scaphandre-v0.1.1-mesurer-la-consommation-d%C3%A9nergie-des-coulisses-du-num%C3%A9rique/</loc>
     <lastmod>2021-01-13T15:20:24+02:00</lastmod>
     <xhtml:link
@@ -109,21 +174,6 @@
                 rel="alternate"
                 hreflang="fr"
                 href="https://bpetit.nce.re/fr/2021/01/scaphandre-v0.1.1-mesurer-la-consommation-d%C3%A9nergie-des-coulisses-du-num%C3%A9rique/"
-                />
-  </url>
-  
-  <url>
-    <loc>https://bpetit.nce.re/fr/tags/</loc>
-    <lastmod>2021-01-13T15:20:24+02:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://bpetit.nce.re/tags/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="fr"
-                href="https://bpetit.nce.re/fr/tags/"
                 />
   </url>
   

@@ -1,6 +1,15 @@
 ---
 title: "How to build a simplistic private cloud piece by piece"
 date: 2017-11-21T20:44:12+02:00
+tags:
+  - automation
+  - cloud
+  - ansible
+  - cloud-init
+  - libvirt
+  - qemu
+  - kvm
+  - openvswitch
 author: Benoit Petit
 ---
 
@@ -369,5 +378,5 @@ There are many flaws in this setup:
     I don't use libvirt networks to configure ovs bridges, it would be proper to do so.
     As I said in the introduction, this setup lacks a lot of features to be nice, I'll improve it step by step ;)
 
-Feel free to comment !
+Feel free to contact me or comment on any social media listed below.
 

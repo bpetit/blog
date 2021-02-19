@@ -1,5 +1,13 @@
 ---
 title: "Automating web applications proxying, DNS registration and TLS termination with ansible"
+tags:
+  - automation
+  - cd
+  - ansible
+  - dns
+  - letsencrypt
+  - knot
+  - tls
 date: 2018-03-17T20:12:45+02:00
 author: Benoit Petit
 ---

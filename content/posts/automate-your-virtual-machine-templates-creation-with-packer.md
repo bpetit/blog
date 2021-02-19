@@ -1,6 +1,12 @@
 ---
 title: "Automate your virtual machine templates creation with Packer"
 date: 2017-09-01T19:44:12+02:00
+tags:
+  - automation
+  - cloud
+  - packer
+  - virtualization
+  - debian
 author: Benoit Petit
 ---
 

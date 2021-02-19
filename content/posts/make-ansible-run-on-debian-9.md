@@ -1,6 +1,9 @@
 ---
 title: "Make Ansible Run on Debian 9"
 date: 2017-07-27T21:44:12+02:00
+tags:
+  - debian
+  - ansible
 author: Benoit Petit
 ---
 

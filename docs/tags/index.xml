@@ -76,5 +76,140 @@
       <description></description>
     </item>
     
+    <item>
+      <title>ansible</title>
+      <link>https://bpetit.nce.re/tags/ansible/</link>
+      <pubDate>Sat, 17 Mar 2018 20:12:45 +0200</pubDate>
+      <author>bpetit@nce.re (Benoit Petit)</author>
+      <guid>https://bpetit.nce.re/tags/ansible/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>automation</title>
+      <link>https://bpetit.nce.re/tags/automation/</link>
+      <pubDate>Sat, 17 Mar 2018 20:12:45 +0200</pubDate>
+      <author>bpetit@nce.re (Benoit Petit)</author>
+      <guid>https://bpetit.nce.re/tags/automation/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>cd</title>
+      <link>https://bpetit.nce.re/tags/cd/</link>
+      <pubDate>Sat, 17 Mar 2018 20:12:45 +0200</pubDate>
+      <author>bpetit@nce.re (Benoit Petit)</author>
+      <guid>https://bpetit.nce.re/tags/cd/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>dns</title>
+      <link>https://bpetit.nce.re/tags/dns/</link>
+      <pubDate>Sat, 17 Mar 2018 20:12:45 +0200</pubDate>
+      <author>bpetit@nce.re (Benoit Petit)</author>
+      <guid>https://bpetit.nce.re/tags/dns/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>knot</title>
+      <link>https://bpetit.nce.re/tags/knot/</link>
+      <pubDate>Sat, 17 Mar 2018 20:12:45 +0200</pubDate>
+      <author>bpetit@nce.re (Benoit Petit)</author>
+      <guid>https://bpetit.nce.re/tags/knot/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>letsencrypt</title>
+      <link>https://bpetit.nce.re/tags/letsencrypt/</link>
+      <pubDate>Sat, 17 Mar 2018 20:12:45 +0200</pubDate>
+      <author>bpetit@nce.re (Benoit Petit)</author>
+      <guid>https://bpetit.nce.re/tags/letsencrypt/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>tls</title>
+      <link>https://bpetit.nce.re/tags/tls/</link>
+      <pubDate>Sat, 17 Mar 2018 20:12:45 +0200</pubDate>
+      <author>bpetit@nce.re (Benoit Petit)</author>
+      <guid>https://bpetit.nce.re/tags/tls/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>cloud-init</title>
+      <link>https://bpetit.nce.re/tags/cloud-init/</link>
+      <pubDate>Tue, 21 Nov 2017 20:44:12 +0200</pubDate>
+      <author>bpetit@nce.re (Benoit Petit)</author>
+      <guid>https://bpetit.nce.re/tags/cloud-init/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>kvm</title>
+      <link>https://bpetit.nce.re/tags/kvm/</link>
+      <pubDate>Tue, 21 Nov 2017 20:44:12 +0200</pubDate>
+      <author>bpetit@nce.re (Benoit Petit)</author>
+      <guid>https://bpetit.nce.re/tags/kvm/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>libvirt</title>
+      <link>https://bpetit.nce.re/tags/libvirt/</link>
+      <pubDate>Tue, 21 Nov 2017 20:44:12 +0200</pubDate>
+      <author>bpetit@nce.re (Benoit Petit)</author>
+      <guid>https://bpetit.nce.re/tags/libvirt/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>openvswitch</title>
+      <link>https://bpetit.nce.re/tags/openvswitch/</link>
+      <pubDate>Tue, 21 Nov 2017 20:44:12 +0200</pubDate>
+      <author>bpetit@nce.re (Benoit Petit)</author>
+      <guid>https://bpetit.nce.re/tags/openvswitch/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>qemu</title>
+      <link>https://bpetit.nce.re/tags/qemu/</link>
+      <pubDate>Tue, 21 Nov 2017 20:44:12 +0200</pubDate>
+      <author>bpetit@nce.re (Benoit Petit)</author>
+      <guid>https://bpetit.nce.re/tags/qemu/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>debian</title>
+      <link>https://bpetit.nce.re/tags/debian/</link>
+      <pubDate>Fri, 01 Sep 2017 19:44:12 +0200</pubDate>
+      <author>bpetit@nce.re (Benoit Petit)</author>
+      <guid>https://bpetit.nce.re/tags/debian/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>packer</title>
+      <link>https://bpetit.nce.re/tags/packer/</link>
+      <pubDate>Fri, 01 Sep 2017 19:44:12 +0200</pubDate>
+      <author>bpetit@nce.re (Benoit Petit)</author>
+      <guid>https://bpetit.nce.re/tags/packer/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>virtualization</title>
+      <link>https://bpetit.nce.re/tags/virtualization/</link>
+      <pubDate>Fri, 01 Sep 2017 19:44:12 +0200</pubDate>
+      <author>bpetit@nce.re (Benoit Petit)</author>
+      <guid>https://bpetit.nce.re/tags/virtualization/</guid>
+      <description></description>
+    </item>
+    
   </channel>
 </rss>

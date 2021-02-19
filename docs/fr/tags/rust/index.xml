@@ -8,10 +8,19 @@
     <language>en-us</language>
     <managingEditor>bpetit@nce.re (Benoit Petit)</managingEditor>
     <webMaster>bpetit@nce.re (Benoit Petit)</webMaster>
-    <lastBuildDate>Wed, 13 Jan 2021 15:20:24 +0200</lastBuildDate>
+    <lastBuildDate>Wed, 20 Jan 2021 11:10:24 +0200</lastBuildDate>
     
 	<atom:link href="https://bpetit.nce.re/fr/tags/rust/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>La méthode SRE et le climat</title>
+      <link>https://bpetit.nce.re/fr/2021/01/la-m%C3%A9thode-sre-et-le-climat/</link>
+      <pubDate>Wed, 20 Jan 2021 11:10:24 +0200</pubDate>
+      <author>bpetit@nce.re (Benoit Petit)</author>
+      <guid>https://bpetit.nce.re/fr/2021/01/la-m%C3%A9thode-sre-et-le-climat/</guid>
+      <description>Connaissez vous les pratiques SRE (et non pas RSE) ? Ce sont des pratiques mises en avant par Google, notamment depuis la sortie du premier livre &amp;ldquo;référence&amp;rdquo; intitulé &amp;ldquo;Site Reliability Engineering&amp;rdquo; en 2016. L&amp;rsquo;&amp;ldquo;ingénierie de la fiabilité des sites&amp;rdquo;, en bon français (traduction brillament osée par les contributeurs de Wikipedia), a pour objectif au sein d&amp;rsquo;une organisation de s&amp;rsquo;assurer que les systèmes et services logiciels qui y sont créés sont évolutifs et surtout très fiables.</description>
+    </item>
     
     <item>
       <title>Scaphandre v0.1.1: mesurer la consommation d&#39;énergie (des coulisses) du numérique</title>
