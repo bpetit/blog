@@ -14,12 +14,13 @@
     
     
     <item>
-      <title>La méthode SRE et le climat</title>
-      <link>https://bpetit.nce.re/fr/2021/02/la-m%C3%A9thode-sre-et-le-climat/</link>
+      <title>Les pratiques SRE et le climat</title>
+      <link>https://bpetit.nce.re/fr/2021/02/les-pratiques-sre-et-le-climat/</link>
       <pubDate>Fri, 19 Feb 2021 19:25:24 +0200</pubDate>
       <author>bpetit@nce.re (Benoit Petit)</author>
-      <guid>https://bpetit.nce.re/fr/2021/02/la-m%C3%A9thode-sre-et-le-climat/</guid>
-      <description>Connaissez vous les pratiques SRE (et non pas RSE) ? Ce sont des pratiques mises en avant par Google, notamment depuis la sortie du premier livre &amp;ldquo;référence&amp;rdquo; intitulé &amp;ldquo;Site Reliability Engineering&amp;rdquo; en 2016. L&amp;rsquo;&amp;ldquo;ingénierie de la fiabilité des sites&amp;rdquo;, en bon français (traduction brillament osée par les contributeurs de Wikipedia), a pour objectif au sein d&amp;rsquo;une organisation de s&amp;rsquo;assurer que les systèmes et services logiciels qui y sont créés sont évolutifs et surtout très fiables.</description>
+      <guid>https://bpetit.nce.re/fr/2021/02/les-pratiques-sre-et-le-climat/</guid>
+      <description>L&amp;rsquo;ingénierie de la fiabilité des sites (Site Reliability Engineering), a pour objectif au sein d&amp;rsquo;une organisation de s&amp;rsquo;assurer que les systèmes et services logiciels qui y sont créés sont évolutifs et surtout très fiables.
+Pour ce faire, de nombreux aspects de l&amp;rsquo;ingénierie logicielle sont appliqués aux problèmes d&amp;rsquo;infrastructure. Ce sont des pratiques mises en avant par Google, notamment depuis la sortie du premier livre &amp;ldquo;référence&amp;rdquo; intitulé &amp;ldquo;Site Reliability Engineering&amp;rdquo; en 2016.</description>
     </item>
     
     <item>
