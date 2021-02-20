@@ -72,9 +72,9 @@ Puisque l'IT doit baisser ses émissions de gazs à effets de serre de [45% dans
 
 Peut on dire que l'on satisfait durablement le client si l'on contribue à rendre le monde dans lequel il vivra en 2050 encore plus incertain qu'aujourd'hui ?
 
-La méthode SRE fait de plus en plus d'adeptes et fournis un cadre de travail réellement intéressant car il encourage une collaboration entre les équipes techniques et le métier. Comme l'a très justement rappellée [Alexis Nicolas](https://www.linkedin.com/in/alexis8nicolas/) dans son [retour d'expérience]() à [Frug'agile](http://www.frugagile.org/), lutter pour amortir le changement climatique est comme un escape game dont nous faisons tous partie, qu'on le veuille ou non. C'est donc bien sûr également le cas pour chaque organisation.
+La méthode SRE fait de plus en plus d'adeptes et fournis un cadre de travail réellement intéressant car il encourage une collaboration entre les équipes techniques et le métier. Comme l'a très justement rappellée [Alexis Nicolas](https://www.linkedin.com/in/alexis8nicolas/) dans son [retour d'expérience]() à [Frug'agile](http://www.frugagile.org/), lutter pour amortir le changement climatique est comme un **escape game dont nous faisons tous partie**, qu'on le veuille ou non.
 
-Si je suis dans un escape game dans lequel l'échec signifie un réel danger pour mon entourage et ma personne (ce qui est [le cas dans celui-ci](https://meteofrance.com/actualites-et-dossiers/actualites/meteo-france-eclaire-le-climat-en-france-jusquen-2100)), je préferrerai avoir une aide dynamique pour résoudre les énigmes, des alertes automatisées si je perd trop de temps sur les mauvais éléments et une équipe qui collabore en toute transparence et qui soit pleinement concentrée sur le même objectif. Pas vous ?
+Si je suis dans un escape game dans lequel l'échec signifie **un réel danger pour mon entourage et moi-même** (ce qui est [le cas dans celui-ci](https://meteofrance.com/actualites-et-dossiers/actualites/meteo-france-eclaire-le-climat-en-france-jusquen-2100)), je préferrerai avoir une aide dynamique pour résoudre les énigmes, des alertes automatisées si je perd trop de temps sur les mauvais éléments et une équipe qui collabore en toute transparence et qui soit pleinement concentrée sur le même objectif. Pas vous ?
 
 ## Comment obtenir ces métriques ?
 
