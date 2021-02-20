@@ -43,7 +43,7 @@ Je souhaite vous parler aujourd'hui d'un élément particulier parmis les pratiq
 
 Un Service Level Indicator est le plus souvent un ratio entre deux nombres. L'un étant le nombre d'évennements "positifs", l'autre le nombre total d'évennements correspondants. Quelques exemples de SLI:
 
-- nombre de requêtes HTTP soldées par un succès / nom total de requêtes HTTP sur le même service
+- nombre de requêtes HTTP soldées par un succès / nombre total de requêtes HTTP sur le même service
 - nombre de demandes sur mon datastore, qui ont retourné un résultat en moins de 2 secondes / nombre total de demandes sur le datastore
 - nombre d'appels gRPC qui ont terminé en moins de 80ms / nombre total d'appels gRPC sur le même service
 

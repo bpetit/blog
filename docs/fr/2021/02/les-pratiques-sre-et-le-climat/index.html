@@ -249,7 +249,7 @@ Pour ce faire, de nombreux aspects de l&rsquo;ingénierie logicielle sont appliq
 <p>Je souhaite vous parler aujourd&rsquo;hui d&rsquo;un élément particulier parmis les pratiques SRE : les fameux SLI et SLO, pour <strong>Service Level Indicators</strong> and <strong>Service Level Objectives</strong>. Ces notions donnent un cadre pour déterminer quelles métriques sont importantes pour la réussite d&rsquo;un projet dans sa phase de run.</p>
 <p>Un Service Level Indicator est le plus souvent un ratio entre deux nombres. L&rsquo;un étant le nombre d'évennements &ldquo;positifs&rdquo;, l&rsquo;autre le nombre total d'évennements correspondants. Quelques exemples de SLI:</p>
 <ul>
-<li>nombre de requêtes HTTP soldées par un succès / nom total de requêtes HTTP sur le même service</li>
+<li>nombre de requêtes HTTP soldées par un succès / nombre total de requêtes HTTP sur le même service</li>
 <li>nombre de demandes sur mon datastore, qui ont retourné un résultat en moins de 2 secondes / nombre total de demandes sur le datastore</li>
 <li>nombre d&rsquo;appels gRPC qui ont terminé en moins de 80ms / nombre total d&rsquo;appels gRPC sur le même service</li>
 </ul>
