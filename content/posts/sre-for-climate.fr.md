@@ -39,7 +39,7 @@ Les deux mouvements sont donc très proches, si bien que certains considèrent q
 
 ## SLI, SLO et le budget d'erreur
 
-Je souhaite vous parler aujourd'hui d'un élément particulier parmi les pratiques SRE : les fameux SLI et SLO, pour **Service Level Indicators** and **Service Level Objectives**. Ces notions donnent un cadre pour déterminer quelles métriques sont importantes pour la réussite d'un projet dans sa phase de run.
+Je souhaite vous parler aujourd'hui d'un élément particulier parmi les pratiques SRE : les fameux SLI et SLO, pour **Service Level Indicators** et **Service Level Objectives**. Ces notions donnent un cadre pour déterminer quelles métriques sont importantes pour la réussite d'un projet dans sa phase de run.
 
 Un Service Level Indicator est le plus souvent un ratio entre deux nombres. L'un étant le nombre d'événements "positifs", l'autre le nombre total d'événements correspondants. Quelques exemples de SLI:
 
