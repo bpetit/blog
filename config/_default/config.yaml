@@ -25,7 +25,7 @@ languages:
   fr:
     title: "Benoit Petit"
     homeTitle: "Bienvenue sur l'ordinateur de quelqu'un d'autre."
-    subtitle: "Utopiste pragmatique, je construit des infrastructures informatiques. En quête de transparence et de mesurabilité. Rien n'est immatériel."
+    subtitle: "Utopiste pragmatique, je construis des infrastructures informatiques. En quête de transparence et de mesurabilité. Rien n'est immatériel."
     languageName: Français
     weight: 2
 permalinks:
