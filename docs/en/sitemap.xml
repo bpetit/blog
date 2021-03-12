@@ -3,8 +3,13 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://bpetit.nce.re/tags/automation/</loc>
+    <lastmod>2021-02-19T19:25:24+02:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://bpetit.nce.re/</loc>
-    <lastmod>2021-01-20T11:10:24+02:00</lastmod>
+    <lastmod>2021-02-19T19:25:24+02:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="fr"
@@ -14,6 +19,156 @@
                 rel="alternate"
                 hreflang="en"
                 href="https://bpetit.nce.re/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://bpetit.nce.re/tags/climate/</loc>
+    <lastmod>2021-02-19T19:25:24+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://bpetit.nce.re/tags/devops/</loc>
+    <lastmod>2021-02-19T19:25:24+02:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="fr"
+                href="https://bpetit.nce.re/fr/tags/devops/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://bpetit.nce.re/tags/devops/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://bpetit.nce.re/tags/energy/</loc>
+    <lastmod>2021-02-19T19:25:24+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://bpetit.nce.re/tags/open-source/</loc>
+    <lastmod>2021-02-19T19:25:24+02:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="fr"
+                href="https://bpetit.nce.re/fr/tags/open-source/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://bpetit.nce.re/tags/open-source/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://bpetit.nce.re/posts/</loc>
+    <lastmod>2021-02-19T19:25:24+02:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="fr"
+                href="https://bpetit.nce.re/fr/posts/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://bpetit.nce.re/posts/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://bpetit.nce.re/tags/resiliency/</loc>
+    <lastmod>2021-02-19T19:25:24+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://bpetit.nce.re/tags/rust/</loc>
+    <lastmod>2021-02-19T19:25:24+02:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="fr"
+                href="https://bpetit.nce.re/fr/tags/rust/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://bpetit.nce.re/tags/rust/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://bpetit.nce.re/tags/scaphandre/</loc>
+    <lastmod>2021-02-19T19:25:24+02:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="fr"
+                href="https://bpetit.nce.re/fr/tags/scaphandre/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://bpetit.nce.re/tags/scaphandre/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://bpetit.nce.re/tags/sre/</loc>
+    <lastmod>2021-02-19T19:25:24+02:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="fr"
+                href="https://bpetit.nce.re/fr/tags/sre/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://bpetit.nce.re/tags/sre/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://bpetit.nce.re/2021/02/sre-methods-and-climate-change/</loc>
+    <lastmod>2021-02-19T19:25:24+02:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="fr"
+                href="https://bpetit.nce.re/fr/2021/02/les-pratiques-sre-et-le-climat/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://bpetit.nce.re/2021/02/sre-methods-and-climate-change/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://bpetit.nce.re/tags/</loc>
+    <lastmod>2021-02-19T19:25:24+02:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="fr"
+                href="https://bpetit.nce.re/fr/tags/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://bpetit.nce.re/tags/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://bpetit.nce.re/tags/tech/</loc>
+    <lastmod>2021-02-19T19:25:24+02:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="fr"
+                href="https://bpetit.nce.re/fr/tags/tech/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://bpetit.nce.re/tags/tech/"
                 />
   </url>
   
@@ -38,71 +193,6 @@
   </url>
   
   <url>
-    <loc>https://bpetit.nce.re/tags/energy/</loc>
-    <lastmod>2021-01-20T11:10:24+02:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://bpetit.nce.re/tags/open-source/</loc>
-    <lastmod>2021-01-20T11:10:24+02:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="fr"
-                href="https://bpetit.nce.re/fr/tags/open-source/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://bpetit.nce.re/tags/open-source/"
-                />
-  </url>
-  
-  <url>
-    <loc>https://bpetit.nce.re/posts/</loc>
-    <lastmod>2021-01-20T11:10:24+02:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="fr"
-                href="https://bpetit.nce.re/fr/posts/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://bpetit.nce.re/posts/"
-                />
-  </url>
-  
-  <url>
-    <loc>https://bpetit.nce.re/tags/rust/</loc>
-    <lastmod>2021-01-20T11:10:24+02:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="fr"
-                href="https://bpetit.nce.re/fr/tags/rust/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://bpetit.nce.re/tags/rust/"
-                />
-  </url>
-  
-  <url>
-    <loc>https://bpetit.nce.re/tags/scaphandre/</loc>
-    <lastmod>2021-01-20T11:10:24+02:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="fr"
-                href="https://bpetit.nce.re/fr/tags/scaphandre/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://bpetit.nce.re/tags/scaphandre/"
-                />
-  </url>
-  
-  <url>
     <loc>https://bpetit.nce.re/2021/01/scaphandre-v0.1.1-measuring-the-energy-consumption-of-the-tech-industry-backstages/</loc>
     <lastmod>2021-01-20T11:10:24+02:00</lastmod>
     <xhtml:link
@@ -118,47 +208,12 @@
   </url>
   
   <url>
-    <loc>https://bpetit.nce.re/tags/</loc>
-    <lastmod>2021-01-20T11:10:24+02:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="fr"
-                href="https://bpetit.nce.re/fr/tags/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://bpetit.nce.re/tags/"
-                />
-  </url>
-  
-  <url>
-    <loc>https://bpetit.nce.re/tags/tech/</loc>
-    <lastmod>2021-01-20T11:10:24+02:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="fr"
-                href="https://bpetit.nce.re/fr/tags/tech/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://bpetit.nce.re/tags/tech/"
-                />
-  </url>
-  
-  <url>
     <loc>https://bpetit.nce.re/tags/ansible/</loc>
     <lastmod>2018-03-17T20:12:45+02:00</lastmod>
   </url>
   
   <url>
     <loc>https://bpetit.nce.re/2018/03/automating-web-applications-proxying-dns-registration-and-tls-termination-with-ansible/</loc>
-    <lastmod>2018-03-17T20:12:45+02:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://bpetit.nce.re/tags/automation/</loc>
     <lastmod>2018-03-17T20:12:45+02:00</lastmod>
   </url>
   

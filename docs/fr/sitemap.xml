@@ -30,6 +30,16 @@
   <url>
     <loc>https://bpetit.nce.re/fr/tags/devops/</loc>
     <lastmod>2021-02-19T19:25:24+02:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://bpetit.nce.re/tags/devops/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="fr"
+                href="https://bpetit.nce.re/fr/tags/devops/"
+                />
   </url>
   
   <url>
@@ -40,6 +50,16 @@
   <url>
     <loc>https://bpetit.nce.re/fr/2021/02/les-pratiques-sre-et-le-climat/</loc>
     <lastmod>2021-02-19T19:25:24+02:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://bpetit.nce.re/2021/02/sre-methods-and-climate-change/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="fr"
+                href="https://bpetit.nce.re/fr/2021/02/les-pratiques-sre-et-le-climat/"
+                />
   </url>
   
   <url>
@@ -110,6 +130,16 @@
   <url>
     <loc>https://bpetit.nce.re/fr/tags/sre/</loc>
     <lastmod>2021-02-19T19:25:24+02:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://bpetit.nce.re/tags/sre/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="fr"
+                href="https://bpetit.nce.re/fr/tags/sre/"
+                />
   </url>
   
   <url>
