@@ -8,17 +8,17 @@
     <language>en-us</language>
     <managingEditor>bpetit@nce.re (Benoit Petit)</managingEditor>
     <webMaster>bpetit@nce.re (Benoit Petit)</webMaster>
-    <lastBuildDate>Fri, 19 Feb 2021 19:25:24 +0200</lastBuildDate>
+    <lastBuildDate>Fri, 12 Mar 2021 10:22:24 +0200</lastBuildDate>
     
 	<atom:link href="https://bpetit.nce.re/tags/sre/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>SRE methods and climate change</title>
-      <link>https://bpetit.nce.re/2021/02/sre-methods-and-climate-change/</link>
-      <pubDate>Fri, 19 Feb 2021 19:25:24 +0200</pubDate>
+      <link>https://bpetit.nce.re/2021/03/sre-methods-and-climate-change/</link>
+      <pubDate>Fri, 12 Mar 2021 10:22:24 +0200</pubDate>
       <author>bpetit@nce.re (Benoit Petit)</author>
-      <guid>https://bpetit.nce.re/2021/02/sre-methods-and-climate-change/</guid>
+      <guid>https://bpetit.nce.re/2021/03/sre-methods-and-climate-change/</guid>
       <description>Disclaimer: As I&amp;rsquo;m used to the french/european tech industry context, I may be strongly biased and talk about general principles or views that do not apply to other contexts. Feel free to reach me on any social plarform or via email to discuss about those perceptions differences.
 Site Reliability Engineering&amp;rsquo;s goal is to ensure that software systems and services that are created in an organization are made to evolve easily and especially to be extremely reliable.</description>
     </item>

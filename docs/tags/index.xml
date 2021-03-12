@@ -8,7 +8,7 @@
     <language>en-us</language>
     <managingEditor>bpetit@nce.re (Benoit Petit)</managingEditor>
     <webMaster>bpetit@nce.re (Benoit Petit)</webMaster>
-    <lastBuildDate>Fri, 19 Feb 2021 19:25:24 +0200</lastBuildDate>
+    <lastBuildDate>Fri, 12 Mar 2021 10:22:24 +0200</lastBuildDate>
     
 	<atom:link href="https://bpetit.nce.re/tags/index.xml" rel="self" type="application/rss+xml" />
     
@@ -16,7 +16,7 @@
     <item>
       <title>automation</title>
       <link>https://bpetit.nce.re/tags/automation/</link>
-      <pubDate>Fri, 19 Feb 2021 19:25:24 +0200</pubDate>
+      <pubDate>Fri, 12 Mar 2021 10:22:24 +0200</pubDate>
       <author>bpetit@nce.re (Benoit Petit)</author>
       <guid>https://bpetit.nce.re/tags/automation/</guid>
       <description></description>
@@ -25,7 +25,7 @@
     <item>
       <title>climate</title>
       <link>https://bpetit.nce.re/tags/climate/</link>
-      <pubDate>Fri, 19 Feb 2021 19:25:24 +0200</pubDate>
+      <pubDate>Fri, 12 Mar 2021 10:22:24 +0200</pubDate>
       <author>bpetit@nce.re (Benoit Petit)</author>
       <guid>https://bpetit.nce.re/tags/climate/</guid>
       <description></description>
@@ -34,7 +34,7 @@
     <item>
       <title>devops</title>
       <link>https://bpetit.nce.re/tags/devops/</link>
-      <pubDate>Fri, 19 Feb 2021 19:25:24 +0200</pubDate>
+      <pubDate>Fri, 12 Mar 2021 10:22:24 +0200</pubDate>
       <author>bpetit@nce.re (Benoit Petit)</author>
       <guid>https://bpetit.nce.re/tags/devops/</guid>
       <description></description>
@@ -43,7 +43,7 @@
     <item>
       <title>energy</title>
       <link>https://bpetit.nce.re/tags/energy/</link>
-      <pubDate>Fri, 19 Feb 2021 19:25:24 +0200</pubDate>
+      <pubDate>Fri, 12 Mar 2021 10:22:24 +0200</pubDate>
       <author>bpetit@nce.re (Benoit Petit)</author>
       <guid>https://bpetit.nce.re/tags/energy/</guid>
       <description></description>
@@ -52,7 +52,7 @@
     <item>
       <title>open-source</title>
       <link>https://bpetit.nce.re/tags/open-source/</link>
-      <pubDate>Fri, 19 Feb 2021 19:25:24 +0200</pubDate>
+      <pubDate>Fri, 12 Mar 2021 10:22:24 +0200</pubDate>
       <author>bpetit@nce.re (Benoit Petit)</author>
       <guid>https://bpetit.nce.re/tags/open-source/</guid>
       <description></description>
@@ -61,7 +61,7 @@
     <item>
       <title>resiliency</title>
       <link>https://bpetit.nce.re/tags/resiliency/</link>
-      <pubDate>Fri, 19 Feb 2021 19:25:24 +0200</pubDate>
+      <pubDate>Fri, 12 Mar 2021 10:22:24 +0200</pubDate>
       <author>bpetit@nce.re (Benoit Petit)</author>
       <guid>https://bpetit.nce.re/tags/resiliency/</guid>
       <description></description>
@@ -70,7 +70,7 @@
     <item>
       <title>rust</title>
       <link>https://bpetit.nce.re/tags/rust/</link>
-      <pubDate>Fri, 19 Feb 2021 19:25:24 +0200</pubDate>
+      <pubDate>Fri, 12 Mar 2021 10:22:24 +0200</pubDate>
       <author>bpetit@nce.re (Benoit Petit)</author>
       <guid>https://bpetit.nce.re/tags/rust/</guid>
       <description></description>
@@ -79,7 +79,7 @@
     <item>
       <title>scaphandre</title>
       <link>https://bpetit.nce.re/tags/scaphandre/</link>
-      <pubDate>Fri, 19 Feb 2021 19:25:24 +0200</pubDate>
+      <pubDate>Fri, 12 Mar 2021 10:22:24 +0200</pubDate>
       <author>bpetit@nce.re (Benoit Petit)</author>
       <guid>https://bpetit.nce.re/tags/scaphandre/</guid>
       <description></description>
@@ -88,7 +88,7 @@
     <item>
       <title>sre</title>
       <link>https://bpetit.nce.re/tags/sre/</link>
-      <pubDate>Fri, 19 Feb 2021 19:25:24 +0200</pubDate>
+      <pubDate>Fri, 12 Mar 2021 10:22:24 +0200</pubDate>
       <author>bpetit@nce.re (Benoit Petit)</author>
       <guid>https://bpetit.nce.re/tags/sre/</guid>
       <description></description>
@@ -97,7 +97,7 @@
     <item>
       <title>tech</title>
       <link>https://bpetit.nce.re/tags/tech/</link>
-      <pubDate>Fri, 19 Feb 2021 19:25:24 +0200</pubDate>
+      <pubDate>Fri, 12 Mar 2021 10:22:24 +0200</pubDate>
       <author>bpetit@nce.re (Benoit Petit)</author>
       <guid>https://bpetit.nce.re/tags/tech/</guid>
       <description></description>

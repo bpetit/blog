@@ -1,6 +1,6 @@
 ---
 title: "SRE methods and climate change"
-date: 2021-02-19T19:25:24+02:00
+date: 2021-03-12T10:22:24+02:00
 tags:
   - sre
   - automation
