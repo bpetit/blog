@@ -26,7 +26,7 @@ Site Reliability Engineering's goal is to ensure that software systems and servi
  
 ## DevOps, SRE, what's the difference ?
 
-As we have used some buzzwords, let's make it clearer before we move forward. If you are already familiar with DevOps and SRE methods, you can directly jump to the next [section](#sli-slo-and-the-error-budget).
+As we have used some buzzwords, let's make it clearer before we move forward. If you are already familiar with DevOps and SRE methods, you can jump to the next [section](#sli-slo-and-the-error-budget).
 
 The SRE "framework" shares some principles with the DevOps movement:
 
