@@ -67,7 +67,7 @@ Once those principles are applied to several tech services in the organization, 
 
 ## Redefining reliability
 
-There are several definitions of reliability, one being: "reliability is the ability for a system to fulfill a mission in some defined conditions, for a given period of time". This definition allows to redefine the conditions that dictate if the system did actually fullfill its mission on the given period of time.
+There are several definitions of reliability, one being: "reliability is the ability for a system to fulfill a mission in some defined conditions, for a given period of time". This definition allows to redefine the conditions that dictate if the system did actually fulfill its mission on the given period of time.
 
 As the tech industry has to lower its Green House Gaz emissions of [45% in the next 10 years](https://www.itu.int/en/mediacentre/Pages/PR04-2020-ICT-industry-to-reduce-greenhouse-gas-emissions-by-45-percent-by-2030.aspx) to match Paris agreement objectives, it seems essential to me that a tech service or system is considered reliable, not only if it satisfies the client on the short term, but also if it doesn't contribute to jeopardize the client's future. That means obviously, that it has to respect objectives smartly defined regarding GHG emissions related to it's very existence and usage.
 
