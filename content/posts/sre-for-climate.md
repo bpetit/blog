@@ -73,7 +73,7 @@ As the tech industry has to lower its Green House Gaz emissions of [45% in the n
 
 Adoption of SRE is increasing and the framework it provides is really interesting, as it encourages plain collaboration between tech and product teams. As brillantly said [Alexis Nicolas](https://www.linkedin.com/in/alexis8nicolas/) during a recent  webinar, mitigating climate change is like an **escape game that we are all participating to**, whether we want it or not.
 
-If I participare to an escape game in which failure means a [**real danger for my surroundings and myself**](https://meteofrance.com/actualites-et-dossiers/actualites/meteo-france-eclaire-le-climat-en-france-jusquen-2100), I'd prefer to have a dynamic help to solve the challenges, alarms if I spend to much time on less important items and a team fully commited, transparently collaborating on the same objective. Don't you ?
+If I participate to an escape game in which failure means a [**real danger for my surroundings and myself**](https://meteofrance.com/actualites-et-dossiers/actualites/meteo-france-eclaire-le-climat-en-france-jusquen-2100), I'd prefer to have a dynamic help to solve the challenges, alarms if I spend to much time on less important items and a team fully commited, transparently collaborating on the same objective. Don't you ?
 
 ## How to get those metrics ?
 
