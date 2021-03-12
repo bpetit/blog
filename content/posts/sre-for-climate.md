@@ -18,8 +18,6 @@ share_img: /lizard.cleaned.jpg
 author: Benoit Petit
 ---
 
-**Disclaimer**: As I'm used to the french/european tech industry context, I may be strongly biased and talk about general principles or views that do not apply to other contexts. Feel free to reach me on any social plarform or via email to discuss about those perceptions differences.
-
 ![A lezard](/lizard.cleaned.jpg)
 
 Site Reliability Engineering's goal is to ensure that software systems and services that are created in an organization are made to evolve easily and especially to be **extremely reliable**.

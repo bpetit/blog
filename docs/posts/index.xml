@@ -19,8 +19,9 @@
       <pubDate>Fri, 12 Mar 2021 10:22:24 +0200</pubDate>
       <author>bpetit@nce.re (Benoit Petit)</author>
       <guid>https://bpetit.nce.re/2021/03/sre-methods-and-climate-change/</guid>
-      <description>Disclaimer: As I&amp;rsquo;m used to the french/european tech industry context, I may be strongly biased and talk about general principles or views that do not apply to other contexts. Feel free to reach me on any social plarform or via email to discuss about those perceptions differences.
-Site Reliability Engineering&amp;rsquo;s goal is to ensure that software systems and services that are created in an organization are made to evolve easily and especially to be extremely reliable.</description>
+      <description>Site Reliability Engineering&amp;rsquo;s goal is to ensure that software systems and services that are created in an organization are made to evolve easily and especially to be extremely reliable.
+To do that, many aspects of software engineering are applied to infrastructure topics. Those methods are born at Google and are increasingly popular since the release of the book &amp;ldquo;Site Reliability Engineering&amp;rdquo; in 2016.
+DevOps, SRE, what&amp;rsquo;s the difference ? As we have used some buzzwords, let&amp;rsquo;s make it clearer before we move forward.</description>
     </item>
     
     <item>
