@@ -8,7 +8,7 @@
     <language>en-us</language>
     <managingEditor>bpetit@nce.re (Benoit Petit)</managingEditor>
     <webMaster>bpetit@nce.re (Benoit Petit)</webMaster>
-    <lastBuildDate>Thu, 18 Mar 2021 10:25:24 +0200</lastBuildDate>
+    <lastBuildDate>Mon, 22 Mar 2021 15:40:24 +0200</lastBuildDate>
     
 	<atom:link href="https://bpetit.nce.re/fr/tags/sre/index.xml" rel="self" type="application/rss+xml" />
     
@@ -16,7 +16,7 @@
     <item>
       <title>Coder ses dashboards Grafana avec Grafonnet</title>
       <link>https://bpetit.nce.re/fr/2021/03/coder-ses-dashboards-grafana-avec-grafonnet/</link>
-      <pubDate>Thu, 18 Mar 2021 10:25:24 +0200</pubDate>
+      <pubDate>Mon, 22 Mar 2021 15:40:24 +0200</pubDate>
       <author>bpetit@nce.re (Benoit Petit)</author>
       <guid>https://bpetit.nce.re/fr/2021/03/coder-ses-dashboards-grafana-avec-grafonnet/</guid>
       <description>On ne présente plus Grafana en ce qui concerne la visualisation de données de graphiques et de données. Cet outil est très largement utilisé pour des besoins de monitoring, de métrologie&amp;hellip;
