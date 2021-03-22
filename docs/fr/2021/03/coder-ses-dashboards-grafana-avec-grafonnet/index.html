@@ -313,7 +313,7 @@ dashboard.<span style="color:#6ab825;font-weight:bold">new</span>(
     .addPanel(
         grafana.graphPanel.<span style="color:#6ab825;font-weight:bold">new</span>(
             title=<span style="color:#ed9d13">&#39;Hosts power consumption&#39;</span>,
-            datasource=<span style="color:#ed9d13">&#39;Prometheus-scaph&#39;</span>,
+            datasource=<span style="color:#ed9d13">&#39;${PROMETHEUS_DS}&#39;</span>,
             format=<span style="color:#ed9d13">&#39;W&#39;</span>,
             span=<span style="color:#3677a9">6</span>,
         )
@@ -327,7 +327,7 @@ dashboard.<span style="color:#6ab825;font-weight:bold">new</span>(
     .addPanel(
         grafana.graphPanel.<span style="color:#6ab825;font-weight:bold">new</span>(
             title=<span style="color:#ed9d13">&#39;Hosts power consumption total (dynamic time range)&#39;</span>,
-            datasource=<span style="color:#ed9d13">&#39;Prometheus-scaph&#39;</span>,
+            datasource=<span style="color:#ed9d13">&#39;${PROMETHEUS_DS}&#39;</span>,
             span=<span style="color:#3677a9">4</span>,
             bars=<span style="color:#6ab825;font-weight:bold">true</span>,
             format=<span style="color:#ed9d13">&#39;Wh&#39;</span>,
@@ -358,7 +358,7 @@ dashboard.<span style="color:#6ab825;font-weight:bold">new</span>(
     .addPanel(
         grafana.graphPanel.<span style="color:#6ab825;font-weight:bold">new</span>(
             title=<span style="color:#ed9d13">&#39;Socket power consumption&#39;</span>,
-            datasource=<span style="color:#ed9d13">&#39;Prometheus-scaph&#39;</span>,
+            datasource=<span style="color:#ed9d13">&#39;${PROMETHEUS_DS}&#39;</span>,
             format=<span style="color:#ed9d13">&#39;W&#39;</span>,
             span=<span style="color:#3677a9">6</span>,
         )
@@ -377,7 +377,7 @@ dashboard.<span style="color:#6ab825;font-weight:bold">new</span>(
     .addPanel(
         grafana.statPanel.<span style="color:#6ab825;font-weight:bold">new</span>(
             title=<span style="color:#ed9d13">&#39;Top process consumers&#39;</span>,
-            datasource=<span style="color:#ed9d13">&#39;Prometheus-scaph&#39;</span>,
+            datasource=<span style="color:#ed9d13">&#39;${PROMETHEUS_DS}&#39;</span>,
         )
         .addTarget(
             grafana.prometheus.target(
@@ -389,7 +389,7 @@ dashboard.<span style="color:#6ab825;font-weight:bold">new</span>(
     .addPanel(
         grafana.graphPanel.<span style="color:#6ab825;font-weight:bold">new</span>(
             title=<span style="color:#ed9d13">&#39;Filtered process (process_filter) power, by exe&#39;</span>,
-            datasource=<span style="color:#ed9d13">&#39;Prometheus-scaph&#39;</span>,
+            datasource=<span style="color:#ed9d13">&#39;${PROMETHEUS_DS}&#39;</span>,
             span=<span style="color:#3677a9">8</span>,
             format=<span style="color:#ed9d13">&#39;W&#39;</span>,
             legend_rightSide=<span style="color:#6ab825;font-weight:bold">true</span>,

@@ -135,7 +135,7 @@ Nous avons déjà vu les objet dashboard et template. Nous allons maintenant ajo
     .addPanel(
         grafana.graphPanel.new(
             title='Hosts power consumption',
-            datasource='Prometheus-scaph',
+            datasource='${PROMETHEUS_DS}',
             format='W',
             span=6,
         )
@@ -149,7 +149,7 @@ Nous avons déjà vu les objet dashboard et template. Nous allons maintenant ajo
     .addPanel(
         grafana.graphPanel.new(
             title='Hosts power consumption total (dynamic time range)',
-            datasource='Prometheus-scaph',
+            datasource='${PROMETHEUS_DS}',
             span=4,
             bars=true,
             format='Wh',
@@ -188,7 +188,7 @@ Comme lorsque vous éditez vos panels à la main, on peut ajouter plusieurs requ
     .addPanel(
         grafana.graphPanel.new(
             title='Socket power consumption',
-            datasource='Prometheus-scaph',
+            datasource='${PROMETHEUS_DS}',
             format='W',
             span=6,
         )
@@ -207,7 +207,7 @@ Comme lorsque vous éditez vos panels à la main, on peut ajouter plusieurs requ
     .addPanel(
         grafana.statPanel.new(
             title='Top process consumers',
-            datasource='Prometheus-scaph',
+            datasource='${PROMETHEUS_DS}',
         )
         .addTarget(
             grafana.prometheus.target(
@@ -219,7 +219,7 @@ Comme lorsque vous éditez vos panels à la main, on peut ajouter plusieurs requ
     .addPanel(
         grafana.graphPanel.new(
             title='Filtered process (process_filter) power, by exe',
-            datasource='Prometheus-scaph',
+            datasource='${PROMETHEUS_DS}',
             span=8,
             format='W',
             legend_rightSide=true,
@@ -260,3 +260,4 @@ Le résultat final :
 ![Dashboard grafana](/grafonnet_sample_2.png)
 
 Le fichier jsonnet final se trouve [ici](https://github.com/hubblo-org/scaphandre/blob/main/docker-compose/sample.jsonnet).
+
