@@ -61,7 +61,7 @@ Les avantages sont multiples:
   "headline": "Coder ses dashboards Grafana avec Grafonnet",
   "description" : "On ne présente plus Grafana en ce qui concerne la visualisation de données de graphiques et de données. Cet outil est très largement utilisé pour des besoins de monitoring, de métrologie\x26hellip;\nLes avantages sont multiples:\n open-source pratique : on peut créer des dashboards pour divers besoin très simplement flexible : de nombreuses sources de données sont supportées et les plugins répondent aux besoins les plus exotiques  Grafana permet également de déclencher des alertes lorsqu\x26rsquo;une métrique dépasse une certaine valeur (plus besoin de configurer un système d\x26rsquo;alerte propre à chaque source de donnée).",
   "inLanguage" : "fr",
-  "wordCount":  1130 ,
+  "wordCount":  1169 ,
   "datePublished" : "2021-03-22T15:40:24",
   "dateModified" : "2021-03-22T15:40:24",
   "image" : "https:\/\/bpetit.nce.re",
@@ -349,7 +349,7 @@ dashboard.<span style="color:#6ab825;font-weight:bold">new</span>(
 <p>On ajoute ensuite une requête au graphique avec <code>addTarget</code> et un objet <a href="https://grafana.github.io/grafonnet-lib/api-docs/#prometheustarget">prometheus.target</a> pour lequel on précise la requête PromQL, ici la consommation d'énergie de la machine en microwatts que l&rsquo;on divise pour obtenir des watts, puis la légende.</p>
 <p>On obtient donc :</p>
 <p><img src="/grafonnet_sample_1.png" alt="Dashboard grafana"></p>
-<p>Comme lorsque vous éditez vos panels à la main, on peut ajouter plusieurs requêtes/courbes dans le même panel en chaînant les appels <code>addTarget</code>. De même on peut ajouter des lignes en chaînant les appels <code>addRow</code>:</p>
+<p>Comme lorsque vous éditez vos panels à la main, on peut ajouter plusieurs requêtes/courbes dans le même panel en chaînant les appels <code>addTarget</code>. De même on peut ajouter des lignes en chaînant les appels <code>addRow</code>. Ajoutons une ligne pour la consommation par socket CPU et une autre pour les processus qui tournent sur la machine :</p>
 <div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">[...]
 .addRow(
     row.<span style="color:#6ab825;font-weight:bold">new</span>(
@@ -406,7 +406,7 @@ dashboard.<span style="color:#6ab825;font-weight:bold">new</span>(
     )
 )
 </code></pre></div>
-<p>J&rsquo;ai également ajouté dans cet exemple une target qui fait appel à une variable <code>process_filter</code>. Cette variable doit être définie au préalable (à la suite de la première) :</p>
+<p>J&rsquo;ai également ajouté dans cet exemple une target qui fait appel à une variable <code>process_filter</code>.  La variable permet à l&rsquo;utilisateur de saisir le nom du processus dont il veut surveiller la consommation d'énergie et doit donc être définie au préalable (à la suite de la première) :</p>
 <div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">.addTemplate(
     template.datasource(
         <span style="color:#ed9d13">&#39;PROMETHEUS_DS&#39;</span>,

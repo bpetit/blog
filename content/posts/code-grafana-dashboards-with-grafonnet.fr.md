@@ -177,7 +177,7 @@ On obtient donc :
 
 ![Dashboard grafana](/grafonnet_sample_1.png)
 
-Comme lorsque vous éditez vos panels à la main, on peut ajouter plusieurs requêtes/courbes dans le même panel en chaînant les appels `addTarget`. De même on peut ajouter des lignes en chaînant les appels `addRow`:
+Comme lorsque vous éditez vos panels à la main, on peut ajouter plusieurs requêtes/courbes dans le même panel en chaînant les appels `addTarget`. De même on peut ajouter des lignes en chaînant les appels `addRow`. Ajoutons une ligne pour la consommation par socket CPU et une autre pour les processus qui tournent sur la machine :
 
 {{< highlight javascript >}}
 [...]
@@ -237,7 +237,7 @@ Comme lorsque vous éditez vos panels à la main, on peut ajouter plusieurs requ
 )
 {{< / highlight >}}
 
-J'ai également ajouté dans cet exemple une target qui fait appel à une variable `process_filter`. Cette variable doit être définie au préalable (à la suite de la première) :
+J'ai également ajouté dans cet exemple une target qui fait appel à une variable `process_filter`.  La variable permet à l'utilisateur de saisir le nom du processus dont il veut surveiller la consommation d'énergie et doit donc être définie au préalable (à la suite de la première) :
 
 {{< highlight javascript >}}
 .addTemplate(
