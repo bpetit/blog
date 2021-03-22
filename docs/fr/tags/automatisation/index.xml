@@ -8,10 +8,21 @@
     <language>en-us</language>
     <managingEditor>bpetit@nce.re (Benoit Petit)</managingEditor>
     <webMaster>bpetit@nce.re (Benoit Petit)</webMaster>
-    <lastBuildDate>Fri, 19 Feb 2021 19:25:24 +0200</lastBuildDate>
+    <lastBuildDate>Thu, 18 Mar 2021 10:25:24 +0200</lastBuildDate>
     
 	<atom:link href="https://bpetit.nce.re/fr/tags/automatisation/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Coder ses dashboards Grafana avec Grafonnet</title>
+      <link>https://bpetit.nce.re/fr/2021/03/coder-ses-dashboards-grafana-avec-grafonnet/</link>
+      <pubDate>Thu, 18 Mar 2021 10:25:24 +0200</pubDate>
+      <author>bpetit@nce.re (Benoit Petit)</author>
+      <guid>https://bpetit.nce.re/fr/2021/03/coder-ses-dashboards-grafana-avec-grafonnet/</guid>
+      <description>On ne présente plus Grafana en ce qui concerne la visualisation de données de graphiques et de données. Cet outil est très largement utilisé pour des besoins de monitoring, de métrologie&amp;hellip;
+Les avantages sont multiples:
+ open-source pratique : on peut créer des dashboards pour divers besoin très simplement flexible : de nombreuses sources de données sont supportées et les plugins répondent aux besoins les plus exotiques  Grafana permet également de déclencher des alertes lorsqu&amp;rsquo;une métrique dépasse une certaine valeur (plus besoin de configurer un système d&amp;rsquo;alerte propre à chaque source de donnée).</description>
+    </item>
     
     <item>
       <title>Les pratiques SRE et le climat</title>
