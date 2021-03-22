@@ -41,7 +41,7 @@ Petite précision : je vais ici présenter [go-jsonnet](https://github.com/googl
 go get github.com/google/go-jsonnet/cmd/jsonnet
 {{< /highlight >}}
 
-Assurez vous alors que votre `$GO_PATH` est bien compris dans `$PATH` et vous pourrez lancer :
+Assurez vous alors que votre path Go est bien compris dans `$PATH` et vous pourrez lancer :
 
 {{< highlight javascript >}}
 jsonnet --help
