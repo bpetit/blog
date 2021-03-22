@@ -177,7 +177,7 @@ On obtient donc :
 
 ![Dashboard grafana](/grafonnet_sample_1.png)
 
-Comme lorsque vous éditez vos panels à la main, on peut ajouter plusieurs requêtes/courbes dans le même panel en chaînant les appels `addTarget`. De même on peut ajouter des lignes en chaînant les appels `addRow`. Ajoutons une ligne pour la consommation par socket CPU et une autre pour les processus qui tournent sur la machine :
+Comme lorsque vous éditez vos panels à la main, on peut ajouter plusieurs requêtes/courbes dans le même panel en chaînant les appels `addTarget`. De même on peut ajouter des lignes en chaînant les appels `addRow`. Ajoutons une ligne pour la consommation par socket CPU et une autre pour la consommation des processus qui tournent sur la machine :
 
 {{< highlight javascript >}}
 [...]
