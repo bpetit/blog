@@ -167,7 +167,7 @@ Nous avons déjà vu les objet dashboard et template. Nous allons maintenant ajo
 )   
 {{< /highlight >}}
 
-Dans l'appel à `addRow` on créé une nouvelle ligne avec [row.new](https://grafana.github.io/grafonnet-lib/api-docs/#rownew), on donne un titre à cette ligne (ici je décide que cette ligne servira aux métriques de consommation de la machine tout entière), puis on appelle [addPanel](sur la ligne résultante).
+Dans l'appel à `addRow` on créé une nouvelle ligne avec [row.new](https://grafana.github.io/grafonnet-lib/api-docs/#rownew), on donne un titre à cette ligne (ici je cette ligne servira aux métriques de consommation de la machine), puis on appelle [addPanel](sur la ligne résultante).
 
 On appelle alors [grafana.graphPanel.new](https://grafana.github.io/grafonnet-lib/api-docs/#graphpanelnew) pour créer notre graphe de consommation de la machine, en précisant l'unité (Watts), la source de données (l'instance prometheus tel que nommé avec la variable définie plus haut) et la largeur du graphique.
 

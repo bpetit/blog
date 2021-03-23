@@ -61,7 +61,7 @@ Les avantages sont multiples:
   "headline": "Coder ses dashboards Grafana avec Grafonnet",
   "description" : "On ne présente plus Grafana en ce qui concerne la visualisation de données de graphiques et de données. Cet outil est très largement utilisé pour des besoins de monitoring, de métrologie\x26hellip;\nLes avantages sont multiples:\n open-source pratique : on peut créer des dashboards pour divers besoin très simplement flexible : de nombreuses sources de données sont supportées et les plugins répondent aux besoins les plus exotiques  Grafana permet également de déclencher des alertes lorsqu\x26rsquo;une métrique dépasse une certaine valeur (plus besoin de configurer un système d\x26rsquo;alerte propre à chaque source de donnée).",
   "inLanguage" : "fr",
-  "wordCount":  1172 ,
+  "wordCount":  1168 ,
   "datePublished" : "2021-03-22T15:40:24",
   "dateModified" : "2021-03-22T15:40:24",
   "image" : "https:\/\/bpetit.nce.re",
@@ -344,7 +344,7 @@ dashboard.<span style="color:#6ab825;font-weight:bold">new</span>(
     )
 )   
 </code></pre></div>
-<p>Dans l&rsquo;appel à <code>addRow</code> on créé une nouvelle ligne avec <a href="https://grafana.github.io/grafonnet-lib/api-docs/#rownew">row.new</a>, on donne un titre à cette ligne (ici je décide que cette ligne servira aux métriques de consommation de la machine tout entière), puis on appelle [addPanel](sur la ligne résultante).</p>
+<p>Dans l&rsquo;appel à <code>addRow</code> on créé une nouvelle ligne avec <a href="https://grafana.github.io/grafonnet-lib/api-docs/#rownew">row.new</a>, on donne un titre à cette ligne (ici je cette ligne servira aux métriques de consommation de la machine), puis on appelle [addPanel](sur la ligne résultante).</p>
 <p>On appelle alors <a href="https://grafana.github.io/grafonnet-lib/api-docs/#graphpanelnew">grafana.graphPanel.new</a> pour créer notre graphe de consommation de la machine, en précisant l&rsquo;unité (Watts), la source de données (l&rsquo;instance prometheus tel que nommé avec la variable définie plus haut) et la largeur du graphique.</p>
 <p>On ajoute ensuite une requête au graphique avec <code>addTarget</code> et un objet <a href="https://grafana.github.io/grafonnet-lib/api-docs/#prometheustarget">prometheus.target</a> pour lequel on précise la requête PromQL, ici la consommation d'énergie de la machine en microwatts que l&rsquo;on divise pour obtenir des watts, puis la légende.</p>
 <p>On obtient donc :</p>
