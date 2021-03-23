@@ -61,7 +61,7 @@ Les avantages sont multiples:
   "headline": "Coder ses dashboards Grafana avec Grafonnet",
   "description" : "On ne présente plus Grafana en ce qui concerne la visualisation de données de graphiques et de données. Cet outil est très largement utilisé pour des besoins de monitoring, de métrologie\x26hellip;\nLes avantages sont multiples:\n open-source pratique : on peut créer des dashboards pour divers besoin très simplement flexible : de nombreuses sources de données sont supportées et les plugins répondent aux besoins les plus exotiques  Grafana permet également de déclencher des alertes lorsqu\x26rsquo;une métrique dépasse une certaine valeur (plus besoin de configurer un système d\x26rsquo;alerte propre à chaque source de donnée).",
   "inLanguage" : "fr",
-  "wordCount":  1171 ,
+  "wordCount":  1172 ,
   "datePublished" : "2021-03-22T15:40:24",
   "dateModified" : "2021-03-22T15:40:24",
   "image" : "https:\/\/bpetit.nce.re",
@@ -273,8 +273,8 @@ local dashboard = grafana.dashboard;
 local template = grafana.template;
 
 dashboard.<span style="color:#6ab825;font-weight:bold">new</span>(
-    <span style="color:#ed9d13">&#39;Mon super dashboard&#39;</span>,
-    tags=[<span style="color:#ed9d13">&#39;super&#39;</span>, <span style="color:#ed9d13">&#39;dashboard&#39;</span>],
+    <span style="color:#ed9d13">&#39;Scaphandre example dashboard&#39;</span>,
+    tags=[<span style="color:#ed9d13">&#39;scaphandre&#39;</span>, <span style="color:#ed9d13">&#39;energy&#39;</span>, <span style="color:#ed9d13">&#39;power&#39;</span>],
     editable=<span style="color:#6ab825;font-weight:bold">true</span>
 )
 .addTemplate(

@@ -74,8 +74,8 @@ local dashboard = grafana.dashboard;
 local template = grafana.template;
 
 dashboard.new(
-    'Mon super dashboard',
-    tags=['super', 'dashboard'],
+    'Scaphandre example dashboard',
+    tags=['scaphandre', 'energy', 'power'],
     editable=true
 )
 .addTemplate(
