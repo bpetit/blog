@@ -288,11 +288,11 @@ dashboard.<span style="color:#6ab825;font-weight:bold">new</span>(
 </code></pre></div>
 <p>Ici on déclare trois variables :</p>
 <ul>
-<li><code>grafana</code> qui va comprendre le chemin vers notre bilbiothèque grafonnet (nous verrons ensuite comment appeller effectivement la bibliothèque)</li>
-<li><code>dashboard</code> et <code>template</code> qui vous nous permettre de manipuler respectivement un <a href="https://grafana.com/docs/grafana/latest/dashboards/">dashboard</a> et des <a href="https://grafana.com/docs/grafana/latest/variables/">templates</a> sans avoir à repréciser le préfice <code>grafana.</code> à chaque fois</li>
+<li><code>grafana</code> qui va comprendre le chemin vers notre bibliothèque grafonnet (nous verrons ensuite comment appeller effectivement la bibliothèque)</li>
+<li><code>dashboard</code> et <code>template</code> qui vous nous permettre de manipuler respectivement un <a href="https://grafana.com/docs/grafana/latest/dashboards/">dashboard</a> et des <a href="https://grafana.com/docs/grafana/latest/variables/">templates</a> sans avoir à repréciser le préfixe <code>grafana.</code> à chaque fois</li>
 </ul>
 <p>Puis on appelle la fonction <a href="https://grafana.github.io/grafonnet-lib/api-docs/#dashboardnew">new</a> pour créer un nouveau dashboard, on lui donne un nom, des tags pour l&rsquo;identifier facilement lorsque l&rsquo;on aura de nombreux dashboards sur notre instance grafana et on demande à ce qu&rsquo;il soit éditable (c&rsquo;est toujours pratique de pouvoir tester quelques options à la main).</p>
-<p>On appelle ensuite la fonction <code>addTemplate</code> pour créer notre variable, qui sera un <a href="https://grafana.github.io/grafonnet-lib/api-docs/#templatedatasource">datasource</a> et nous permettra en un clic de séléctionner une source de donnée différente (ce qui est pratique si l&rsquo;on va chercher des données dans plusieurs instances prometheus différentes par exemple).</p>
+<p>On appelle ensuite la fonction <code>addTemplate</code> pour créer notre variable, qui sera un <a href="https://grafana.github.io/grafonnet-lib/api-docs/#templatedatasource">datasource</a> et nous permettra en un clic de sélectionner une source de donnée différente (ce qui est pratique si l&rsquo;on va chercher des données dans plusieurs instances prometheus différentes par exemple).</p>
 <p>On sauvegarde ce fichier et on le nomme <code>dashboard.jsonnet</code>.</p>
 <h2 id="utilisation">Utilisation</h2>
 <p>Nous allons maintenant lancer jsonnet, lui dire d&rsquo;utiliser la biliothèque qui nous intéresse pour faire nos dashboards (Grafonnet) et lui donner notre template à digérer :</p>
@@ -303,7 +303,7 @@ dashboard.<span style="color:#6ab825;font-weight:bold">new</span>(
 <p>Dans mon cas, le conteneur grafana a un volume attaché qui permet de donner à grafana un répertoire de dashboards (fichiers json) par défaut, grafana <a href="https://github.com/hubblo-org/scaphandre/blob/main/docker-compose/grafana/dashboards.yml">étant configuré pour charger ce dashboard</a>. De cette manière je peux générer un dashboard en JSON puis redémarrer le conteneur grafana pour tester mes changements :</p>
 <div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">jsonnet -J ~/git/grafonnet-lib ../sample.jsonnet &gt; dashboards/sample-dashboard.json &amp;&amp; docker-compose restart grafana</code></pre></div>
 <h2 id="remplir-le-dashboard">Remplir le dashboard</h2>
-<p>Notre dashboard n&rsquo;est pas très intéressant, c'était l&rsquo;exemple de base. Voyons comment l&rsquo;aggrémenter et faire un dashboard pour remonter la consommation d'énergie détaillée de mon laptop avec <a href="https://github.com/hubblo-org/scaphandre/">Scaphandre</a> et la stack <a href="https://github.com/hubblo-org/scaphandre/tree/main/docker-compose">docker-compose</a> qui va bien pour des tests en local.</p>
+<p>Notre dashboard n&rsquo;est pas très intéressant, c'était l&rsquo;exemple de base. Voyons comment l&rsquo;agrémenter et faire un dashboard pour remonter la consommation d'énergie détaillée de mon laptop avec <a href="https://github.com/hubblo-org/scaphandre/">Scaphandre</a> et la stack <a href="https://github.com/hubblo-org/scaphandre/tree/main/docker-compose">docker-compose</a> qui va bien pour des tests en local.</p>
 <p>Nous avons déjà vu les objet dashboard et template. Nous allons maintenant ajouter une ligne (row) à notre dashboard et insérer des graphes dans cette ligne. Pour ce faire, on appelle directement la fonction <a href="">addRow</a> sur l&rsquo;appel à la fonction <a href="">addTemplate</a> vue <a href="#premier-dashboard">précédemment</a>:</p>
 <div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">[...]
 .addRow(
@@ -344,7 +344,7 @@ dashboard.<span style="color:#6ab825;font-weight:bold">new</span>(
     )
 )   
 </code></pre></div>
-<p>Dans l&rsquo;appel à <code>addRow</code> on créé une nouvelle ligne avec <a href="https://grafana.github.io/grafonnet-lib/api-docs/#rownew">row.new</a>, on donne un titre à cette ligne (ici je décide que cette ligne servira aux métriques de consommation de la machine toute entière), puis on appelle [addPanel](sur la ligne résultante).</p>
+<p>Dans l&rsquo;appel à <code>addRow</code> on créé une nouvelle ligne avec <a href="https://grafana.github.io/grafonnet-lib/api-docs/#rownew">row.new</a>, on donne un titre à cette ligne (ici je décide que cette ligne servira aux métriques de consommation de la machine tout entière), puis on appelle [addPanel](sur la ligne résultante).</p>
 <p>On appelle alors <a href="https://grafana.github.io/grafonnet-lib/api-docs/#graphpanelnew">grafana.graphPanel.new</a> pour créer notre graphe de consommation de la machine, en précisant l&rsquo;unité (Watts), la source de données (l&rsquo;instance prometheus tel que nommé avec la variable définie plus haut) et la largeur du graphique.</p>
 <p>On ajoute ensuite une requête au graphique avec <code>addTarget</code> et un objet <a href="https://grafana.github.io/grafonnet-lib/api-docs/#prometheustarget">prometheus.target</a> pour lequel on précise la requête PromQL, ici la consommation d'énergie de la machine en microwatts que l&rsquo;on divise pour obtenir des watts, puis la légende.</p>
 <p>On obtient donc :</p>
@@ -406,7 +406,7 @@ dashboard.<span style="color:#6ab825;font-weight:bold">new</span>(
     )
 )
 </code></pre></div>
-<p>J&rsquo;ai également ajouté dans cet exemple une target qui fait appel à une variable <code>process_filter</code>.  La variable permet à l&rsquo;utilisateur de saisir le nom du processus dont il veut surveiller la consommation d'énergie et doit donc être définie au préalable (à la suite de la première) :</p>
+<p>J&rsquo;ai également ajouté dans cet exemple une Target qui fait appel à une variable <code>process_filter</code>.  La variable permet à l&rsquo;utilisateur de saisir le nom du processus dont il veut surveiller la consommation d'énergie et doit donc être définie au préalable (à la suite de la première) :</p>
 <div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">.addTemplate(
     template.datasource(
         <span style="color:#ed9d13">&#39;PROMETHEUS_DS&#39;</span>,
