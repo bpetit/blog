@@ -19,7 +19,7 @@ languages:
   en:
     title: "Benoit Petit"
     homeTitle: "The cloud is just someone else's computer"
-    subtitle: "ICT infrastructure engineer, focussed sustainability. Nothing is virtual."
+    subtitle: "ICT infrastructure engineer, focussed on sustainability. Nothing is virtual."
     languageName: English
     weight: 1
   fr:
