@@ -19,13 +19,13 @@ languages:
   en:
     title: "Benoit Petit"
     homeTitle: "The cloud is a lie."
-    subtitle: "Pragmatic utopist, I build IT infrastructures. Striving for transparency and measurability. Nothing is virtual."
+    subtitle: "ICT infrastructure engineer, focussed sustainability."
     languageName: English
     weight: 1
   fr:
     title: "Benoit Petit"
     homeTitle: "Bienvenue sur l'ordinateur de quelqu'un d'autre."
-    subtitle: "Utopiste pragmatique, je construis des infrastructures informatiques. En quête de transparence et de mesurabilité. Rien n'est immatériel."
+    subtitle: "Ingénieur infrastructure, spécialisé en durabilité et sobriété numérique."
     languageName: Français
     weight: 2
 permalinks:
