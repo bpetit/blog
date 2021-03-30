@@ -1,10 +1,13 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  
   <url>
     <loc>https://bpetit.nce.re/fr/tags/automatisation/</loc>
     <lastmod>2021-03-22T15:40:24+02:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://bpetit.nce.re/fr/</loc>
     <lastmod>2021-03-22T15:40:24+02:00</lastmod>
     <xhtml:link
@@ -17,10 +20,14 @@
                 hreflang="fr"
                 href="https://bpetit.nce.re/fr/"
                 />
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://bpetit.nce.re/fr/2021/03/coder-ses-dashboards-grafana-avec-grafonnet/</loc>
     <lastmod>2021-03-22T15:40:24+02:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://bpetit.nce.re/fr/tags/devops/</loc>
     <lastmod>2021-03-22T15:40:24+02:00</lastmod>
     <xhtml:link
@@ -33,13 +40,19 @@
                 hreflang="fr"
                 href="https://bpetit.nce.re/fr/tags/devops/"
                 />
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://bpetit.nce.re/fr/tags/grafana/</loc>
     <lastmod>2021-03-22T15:40:24+02:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://bpetit.nce.re/fr/tags/monitoring/</loc>
     <lastmod>2021-03-22T15:40:24+02:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://bpetit.nce.re/fr/tags/open-source/</loc>
     <lastmod>2021-03-22T15:40:24+02:00</lastmod>
     <xhtml:link
@@ -52,7 +65,9 @@
                 hreflang="fr"
                 href="https://bpetit.nce.re/fr/tags/open-source/"
                 />
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://bpetit.nce.re/fr/posts/</loc>
     <lastmod>2021-03-22T15:40:24+02:00</lastmod>
     <xhtml:link
@@ -65,7 +80,9 @@
                 hreflang="fr"
                 href="https://bpetit.nce.re/fr/posts/"
                 />
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://bpetit.nce.re/fr/tags/sre/</loc>
     <lastmod>2021-03-22T15:40:24+02:00</lastmod>
     <xhtml:link
@@ -78,7 +95,9 @@
                 hreflang="fr"
                 href="https://bpetit.nce.re/fr/tags/sre/"
                 />
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://bpetit.nce.re/fr/tags/</loc>
     <lastmod>2021-03-22T15:40:24+02:00</lastmod>
     <xhtml:link
@@ -91,7 +110,9 @@
                 hreflang="fr"
                 href="https://bpetit.nce.re/fr/tags/"
                 />
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://bpetit.nce.re/fr/tags/tech/</loc>
     <lastmod>2021-03-22T15:40:24+02:00</lastmod>
     <xhtml:link
@@ -104,13 +125,19 @@
                 hreflang="fr"
                 href="https://bpetit.nce.re/fr/tags/tech/"
                 />
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://bpetit.nce.re/fr/tags/climat/</loc>
     <lastmod>2021-02-19T19:25:24+02:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://bpetit.nce.re/fr/tags/energie/</loc>
     <lastmod>2021-02-19T19:25:24+02:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://bpetit.nce.re/fr/2021/02/les-pratiques-sre-et-le-climat/</loc>
     <lastmod>2021-02-19T19:25:24+02:00</lastmod>
     <xhtml:link
@@ -123,7 +150,9 @@
                 hreflang="fr"
                 href="https://bpetit.nce.re/fr/2021/02/les-pratiques-sre-et-le-climat/"
                 />
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://bpetit.nce.re/fr/tags/rust/</loc>
     <lastmod>2021-02-19T19:25:24+02:00</lastmod>
     <xhtml:link
@@ -136,10 +165,14 @@
                 hreflang="fr"
                 href="https://bpetit.nce.re/fr/tags/rust/"
                 />
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://bpetit.nce.re/fr/tags/r%C3%A9silience/</loc>
     <lastmod>2021-02-19T19:25:24+02:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://bpetit.nce.re/fr/tags/scaphandre/</loc>
     <lastmod>2021-02-19T19:25:24+02:00</lastmod>
     <xhtml:link
@@ -152,7 +185,9 @@
                 hreflang="fr"
                 href="https://bpetit.nce.re/fr/tags/scaphandre/"
                 />
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://bpetit.nce.re/fr/tags/cloud/</loc>
     <lastmod>2021-01-13T15:20:24+02:00</lastmod>
     <xhtml:link
@@ -165,10 +200,14 @@
                 hreflang="fr"
                 href="https://bpetit.nce.re/fr/tags/cloud/"
                 />
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://bpetit.nce.re/fr/tags/num%C3%A9rique/</loc>
     <lastmod>2021-01-13T15:20:24+02:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://bpetit.nce.re/fr/2021/01/scaphandre-v0.1.1-mesurer-la-consommation-d%C3%A9nergie-des-coulisses-du-num%C3%A9rique/</loc>
     <lastmod>2021-01-13T15:20:24+02:00</lastmod>
     <xhtml:link
@@ -181,26 +220,41 @@
                 hreflang="fr"
                 href="https://bpetit.nce.re/fr/2021/01/scaphandre-v0.1.1-mesurer-la-consommation-d%C3%A9nergie-des-coulisses-du-num%C3%A9rique/"
                 />
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://bpetit.nce.re/fr/tags/%C3%A9cologie/</loc>
     <lastmod>2021-01-13T15:20:24+02:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://bpetit.nce.re/fr/tags/%C3%A9nergie/</loc>
     <lastmod>2021-01-13T15:20:24+02:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://bpetit.nce.re/fr/tags/emploi/</loc>
     <lastmod>2020-08-26T14:30:24+02:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://bpetit.nce.re/fr/tags/humeur/</loc>
     <lastmod>2020-08-26T14:30:24+02:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://bpetit.nce.re/fr/2020/08/pourquoi-jai-quitt%C3%A9-mon-job-qui-avait-tout-pour-plaire/</loc>
     <lastmod>2020-08-26T14:30:24+02:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://bpetit.nce.re/fr/tags/soci%C3%A9t%C3%A9/</loc>
     <lastmod>2020-08-26T14:30:24+02:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://bpetit.nce.re/fr/2020/07/au-fait-pourquoi-on-bosse-dans-lit/</loc>
     <lastmod>2020-07-18T14:30:55+02:00</lastmod>
   </url>
+  
 </urlset>
