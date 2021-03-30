@@ -8,11 +8,7 @@
     <language>en-us</language>
     <managingEditor>bpetit@nce.re (Benoit Petit)</managingEditor>
     <webMaster>bpetit@nce.re (Benoit Petit)</webMaster>
-    <lastBuildDate>Mon, 22 Mar 2021 15:40:24 +0200</lastBuildDate>
-    
-	<atom:link href="https://bpetit.nce.re/fr/tags/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Mon, 22 Mar 2021 15:40:24 +0200</lastBuildDate><atom:link href="https://bpetit.nce.re/fr/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>automatisation</title>
       <link>https://bpetit.nce.re/fr/tags/automatisation/</link>

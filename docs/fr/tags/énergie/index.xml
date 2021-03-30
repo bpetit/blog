@@ -8,11 +8,7 @@
     <language>en-us</language>
     <managingEditor>bpetit@nce.re (Benoit Petit)</managingEditor>
     <webMaster>bpetit@nce.re (Benoit Petit)</webMaster>
-    <lastBuildDate>Wed, 13 Jan 2021 15:20:24 +0200</lastBuildDate>
-    
-	<atom:link href="https://bpetit.nce.re/fr/tags/%C3%A9nergie/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Wed, 13 Jan 2021 15:20:24 +0200</lastBuildDate><atom:link href="https://bpetit.nce.re/fr/tags/%C3%A9nergie/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Scaphandre v0.1.1: mesurer la consommation d&#39;énergie (des coulisses) du numérique</title>
       <link>https://bpetit.nce.re/fr/2021/01/scaphandre-v0.1.1-mesurer-la-consommation-d%C3%A9nergie-des-coulisses-du-num%C3%A9rique/</link>
