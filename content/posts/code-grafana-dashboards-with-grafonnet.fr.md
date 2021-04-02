@@ -15,7 +15,7 @@ share_img: /grafonnet.png
 author: Benoit Petit
 ---
 
-On ne présente plus [Grafana](https://grafana.com/) en ce qui concerne la visualisation de données de graphiques et de données. Cet outil est très largement utilisé pour des besoins de monitoring, de métrologie...
+On ne présente plus [Grafana](https://grafana.com/) en ce qui concerne la visualisation de graphiques et de données. Cet outil est très largement utilisé pour des besoins de monitoring, de métrologie...
 
 Les avantages sont multiples:
 
@@ -48,7 +48,7 @@ jsonnet --help
 	Jsonnet commandline interpreter (Go implementation) v0.17.0
 
 jsonnet {<option>} <filename>
-	
+
 Available options:
   -h / --help                This message
   -e / --exec                Treat filename as code
@@ -131,7 +131,7 @@ Nous avons déjà vu les objet dashboard et template. Nous allons maintenant ajo
 .addRow(
     row.new(
         title='Per hosts',
-    )   
+    )
     .addPanel(
         grafana.graphPanel.new(
             title='Hosts power consumption',
@@ -164,7 +164,7 @@ Nous avons déjà vu les objet dashboard et template. Nous allons maintenant ajo
             )
         )
     )
-)   
+)
 {{< /highlight >}}
 
 Dans l'appel à `addRow` on créé une nouvelle ligne avec [row.new](https://grafana.github.io/grafonnet-lib/api-docs/#rownew), on donne un titre à cette ligne (ici je cette ligne servira aux métriques de consommation de la machine), puis on appelle [addPanel](sur la ligne résultante).
@@ -199,7 +199,7 @@ Comme lorsque vous éditez vos panels à la main, on peut ajouter plusieurs requ
             )
         )
     )
-) 
+)
 .addRow(
     row.new(
         title='Per process',

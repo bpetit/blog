@@ -8,7 +8,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
 
   <title>Coder ses dashboards Grafana avec Grafonnet - Benoit Petit</title>
-  <meta name="description" content="On ne présente plus Grafana en ce qui concerne la visualisation de données de graphiques et de données. Cet outil est très largement utilisé pour des besoins de monitoring, de métrologie&hellip;
+  <meta name="description" content="On ne présente plus Grafana en ce qui concerne la visualisation de graphiques et de données. Cet outil est très largement utilisé pour des besoins de monitoring, de métrologie&hellip;
 Les avantages sont multiples:
  open-source pratique : on peut créer des dashboards pour divers besoin très simplement flexible : de nombreuses sources de données sont supportées et les plugins répondent aux besoins les plus exotiques  Grafana permet également de déclencher des alertes lorsqu&rsquo;une métrique dépasse une certaine valeur (plus besoin de configurer un système d&rsquo;alerte propre à chaque source de donnée).">
   <meta name="author" content="Benoit Petit"/><script type="application/ld+json">
@@ -59,9 +59,9 @@ Les avantages sont multiples:
     "name" : "Benoit Petit"
   },
   "headline": "Coder ses dashboards Grafana avec Grafonnet",
-  "description" : "On ne présente plus Grafana en ce qui concerne la visualisation de données de graphiques et de données. Cet outil est très largement utilisé pour des besoins de monitoring, de métrologie\x26hellip;\nLes avantages sont multiples:\n open-source pratique : on peut créer des dashboards pour divers besoin très simplement flexible : de nombreuses sources de données sont supportées et les plugins répondent aux besoins les plus exotiques  Grafana permet également de déclencher des alertes lorsqu\x26rsquo;une métrique dépasse une certaine valeur (plus besoin de configurer un système d\x26rsquo;alerte propre à chaque source de donnée).",
+  "description" : "On ne présente plus Grafana en ce qui concerne la visualisation de graphiques et de données. Cet outil est très largement utilisé pour des besoins de monitoring, de métrologie\x26hellip;\nLes avantages sont multiples:\n open-source pratique : on peut créer des dashboards pour divers besoin très simplement flexible : de nombreuses sources de données sont supportées et les plugins répondent aux besoins les plus exotiques  Grafana permet également de déclencher des alertes lorsqu\x26rsquo;une métrique dépasse une certaine valeur (plus besoin de configurer un système d\x26rsquo;alerte propre à chaque source de donnée).",
   "inLanguage" : "fr",
-  "wordCount":  1168 ,
+  "wordCount":  1166 ,
   "datePublished" : "2021-03-22T15:40:24",
   "dateModified" : "2021-03-22T15:40:24",
   "image" : "https:\/\/bpetit.nce.re",
@@ -81,7 +81,7 @@ Les avantages sont multiples:
 </script>
 
 <meta property="og:title" content="Coder ses dashboards Grafana avec Grafonnet" />
-<meta property="og:description" content="On ne présente plus Grafana en ce qui concerne la visualisation de données de graphiques et de données. Cet outil est très largement utilisé pour des besoins de monitoring, de métrologie&hellip;
+<meta property="og:description" content="On ne présente plus Grafana en ce qui concerne la visualisation de graphiques et de données. Cet outil est très largement utilisé pour des besoins de monitoring, de métrologie&hellip;
 Les avantages sont multiples:
  open-source pratique : on peut créer des dashboards pour divers besoin très simplement flexible : de nombreuses sources de données sont supportées et les plugins répondent aux besoins les plus exotiques  Grafana permet également de déclencher des alertes lorsqu&rsquo;une métrique dépasse une certaine valeur (plus besoin de configurer un système d&rsquo;alerte propre à chaque source de donnée).">
 <meta property="og:image" content="https://bpetit.nce.re/grafonnet.png" />
@@ -90,8 +90,8 @@ Les avantages sont multiples:
 <meta property="og:site_name" content="Benoit Petit" />
 
   <meta name="twitter:title" content="Coder ses dashboards Grafana avec Grafonnet" />
-  <meta name="twitter:description" content="On ne présente plus Grafana en ce qui concerne la visualisation de données de graphiques et de données. Cet outil est très largement utilisé pour des besoins de monitoring, de métrologie&hellip;
-Les …">
+  <meta name="twitter:description" content="On ne présente plus Grafana en ce qui concerne la visualisation de graphiques et de données. Cet outil est très largement utilisé pour des besoins de monitoring, de métrologie&hellip;
+Les avantages …">
   <meta name="twitter:image" content="https://bpetit.nce.re/grafonnet.png" />
   <meta name="twitter:card" content="summary" />
   <meta name="twitter:site" content="@bpetit_" />
@@ -235,7 +235,7 @@ Les …">
   <div class="row">
     <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
       <article role="main" class="blog-post">
-        <p>On ne présente plus <a href="https://grafana.com/">Grafana</a> en ce qui concerne la visualisation de données de graphiques et de données. Cet outil est très largement utilisé pour des besoins de monitoring, de métrologie&hellip;</p>
+        <p>On ne présente plus <a href="https://grafana.com/">Grafana</a> en ce qui concerne la visualisation de graphiques et de données. Cet outil est très largement utilisé pour des besoins de monitoring, de métrologie&hellip;</p>
 <p>Les avantages sont multiples:</p>
 <ul>
 <li>open-source</li>
@@ -255,7 +255,7 @@ Les …">
 	Jsonnet commandline interpreter (Go implementation) v0<span style="color:#3677a9">.17.0</span>
 
 jsonnet {&lt;option&gt;} &lt;filename&gt;
-	
+
 Available options:
   -h / --help                This message
   -e / --exec                Treat filename as code
@@ -309,7 +309,7 @@ dashboard.<span style="color:#6ab825;font-weight:bold">new</span>(
 .addRow(
     row.<span style="color:#6ab825;font-weight:bold">new</span>(
         title=<span style="color:#ed9d13">&#39;Per hosts&#39;</span>,
-    )   
+    )
     .addPanel(
         grafana.graphPanel.<span style="color:#6ab825;font-weight:bold">new</span>(
             title=<span style="color:#ed9d13">&#39;Hosts power consumption&#39;</span>,
@@ -342,7 +342,7 @@ dashboard.<span style="color:#6ab825;font-weight:bold">new</span>(
             )
         )
     )
-)   
+)
 </code></pre></div>
 <p>Dans l&rsquo;appel à <code>addRow</code> on créé une nouvelle ligne avec <a href="https://grafana.github.io/grafonnet-lib/api-docs/#rownew">row.new</a>, on donne un titre à cette ligne (ici je cette ligne servira aux métriques de consommation de la machine), puis on appelle [addPanel](sur la ligne résultante).</p>
 <p>On appelle alors <a href="https://grafana.github.io/grafonnet-lib/api-docs/#graphpanelnew">grafana.graphPanel.new</a> pour créer notre graphe de consommation de la machine, en précisant l&rsquo;unité (Watts), la source de données (l&rsquo;instance prometheus tel que nommé avec la variable définie plus haut) et la largeur du graphique.</p>
@@ -369,7 +369,7 @@ dashboard.<span style="color:#6ab825;font-weight:bold">new</span>(
             )
         )
     )
-) 
+)
 .addRow(
     row.<span style="color:#6ab825;font-weight:bold">new</span>(
         title=<span style="color:#ed9d13">&#39;Per process&#39;</span>,
