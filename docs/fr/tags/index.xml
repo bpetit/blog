@@ -8,11 +8,7 @@
     <language>en-us</language>
     <managingEditor>bpetit@nce.re (Benoit Petit)</managingEditor>
     <webMaster>bpetit@nce.re (Benoit Petit)</webMaster>
-    <lastBuildDate>Mon, 22 Mar 2021 15:40:24 +0200</lastBuildDate>
-    
-	<atom:link href="https://bpetit.nce.re/fr/tags/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Mon, 22 Mar 2021 15:40:24 +0200</lastBuildDate><atom:link href="https://bpetit.nce.re/fr/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>automatisation</title>
       <link>https://bpetit.nce.re/fr/tags/automatisation/</link>
@@ -23,11 +19,29 @@
     </item>
     
     <item>
+      <title>climat</title>
+      <link>https://bpetit.nce.re/fr/tags/climat/</link>
+      <pubDate>Mon, 22 Mar 2021 15:40:24 +0200</pubDate>
+      <author>bpetit@nce.re (Benoit Petit)</author>
+      <guid>https://bpetit.nce.re/fr/tags/climat/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>devops</title>
       <link>https://bpetit.nce.re/fr/tags/devops/</link>
       <pubDate>Mon, 22 Mar 2021 15:40:24 +0200</pubDate>
       <author>bpetit@nce.re (Benoit Petit)</author>
       <guid>https://bpetit.nce.re/fr/tags/devops/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>environnement</title>
+      <link>https://bpetit.nce.re/fr/tags/environnement/</link>
+      <pubDate>Mon, 22 Mar 2021 15:40:24 +0200</pubDate>
+      <author>bpetit@nce.re (Benoit Petit)</author>
+      <guid>https://bpetit.nce.re/fr/tags/environnement/</guid>
       <description></description>
     </item>
     
@@ -59,6 +73,33 @@
     </item>
     
     <item>
+      <title>rse</title>
+      <link>https://bpetit.nce.re/fr/tags/rse/</link>
+      <pubDate>Mon, 22 Mar 2021 15:40:24 +0200</pubDate>
+      <author>bpetit@nce.re (Benoit Petit)</author>
+      <guid>https://bpetit.nce.re/fr/tags/rse/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>slo</title>
+      <link>https://bpetit.nce.re/fr/tags/slo/</link>
+      <pubDate>Mon, 22 Mar 2021 15:40:24 +0200</pubDate>
+      <author>bpetit@nce.re (Benoit Petit)</author>
+      <guid>https://bpetit.nce.re/fr/tags/slo/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>sobriété</title>
+      <link>https://bpetit.nce.re/fr/tags/sobri%C3%A9t%C3%A9/</link>
+      <pubDate>Mon, 22 Mar 2021 15:40:24 +0200</pubDate>
+      <author>bpetit@nce.re (Benoit Petit)</author>
+      <guid>https://bpetit.nce.re/fr/tags/sobri%C3%A9t%C3%A9/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>sre</title>
       <link>https://bpetit.nce.re/fr/tags/sre/</link>
       <pubDate>Mon, 22 Mar 2021 15:40:24 +0200</pubDate>
@@ -73,15 +114,6 @@
       <pubDate>Mon, 22 Mar 2021 15:40:24 +0200</pubDate>
       <author>bpetit@nce.re (Benoit Petit)</author>
       <guid>https://bpetit.nce.re/fr/tags/tech/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>climat</title>
-      <link>https://bpetit.nce.re/fr/tags/climat/</link>
-      <pubDate>Fri, 19 Feb 2021 19:25:24 +0200</pubDate>
-      <author>bpetit@nce.re (Benoit Petit)</author>
-      <guid>https://bpetit.nce.re/fr/tags/climat/</guid>
       <description></description>
     </item>
     

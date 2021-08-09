@@ -59,7 +59,7 @@ Les avantages sont multiples:
     "name" : "Benoit Petit"
   },
   "headline": "Coder ses dashboards Grafana avec Grafonnet",
-  "description" : "On ne présente plus Grafana en ce qui concerne la visualisation de graphiques et de données. Cet outil est très largement utilisé pour des besoins de monitoring, de métrologie\x26hellip;\nLes avantages sont multiples:\n open-source pratique : on peut créer des dashboards pour divers besoin très simplement flexible : de nombreuses sources de données sont supportées et les plugins répondent aux besoins les plus exotiques  Grafana permet également de déclencher des alertes lorsqu\x26rsquo;une métrique dépasse une certaine valeur (plus besoin de configurer un système d\x26rsquo;alerte propre à chaque source de donnée).",
+  "description" : "On ne présente plus Grafana en ce qui concerne la visualisation de graphiques et de données. Cet outil est très largement utilisé pour des besoins de monitoring, de métrologie\u0026hellip;\nLes avantages sont multiples:\n open-source pratique : on peut créer des dashboards pour divers besoin très simplement flexible : de nombreuses sources de données sont supportées et les plugins répondent aux besoins les plus exotiques  Grafana permet également de déclencher des alertes lorsqu\u0026rsquo;une métrique dépasse une certaine valeur (plus besoin de configurer un système d\u0026rsquo;alerte propre à chaque source de donnée).",
   "inLanguage" : "fr",
   "wordCount":  1166 ,
   "datePublished" : "2021-03-22T15:40:24",
@@ -96,7 +96,7 @@ Les avantages …">
   <meta name="twitter:card" content="summary" />
   <meta name="twitter:site" content="@bpetit_" />
   <meta name="twitter:creator" content="@bpetit_" />
-  <meta name="generator" content="Hugo 0.68.3" />
+  <meta name="generator" content="Hugo 0.82.0" />
   <link rel="alternate" href="https://bpetit.nce.re/fr/index.xml" type="application/rss+xml" title="Benoit Petit"><link rel="stylesheet" href="https://bpetit.nce.re/css/katex.min.css" />
   <link rel="stylesheet" href="https://bpetit.nce.re/fontawesome/css/all.css" />
   <link rel="stylesheet" href="https://bpetit.nce.re/css/bootstrap.min.css" /><link rel="stylesheet" href="https://bpetit.nce.re/css/main.css" /><link rel="stylesheet" href="https://bpetit.nce.re/css/fonts.css" /><link rel="stylesheet" href="https://bpetit.nce.re/css/syntax.css" /><link rel="stylesheet" href="https://bpetit.nce.re/css/codeblock.css" /><link rel="stylesheet" href="https://bpetit.nce.re/css/photoswipe.min.css" />
@@ -299,11 +299,11 @@ dashboard.<span style="color:#6ab825;font-weight:bold">new</span>(
 <div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">	jsonnet -J grafonnet-lib dashboard.jsonnet</code></pre></div>
 <p>Par défaut jsonnet afficher le résultat sur la sortie standard, ce qui n&rsquo;est pas très pratique. On redirige le tout dans un fichier :</p>
 <div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">	jsonnet -J grafonnet-lib dashboard.jsonnet &gt; bidouille.json</code></pre></div>
-<p>Une fois fait il n&rsquo;y a plus qu'à importer le dashboard dans grafana et le tour est joué. A ce stade, on aura un dashboard vide avec notre variable en haut à gauche.</p>
+<p>Une fois fait il n&rsquo;y a plus qu&rsquo;à importer le dashboard dans grafana et le tour est joué. A ce stade, on aura un dashboard vide avec notre variable en haut à gauche.</p>
 <p>Dans mon cas, le conteneur grafana a un volume attaché qui permet de donner à grafana un répertoire de dashboards (fichiers json) par défaut, grafana <a href="https://github.com/hubblo-org/scaphandre/blob/main/docker-compose/grafana/dashboards.yml">étant configuré pour charger ce dashboard</a>. De cette manière je peux générer un dashboard en JSON puis redémarrer le conteneur grafana pour tester mes changements :</p>
 <div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">jsonnet -J ~/git/grafonnet-lib ../sample.jsonnet &gt; dashboards/sample-dashboard.json &amp;&amp; docker-compose restart grafana</code></pre></div>
 <h2 id="remplir-le-dashboard">Remplir le dashboard</h2>
-<p>Notre dashboard n&rsquo;est pas très intéressant, c'était l&rsquo;exemple de base. Voyons comment l&rsquo;agrémenter et faire un dashboard pour remonter la consommation d'énergie détaillée de mon laptop avec <a href="https://github.com/hubblo-org/scaphandre/">Scaphandre</a> et la stack <a href="https://github.com/hubblo-org/scaphandre/tree/main/docker-compose">docker-compose</a> qui va bien pour des tests en local.</p>
+<p>Notre dashboard n&rsquo;est pas très intéressant, c&rsquo;était l&rsquo;exemple de base. Voyons comment l&rsquo;agrémenter et faire un dashboard pour remonter la consommation d&rsquo;énergie détaillée de mon laptop avec <a href="https://github.com/hubblo-org/scaphandre/">Scaphandre</a> et la stack <a href="https://github.com/hubblo-org/scaphandre/tree/main/docker-compose">docker-compose</a> qui va bien pour des tests en local.</p>
 <p>Nous avons déjà vu les objet dashboard et template. Nous allons maintenant ajouter une ligne (row) à notre dashboard et insérer des graphes dans cette ligne. Pour ce faire, on appelle directement la fonction <a href="">addRow</a> sur l&rsquo;appel à la fonction <a href="">addTemplate</a> vue <a href="#premier-dashboard">précédemment</a>:</p>
 <div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">[...]
 .addRow(
@@ -346,7 +346,7 @@ dashboard.<span style="color:#6ab825;font-weight:bold">new</span>(
 </code></pre></div>
 <p>Dans l&rsquo;appel à <code>addRow</code> on créé une nouvelle ligne avec <a href="https://grafana.github.io/grafonnet-lib/api-docs/#rownew">row.new</a>, on donne un titre à cette ligne (ici je cette ligne servira aux métriques de consommation de la machine), puis on appelle [addPanel](sur la ligne résultante).</p>
 <p>On appelle alors <a href="https://grafana.github.io/grafonnet-lib/api-docs/#graphpanelnew">grafana.graphPanel.new</a> pour créer notre graphe de consommation de la machine, en précisant l&rsquo;unité (Watts), la source de données (l&rsquo;instance prometheus tel que nommé avec la variable définie plus haut) et la largeur du graphique.</p>
-<p>On ajoute ensuite une requête au graphique avec <code>addTarget</code> et un objet <a href="https://grafana.github.io/grafonnet-lib/api-docs/#prometheustarget">prometheus.target</a> pour lequel on précise la requête PromQL, ici la consommation d'énergie de la machine en microwatts que l&rsquo;on divise pour obtenir des watts, puis la légende.</p>
+<p>On ajoute ensuite une requête au graphique avec <code>addTarget</code> et un objet <a href="https://grafana.github.io/grafonnet-lib/api-docs/#prometheustarget">prometheus.target</a> pour lequel on précise la requête PromQL, ici la consommation d&rsquo;énergie de la machine en microwatts que l&rsquo;on divise pour obtenir des watts, puis la légende.</p>
 <p>On obtient donc :</p>
 <p><img src="/grafonnet_sample_1.png" alt="Dashboard grafana"></p>
 <p>Comme lorsque vous éditez vos panels à la main, on peut ajouter plusieurs requêtes/courbes dans le même panel en chaînant les appels <code>addTarget</code>. De même on peut ajouter des lignes en chaînant les appels <code>addRow</code>. Ajoutons une ligne pour la consommation par socket CPU et une autre pour la consommation des processus qui tournent sur la machine :</p>
@@ -406,7 +406,7 @@ dashboard.<span style="color:#6ab825;font-weight:bold">new</span>(
     )
 )
 </code></pre></div>
-<p>J&rsquo;ai également ajouté dans cet exemple une Target qui fait appel à une variable <code>process_filter</code>.  La variable permet à l&rsquo;utilisateur de saisir le nom du processus dont il veut surveiller la consommation d'énergie et doit donc être définie au préalable (à la suite de la première) :</p>
+<p>J&rsquo;ai également ajouté dans cet exemple une Target qui fait appel à une variable <code>process_filter</code>.  La variable permet à l&rsquo;utilisateur de saisir le nom du processus dont il veut surveiller la consommation d&rsquo;énergie et doit donc être définie au préalable (à la suite de la première) :</p>
 <div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">.addTemplate(
     template.datasource(
         <span style="color:#ed9d13">&#39;PROMETHEUS_DS&#39;</span>,
@@ -458,6 +458,10 @@ dashboard.<span style="color:#6ab825;font-weight:bold">new</span>(
               <a href="https://bpetit.nce.re/fr/2021/02/les-pratiques-sre-et-le-climat/" data-toggle="tooltip" data-placement="top" title="Les pratiques SRE et le climat">&larr; Post précédent</a>
             </li>
           
+          
+            <li class="next">
+              <a href="https://bpetit.nce.re/fr/2021/03/climat-et-num%C3%A9rique-pourquoi-le-mouvement-devops-a-un-r%C3%B4le-%C3%A0-jouer/" data-toggle="tooltip" data-placement="top" title="Climat et numérique: pourquoi le mouvement DevOps a un rôle à jouer">Post suivant &rarr;</a>
+            </li>
           
         </ul>
       
@@ -526,11 +530,19 @@ dashboard.<span style="color:#6ab825;font-weight:bold">new</span>(
             
           
 
-          <img src="/by-sa.svg"/>
+          &nbsp;&bull;&nbsp;&copy;
+          
+            2021
+          
+
+          
+            &nbsp;&bull;&nbsp;
+            <a href="https://bpetit.nce.re/fr/">Benoit Petit</a>
+          
         </p>
         
         <p class="credits theme-by text-muted">
-          Carbure avec <a href="https://gohugo.io">Hugo v0.68.3</a>&nbsp;&bull;&nbsp; Avec le Theme <a href="https://github.com/halogenica/beautifulhugo">Beautiful Hugo</a> adapté de <a href="https://deanattali.com/beautiful-jekyll/">Beautiful Jekyll</a>
+          Carbure avec <a href="https://gohugo.io">Hugo v0.82.0</a>&nbsp;&bull;&nbsp; Avec le Theme <a href="https://github.com/halogenica/beautifulhugo">Beautiful Hugo</a> adapté de <a href="https://deanattali.com/beautiful-jekyll/">Beautiful Jekyll</a>
           
         </p>
       </div>
