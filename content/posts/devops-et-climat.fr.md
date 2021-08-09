@@ -15,6 +15,7 @@ thumbnail: /bird.jpg
 share_img: /bird.jpg
 author: Benoit Petit
 ---
+![Un oiseau](/bird.jpg)
 
 En ce moment je travaille sur une formation à l'attention des techs, côté infrastructure (avec un penchant pour les méthodes SRE/DevOps), concernant la sobriété numérique. J'en ai parlé un peu autour de moi pour savoir ce que les pros du domaine aimeraient trouver dans ce type de formation. J'ai entendu plein de bonnes idées et j'en ai gardé une bonne partie (merci à celles et ceux qui me les ont soufflé). En plus de ces idées, j'ai eu droit à des avis sur le sujet, bien entendu. Certains avis m'ont interpellé.
 
@@ -22,7 +23,7 @@ Je précise que je vais un peu mélanger tous les métiers de la tech dans ce po
 
 Autre précision, dans cet article, il ne faut pas confondre RSE, pour Responsabilité Sociétale des Entreprises et SRE pour Site Reliability Engineering.
 
-## Ceux qui gèrent l'infra n'ont pas de temps à perdre, pas de moyens et/ou pas de pouvoir
+## "Ceux qui gèrent l'infra n'ont pas de temps à perdre, pas de moyens et/ou pas de pouvoir"
 
 ![Les administrateurs système d'IT Crowd](/itcrowd.png)
 
@@ -36,7 +37,7 @@ La morale de tout ça, c'est que les profils techniques, notamment en lien avec 
 
 "Et les grands groupes ?" me dira t'on. C'est vrai que dans de grandes structures les choix techniques sont souvent beaucoup plus soumis à une chaine de décision descendante. Mais j'ai au moins un exemple en tête d'entreprise importante, très, très procédurière et organisée en silo, qui a fini par adopter les technos à la mode, sous pression des techs (et certainement un peu des recruteurs/recruteuses).
 
-## Ca doit venir de la RSE
+## "Ca doit venir de la RSE"
 
 ![Monsieurs Propre s'occupe de tout !](/mrpropre.jpg)
 
@@ -48,7 +49,7 @@ La RSE, il me semble, suit souvent le même chemin. On créé un département RS
 
 Les vrais sujets sont d'ailleurs souvent mis sur la table par les employés [eux mêmes](https://www.printemps-ecologique.fr/). Comme à l'échelle individuelle, attendre que les institutions fassent tout le travail revient à nous condamner. Il faut se rassembler pour faire bouger les logiques en place, mais aussi commencer à son échelle et sur le périmètre que l'on maitrise.
 
-## Notre boulot c'est la fiabilité et la valeur business
+## "Notre boulot c'est la fiabilité et la valeur business"
 
 C'est vrai. Mais depuis quand reste t'on dans les sentiers battus ? L'IT évolue considérablement, en permanence et pas uniquement sur des aspects techniques, comme ceux que l'on a évoqué dans cet article.
 
