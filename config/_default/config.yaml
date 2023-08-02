@@ -4,7 +4,7 @@ languageCode: "en-us"
 languageName: English
 theme: "beautifulhugo"
 Author:
-  mastodon: "@bpetit@mastodon.green"
+  mastodon: "bpetit@mastodon.green"
   linkedin: bepetit
   github: bpetit
   gitlab: bpetit1
