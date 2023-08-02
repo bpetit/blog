@@ -89,9 +89,7 @@
   <meta name="twitter:description" content="Les origines du projet Comme d&rsquo;autres petites mains de la &ldquo;startup nation&rdquo;, j&rsquo;ai été amené à travailler sur des projets à &ldquo;gros volume&rdquo; (tout est relatif). Je pense …">
   <meta name="twitter:image" content="https://bpetit.nce.re/scaphandre.large.cleaned.png" />
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:site" content="@bpetit_" />
-  <meta name="twitter:creator" content="@bpetit_" />
-  <meta name="generator" content="Hugo 0.82.0" />
+  <meta name="generator" content="Hugo 0.115.4">
   <link rel="alternate" href="https://bpetit.nce.re/fr/index.xml" type="application/rss+xml" title="Benoit Petit"><link rel="stylesheet" href="https://bpetit.nce.re/css/katex.min.css" />
   <link rel="stylesheet" href="https://bpetit.nce.re/fontawesome/css/all.css" />
   <link rel="stylesheet" href="https://bpetit.nce.re/css/bootstrap.min.css" /><link rel="stylesheet" href="https://bpetit.nce.re/css/main.css" /><link rel="stylesheet" href="https://bpetit.nce.re/css/fonts.css" /><link rel="stylesheet" href="https://bpetit.nce.re/css/syntax.css" /><link rel="stylesheet" href="https://bpetit.nce.re/css/codeblock.css" /><link rel="stylesheet" href="https://bpetit.nce.re/css/photoswipe.min.css" />
@@ -236,7 +234,7 @@
 <p>J&rsquo;ai remarqué alors que nous étions souvent très heureux du défi technique que ces systèmes représentent, mais rarement critiques du nombre de machines nécessaires.
 Si l&rsquo;on est conscient que <a href="https://bpetit.nce.re/fr/2020/08/pourquoi-jai-quitt%C3%A9-mon-job-qui-avait-tout-pour-plaire/#relever-la-t%C3%AAte-de-l%C3%A9cran">l&rsquo;avenir de l&rsquo;humanité</a> dépend de notre capacité à réguler et faire évoluer nos pratiques (pas qu&rsquo;en informatique bien entendu), on peut se poser la question de ce qu&rsquo;implique le fonctionnement de telles infrastructures et services sur le climat (et bien plus).</p>
 <h2 id="mais-alors-pourquoi-rien-nest-fait-">Mais alors pourquoi rien n&rsquo;est fait ?</h2>
-<p>J&rsquo;étais moi-même incapable à cette époque de mesurer les conséquences de ces projets. Nous utilisions notamment des systèmes d'<em>auto-scaling</em> et nous étions sur un cloud public (évidemment), où la ressource est <strong>virtuellement infinie</strong>. Lancer de nouvelles machines, lors d&rsquo;une montée en charge, ne nécessitait aucune action humaine (grâce à l&rsquo;auto-scaling).
+<p>J&rsquo;étais moi-même incapable à cette époque de mesurer les conséquences de ces projets. Nous utilisions notamment des systèmes d&rsquo;<em>auto-scaling</em> et nous étions sur un cloud public (évidemment), où la ressource est <strong>virtuellement infinie</strong>. Lancer de nouvelles machines, lors d&rsquo;une montée en charge, ne nécessitait aucune action humaine (grâce à l&rsquo;auto-scaling).
 Je me suis rendu compte que dans un tel contexte, <strong>la ressource IT</strong> (CPU/RAM/GPU/&hellip;) n&rsquo;a plus <strong>aucun lien</strong> &ldquo;cognitif&rdquo; avec le <strong>monde réel</strong>. Il est impossible en l&rsquo;état de se représenter ne serait-ce qu&rsquo;un ordre de grandeur de ce que le service que l&rsquo;on opère consomme en terme d&rsquo;énergie. Impossible alors de se rendre compte de son impact sur le climat.</p>
 <p>Comment alors :</p>
 <ul>
@@ -253,9 +251,9 @@ Je me suis rendu compte que dans un tel contexte, <strong>la ressource IT</stron
 <p>Venons en au sujet de cet article qui est de vous présenter <a href="https://github.com/hubblo-org/scaphandre">scaphandre</a>, un logiciel open-source de <strong>mesure de la consommation d&rsquo;énergie d&rsquo;un serveur informatique</strong> ou ordinateur, <strong>mais aussi des services et applications qu&rsquo;il exécute</strong>. Plus précisément, scaphandre est à la fois un outil utilisable en ligne de commande et un <strong>démon</strong> (service).</p>
 <p>Le projet a notamment pour objectif de rendre la mesure de consommation d&rsquo;énergie suffisamment simple pour que ça devienne &ldquo;un basique&rdquo;, au même titre que le nombre de requêtes par seconde ou la latence, le temps CPU consommé ou la RAM, etc&hellip;</p>
 <p>Scaphandre est <strong>extensible</strong>, il peut faire appel à différentes &ldquo;logiques&rdquo; pour collecter les métriques (<em><a href="https://hubblo-org.github.io/scaphandre/explanations/internal-structure.html#sensors">sensors</a></em>) et différentes logiques pour envoyer ou exposer ces métriques (<em><a href="https://hubblo-org.github.io/scaphandre/explanations/internal-structure.html#exporters">exporters</a></em>). Cependant, il n&rsquo;exécute qu&rsquo;un <em>sensor</em> et qu&rsquo;un <em>exporter</em> à la fois (rien n&rsquo;empêche de lancer plusieurs instances de scaphandre pour répondre à des besoins différents).</p>
-<p>Il peut donc être mis en place dans une infrastructure, <strong>quelque soit la stack de monitoring</strong>, puisqu&rsquo;il est possible de développer un nouvel exporter pour votre <a href="https://blog.octo.com/introduction-aux-bases-de-donnees-temporelles/">TSDB</a> ou outil d&rsquo;analyse de données préféré, si l'<em>exporter</em> en question n&rsquo;existe pas déjà. L&rsquo;idée sous-jacente est que pour que ces mesures soient faites et exploitées par une majorité d&rsquo;informaticiens, l&rsquo;outil doit <strong>s&rsquo;adapter à l&rsquo;existant</strong> et non l&rsquo;inverse.</p>
+<p>Il peut donc être mis en place dans une infrastructure, <strong>quelque soit la stack de monitoring</strong>, puisqu&rsquo;il est possible de développer un nouvel exporter pour votre <a href="https://blog.octo.com/introduction-aux-bases-de-donnees-temporelles/">TSDB</a> ou outil d&rsquo;analyse de données préféré, si l&rsquo;<em>exporter</em> en question n&rsquo;existe pas déjà. L&rsquo;idée sous-jacente est que pour que ces mesures soient faites et exploitées par une majorité d&rsquo;informaticiens, l&rsquo;outil doit <strong>s&rsquo;adapter à l&rsquo;existant</strong> et non l&rsquo;inverse.</p>
 <p>Scaphandre est de plus développé pour être le plus léger possible, à la fois en termes de ressources et de consommation d&rsquo;énergie (l&rsquo;inverse serait dommageable). Sa configuration est simplissime de manière à ne pas ajouter de charge de travail supplémentaire aux personnes qui opèrent l&rsquo;infrastructure.</p>
-<p>Son usage ne s&rsquo;arrête pas à l'&ldquo;infrastructure&rdquo;. Scaphandre peut également être utilisé pour le développement, de manière à savoir, par exemple, si d&rsquo;une <strong>release</strong> à une autre, une <strong>application</strong> est plus ou moins <strong>énergivore</strong>.</p>
+<p>Son usage ne s&rsquo;arrête pas à l&rsquo;&ldquo;infrastructure&rdquo;. Scaphandre peut également être utilisé pour le développement, de manière à savoir, par exemple, si d&rsquo;une <strong>release</strong> à une autre, une <strong>application</strong> est plus ou moins <strong>énergivore</strong>.</p>
 <h2 id="etat-et-évolution">Etat et évolution</h2>
 <p>Le projet, sous license Apache-2.0, démarré en octobre 2020, en est à sa version 0.1.1. Il comprend les fonctionnalités suivantes :</p>
 <ul>
@@ -360,10 +358,10 @@ Je me suis rendu compte que dans un tel contexte, <strong>la ressource IT</stron
                 </a>
               </li>
               <li>
-                <a href="https://twitter.com/bpetit_" title="Twitter">
+                <a href="https://gitlab.com/bpetit1" title="GitLab">
                   <span class="fa-stack fa-lg">
                     <i class="fas fa-circle fa-stack-2x"></i>
-                    <i class="fab fa-twitter fa-stack-1x fa-inverse"></i>
+                    <i class="fab fa-gitlab fa-stack-1x fa-inverse"></i>
                   </span>
                 </a>
               </li>
@@ -372,6 +370,14 @@ Je me suis rendu compte que dans un tel contexte, <strong>la ressource IT</stron
                   <span class="fa-stack fa-lg">
                     <i class="fas fa-circle fa-stack-2x"></i>
                     <i class="fab fa-linkedin fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="https://bpetit@mastodon.green" title="Mastodon">
+                  <span class="fa-stack fa-lg">
+                    <i class="fas fa-circle fa-stack-2x"></i>
+                    <i class="fab fa-mastodon fa-stack-1x fa-inverse"></i>
                   </span>
                 </a>
               </li>
@@ -405,7 +411,7 @@ Je me suis rendu compte que dans un tel contexte, <strong>la ressource IT</stron
         </p>
         
         <p class="credits theme-by text-muted">
-          Carbure avec <a href="https://gohugo.io">Hugo v0.82.0</a>&nbsp;&bull;&nbsp; Avec le Theme <a href="https://github.com/halogenica/beautifulhugo">Beautiful Hugo</a> adapté de <a href="https://deanattali.com/beautiful-jekyll/">Beautiful Jekyll</a>
+          Carbure avec <a href="https://gohugo.io">Hugo v0.115.4</a>&nbsp;&bull;&nbsp; Avec le Theme <a href="https://github.com/halogenica/beautifulhugo">Beautiful Hugo</a> adapté de <a href="https://deanattali.com/beautiful-jekyll/">Beautiful Jekyll</a>
           
         </p>
       </div>

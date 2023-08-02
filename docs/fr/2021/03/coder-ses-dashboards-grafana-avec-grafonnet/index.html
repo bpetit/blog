@@ -10,7 +10,7 @@
   <title>Coder ses dashboards Grafana avec Grafonnet - Benoit Petit</title>
   <meta name="description" content="On ne présente plus Grafana en ce qui concerne la visualisation de graphiques et de données. Cet outil est très largement utilisé pour des besoins de monitoring, de métrologie&hellip;
 Les avantages sont multiples:
- open-source pratique : on peut créer des dashboards pour divers besoin très simplement flexible : de nombreuses sources de données sont supportées et les plugins répondent aux besoins les plus exotiques  Grafana permet également de déclencher des alertes lorsqu&rsquo;une métrique dépasse une certaine valeur (plus besoin de configurer un système d&rsquo;alerte propre à chaque source de donnée).">
+open-source pratique : on peut créer des dashboards pour divers besoin très simplement flexible : de nombreuses sources de données sont supportées et les plugins répondent aux besoins les plus exotiques Grafana permet également de déclencher des alertes lorsqu&rsquo;une métrique dépasse une certaine valeur (plus besoin de configurer un système d&rsquo;alerte propre à chaque source de donnée).">
   <meta name="author" content="Benoit Petit"/><script type="application/ld+json">
 {
     "@context": "http://schema.org",
@@ -59,7 +59,7 @@ Les avantages sont multiples:
     "name" : "Benoit Petit"
   },
   "headline": "Coder ses dashboards Grafana avec Grafonnet",
-  "description" : "On ne présente plus Grafana en ce qui concerne la visualisation de graphiques et de données. Cet outil est très largement utilisé pour des besoins de monitoring, de métrologie\u0026hellip;\nLes avantages sont multiples:\n open-source pratique : on peut créer des dashboards pour divers besoin très simplement flexible : de nombreuses sources de données sont supportées et les plugins répondent aux besoins les plus exotiques  Grafana permet également de déclencher des alertes lorsqu\u0026rsquo;une métrique dépasse une certaine valeur (plus besoin de configurer un système d\u0026rsquo;alerte propre à chaque source de donnée).",
+  "description" : "On ne présente plus Grafana en ce qui concerne la visualisation de graphiques et de données. Cet outil est très largement utilisé pour des besoins de monitoring, de métrologie\u0026hellip;\nLes avantages sont multiples:\nopen-source pratique : on peut créer des dashboards pour divers besoin très simplement flexible : de nombreuses sources de données sont supportées et les plugins répondent aux besoins les plus exotiques Grafana permet également de déclencher des alertes lorsqu\u0026rsquo;une métrique dépasse une certaine valeur (plus besoin de configurer un système d\u0026rsquo;alerte propre à chaque source de donnée).",
   "inLanguage" : "fr",
   "wordCount":  1166 ,
   "datePublished" : "2021-03-22T15:40:24",
@@ -83,7 +83,7 @@ Les avantages sont multiples:
 <meta property="og:title" content="Coder ses dashboards Grafana avec Grafonnet" />
 <meta property="og:description" content="On ne présente plus Grafana en ce qui concerne la visualisation de graphiques et de données. Cet outil est très largement utilisé pour des besoins de monitoring, de métrologie&hellip;
 Les avantages sont multiples:
- open-source pratique : on peut créer des dashboards pour divers besoin très simplement flexible : de nombreuses sources de données sont supportées et les plugins répondent aux besoins les plus exotiques  Grafana permet également de déclencher des alertes lorsqu&rsquo;une métrique dépasse une certaine valeur (plus besoin de configurer un système d&rsquo;alerte propre à chaque source de donnée).">
+open-source pratique : on peut créer des dashboards pour divers besoin très simplement flexible : de nombreuses sources de données sont supportées et les plugins répondent aux besoins les plus exotiques Grafana permet également de déclencher des alertes lorsqu&rsquo;une métrique dépasse une certaine valeur (plus besoin de configurer un système d&rsquo;alerte propre à chaque source de donnée).">
 <meta property="og:image" content="https://bpetit.nce.re/grafonnet.png" />
 <meta property="og:url" content="https://bpetit.nce.re/fr/2021/03/coder-ses-dashboards-grafana-avec-grafonnet/" />
 <meta property="og:type" content="website" />
@@ -94,9 +94,7 @@ Les avantages sont multiples:
 Les avantages …">
   <meta name="twitter:image" content="https://bpetit.nce.re/grafonnet.png" />
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:site" content="@bpetit_" />
-  <meta name="twitter:creator" content="@bpetit_" />
-  <meta name="generator" content="Hugo 0.82.0" />
+  <meta name="generator" content="Hugo 0.115.4">
   <link rel="alternate" href="https://bpetit.nce.re/fr/index.xml" type="application/rss+xml" title="Benoit Petit"><link rel="stylesheet" href="https://bpetit.nce.re/css/katex.min.css" />
   <link rel="stylesheet" href="https://bpetit.nce.re/fontawesome/css/all.css" />
   <link rel="stylesheet" href="https://bpetit.nce.re/css/bootstrap.min.css" /><link rel="stylesheet" href="https://bpetit.nce.re/css/main.css" /><link rel="stylesheet" href="https://bpetit.nce.re/css/fonts.css" /><link rel="stylesheet" href="https://bpetit.nce.re/css/syntax.css" /><link rel="stylesheet" href="https://bpetit.nce.re/css/codeblock.css" /><link rel="stylesheet" href="https://bpetit.nce.re/css/photoswipe.min.css" />
@@ -249,43 +247,41 @@ Les avantages …">
 <p>Il s&rsquo;agit d&rsquo;une bibliothèque pour <a href="https://github.com/google/jsonnet">Jsonnet</a> qui est ni plus ni moins qu&rsquo;un langage de templating (ou modèle/gabarit/patron en bon français). C&rsquo;est un langage qui va nous permettre de créer des modèles de dashboards, d&rsquo;en faire des variantes et de les éditer <strong>à partir du code</strong>.</p>
 <h2 id="installation">Installation</h2>
 <p>Petite précision : je vais ici présenter <a href="https://github.com/google/go-jsonnet">go-jsonnet</a>, qui est une implémentation plus récente que le projet jsonnet original et réputée plus performante (je n&rsquo;ai pas comparé). Si vous avez déjà joué avec des projets écrits en Go cette commande vous sera familière :</p>
-<div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">go get github.com/google/go-jsonnet/cmd/jsonnet</code></pre></div>
+<div class="highlight"><pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>go get github.com/google/go-jsonnet/cmd/jsonnet</span></span></code></pre></div>
 <p>Assurez vous alors que votre path Go est bien compris dans <code>$PATH</code> et vous pourrez lancer :</p>
-<div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">jsonnet --help
-	Jsonnet commandline interpreter (Go implementation) v0<span style="color:#3677a9">.17.0</span>
-
-jsonnet {&lt;option&gt;} &lt;filename&gt;
-
-Available options:
-  -h / --help                This message
-  -e / --exec                Treat filename as code
-  -J / --jpath &lt;dir&gt;         Specify an additional library search dir
-[...]
-</code></pre></div>
+<div class="highlight"><pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span>jsonnet --help
+</span></span><span style="display:flex;"><span>	Jsonnet commandline interpreter (Go implementation) v0.<span style="color:#3677a9">17.0</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>jsonnet {&lt;option&gt;} &lt;filename&gt;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Available options:
+</span></span><span style="display:flex;"><span>  -h / --help                This message
+</span></span><span style="display:flex;"><span>  -e / --exec                Treat filename as code
+</span></span><span style="display:flex;"><span>  -J / --jpath &lt;dir&gt;         Specify an additional library search dir
+</span></span><span style="display:flex;"><span>[...]</span></span></code></pre></div>
 <p>Nous allons également avoir besoin de Grafonnet, que nous allons placer dans le dossier courant :</p>
-<div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">git clone https:<span style="color:#999;font-style:italic">//github.com/grafana/grafonnet-lib.git
-</span></code></pre></div>
+<div class="highlight"><pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span>git clone https:<span style="color:#999;font-style:italic">//github.com/grafana/grafonnet-lib.git
+</span></span></span></code></pre></div>
 <p>Passons maitenant au code.</p>
 <h2 id="premier-dashboard">Premier dashboard</h2>
 <p>Posons les bases de notre premier dashboard :</p>
-<div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">local grafana = <span style="color:#6ab825;font-weight:bold">import</span> <span style="color:#ed9d13">&#39;grafonnet/grafana.libsonnet&#39;</span>;
-local dashboard = grafana.dashboard;
-local template = grafana.template;
-
-dashboard.<span style="color:#6ab825;font-weight:bold">new</span>(
-    <span style="color:#ed9d13">&#39;Scaphandre example dashboard&#39;</span>,
-    tags=[<span style="color:#ed9d13">&#39;scaphandre&#39;</span>, <span style="color:#ed9d13">&#39;energy&#39;</span>, <span style="color:#ed9d13">&#39;power&#39;</span>],
-    editable=<span style="color:#6ab825;font-weight:bold">true</span>
-)
-.addTemplate(
-    template.datasource(
-        <span style="color:#ed9d13">&#39;PROMETHEUS_DS&#39;</span>,
-        <span style="color:#ed9d13">&#39;prometheus&#39;</span>,
-        <span style="color:#ed9d13">&#39;Prometheus&#39;</span>,
-        hide=<span style="color:#ed9d13">&#39;label&#39;</span>,
-    )
-)
-</code></pre></div>
+<div class="highlight"><pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span>local grafana = <span style="color:#6ab825;font-weight:bold">import</span> <span style="color:#ed9d13">&#39;grafonnet/grafana.libsonnet&#39;</span>;
+</span></span><span style="display:flex;"><span>local dashboard = grafana.dashboard;
+</span></span><span style="display:flex;"><span>local template = grafana.template;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>dashboard.<span style="color:#6ab825;font-weight:bold">new</span>(
+</span></span><span style="display:flex;"><span>    <span style="color:#ed9d13">&#39;Scaphandre example dashboard&#39;</span>,
+</span></span><span style="display:flex;"><span>    tags=[<span style="color:#ed9d13">&#39;scaphandre&#39;</span>, <span style="color:#ed9d13">&#39;energy&#39;</span>, <span style="color:#ed9d13">&#39;power&#39;</span>],
+</span></span><span style="display:flex;"><span>    editable=<span style="color:#6ab825;font-weight:bold">true</span>
+</span></span><span style="display:flex;"><span>)
+</span></span><span style="display:flex;"><span>.addTemplate(
+</span></span><span style="display:flex;"><span>    template.datasource(
+</span></span><span style="display:flex;"><span>        <span style="color:#ed9d13">&#39;PROMETHEUS_DS&#39;</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#ed9d13">&#39;prometheus&#39;</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#ed9d13">&#39;Prometheus&#39;</span>,
+</span></span><span style="display:flex;"><span>        hide=<span style="color:#ed9d13">&#39;label&#39;</span>,
+</span></span><span style="display:flex;"><span>    )
+</span></span><span style="display:flex;"><span>)</span></span></code></pre></div>
 <p>Ici on déclare trois variables :</p>
 <ul>
 <li><code>grafana</code> qui va comprendre le chemin vers notre bibliothèque grafonnet (nous verrons ensuite comment appeller effectivement la bibliothèque)</li>
@@ -296,131 +292,128 @@ dashboard.<span style="color:#6ab825;font-weight:bold">new</span>(
 <p>On sauvegarde ce fichier et on le nomme <code>dashboard.jsonnet</code>.</p>
 <h2 id="utilisation">Utilisation</h2>
 <p>Nous allons maintenant lancer jsonnet, lui dire d&rsquo;utiliser la biliothèque qui nous intéresse pour faire nos dashboards (Grafonnet) et lui donner notre template à digérer :</p>
-<div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">	jsonnet -J grafonnet-lib dashboard.jsonnet</code></pre></div>
+<div class="highlight"><pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>	jsonnet -J grafonnet-lib dashboard.jsonnet</span></span></code></pre></div>
 <p>Par défaut jsonnet afficher le résultat sur la sortie standard, ce qui n&rsquo;est pas très pratique. On redirige le tout dans un fichier :</p>
-<div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">	jsonnet -J grafonnet-lib dashboard.jsonnet &gt; bidouille.json</code></pre></div>
+<div class="highlight"><pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>	jsonnet -J grafonnet-lib dashboard.jsonnet &gt; bidouille.json</span></span></code></pre></div>
 <p>Une fois fait il n&rsquo;y a plus qu&rsquo;à importer le dashboard dans grafana et le tour est joué. A ce stade, on aura un dashboard vide avec notre variable en haut à gauche.</p>
 <p>Dans mon cas, le conteneur grafana a un volume attaché qui permet de donner à grafana un répertoire de dashboards (fichiers json) par défaut, grafana <a href="https://github.com/hubblo-org/scaphandre/blob/main/docker-compose/grafana/dashboards.yml">étant configuré pour charger ce dashboard</a>. De cette manière je peux générer un dashboard en JSON puis redémarrer le conteneur grafana pour tester mes changements :</p>
-<div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">jsonnet -J ~/git/grafonnet-lib ../sample.jsonnet &gt; dashboards/sample-dashboard.json &amp;&amp; docker-compose restart grafana</code></pre></div>
+<div class="highlight"><pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>jsonnet -J ~/git/grafonnet-lib ../sample.jsonnet &gt; dashboards/sample-dashboard.json &amp;&amp; docker-compose restart grafana</span></span></code></pre></div>
 <h2 id="remplir-le-dashboard">Remplir le dashboard</h2>
 <p>Notre dashboard n&rsquo;est pas très intéressant, c&rsquo;était l&rsquo;exemple de base. Voyons comment l&rsquo;agrémenter et faire un dashboard pour remonter la consommation d&rsquo;énergie détaillée de mon laptop avec <a href="https://github.com/hubblo-org/scaphandre/">Scaphandre</a> et la stack <a href="https://github.com/hubblo-org/scaphandre/tree/main/docker-compose">docker-compose</a> qui va bien pour des tests en local.</p>
 <p>Nous avons déjà vu les objet dashboard et template. Nous allons maintenant ajouter une ligne (row) à notre dashboard et insérer des graphes dans cette ligne. Pour ce faire, on appelle directement la fonction <a href="">addRow</a> sur l&rsquo;appel à la fonction <a href="">addTemplate</a> vue <a href="#premier-dashboard">précédemment</a>:</p>
-<div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">[...]
-.addRow(
-    row.<span style="color:#6ab825;font-weight:bold">new</span>(
-        title=<span style="color:#ed9d13">&#39;Per hosts&#39;</span>,
-    )
-    .addPanel(
-        grafana.graphPanel.<span style="color:#6ab825;font-weight:bold">new</span>(
-            title=<span style="color:#ed9d13">&#39;Hosts power consumption&#39;</span>,
-            datasource=<span style="color:#ed9d13">&#39;${PROMETHEUS_DS}&#39;</span>,
-            format=<span style="color:#ed9d13">&#39;W&#39;</span>,
-            span=<span style="color:#3677a9">6</span>,
-        )
-        .addTarget(
-            grafana.prometheus.target(
-                <span style="color:#ed9d13">&#39;scaph_host_power_microwatts / 1000000&#39;</span>,
-                legendFormat=<span style="color:#ed9d13">&#39;{{instance}}&#39;</span>,
-            )
-        )
-    )
-    .addPanel(
-        grafana.graphPanel.<span style="color:#6ab825;font-weight:bold">new</span>(
-            title=<span style="color:#ed9d13">&#39;Hosts power consumption total (dynamic time range)&#39;</span>,
-            datasource=<span style="color:#ed9d13">&#39;${PROMETHEUS_DS}&#39;</span>,
-            span=<span style="color:#3677a9">4</span>,
-            bars=<span style="color:#6ab825;font-weight:bold">true</span>,
-            format=<span style="color:#ed9d13">&#39;Wh&#39;</span>,
-            x_axis_mode=<span style="color:#ed9d13">&#39;series&#39;</span>,
-            min=<span style="color:#3677a9">0</span>
-        )
-        .addTarget(
-            grafana.prometheus.target(
-                <span style="color:#ed9d13">&#39;sum(avg_over_time(scaph_host_power_microwatts[1h]))/1000000&#39;</span>,
-                legendFormat=<span style="color:#ed9d13">&#39;total of hosts, during displayed time window&#39;</span>,
-                interval=<span style="color:#ed9d13">&#39;1h&#39;</span>
-            )
-        )
-    )
-)
-</code></pre></div>
+<div class="highlight"><pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span>[...]
+</span></span><span style="display:flex;"><span>.addRow(
+</span></span><span style="display:flex;"><span>    row.<span style="color:#6ab825;font-weight:bold">new</span>(
+</span></span><span style="display:flex;"><span>        title=<span style="color:#ed9d13">&#39;Per hosts&#39;</span>,
+</span></span><span style="display:flex;"><span>    )
+</span></span><span style="display:flex;"><span>    .addPanel(
+</span></span><span style="display:flex;"><span>        grafana.graphPanel.<span style="color:#6ab825;font-weight:bold">new</span>(
+</span></span><span style="display:flex;"><span>            title=<span style="color:#ed9d13">&#39;Hosts power consumption&#39;</span>,
+</span></span><span style="display:flex;"><span>            datasource=<span style="color:#ed9d13">&#39;${PROMETHEUS_DS}&#39;</span>,
+</span></span><span style="display:flex;"><span>            format=<span style="color:#ed9d13">&#39;W&#39;</span>,
+</span></span><span style="display:flex;"><span>            span=<span style="color:#3677a9">6</span>,
+</span></span><span style="display:flex;"><span>        )
+</span></span><span style="display:flex;"><span>        .addTarget(
+</span></span><span style="display:flex;"><span>            grafana.prometheus.target(
+</span></span><span style="display:flex;"><span>                <span style="color:#ed9d13">&#39;scaph_host_power_microwatts / 1000000&#39;</span>,
+</span></span><span style="display:flex;"><span>                legendFormat=<span style="color:#ed9d13">&#39;{{instance}}&#39;</span>,
+</span></span><span style="display:flex;"><span>            )
+</span></span><span style="display:flex;"><span>        )
+</span></span><span style="display:flex;"><span>    )
+</span></span><span style="display:flex;"><span>    .addPanel(
+</span></span><span style="display:flex;"><span>        grafana.graphPanel.<span style="color:#6ab825;font-weight:bold">new</span>(
+</span></span><span style="display:flex;"><span>            title=<span style="color:#ed9d13">&#39;Hosts power consumption total (dynamic time range)&#39;</span>,
+</span></span><span style="display:flex;"><span>            datasource=<span style="color:#ed9d13">&#39;${PROMETHEUS_DS}&#39;</span>,
+</span></span><span style="display:flex;"><span>            span=<span style="color:#3677a9">4</span>,
+</span></span><span style="display:flex;"><span>            bars=<span style="color:#6ab825;font-weight:bold">true</span>,
+</span></span><span style="display:flex;"><span>            format=<span style="color:#ed9d13">&#39;Wh&#39;</span>,
+</span></span><span style="display:flex;"><span>            x_axis_mode=<span style="color:#ed9d13">&#39;series&#39;</span>,
+</span></span><span style="display:flex;"><span>            min=<span style="color:#3677a9">0</span>
+</span></span><span style="display:flex;"><span>        )
+</span></span><span style="display:flex;"><span>        .addTarget(
+</span></span><span style="display:flex;"><span>            grafana.prometheus.target(
+</span></span><span style="display:flex;"><span>                <span style="color:#ed9d13">&#39;sum(avg_over_time(scaph_host_power_microwatts[1h]))/1000000&#39;</span>,
+</span></span><span style="display:flex;"><span>                legendFormat=<span style="color:#ed9d13">&#39;total of hosts, during displayed time window&#39;</span>,
+</span></span><span style="display:flex;"><span>                interval=<span style="color:#ed9d13">&#39;1h&#39;</span>
+</span></span><span style="display:flex;"><span>            )
+</span></span><span style="display:flex;"><span>        )
+</span></span><span style="display:flex;"><span>    )
+</span></span><span style="display:flex;"><span>)</span></span></code></pre></div>
 <p>Dans l&rsquo;appel à <code>addRow</code> on créé une nouvelle ligne avec <a href="https://grafana.github.io/grafonnet-lib/api-docs/#rownew">row.new</a>, on donne un titre à cette ligne (ici je cette ligne servira aux métriques de consommation de la machine), puis on appelle [addPanel](sur la ligne résultante).</p>
 <p>On appelle alors <a href="https://grafana.github.io/grafonnet-lib/api-docs/#graphpanelnew">grafana.graphPanel.new</a> pour créer notre graphe de consommation de la machine, en précisant l&rsquo;unité (Watts), la source de données (l&rsquo;instance prometheus tel que nommé avec la variable définie plus haut) et la largeur du graphique.</p>
 <p>On ajoute ensuite une requête au graphique avec <code>addTarget</code> et un objet <a href="https://grafana.github.io/grafonnet-lib/api-docs/#prometheustarget">prometheus.target</a> pour lequel on précise la requête PromQL, ici la consommation d&rsquo;énergie de la machine en microwatts que l&rsquo;on divise pour obtenir des watts, puis la légende.</p>
 <p>On obtient donc :</p>
 <p><img src="/grafonnet_sample_1.png" alt="Dashboard grafana"></p>
 <p>Comme lorsque vous éditez vos panels à la main, on peut ajouter plusieurs requêtes/courbes dans le même panel en chaînant les appels <code>addTarget</code>. De même on peut ajouter des lignes en chaînant les appels <code>addRow</code>. Ajoutons une ligne pour la consommation par socket CPU et une autre pour la consommation des processus qui tournent sur la machine :</p>
-<div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">[...]
-.addRow(
-    row.<span style="color:#6ab825;font-weight:bold">new</span>(
-        title=<span style="color:#ed9d13">&#39;Per CPU Sockets&#39;</span>
-    )
-    .addPanel(
-        grafana.graphPanel.<span style="color:#6ab825;font-weight:bold">new</span>(
-            title=<span style="color:#ed9d13">&#39;Socket power consumption&#39;</span>,
-            datasource=<span style="color:#ed9d13">&#39;${PROMETHEUS_DS}&#39;</span>,
-            format=<span style="color:#ed9d13">&#39;W&#39;</span>,
-            span=<span style="color:#3677a9">6</span>,
-        )
-        .addTarget(
-            grafana.prometheus.target(
-                <span style="color:#ed9d13">&#39;scaph_socket_power_microwatts / 1000000&#39;</span>,
-                legendFormat=<span style="color:#ed9d13">&#39;{{instance}} Socket {{socket_id}}&#39;</span>,
-            )
-        )
-    )
-)
-.addRow(
-    row.<span style="color:#6ab825;font-weight:bold">new</span>(
-        title=<span style="color:#ed9d13">&#39;Per process&#39;</span>,
-    )
-    .addPanel(
-        grafana.statPanel.<span style="color:#6ab825;font-weight:bold">new</span>(
-            title=<span style="color:#ed9d13">&#39;Top process consumers&#39;</span>,
-            datasource=<span style="color:#ed9d13">&#39;${PROMETHEUS_DS}&#39;</span>,
-        )
-        .addTarget(
-            grafana.prometheus.target(
-                <span style="color:#ed9d13">&#39;sort_desc(topk(3, sum by (exe) (scaph_process_power_consumption_microwatts/1000000)))&#39;</span>,
-                legendFormat=<span style="color:#ed9d13">&#39;{{exe}}&#39;</span>,
-            )
-        )
-    )
-    .addPanel(
-        grafana.graphPanel.<span style="color:#6ab825;font-weight:bold">new</span>(
-            title=<span style="color:#ed9d13">&#39;Filtered process (process_filter) power, by exe&#39;</span>,
-            datasource=<span style="color:#ed9d13">&#39;${PROMETHEUS_DS}&#39;</span>,
-            span=<span style="color:#3677a9">8</span>,
-            format=<span style="color:#ed9d13">&#39;W&#39;</span>,
-            legend_rightSide=<span style="color:#6ab825;font-weight:bold">true</span>,
-            legend_alignAsTable=<span style="color:#6ab825;font-weight:bold">true</span>,
-            legend_sideWidth=<span style="color:#ed9d13">&#39;30%&#39;</span>,
-            stack=<span style="color:#6ab825;font-weight:bold">true</span>
-        )
-        .addTarget(
-            grafana.prometheus.target(
-                <span style="color:#ed9d13">&#39;scaph_process_power_consumption_microwatts{exe=~&#34;.*${process_filter}.*&#34;}/1000000&#39;</span>,
-                legendFormat=<span style="color:#ed9d13">&#39;{{ cmdline }}&#39;</span>,
-            )
-        )
-    )
-)
-</code></pre></div>
+<div class="highlight"><pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span>[...]
+</span></span><span style="display:flex;"><span>.addRow(
+</span></span><span style="display:flex;"><span>    row.<span style="color:#6ab825;font-weight:bold">new</span>(
+</span></span><span style="display:flex;"><span>        title=<span style="color:#ed9d13">&#39;Per CPU Sockets&#39;</span>
+</span></span><span style="display:flex;"><span>    )
+</span></span><span style="display:flex;"><span>    .addPanel(
+</span></span><span style="display:flex;"><span>        grafana.graphPanel.<span style="color:#6ab825;font-weight:bold">new</span>(
+</span></span><span style="display:flex;"><span>            title=<span style="color:#ed9d13">&#39;Socket power consumption&#39;</span>,
+</span></span><span style="display:flex;"><span>            datasource=<span style="color:#ed9d13">&#39;${PROMETHEUS_DS}&#39;</span>,
+</span></span><span style="display:flex;"><span>            format=<span style="color:#ed9d13">&#39;W&#39;</span>,
+</span></span><span style="display:flex;"><span>            span=<span style="color:#3677a9">6</span>,
+</span></span><span style="display:flex;"><span>        )
+</span></span><span style="display:flex;"><span>        .addTarget(
+</span></span><span style="display:flex;"><span>            grafana.prometheus.target(
+</span></span><span style="display:flex;"><span>                <span style="color:#ed9d13">&#39;scaph_socket_power_microwatts / 1000000&#39;</span>,
+</span></span><span style="display:flex;"><span>                legendFormat=<span style="color:#ed9d13">&#39;{{instance}} Socket {{socket_id}}&#39;</span>,
+</span></span><span style="display:flex;"><span>            )
+</span></span><span style="display:flex;"><span>        )
+</span></span><span style="display:flex;"><span>    )
+</span></span><span style="display:flex;"><span>)
+</span></span><span style="display:flex;"><span>.addRow(
+</span></span><span style="display:flex;"><span>    row.<span style="color:#6ab825;font-weight:bold">new</span>(
+</span></span><span style="display:flex;"><span>        title=<span style="color:#ed9d13">&#39;Per process&#39;</span>,
+</span></span><span style="display:flex;"><span>    )
+</span></span><span style="display:flex;"><span>    .addPanel(
+</span></span><span style="display:flex;"><span>        grafana.statPanel.<span style="color:#6ab825;font-weight:bold">new</span>(
+</span></span><span style="display:flex;"><span>            title=<span style="color:#ed9d13">&#39;Top process consumers&#39;</span>,
+</span></span><span style="display:flex;"><span>            datasource=<span style="color:#ed9d13">&#39;${PROMETHEUS_DS}&#39;</span>,
+</span></span><span style="display:flex;"><span>        )
+</span></span><span style="display:flex;"><span>        .addTarget(
+</span></span><span style="display:flex;"><span>            grafana.prometheus.target(
+</span></span><span style="display:flex;"><span>                <span style="color:#ed9d13">&#39;sort_desc(topk(3, sum by (exe) (scaph_process_power_consumption_microwatts/1000000)))&#39;</span>,
+</span></span><span style="display:flex;"><span>                legendFormat=<span style="color:#ed9d13">&#39;{{exe}}&#39;</span>,
+</span></span><span style="display:flex;"><span>            )
+</span></span><span style="display:flex;"><span>        )
+</span></span><span style="display:flex;"><span>    )
+</span></span><span style="display:flex;"><span>    .addPanel(
+</span></span><span style="display:flex;"><span>        grafana.graphPanel.<span style="color:#6ab825;font-weight:bold">new</span>(
+</span></span><span style="display:flex;"><span>            title=<span style="color:#ed9d13">&#39;Filtered process (process_filter) power, by exe&#39;</span>,
+</span></span><span style="display:flex;"><span>            datasource=<span style="color:#ed9d13">&#39;${PROMETHEUS_DS}&#39;</span>,
+</span></span><span style="display:flex;"><span>            span=<span style="color:#3677a9">8</span>,
+</span></span><span style="display:flex;"><span>            format=<span style="color:#ed9d13">&#39;W&#39;</span>,
+</span></span><span style="display:flex;"><span>            legend_rightSide=<span style="color:#6ab825;font-weight:bold">true</span>,
+</span></span><span style="display:flex;"><span>            legend_alignAsTable=<span style="color:#6ab825;font-weight:bold">true</span>,
+</span></span><span style="display:flex;"><span>            legend_sideWidth=<span style="color:#ed9d13">&#39;30%&#39;</span>,
+</span></span><span style="display:flex;"><span>            stack=<span style="color:#6ab825;font-weight:bold">true</span>
+</span></span><span style="display:flex;"><span>        )
+</span></span><span style="display:flex;"><span>        .addTarget(
+</span></span><span style="display:flex;"><span>            grafana.prometheus.target(
+</span></span><span style="display:flex;"><span>                <span style="color:#ed9d13">&#39;scaph_process_power_consumption_microwatts{exe=~&#34;.*${process_filter}.*&#34;}/1000000&#39;</span>,
+</span></span><span style="display:flex;"><span>                legendFormat=<span style="color:#ed9d13">&#39;{{ cmdline }}&#39;</span>,
+</span></span><span style="display:flex;"><span>            )
+</span></span><span style="display:flex;"><span>        )
+</span></span><span style="display:flex;"><span>    )
+</span></span><span style="display:flex;"><span>)</span></span></code></pre></div>
 <p>J&rsquo;ai également ajouté dans cet exemple une Target qui fait appel à une variable <code>process_filter</code>.  La variable permet à l&rsquo;utilisateur de saisir le nom du processus dont il veut surveiller la consommation d&rsquo;énergie et doit donc être définie au préalable (à la suite de la première) :</p>
-<div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">.addTemplate(
-    template.datasource(
-        <span style="color:#ed9d13">&#39;PROMETHEUS_DS&#39;</span>,
-        <span style="color:#ed9d13">&#39;prometheus&#39;</span>,
-        <span style="color:#ed9d13">&#39;Prometheus&#39;</span>,
-        hide=<span style="color:#ed9d13">&#39;label&#39;</span>,
-    )
-)
-.addTemplate(
-    template.text(
-        name=<span style="color:#ed9d13">&#39;process_filter&#39;</span>,
-    )
-)
-</code></pre></div>
+<div class="highlight"><pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span>.addTemplate(
+</span></span><span style="display:flex;"><span>    template.datasource(
+</span></span><span style="display:flex;"><span>        <span style="color:#ed9d13">&#39;PROMETHEUS_DS&#39;</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#ed9d13">&#39;prometheus&#39;</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#ed9d13">&#39;Prometheus&#39;</span>,
+</span></span><span style="display:flex;"><span>        hide=<span style="color:#ed9d13">&#39;label&#39;</span>,
+</span></span><span style="display:flex;"><span>    )
+</span></span><span style="display:flex;"><span>)
+</span></span><span style="display:flex;"><span>.addTemplate(
+</span></span><span style="display:flex;"><span>    template.text(
+</span></span><span style="display:flex;"><span>        name=<span style="color:#ed9d13">&#39;process_filter&#39;</span>,
+</span></span><span style="display:flex;"><span>    )
+</span></span><span style="display:flex;"><span>)</span></span></code></pre></div>
 <p>Le résultat final :</p>
 <p><img src="/grafonnet_sample_2.png" alt="Dashboard grafana"></p>
 <p>Le fichier jsonnet final se trouve <a href="https://github.com/hubblo-org/scaphandre/blob/main/docker-compose/sample.jsonnet">ici</a>.</p>
@@ -497,10 +490,10 @@ dashboard.<span style="color:#6ab825;font-weight:bold">new</span>(
                 </a>
               </li>
               <li>
-                <a href="https://twitter.com/bpetit_" title="Twitter">
+                <a href="https://gitlab.com/bpetit1" title="GitLab">
                   <span class="fa-stack fa-lg">
                     <i class="fas fa-circle fa-stack-2x"></i>
-                    <i class="fab fa-twitter fa-stack-1x fa-inverse"></i>
+                    <i class="fab fa-gitlab fa-stack-1x fa-inverse"></i>
                   </span>
                 </a>
               </li>
@@ -509,6 +502,14 @@ dashboard.<span style="color:#6ab825;font-weight:bold">new</span>(
                   <span class="fa-stack fa-lg">
                     <i class="fas fa-circle fa-stack-2x"></i>
                     <i class="fab fa-linkedin fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="https://bpetit@mastodon.green" title="Mastodon">
+                  <span class="fa-stack fa-lg">
+                    <i class="fas fa-circle fa-stack-2x"></i>
+                    <i class="fab fa-mastodon fa-stack-1x fa-inverse"></i>
                   </span>
                 </a>
               </li>
@@ -542,7 +543,7 @@ dashboard.<span style="color:#6ab825;font-weight:bold">new</span>(
         </p>
         
         <p class="credits theme-by text-muted">
-          Carbure avec <a href="https://gohugo.io">Hugo v0.82.0</a>&nbsp;&bull;&nbsp; Avec le Theme <a href="https://github.com/halogenica/beautifulhugo">Beautiful Hugo</a> adapté de <a href="https://deanattali.com/beautiful-jekyll/">Beautiful Jekyll</a>
+          Carbure avec <a href="https://gohugo.io">Hugo v0.115.4</a>&nbsp;&bull;&nbsp; Avec le Theme <a href="https://github.com/halogenica/beautifulhugo">Beautiful Hugo</a> adapté de <a href="https://deanattali.com/beautiful-jekyll/">Beautiful Jekyll</a>
           
         </p>
       </div>

@@ -59,7 +59,7 @@
   "headline": "How to build a simplistic private cloud piece by piece",
   "description" : "I you are, like me, concerned about privacy, you may be the administrator of a few physical servers, either at home or rented to some dedicated server providers. Virtual machine instances (or VPS) bought in public clouds are great, but if you can\u0026rsquo;t configure yourself the underlying network and the hypervisors, where is the fun ? (just kidding, there is so much to do above a cloud-like infrastructure too). Here I\u0026rsquo;ll describe a little configuration I made for my own needs.",
   "inLanguage" : "en",
-  "wordCount":  1871 ,
+  "wordCount":  2090 ,
   "datePublished" : "2017-11-21T20:44:12",
   "dateModified" : "2017-11-21T20:44:12",
   "image" : "https:\/\/bpetit.nce.re",
@@ -87,9 +87,7 @@
   <meta name="twitter:title" content="How to build a simplistic private cloud piece by piece" />
   <meta name="twitter:description" content="I you are, like me, concerned about privacy, you may be the administrator of a few physical servers, either at home or rented to some dedicated server providers. Virtual machine instances (or VPS) …">
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:site" content="@bpetit_" />
-  <meta name="twitter:creator" content="@bpetit_" />
-  <meta name="generator" content="Hugo 0.82.0" />
+  <meta name="generator" content="Hugo 0.115.4">
   <link rel="alternate" href="https://bpetit.nce.re/index.xml" type="application/rss+xml" title="Benoit Petit"><link rel="stylesheet" href="https://bpetit.nce.re/css/katex.min.css" />
   <link rel="stylesheet" href="https://bpetit.nce.re/fontawesome/css/all.css" />
   <link rel="stylesheet" href="https://bpetit.nce.re/css/bootstrap.min.css" /><link rel="stylesheet" href="https://bpetit.nce.re/css/main.css" /><link rel="stylesheet" href="https://bpetit.nce.re/css/fonts.css" /><link rel="stylesheet" href="https://bpetit.nce.re/css/syntax.css" /><link rel="stylesheet" href="https://bpetit.nce.re/css/codeblock.css" /><link rel="stylesheet" href="https://bpetit.nce.re/css/photoswipe.min.css" />
@@ -243,412 +241,412 @@
 <p>Let&rsquo;s describe each step a bit more precisely.</p>
 <h3 id="0-requirements-installation">0. Requirements installation</h3>
 <p>First we have to install all required packages on the hypervisors, for qemu-kvm, libvirt, openvswitch, and some utils (vlans could be usefull to).</p>
-<div class="highlight"><div style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
-<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868"> 1
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868"> 2
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868"> 3
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868"> 4
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868"> 5
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868"> 6
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868"> 7
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868"> 8
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868"> 9
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">10
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">11
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">12
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">13
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">14
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">15
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">16
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">17
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">18
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">19
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">20
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">21
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">22
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">23
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">24
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">25
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">26
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">27
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">28
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">29
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">30
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">31
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">32
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">33
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">34
+<div class="highlight"><div style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868"> 1
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868"> 2
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868"> 3
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868"> 4
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868"> 5
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868"> 6
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868"> 7
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868"> 8
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868"> 9
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">10
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">11
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">12
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">13
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">14
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">15
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">16
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">17
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">18
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">19
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">20
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">21
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">22
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">23
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">24
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">25
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">26
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">27
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">28
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">29
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">30
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">31
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">32
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">33
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">34
 </span></code></pre></td>
 <td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml">- <span style="color:#6ab825;font-weight:bold">hosts</span>:<span style="color:#666"> </span>kvm<span style="color:#666">
-</span><span style="color:#666">  </span><span style="color:#6ab825;font-weight:bold">tasks</span>:<span style="color:#666">
-</span><span style="color:#666">    </span>- <span style="color:#6ab825;font-weight:bold">apt</span>:<span style="color:#666"> </span>update_cache={{ kvm_update_apt_cache | default(&#39;yes&#39;) }} state=present name={{ item }}<span style="color:#666">
-</span><span style="color:#666">      </span><span style="color:#6ab825;font-weight:bold">with_items</span>:<span style="color:#666">
-</span><span style="color:#666">        </span>- bridge-utils<span style="color:#666">
-</span><span style="color:#666">        </span>- debootstrap<span style="color:#666">
-</span><span style="color:#666">        </span>- ifenslave<span style="color:#666">
-</span><span style="color:#666">        </span>- ifenslave-2.6<span style="color:#666">
-</span><span style="color:#666">        </span>- lsof<span style="color:#666">
-</span><span style="color:#666">        </span>- ntp<span style="color:#666">
-</span><span style="color:#666">        </span>- ntpdate<span style="color:#666">
-</span><span style="color:#666">        </span>- tcpdump<span style="color:#666">
-</span><span style="color:#666">        </span>- vlan<span style="color:#666">
-</span><span style="color:#666">        </span>- virt-top<span style="color:#666">
-</span><span style="color:#666">        </span>- libvirt0<span style="color:#666">
-</span><span style="color:#666">        </span>- python-libvirt<span style="color:#666">
-</span><span style="color:#666">        </span>- virtinst<span style="color:#666">
-</span><span style="color:#666">        </span>- qemu-kvm<span style="color:#666">
-</span><span style="color:#666">        </span>- genisoimage<span style="color:#666">
-</span><span style="color:#666">        </span>- openvswitch-switch<span style="color:#666">
-</span><span style="color:#666">        </span>- openvswitch-common<span style="color:#666">
-</span><span style="color:#666">        </span>- openvswitch-vtep<span style="color:#666">
-</span><span style="color:#666">        </span>- python-openvswitch<span style="color:#666">
-</span><span style="color:#666">    </span>- <span style="color:#6ab825;font-weight:bold">apt</span>:<span style="color:#666"> </span>state=present name=libvirt-bin<span style="color:#666">
-</span><span style="color:#666">      </span><span style="color:#6ab825;font-weight:bold">when</span>:<span style="color:#666"> </span>ansible_distribution_major_version &lt; 9 and ansible_distribution == &#39;Debian&#39;<span style="color:#666">
-</span><span style="color:#666">    </span>- <span style="color:#6ab825;font-weight:bold">apt</span>:<span style="color:#666"> </span>state=present name={{ item }}<span style="color:#666">
-</span><span style="color:#666">      </span><span style="color:#6ab825;font-weight:bold">when</span>:<span style="color:#666"> </span>ansible_distribution_major_version &gt;= 9 and ansible_distribution == &#39;Debian&#39; or ansible_distribution == &#39;Ubuntu&#39;<span style="color:#666">
-</span><span style="color:#666">      </span><span style="color:#6ab825;font-weight:bold">with_items</span>:<span style="color:#666">
-</span><span style="color:#666">        </span>- libvirt-daemon-system<span style="color:#666">
-</span><span style="color:#666">        </span>- libvirt-clients<span style="color:#666">
-</span><span style="color:#666">    </span>- <span style="color:#6ab825;font-weight:bold">modprobe</span>:<span style="color:#666"> </span>name={{ item }} state=present<span style="color:#666">
-</span><span style="color:#666">      </span><span style="color:#6ab825;font-weight:bold">with_items</span>:<span style="color:#666">
-</span><span style="color:#666">        </span>- bonding<span style="color:#666">
-</span><span style="color:#666">        </span>- 8021q</code></pre></td></tr></table>
+<pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span>- <span style="color:#6ab825;font-weight:bold">hosts</span>:<span style="color:#666"> </span>kvm<span style="color:#666">
+</span></span></span><span style="display:flex;"><span><span style="color:#666">  </span><span style="color:#6ab825;font-weight:bold">tasks</span>:<span style="color:#666">
+</span></span></span><span style="display:flex;"><span><span style="color:#666">    </span>- <span style="color:#6ab825;font-weight:bold">apt</span>:<span style="color:#666"> </span>update_cache={{ kvm_update_apt_cache | default(&#39;yes&#39;) }} state=present name={{ item }}<span style="color:#666">
+</span></span></span><span style="display:flex;"><span><span style="color:#666">      </span><span style="color:#6ab825;font-weight:bold">with_items</span>:<span style="color:#666">
+</span></span></span><span style="display:flex;"><span><span style="color:#666">        </span>- bridge-utils<span style="color:#666">
+</span></span></span><span style="display:flex;"><span><span style="color:#666">        </span>- debootstrap<span style="color:#666">
+</span></span></span><span style="display:flex;"><span><span style="color:#666">        </span>- ifenslave<span style="color:#666">
+</span></span></span><span style="display:flex;"><span><span style="color:#666">        </span>- ifenslave-2.6<span style="color:#666">
+</span></span></span><span style="display:flex;"><span><span style="color:#666">        </span>- lsof<span style="color:#666">
+</span></span></span><span style="display:flex;"><span><span style="color:#666">        </span>- ntp<span style="color:#666">
+</span></span></span><span style="display:flex;"><span><span style="color:#666">        </span>- ntpdate<span style="color:#666">
+</span></span></span><span style="display:flex;"><span><span style="color:#666">        </span>- tcpdump<span style="color:#666">
+</span></span></span><span style="display:flex;"><span><span style="color:#666">        </span>- vlan<span style="color:#666">
+</span></span></span><span style="display:flex;"><span><span style="color:#666">        </span>- virt-top<span style="color:#666">
+</span></span></span><span style="display:flex;"><span><span style="color:#666">        </span>- libvirt0<span style="color:#666">
+</span></span></span><span style="display:flex;"><span><span style="color:#666">        </span>- python-libvirt<span style="color:#666">
+</span></span></span><span style="display:flex;"><span><span style="color:#666">        </span>- virtinst<span style="color:#666">
+</span></span></span><span style="display:flex;"><span><span style="color:#666">        </span>- qemu-kvm<span style="color:#666">
+</span></span></span><span style="display:flex;"><span><span style="color:#666">        </span>- genisoimage<span style="color:#666">
+</span></span></span><span style="display:flex;"><span><span style="color:#666">        </span>- openvswitch-switch<span style="color:#666">
+</span></span></span><span style="display:flex;"><span><span style="color:#666">        </span>- openvswitch-common<span style="color:#666">
+</span></span></span><span style="display:flex;"><span><span style="color:#666">        </span>- openvswitch-vtep<span style="color:#666">
+</span></span></span><span style="display:flex;"><span><span style="color:#666">        </span>- python-openvswitch<span style="color:#666">
+</span></span></span><span style="display:flex;"><span><span style="color:#666">    </span>- <span style="color:#6ab825;font-weight:bold">apt</span>:<span style="color:#666"> </span>state=present name=libvirt-bin<span style="color:#666">
+</span></span></span><span style="display:flex;"><span><span style="color:#666">      </span><span style="color:#6ab825;font-weight:bold">when</span>:<span style="color:#666"> </span>ansible_distribution_major_version &lt; 9 and ansible_distribution == &#39;Debian&#39;<span style="color:#666">
+</span></span></span><span style="display:flex;"><span><span style="color:#666">    </span>- <span style="color:#6ab825;font-weight:bold">apt</span>:<span style="color:#666"> </span>state=present name={{ item }}<span style="color:#666">
+</span></span></span><span style="display:flex;"><span><span style="color:#666">      </span><span style="color:#6ab825;font-weight:bold">when</span>:<span style="color:#666"> </span>ansible_distribution_major_version &gt;= 9 and ansible_distribution == &#39;Debian&#39; or ansible_distribution == &#39;Ubuntu&#39;<span style="color:#666">
+</span></span></span><span style="display:flex;"><span><span style="color:#666">      </span><span style="color:#6ab825;font-weight:bold">with_items</span>:<span style="color:#666">
+</span></span></span><span style="display:flex;"><span><span style="color:#666">        </span>- libvirt-daemon-system<span style="color:#666">
+</span></span></span><span style="display:flex;"><span><span style="color:#666">        </span>- libvirt-clients<span style="color:#666">
+</span></span></span><span style="display:flex;"><span><span style="color:#666">    </span>- <span style="color:#6ab825;font-weight:bold">modprobe</span>:<span style="color:#666"> </span>name={{ item }} state=present<span style="color:#666">
+</span></span></span><span style="display:flex;"><span><span style="color:#666">      </span><span style="color:#6ab825;font-weight:bold">with_items</span>:<span style="color:#666">
+</span></span></span><span style="display:flex;"><span><span style="color:#666">        </span>- bonding<span style="color:#666">
+</span></span></span><span style="display:flex;"><span><span style="color:#666">        </span>- 8021q</span></span></code></pre></td></tr></table>
 </div>
 </div>
 <h3 id="1-openvswitch-configuration">1. Openvswitch configuration</h3>
 <p>Now we have to configure ovs bridges in order to allow attaching new virtual network interfaces to thoses bridges. Creating persistent ovs ports is also interessting (it will be when we&rsquo;ll deploys ipsec tunnels between hypervisors the next article). You surely noted the with_items parameter. That way, we will be able to call those playbooks with a dictionnary as parameter and run them with multiple datasets.</p>
 <p>In the main playbook:</p>
-<div class="highlight"><div style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
-<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">1
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">2
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">3
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">4
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">5
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">6
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">7
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">8
+<div class="highlight"><div style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">1
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">2
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">3
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">4
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">5
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">6
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">7
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">8
 </span></code></pre></td>
 <td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml">- <span style="color:#6ab825;font-weight:bold">include</span>:<span style="color:#666"> </span>ovs/bridges.yml<span style="color:#666">
-</span><span style="color:#666">  </span><span style="color:#6ab825;font-weight:bold">with_items</span>:<span style="color:#666"> </span><span style="color:#ed9d13">&#34;{{ ovs.bridges }}&#34;</span><span style="color:#666">
-</span><span style="color:#666">  </span><span style="color:#6ab825;font-weight:bold">when</span>:<span style="color:#666"> </span>ovs.bridges is defined<span style="color:#666">
-</span><span style="color:#666">  </span><span style="color:#6ab825;font-weight:bold">tags</span>:<span style="color:#666"> </span>ovs<span style="color:#666">
-</span><span style="color:#666"></span>- <span style="color:#6ab825;font-weight:bold">include</span>:<span style="color:#666"> </span>ovs/ports.yml<span style="color:#666">
-</span><span style="color:#666">  </span><span style="color:#6ab825;font-weight:bold">with_items</span>:<span style="color:#666"> </span><span style="color:#ed9d13">&#34;{{ ovs.ports }}&#34;</span><span style="color:#666">
-</span><span style="color:#666">  </span><span style="color:#6ab825;font-weight:bold">when</span>:<span style="color:#666"> </span>ovs.ports is defined<span style="color:#666">
-</span><span style="color:#666">  </span><span style="color:#6ab825;font-weight:bold">tags</span>:<span style="color:#666"> </span>ovs</code></pre></td></tr></table>
+<pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span>- <span style="color:#6ab825;font-weight:bold">include</span>:<span style="color:#666"> </span>ovs/bridges.yml<span style="color:#666">
+</span></span></span><span style="display:flex;"><span><span style="color:#666">  </span><span style="color:#6ab825;font-weight:bold">with_items</span>:<span style="color:#666"> </span><span style="color:#ed9d13">&#34;{{ ovs.bridges }}&#34;</span><span style="color:#666">
+</span></span></span><span style="display:flex;"><span><span style="color:#666">  </span><span style="color:#6ab825;font-weight:bold">when</span>:<span style="color:#666"> </span>ovs.bridges is defined<span style="color:#666">
+</span></span></span><span style="display:flex;"><span><span style="color:#666">  </span><span style="color:#6ab825;font-weight:bold">tags</span>:<span style="color:#666"> </span>ovs<span style="color:#666">
+</span></span></span><span style="display:flex;"><span><span style="color:#666"></span>- <span style="color:#6ab825;font-weight:bold">include</span>:<span style="color:#666"> </span>ovs/ports.yml<span style="color:#666">
+</span></span></span><span style="display:flex;"><span><span style="color:#666">  </span><span style="color:#6ab825;font-weight:bold">with_items</span>:<span style="color:#666"> </span><span style="color:#ed9d13">&#34;{{ ovs.ports }}&#34;</span><span style="color:#666">
+</span></span></span><span style="display:flex;"><span><span style="color:#666">  </span><span style="color:#6ab825;font-weight:bold">when</span>:<span style="color:#666"> </span>ovs.ports is defined<span style="color:#666">
+</span></span></span><span style="display:flex;"><span><span style="color:#666">  </span><span style="color:#6ab825;font-weight:bold">tags</span>:<span style="color:#666"> </span>ovs</span></span></code></pre></td></tr></table>
 </div>
 </div>
 <p>If we have a look at the bridges.yml playbook:</p>
-<div class="highlight"><div style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
-<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">1
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">2
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">3
+<div class="highlight"><div style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">1
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">2
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">3
 </span></code></pre></td>
 <td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml">- <span style="color:#6ab825;font-weight:bold">openvswitch_bridge</span>:<span style="color:#666">
-</span><span style="color:#666">    </span><span style="color:#6ab825;font-weight:bold">bridge</span>:<span style="color:#666"> </span><span style="color:#ed9d13">&#34;{{ item.name }}&#34;</span><span style="color:#666">
-</span><span style="color:#666">    </span><span style="color:#6ab825;font-weight:bold">state</span>:<span style="color:#666"> </span><span style="color:#ed9d13">&#34;{{ item.state | default(&#39;present&#39;) }}&#34;</span></code></pre></td></tr></table>
+<pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span>- <span style="color:#6ab825;font-weight:bold">openvswitch_bridge</span>:<span style="color:#666">
+</span></span></span><span style="display:flex;"><span><span style="color:#666">    </span><span style="color:#6ab825;font-weight:bold">bridge</span>:<span style="color:#666"> </span><span style="color:#ed9d13">&#34;{{ item.name }}&#34;</span><span style="color:#666">
+</span></span></span><span style="display:flex;"><span><span style="color:#666">    </span><span style="color:#6ab825;font-weight:bold">state</span>:<span style="color:#666"> </span><span style="color:#ed9d13">&#34;{{ item.state | default(&#39;present&#39;) }}&#34;</span></span></span></code></pre></td></tr></table>
 </div>
 </div>
 <p>Yes, it&rsquo;s really simple, according to the needs of this article. You could easily improve that task by using other parameters from the openvswith_bridge module.</p>
 <p>In the <code>ports.yml</code> playbook:</p>
-<div class="highlight"><div style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
-<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868"> 1
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868"> 2
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868"> 3
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868"> 4
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868"> 5
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868"> 6
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868"> 7
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868"> 8
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868"> 9
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">10
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">11
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">12
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">13
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">14
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">15
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">16
+<div class="highlight"><div style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868"> 1
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868"> 2
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868"> 3
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868"> 4
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868"> 5
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868"> 6
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868"> 7
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868"> 8
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868"> 9
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">10
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">11
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">12
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">13
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">14
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">15
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">16
 </span></code></pre></td>
 <td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml">- <span style="color:#6ab825;font-weight:bold">name</span>:<span style="color:#666"> </span>define ovs port configuration<span style="color:#666">
-</span><span style="color:#666">  </span><span style="color:#6ab825;font-weight:bold">template</span>:<span style="color:#666">
-</span><span style="color:#666">    </span><span style="color:#6ab825;font-weight:bold">src</span>:<span style="color:#666"> </span>templates/ovs_interfaces.j2<span style="color:#666">
-</span><span style="color:#666">    </span><span style="color:#6ab825;font-weight:bold">dest</span>:<span style="color:#666"> </span><span style="color:#ed9d13">&#34;/etc/network/interfaces.d/ovs_port_{{ item.port }}&#34;</span><span style="color:#666">
-</span><span style="color:#666"></span>- <span style="color:#6ab825;font-weight:bold">name</span>:<span style="color:#666"> </span>include configuration<span style="color:#666">
-</span><span style="color:#666">  </span><span style="color:#6ab825;font-weight:bold">lineinfile</span>:<span style="color:#666">
-</span><span style="color:#666">    </span><span style="color:#6ab825;font-weight:bold">path</span>:<span style="color:#666"> </span>/etc/network/interfaces<span style="color:#666">
-</span><span style="color:#666">    </span><span style="color:#6ab825;font-weight:bold">line</span>:<span style="color:#666"> </span><span style="color:#ed9d13">&#34;source /etc/network/interfaces.d/ovs_port_{{ item.port }}&#34;</span><span style="color:#666">
-</span><span style="color:#666"></span>- <span style="color:#6ab825;font-weight:bold">name</span>:<span style="color:#666"> </span>ensure interface is up<span style="color:#666">
-</span><span style="color:#666">  </span><span style="color:#6ab825;font-weight:bold">shell</span>:<span style="color:#666"> </span><span style="color:#ed9d13">&#34;ifup {{ item.port }}&#34;</span><span style="color:#666">
-</span><span style="color:#666">  </span><span style="color:#6ab825;font-weight:bold">ignore_errors</span>:<span style="color:#666"> </span><span style="color:#6ab825;font-weight:bold">yes</span><span style="color:#666">
-</span><span style="color:#666">  </span><span style="color:#6ab825;font-weight:bold">when</span>:<span style="color:#666"> </span>item.state is not defined or item.state == &#39;present&#39;<span style="color:#666">
-</span><span style="color:#666"></span>- <span style="color:#6ab825;font-weight:bold">name</span>:<span style="color:#666"> </span>ensure interface is down<span style="color:#666">
-</span><span style="color:#666">  </span><span style="color:#6ab825;font-weight:bold">shell</span>:<span style="color:#666"> </span><span style="color:#ed9d13">&#34;ifdown {{ item.port }}&#34;</span><span style="color:#666">
-</span><span style="color:#666">  </span><span style="color:#6ab825;font-weight:bold">ignore_errors</span>:<span style="color:#666"> </span><span style="color:#6ab825;font-weight:bold">yes</span><span style="color:#666">
-</span><span style="color:#666">  </span><span style="color:#6ab825;font-weight:bold">when</span>:<span style="color:#666"> </span>item.state is defined and item.state == &#39;absent&#39;</code></pre></td></tr></table>
+<pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span>- <span style="color:#6ab825;font-weight:bold">name</span>:<span style="color:#666"> </span>define ovs port configuration<span style="color:#666">
+</span></span></span><span style="display:flex;"><span><span style="color:#666">  </span><span style="color:#6ab825;font-weight:bold">template</span>:<span style="color:#666">
+</span></span></span><span style="display:flex;"><span><span style="color:#666">    </span><span style="color:#6ab825;font-weight:bold">src</span>:<span style="color:#666"> </span>templates/ovs_interfaces.j2<span style="color:#666">
+</span></span></span><span style="display:flex;"><span><span style="color:#666">    </span><span style="color:#6ab825;font-weight:bold">dest</span>:<span style="color:#666"> </span><span style="color:#ed9d13">&#34;/etc/network/interfaces.d/ovs_port_{{ item.port }}&#34;</span><span style="color:#666">
+</span></span></span><span style="display:flex;"><span><span style="color:#666"></span>- <span style="color:#6ab825;font-weight:bold">name</span>:<span style="color:#666"> </span>include configuration<span style="color:#666">
+</span></span></span><span style="display:flex;"><span><span style="color:#666">  </span><span style="color:#6ab825;font-weight:bold">lineinfile</span>:<span style="color:#666">
+</span></span></span><span style="display:flex;"><span><span style="color:#666">    </span><span style="color:#6ab825;font-weight:bold">path</span>:<span style="color:#666"> </span>/etc/network/interfaces<span style="color:#666">
+</span></span></span><span style="display:flex;"><span><span style="color:#666">    </span><span style="color:#6ab825;font-weight:bold">line</span>:<span style="color:#666"> </span><span style="color:#ed9d13">&#34;source /etc/network/interfaces.d/ovs_port_{{ item.port }}&#34;</span><span style="color:#666">
+</span></span></span><span style="display:flex;"><span><span style="color:#666"></span>- <span style="color:#6ab825;font-weight:bold">name</span>:<span style="color:#666"> </span>ensure interface is up<span style="color:#666">
+</span></span></span><span style="display:flex;"><span><span style="color:#666">  </span><span style="color:#6ab825;font-weight:bold">shell</span>:<span style="color:#666"> </span><span style="color:#ed9d13">&#34;ifup {{ item.port }}&#34;</span><span style="color:#666">
+</span></span></span><span style="display:flex;"><span><span style="color:#666">  </span><span style="color:#6ab825;font-weight:bold">ignore_errors</span>:<span style="color:#666"> </span><span style="color:#6ab825;font-weight:bold">yes</span><span style="color:#666">
+</span></span></span><span style="display:flex;"><span><span style="color:#666">  </span><span style="color:#6ab825;font-weight:bold">when</span>:<span style="color:#666"> </span>item.state is not defined or item.state == &#39;present&#39;<span style="color:#666">
+</span></span></span><span style="display:flex;"><span><span style="color:#666"></span>- <span style="color:#6ab825;font-weight:bold">name</span>:<span style="color:#666"> </span>ensure interface is down<span style="color:#666">
+</span></span></span><span style="display:flex;"><span><span style="color:#666">  </span><span style="color:#6ab825;font-weight:bold">shell</span>:<span style="color:#666"> </span><span style="color:#ed9d13">&#34;ifdown {{ item.port }}&#34;</span><span style="color:#666">
+</span></span></span><span style="display:flex;"><span><span style="color:#666">  </span><span style="color:#6ab825;font-weight:bold">ignore_errors</span>:<span style="color:#666"> </span><span style="color:#6ab825;font-weight:bold">yes</span><span style="color:#666">
+</span></span></span><span style="display:flex;"><span><span style="color:#666">  </span><span style="color:#6ab825;font-weight:bold">when</span>:<span style="color:#666"> </span>item.state is defined and item.state == &#39;absent&#39;</span></span></code></pre></td></tr></table>
 </div>
 </div>
 <p>Here we set ovs ports configuration directly in the network/interfaces.d directory (Debian environment). The <code>ovs_interfaces.j2</code> template looks like this:</p>
-<div class="highlight"><div style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
-<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868"> 1
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868"> 2
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868"> 3
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868"> 4
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868"> 5
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868"> 6
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868"> 7
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868"> 8
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868"> 9
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">10
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">11
+<div class="highlight"><div style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868"> 1
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868"> 2
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868"> 3
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868"> 4
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868"> 5
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868"> 6
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868"> 7
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868"> 8
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868"> 9
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">10
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">11
 </span></code></pre></td>
 <td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-jinja" data-lang="jinja">allow-vmbr-int <span style="color:#cd2828;font-weight:bold">{{</span> <span style="color:#40ffff">item.port</span> <span style="color:#cd2828;font-weight:bold">}}</span>
-iface <span style="color:#cd2828;font-weight:bold">{{</span> <span style="color:#40ffff">item.port</span> <span style="color:#cd2828;font-weight:bold">}}</span> inet <span style="color:#cd2828;font-weight:bold">{{</span> <span style="color:#40ffff">item.mode</span> | <span style="color:#447fcf">default</span>(<span style="color:#ed9d13">&#39;manual&#39;</span>) <span style="color:#cd2828;font-weight:bold">}}</span>
-  ovs_bridge <span style="color:#cd2828;font-weight:bold">{{</span> <span style="color:#40ffff">item.bridge</span> <span style="color:#cd2828;font-weight:bold">}}</span>
-  ovs_type OVSIntPort
-<span style="color:#cd2828;font-weight:bold">{%</span> <span style="color:#6ab825;font-weight:bold">if</span> <span style="color:#40ffff">item.tag</span> <span style="color:#6ab825;font-weight:bold">is</span> <span style="color:#447fcf">defined</span> <span style="color:#cd2828;font-weight:bold">%}</span>
-  ovs_options tag=<span style="color:#cd2828;font-weight:bold">{{</span> <span style="color:#40ffff">item.tag</span> <span style="color:#cd2828;font-weight:bold">}}</span>
-<span style="color:#cd2828;font-weight:bold">{%</span> <span style="color:#6ab825;font-weight:bold">endif</span> <span style="color:#cd2828;font-weight:bold">%}</span>
-<span style="color:#cd2828;font-weight:bold">{%</span> <span style="color:#6ab825;font-weight:bold">if</span> <span style="color:#40ffff">item.address</span> <span style="color:#6ab825;font-weight:bold">is</span> <span style="color:#447fcf">defined</span> <span style="color:#6ab825;font-weight:bold">and</span> <span style="color:#40ffff">item.netmask</span> <span style="color:#6ab825;font-weight:bold">is</span> <span style="color:#447fcf">defined</span> <span style="color:#cd2828;font-weight:bold">%}</span>
-  address <span style="color:#cd2828;font-weight:bold">{{</span> <span style="color:#40ffff">item.address</span> <span style="color:#cd2828;font-weight:bold">}}</span>
-  netmask <span style="color:#cd2828;font-weight:bold">{{</span> <span style="color:#40ffff">item.netmask</span> <span style="color:#cd2828;font-weight:bold">}}</span>
-<span style="color:#cd2828;font-weight:bold">{%</span> <span style="color:#6ab825;font-weight:bold">endif</span> <span style="color:#cd2828;font-weight:bold">%}</span></code></pre></td></tr></table>
+<pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-jinja" data-lang="jinja"><span style="display:flex;"><span>allow-vmbr-int <span style="color:#cd2828;font-weight:bold">{{</span> <span style="color:#40ffff">item.port</span> <span style="color:#cd2828;font-weight:bold">}}</span>
+</span></span><span style="display:flex;"><span>iface <span style="color:#cd2828;font-weight:bold">{{</span> <span style="color:#40ffff">item.port</span> <span style="color:#cd2828;font-weight:bold">}}</span> inet <span style="color:#cd2828;font-weight:bold">{{</span> <span style="color:#40ffff">item.mode</span> | <span style="color:#447fcf">default</span>(<span style="color:#ed9d13">&#39;manual&#39;</span>) <span style="color:#cd2828;font-weight:bold">}}</span>
+</span></span><span style="display:flex;"><span>  ovs_bridge <span style="color:#cd2828;font-weight:bold">{{</span> <span style="color:#40ffff">item.bridge</span> <span style="color:#cd2828;font-weight:bold">}}</span>
+</span></span><span style="display:flex;"><span>  ovs_type OVSIntPort
+</span></span><span style="display:flex;"><span><span style="color:#cd2828;font-weight:bold">{%</span> <span style="color:#6ab825;font-weight:bold">if</span> <span style="color:#40ffff">item.tag</span> <span style="color:#6ab825;font-weight:bold">is</span> <span style="color:#447fcf">defined</span> <span style="color:#cd2828;font-weight:bold">%}</span>
+</span></span><span style="display:flex;"><span>  ovs_options tag=<span style="color:#cd2828;font-weight:bold">{{</span> <span style="color:#40ffff">item.tag</span> <span style="color:#cd2828;font-weight:bold">}}</span>
+</span></span><span style="display:flex;"><span><span style="color:#cd2828;font-weight:bold">{%</span> <span style="color:#6ab825;font-weight:bold">endif</span> <span style="color:#cd2828;font-weight:bold">%}</span>
+</span></span><span style="display:flex;"><span><span style="color:#cd2828;font-weight:bold">{%</span> <span style="color:#6ab825;font-weight:bold">if</span> <span style="color:#40ffff">item.address</span> <span style="color:#6ab825;font-weight:bold">is</span> <span style="color:#447fcf">defined</span> <span style="color:#6ab825;font-weight:bold">and</span> <span style="color:#40ffff">item.netmask</span> <span style="color:#6ab825;font-weight:bold">is</span> <span style="color:#447fcf">defined</span> <span style="color:#cd2828;font-weight:bold">%}</span>
+</span></span><span style="display:flex;"><span>  address <span style="color:#cd2828;font-weight:bold">{{</span> <span style="color:#40ffff">item.address</span> <span style="color:#cd2828;font-weight:bold">}}</span>
+</span></span><span style="display:flex;"><span>  netmask <span style="color:#cd2828;font-weight:bold">{{</span> <span style="color:#40ffff">item.netmask</span> <span style="color:#cd2828;font-weight:bold">}}</span>
+</span></span><span style="display:flex;"><span><span style="color:#cd2828;font-weight:bold">{%</span> <span style="color:#6ab825;font-weight:bold">endif</span> <span style="color:#cd2828;font-weight:bold">%}</span></span></span></code></pre></td></tr></table>
 </div>
 </div>
 <p>Here we define a layer 3 interface that will basically permit to ping our virtual machines and validate the POC (and, because I use isolated dedicated servers on the Internet, it will permit me to route traffic from and to virtual machines). I&rsquo;ll address more interesting use cases in next posts.
 2. Building guest OS image with packer</p>
 <p>We will build guest OS images with Packer. You can check my last post to read about packer or see example configuration. What is new here is that we will use cloud-init, so we have to install it on the guest OS. We will do guest provisioning with ansible, because ansible is great. In the packer json template we need:</p>
-<div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json"><span style="color:#ed9d13">&#34;provisioners&#34;</span><span style="color:#a61717;background-color:#e3d2d2">:</span> [
-    {
-        <span style="color:#6ab825;font-weight:bold">&#34;type&#34;</span>: <span style="color:#ed9d13">&#34;ansible&#34;</span>,
-        <span style="color:#6ab825;font-weight:bold">&#34;playbook_file&#34;</span>: <span style="color:#ed9d13">&#34;./ansible/playbook.yml&#34;</span>
-    }
-]<span style="color:#a61717;background-color:#e3d2d2">,</span>
-<span style="color:#ed9d13">&#34;post-processors&#34;</span><span style="color:#a61717;background-color:#e3d2d2">:</span> [
-    {
-        <span style="color:#6ab825;font-weight:bold">&#34;type&#34;</span>: <span style="color:#ed9d13">&#34;compress&#34;</span>,
-        <span style="color:#6ab825;font-weight:bold">&#34;output&#34;</span>: <span style="color:#ed9d13">&#34;template-debian-9.qcow2.tar.gz&#34;</span>
-    }
-]</code></pre></div>
+<div class="highlight"><pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-json" data-lang="json"><span style="display:flex;"><span><span style="color:#ed9d13">&#34;provisioners&#34;</span><span style="color:#a61717;background-color:#e3d2d2">:</span> [
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>        <span style="color:#6ab825;font-weight:bold">&#34;type&#34;</span>: <span style="color:#ed9d13">&#34;ansible&#34;</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#6ab825;font-weight:bold">&#34;playbook_file&#34;</span>: <span style="color:#ed9d13">&#34;./ansible/playbook.yml&#34;</span>
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>]<span style="color:#a61717;background-color:#e3d2d2">,</span>
+</span></span><span style="display:flex;"><span><span style="color:#ed9d13">&#34;post-processors&#34;</span><span style="color:#a61717;background-color:#e3d2d2">:</span> [
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>        <span style="color:#6ab825;font-weight:bold">&#34;type&#34;</span>: <span style="color:#ed9d13">&#34;compress&#34;</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#6ab825;font-weight:bold">&#34;output&#34;</span>: <span style="color:#ed9d13">&#34;template-debian-9.qcow2.tar.gz&#34;</span>
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>]</span></span></code></pre></div>
 <p>(The post-processors is here to compress the image before we copy it on the hypervisor, yes we should checksum to).</p>
 <p>The playbook should simply contain:</p>
-<div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml">- <span style="color:#6ab825;font-weight:bold">apt</span>:<span style="color:#666">
-</span><span style="color:#666">    </span><span style="color:#6ab825;font-weight:bold">name</span>:<span style="color:#666"> </span>cloud-init<span style="color:#666">
-</span><span style="color:#666">    </span><span style="color:#6ab825;font-weight:bold">state</span>:<span style="color:#666"> </span>present</code></pre></div>
+<div class="highlight"><pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span>- <span style="color:#6ab825;font-weight:bold">apt</span>:<span style="color:#666">
+</span></span></span><span style="display:flex;"><span><span style="color:#666">    </span><span style="color:#6ab825;font-weight:bold">name</span>:<span style="color:#666"> </span>cloud-init<span style="color:#666">
+</span></span></span><span style="display:flex;"><span><span style="color:#666">    </span><span style="color:#6ab825;font-weight:bold">state</span>:<span style="color:#666"> </span>present</span></span></code></pre></div>
 <ol start="3">
 <li>Give libvirt access to the virtual machine disk file</li>
 </ol>
 <p>This is self explanatory.</p>
-<div class="highlight"><div style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
-<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868"> 1
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868"> 2
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868"> 3
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868"> 4
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868"> 5
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868"> 6
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868"> 7
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868"> 8
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868"> 9
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">10
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">11
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">12
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">13
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">14
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">15
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">16
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">17
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">18
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">19
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">20
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">21
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">22
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">23
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">24
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">25
+<div class="highlight"><div style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868"> 1
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868"> 2
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868"> 3
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868"> 4
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868"> 5
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868"> 6
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868"> 7
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868"> 8
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868"> 9
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">10
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">11
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">12
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">13
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">14
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">15
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">16
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">17
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">18
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">19
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">20
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">21
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">22
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">23
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">24
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">25
 </span></code></pre></td>
 <td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml">- <span style="color:#6ab825;font-weight:bold">name</span>:<span style="color:#666"> </span>install utils<span style="color:#666">
-</span><span style="color:#666">  </span><span style="color:#6ab825;font-weight:bold">apt</span>:<span style="color:#666">
-</span><span style="color:#666">    </span><span style="color:#6ab825;font-weight:bold">name</span>:<span style="color:#666"> </span>gzip<span style="color:#666">
-</span><span style="color:#666">    </span><span style="color:#6ab825;font-weight:bold">state</span>:<span style="color:#666"> </span>present<span style="color:#666">
-</span><span style="color:#666">
-</span><span style="color:#666"></span>- <span style="color:#6ab825;font-weight:bold">name</span>:<span style="color:#666"> </span>creating VM folder<span style="color:#666">
-</span><span style="color:#666">  </span><span style="color:#6ab825;font-weight:bold">file</span>:<span style="color:#666">
-</span><span style="color:#666">    </span><span style="color:#6ab825;font-weight:bold">path</span>:<span style="color:#666"> </span><span style="color:#ed9d13">&#34;/var/lib/libvirt/images/{{ item.name }}&#34;</span><span style="color:#666">
-</span><span style="color:#666">    </span><span style="color:#6ab825;font-weight:bold">state</span>:<span style="color:#666"> </span>directory<span style="color:#666">
-</span><span style="color:#666">    </span><span style="color:#6ab825;font-weight:bold">mode</span>:<span style="color:#666"> </span><span style="color:#3677a9">0755</span><span style="color:#666">
-</span><span style="color:#666">
-</span><span style="color:#666"></span>- <span style="color:#6ab825;font-weight:bold">name</span>:<span style="color:#666"> </span>copy image disk archive<span style="color:#666">
-</span><span style="color:#666">  </span><span style="color:#6ab825;font-weight:bold">copy</span>:<span style="color:#666">
-</span><span style="color:#666">    </span><span style="color:#6ab825;font-weight:bold">src</span>:<span style="color:#666"> </span><span style="color:#ed9d13">&#34;./files/{{ item.archive_name }}.tar.gz&#34;</span><span style="color:#666">
-</span><span style="color:#666">    </span><span style="color:#6ab825;font-weight:bold">dest</span>:<span style="color:#666"> </span><span style="color:#ed9d13">&#34;/var/lib/libvirt/images/{{ item.archive_name }}.tar.gz&#34;</span><span style="color:#666">
-</span><span style="color:#666">    </span><span style="color:#6ab825;font-weight:bold">owner</span>:<span style="color:#666"> </span><span style="color:#ed9d13">&#34;{{ item.kvm_qemu_user | default(&#39;libvirt-qemu&#39;) }}&#34;</span><span style="color:#666">
-</span><span style="color:#666">    </span><span style="color:#6ab825;font-weight:bold">group</span>:<span style="color:#666"> </span><span style="color:#ed9d13">&#34;{{ item.kvm_qemu_group | default(&#39;libvirt-qemu&#39;) }}&#34;</span><span style="color:#666">
-</span><span style="color:#666">    </span><span style="color:#6ab825;font-weight:bold">mode</span>:<span style="color:#666"> </span><span style="color:#3677a9">0644</span><span style="color:#666">
-</span><span style="color:#666">
-</span><span style="color:#666"></span>- <span style="color:#6ab825;font-weight:bold">name</span>:<span style="color:#666"> </span>unarchive disk<span style="color:#666">
-</span><span style="color:#666">  </span><span style="color:#6ab825;font-weight:bold">unarchive</span>:<span style="color:#666">
-</span><span style="color:#666">    </span><span style="color:#6ab825;font-weight:bold">src</span>:<span style="color:#666"> </span><span style="color:#ed9d13">&#34;/var/lib/libvirt/images/{{ item.archive_name }}.tar.gz&#34;</span><span style="color:#666">
-</span><span style="color:#666">    </span><span style="color:#6ab825;font-weight:bold">dest</span>:<span style="color:#666"> </span><span style="color:#ed9d13">&#34;/var/lib/libvirt/images/{{ item.name }}&#34;</span><span style="color:#666">
-</span><span style="color:#666">    </span><span style="color:#6ab825;font-weight:bold">copy</span>:<span style="color:#666"> </span><span style="color:#6ab825;font-weight:bold">no</span><span style="color:#666">
-</span><span style="color:#666">  </span><span style="color:#6ab825;font-weight:bold">ignore_errors</span>:<span style="color:#666"> </span><span style="color:#6ab825;font-weight:bold">yes</span></code></pre></td></tr></table>
+<pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span>- <span style="color:#6ab825;font-weight:bold">name</span>:<span style="color:#666"> </span>install utils<span style="color:#666">
+</span></span></span><span style="display:flex;"><span><span style="color:#666">  </span><span style="color:#6ab825;font-weight:bold">apt</span>:<span style="color:#666">
+</span></span></span><span style="display:flex;"><span><span style="color:#666">    </span><span style="color:#6ab825;font-weight:bold">name</span>:<span style="color:#666"> </span>gzip<span style="color:#666">
+</span></span></span><span style="display:flex;"><span><span style="color:#666">    </span><span style="color:#6ab825;font-weight:bold">state</span>:<span style="color:#666"> </span>present<span style="color:#666">
+</span></span></span><span style="display:flex;"><span><span style="color:#666">
+</span></span></span><span style="display:flex;"><span><span style="color:#666"></span>- <span style="color:#6ab825;font-weight:bold">name</span>:<span style="color:#666"> </span>creating VM folder<span style="color:#666">
+</span></span></span><span style="display:flex;"><span><span style="color:#666">  </span><span style="color:#6ab825;font-weight:bold">file</span>:<span style="color:#666">
+</span></span></span><span style="display:flex;"><span><span style="color:#666">    </span><span style="color:#6ab825;font-weight:bold">path</span>:<span style="color:#666"> </span><span style="color:#ed9d13">&#34;/var/lib/libvirt/images/{{ item.name }}&#34;</span><span style="color:#666">
+</span></span></span><span style="display:flex;"><span><span style="color:#666">    </span><span style="color:#6ab825;font-weight:bold">state</span>:<span style="color:#666"> </span>directory<span style="color:#666">
+</span></span></span><span style="display:flex;"><span><span style="color:#666">    </span><span style="color:#6ab825;font-weight:bold">mode</span>:<span style="color:#666"> </span><span style="color:#3677a9">0755</span><span style="color:#666">
+</span></span></span><span style="display:flex;"><span><span style="color:#666">
+</span></span></span><span style="display:flex;"><span><span style="color:#666"></span>- <span style="color:#6ab825;font-weight:bold">name</span>:<span style="color:#666"> </span>copy image disk archive<span style="color:#666">
+</span></span></span><span style="display:flex;"><span><span style="color:#666">  </span><span style="color:#6ab825;font-weight:bold">copy</span>:<span style="color:#666">
+</span></span></span><span style="display:flex;"><span><span style="color:#666">    </span><span style="color:#6ab825;font-weight:bold">src</span>:<span style="color:#666"> </span><span style="color:#ed9d13">&#34;./files/{{ item.archive_name }}.tar.gz&#34;</span><span style="color:#666">
+</span></span></span><span style="display:flex;"><span><span style="color:#666">    </span><span style="color:#6ab825;font-weight:bold">dest</span>:<span style="color:#666"> </span><span style="color:#ed9d13">&#34;/var/lib/libvirt/images/{{ item.archive_name }}.tar.gz&#34;</span><span style="color:#666">
+</span></span></span><span style="display:flex;"><span><span style="color:#666">    </span><span style="color:#6ab825;font-weight:bold">owner</span>:<span style="color:#666"> </span><span style="color:#ed9d13">&#34;{{ item.kvm_qemu_user | default(&#39;libvirt-qemu&#39;) }}&#34;</span><span style="color:#666">
+</span></span></span><span style="display:flex;"><span><span style="color:#666">    </span><span style="color:#6ab825;font-weight:bold">group</span>:<span style="color:#666"> </span><span style="color:#ed9d13">&#34;{{ item.kvm_qemu_group | default(&#39;libvirt-qemu&#39;) }}&#34;</span><span style="color:#666">
+</span></span></span><span style="display:flex;"><span><span style="color:#666">    </span><span style="color:#6ab825;font-weight:bold">mode</span>:<span style="color:#666"> </span><span style="color:#3677a9">0644</span><span style="color:#666">
+</span></span></span><span style="display:flex;"><span><span style="color:#666">
+</span></span></span><span style="display:flex;"><span><span style="color:#666"></span>- <span style="color:#6ab825;font-weight:bold">name</span>:<span style="color:#666"> </span>unarchive disk<span style="color:#666">
+</span></span></span><span style="display:flex;"><span><span style="color:#666">  </span><span style="color:#6ab825;font-weight:bold">unarchive</span>:<span style="color:#666">
+</span></span></span><span style="display:flex;"><span><span style="color:#666">    </span><span style="color:#6ab825;font-weight:bold">src</span>:<span style="color:#666"> </span><span style="color:#ed9d13">&#34;/var/lib/libvirt/images/{{ item.archive_name }}.tar.gz&#34;</span><span style="color:#666">
+</span></span></span><span style="display:flex;"><span><span style="color:#666">    </span><span style="color:#6ab825;font-weight:bold">dest</span>:<span style="color:#666"> </span><span style="color:#ed9d13">&#34;/var/lib/libvirt/images/{{ item.name }}&#34;</span><span style="color:#666">
+</span></span></span><span style="display:flex;"><span><span style="color:#666">    </span><span style="color:#6ab825;font-weight:bold">copy</span>:<span style="color:#666"> </span><span style="color:#6ab825;font-weight:bold">no</span><span style="color:#666">
+</span></span></span><span style="display:flex;"><span><span style="color:#666">  </span><span style="color:#6ab825;font-weight:bold">ignore_errors</span>:<span style="color:#666"> </span><span style="color:#6ab825;font-weight:bold">yes</span></span></span></code></pre></td></tr></table>
 </div>
 </div>
 <h3 id="4-cloud-init-configuration-and-libvirt-domain-creation">4. Cloud-init configuration and libvirt domain creation</h3>
 <p>Cloud-init is able to take its configuration from a locally mounted iso file. We need to create that iso file on the hypervisors, including meta-data and user-data configuration files.</p>
-<div class="highlight"><div style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
-<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868"> 1
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868"> 2
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868"> 3
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868"> 4
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868"> 5
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868"> 6
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868"> 7
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868"> 8
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868"> 9
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">10
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">11
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">12
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">13
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">14
+<div class="highlight"><div style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868"> 1
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868"> 2
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868"> 3
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868"> 4
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868"> 5
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868"> 6
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868"> 7
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868"> 8
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868"> 9
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">10
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">11
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">12
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">13
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#686868">14
 </span></code></pre></td>
 <td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml">- <span style="color:#6ab825;font-weight:bold">name</span>:<span style="color:#666"> </span>cloud-init user data<span style="color:#666">
-</span><span style="color:#666">  </span><span style="color:#6ab825;font-weight:bold">template</span>:<span style="color:#666">
-</span><span style="color:#666">    </span><span style="color:#6ab825;font-weight:bold">src</span>:<span style="color:#666"> </span><span style="color:#ed9d13">&#34;libvirt/user-data.j2&#34;</span><span style="color:#666">
-</span><span style="color:#666">    </span><span style="color:#6ab825;font-weight:bold">dest</span>:<span style="color:#666"> </span><span style="color:#ed9d13">&#34;/var/lib/libvirt/images/{{ item.name }}/user-data&#34;</span><span style="color:#666">
-</span><span style="color:#666">
-</span><span style="color:#666"></span>- <span style="color:#6ab825;font-weight:bold">name</span>:<span style="color:#666"> </span>cloud-init meta data<span style="color:#666">
-</span><span style="color:#666">  </span><span style="color:#6ab825;font-weight:bold">template</span>:<span style="color:#666">
-</span><span style="color:#666">    </span><span style="color:#6ab825;font-weight:bold">src</span>:<span style="color:#666"> </span><span style="color:#ed9d13">&#34;libvirt/meta-data.j2&#34;</span><span style="color:#666">
-</span><span style="color:#666">    </span><span style="color:#6ab825;font-weight:bold">dest</span>:<span style="color:#666"> </span><span style="color:#ed9d13">&#34;/var/lib/libvirt/images/{{ item.name }}/meta-data&#34;</span><span style="color:#666">
-</span><span style="color:#666">
-</span><span style="color:#666"></span>- <span style="color:#6ab825;font-weight:bold">name</span>:<span style="color:#666"> </span>cloud-init iso<span style="color:#666">
-</span><span style="color:#666">  </span><span style="color:#6ab825;font-weight:bold">shell</span>:<span style="color:#666"> </span>/usr/bin/genisoimage -o {{ item.cloudinit_file | default(&#39;cloud-init&#39;) }}_ci.iso -V cidata -r -J user-data meta-data<span style="color:#666">
-</span><span style="color:#666">  </span><span style="color:#6ab825;font-weight:bold">args</span>:<span style="color:#666">
-</span><span style="color:#666">    </span><span style="color:#6ab825;font-weight:bold">chdir</span>:<span style="color:#666"> </span><span style="color:#ed9d13">&#34;/var/lib/libvirt/images/{{ item.name }}/&#34;</span></code></pre></td></tr></table>
+<pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span>- <span style="color:#6ab825;font-weight:bold">name</span>:<span style="color:#666"> </span>cloud-init user data<span style="color:#666">
+</span></span></span><span style="display:flex;"><span><span style="color:#666">  </span><span style="color:#6ab825;font-weight:bold">template</span>:<span style="color:#666">
+</span></span></span><span style="display:flex;"><span><span style="color:#666">    </span><span style="color:#6ab825;font-weight:bold">src</span>:<span style="color:#666"> </span><span style="color:#ed9d13">&#34;libvirt/user-data.j2&#34;</span><span style="color:#666">
+</span></span></span><span style="display:flex;"><span><span style="color:#666">    </span><span style="color:#6ab825;font-weight:bold">dest</span>:<span style="color:#666"> </span><span style="color:#ed9d13">&#34;/var/lib/libvirt/images/{{ item.name }}/user-data&#34;</span><span style="color:#666">
+</span></span></span><span style="display:flex;"><span><span style="color:#666">
+</span></span></span><span style="display:flex;"><span><span style="color:#666"></span>- <span style="color:#6ab825;font-weight:bold">name</span>:<span style="color:#666"> </span>cloud-init meta data<span style="color:#666">
+</span></span></span><span style="display:flex;"><span><span style="color:#666">  </span><span style="color:#6ab825;font-weight:bold">template</span>:<span style="color:#666">
+</span></span></span><span style="display:flex;"><span><span style="color:#666">    </span><span style="color:#6ab825;font-weight:bold">src</span>:<span style="color:#666"> </span><span style="color:#ed9d13">&#34;libvirt/meta-data.j2&#34;</span><span style="color:#666">
+</span></span></span><span style="display:flex;"><span><span style="color:#666">    </span><span style="color:#6ab825;font-weight:bold">dest</span>:<span style="color:#666"> </span><span style="color:#ed9d13">&#34;/var/lib/libvirt/images/{{ item.name }}/meta-data&#34;</span><span style="color:#666">
+</span></span></span><span style="display:flex;"><span><span style="color:#666">
+</span></span></span><span style="display:flex;"><span><span style="color:#666"></span>- <span style="color:#6ab825;font-weight:bold">name</span>:<span style="color:#666"> </span>cloud-init iso<span style="color:#666">
+</span></span></span><span style="display:flex;"><span><span style="color:#666">  </span><span style="color:#6ab825;font-weight:bold">shell</span>:<span style="color:#666"> </span>/usr/bin/genisoimage -o {{ item.cloudinit_file | default(&#39;cloud-init&#39;) }}_ci.iso -V cidata -r -J user-data meta-data<span style="color:#666">
+</span></span></span><span style="display:flex;"><span><span style="color:#666">  </span><span style="color:#6ab825;font-weight:bold">args</span>:<span style="color:#666">
+</span></span></span><span style="display:flex;"><span><span style="color:#666">    </span><span style="color:#6ab825;font-weight:bold">chdir</span>:<span style="color:#666"> </span><span style="color:#ed9d13">&#34;/var/lib/libvirt/images/{{ item.name }}/&#34;</span></span></span></code></pre></td></tr></table>
 </div>
 </div>
 <p>Note the shell task: we build a fresh iso image containing our cloud-init data files. This iso will be mounted as a cd by libvirt, when the guest is booting.</p>
 <p>Here are the templates:</p>
 <p><code>meta-data.j2</code> is really basic:</p>
-<div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-jinja" data-lang="jinja">local-hostname: <span style="color:#cd2828;font-weight:bold">{{</span> <span style="color:#40ffff">item.hostname</span> <span style="color:#cd2828;font-weight:bold">}}</span></code></pre></div>
+<div class="highlight"><pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-jinja" data-lang="jinja"><span style="display:flex;"><span>local-hostname: <span style="color:#cd2828;font-weight:bold">{{</span> <span style="color:#40ffff">item.hostname</span> <span style="color:#cd2828;font-weight:bold">}}</span></span></span></code></pre></div>
 <p>in <code>user-data.j2</code> we find the network configuration of the guest:</p>
-<div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-jinja" data-lang="jinja">#cloud-config
-
-write_files:
-  - content: |
-      # This file describes the network interfaces available on your system
-      # and how to activate them. For more information, see interfaces(5).
-
-      # The loopback network interface
-      auto lo
-      iface lo inet loopback
-
-<span style="color:#cd2828;font-weight:bold">{%</span> <span style="color:#6ab825;font-weight:bold">for</span> <span style="color:#40ffff">interface</span> <span style="color:#6ab825;font-weight:bold">in</span> <span style="color:#40ffff">item.interfaces</span> <span style="color:#cd2828;font-weight:bold">%}</span>
-<span style="color:#cd2828;font-weight:bold">{%</span> <span style="color:#6ab825;font-weight:bold">if</span> <span style="color:#40ffff">interface.comment</span> <span style="color:#6ab825;font-weight:bold">is</span> <span style="color:#447fcf">defined</span> <span style="color:#cd2828;font-weight:bold">%}</span>
-      # <span style="color:#cd2828;font-weight:bold">{{</span> <span style="color:#40ffff">interface.comment</span> <span style="color:#cd2828;font-weight:bold">}}</span>
-<span style="color:#cd2828;font-weight:bold">{%</span> <span style="color:#6ab825;font-weight:bold">endif</span> <span style="color:#cd2828;font-weight:bold">%}</span>
-      auto <span style="color:#cd2828;font-weight:bold">{{</span> <span style="color:#40ffff">interface.name</span> <span style="color:#cd2828;font-weight:bold">}}</span>
-      iface <span style="color:#cd2828;font-weight:bold">{{</span> <span style="color:#40ffff">interface.name</span> <span style="color:#cd2828;font-weight:bold">}}</span> inet <span style="color:#cd2828;font-weight:bold">{{</span> <span style="color:#40ffff">interface.mode</span> <span style="color:#cd2828;font-weight:bold">}}</span>
-              address <span style="color:#cd2828;font-weight:bold">{{</span> <span style="color:#40ffff">interface.address</span> <span style="color:#cd2828;font-weight:bold">}}</span>
-              netmask <span style="color:#cd2828;font-weight:bold">{{</span> <span style="color:#40ffff">interface.netmask</span> <span style="color:#cd2828;font-weight:bold">}}</span>
-<span style="color:#cd2828;font-weight:bold">{%</span> <span style="color:#6ab825;font-weight:bold">if</span> <span style="color:#40ffff">interface.gateway</span> <span style="color:#6ab825;font-weight:bold">is</span> <span style="color:#447fcf">defined</span> <span style="color:#cd2828;font-weight:bold">%}</span>
-              gateway <span style="color:#cd2828;font-weight:bold">{{</span> <span style="color:#40ffff">interface.gateway</span> <span style="color:#cd2828;font-weight:bold">}}</span>
-<span style="color:#cd2828;font-weight:bold">{%</span> <span style="color:#6ab825;font-weight:bold">endif</span> <span style="color:#cd2828;font-weight:bold">%}</span>
-<span style="color:#cd2828;font-weight:bold">{%</span> <span style="color:#6ab825;font-weight:bold">if</span> <span style="color:#40ffff">interface.dns</span> <span style="color:#6ab825;font-weight:bold">is</span> <span style="color:#447fcf">defined</span> <span style="color:#cd2828;font-weight:bold">%}</span>
-              dns-nameservers <span style="color:#cd2828;font-weight:bold">{{</span> <span style="color:#40ffff">interface.dns</span> | <span style="color:#447fcf">default</span>(<span style="color:#ed9d13">&#39;9.9.9.9&#39;</span>) <span style="color:#cd2828;font-weight:bold">}}</span>
-<span style="color:#cd2828;font-weight:bold">{%</span> <span style="color:#6ab825;font-weight:bold">endif</span> <span style="color:#cd2828;font-weight:bold">%}</span>
-<span style="color:#cd2828;font-weight:bold">{%</span> <span style="color:#6ab825;font-weight:bold">endfor</span> <span style="color:#cd2828;font-weight:bold">%}</span>
-    path: /etc/network/interfaces</code></pre></div>
+<div class="highlight"><pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-jinja" data-lang="jinja"><span style="display:flex;"><span>#cloud-config
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>write_files:
+</span></span><span style="display:flex;"><span>  - content: |
+</span></span><span style="display:flex;"><span>      # This file describes the network interfaces available on your system
+</span></span><span style="display:flex;"><span>      # and how to activate them. For more information, see interfaces(5).
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>      # The loopback network interface
+</span></span><span style="display:flex;"><span>      auto lo
+</span></span><span style="display:flex;"><span>      iface lo inet loopback
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#cd2828;font-weight:bold">{%</span> <span style="color:#6ab825;font-weight:bold">for</span> <span style="color:#40ffff">interface</span> <span style="color:#6ab825;font-weight:bold">in</span> <span style="color:#40ffff">item.interfaces</span> <span style="color:#cd2828;font-weight:bold">%}</span>
+</span></span><span style="display:flex;"><span><span style="color:#cd2828;font-weight:bold">{%</span> <span style="color:#6ab825;font-weight:bold">if</span> <span style="color:#40ffff">interface.comment</span> <span style="color:#6ab825;font-weight:bold">is</span> <span style="color:#447fcf">defined</span> <span style="color:#cd2828;font-weight:bold">%}</span>
+</span></span><span style="display:flex;"><span>      # <span style="color:#cd2828;font-weight:bold">{{</span> <span style="color:#40ffff">interface.comment</span> <span style="color:#cd2828;font-weight:bold">}}</span>
+</span></span><span style="display:flex;"><span><span style="color:#cd2828;font-weight:bold">{%</span> <span style="color:#6ab825;font-weight:bold">endif</span> <span style="color:#cd2828;font-weight:bold">%}</span>
+</span></span><span style="display:flex;"><span>      auto <span style="color:#cd2828;font-weight:bold">{{</span> <span style="color:#40ffff">interface.name</span> <span style="color:#cd2828;font-weight:bold">}}</span>
+</span></span><span style="display:flex;"><span>      iface <span style="color:#cd2828;font-weight:bold">{{</span> <span style="color:#40ffff">interface.name</span> <span style="color:#cd2828;font-weight:bold">}}</span> inet <span style="color:#cd2828;font-weight:bold">{{</span> <span style="color:#40ffff">interface.mode</span> <span style="color:#cd2828;font-weight:bold">}}</span>
+</span></span><span style="display:flex;"><span>              address <span style="color:#cd2828;font-weight:bold">{{</span> <span style="color:#40ffff">interface.address</span> <span style="color:#cd2828;font-weight:bold">}}</span>
+</span></span><span style="display:flex;"><span>              netmask <span style="color:#cd2828;font-weight:bold">{{</span> <span style="color:#40ffff">interface.netmask</span> <span style="color:#cd2828;font-weight:bold">}}</span>
+</span></span><span style="display:flex;"><span><span style="color:#cd2828;font-weight:bold">{%</span> <span style="color:#6ab825;font-weight:bold">if</span> <span style="color:#40ffff">interface.gateway</span> <span style="color:#6ab825;font-weight:bold">is</span> <span style="color:#447fcf">defined</span> <span style="color:#cd2828;font-weight:bold">%}</span>
+</span></span><span style="display:flex;"><span>              gateway <span style="color:#cd2828;font-weight:bold">{{</span> <span style="color:#40ffff">interface.gateway</span> <span style="color:#cd2828;font-weight:bold">}}</span>
+</span></span><span style="display:flex;"><span><span style="color:#cd2828;font-weight:bold">{%</span> <span style="color:#6ab825;font-weight:bold">endif</span> <span style="color:#cd2828;font-weight:bold">%}</span>
+</span></span><span style="display:flex;"><span><span style="color:#cd2828;font-weight:bold">{%</span> <span style="color:#6ab825;font-weight:bold">if</span> <span style="color:#40ffff">interface.dns</span> <span style="color:#6ab825;font-weight:bold">is</span> <span style="color:#447fcf">defined</span> <span style="color:#cd2828;font-weight:bold">%}</span>
+</span></span><span style="display:flex;"><span>              dns-nameservers <span style="color:#cd2828;font-weight:bold">{{</span> <span style="color:#40ffff">interface.dns</span> | <span style="color:#447fcf">default</span>(<span style="color:#ed9d13">&#39;9.9.9.9&#39;</span>) <span style="color:#cd2828;font-weight:bold">}}</span>
+</span></span><span style="display:flex;"><span><span style="color:#cd2828;font-weight:bold">{%</span> <span style="color:#6ab825;font-weight:bold">endif</span> <span style="color:#cd2828;font-weight:bold">%}</span>
+</span></span><span style="display:flex;"><span><span style="color:#cd2828;font-weight:bold">{%</span> <span style="color:#6ab825;font-weight:bold">endfor</span> <span style="color:#cd2828;font-weight:bold">%}</span>
+</span></span><span style="display:flex;"><span>    path: /etc/network/interfaces</span></span></code></pre></div>
 <h3 id="5-define-domain-and-boot-the-guest">5. Define domain and boot the guest</h3>
 <p>I won&rsquo;t paste the whole libvirt domain template as this blog post is already too long. Here are the two specific parts, the domain xml required to mount the cloud-init configuration iso:</p>
-<div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-xml" data-lang="xml"><span style="color:#6ab825;font-weight:bold">&lt;disk</span> <span style="color:#bbb">type=</span><span style="color:#ed9d13">&#39;file&#39;</span> <span style="color:#bbb">device=</span><span style="color:#ed9d13">&#39;cdrom&#39;</span><span style="color:#6ab825;font-weight:bold">&gt;</span>
-  <span style="color:#6ab825;font-weight:bold">&lt;driver</span> <span style="color:#bbb">name=</span><span style="color:#ed9d13">&#39;qemu&#39;</span> <span style="color:#bbb">type=</span><span style="color:#ed9d13">&#39;raw&#39;</span><span style="color:#6ab825;font-weight:bold">/&gt;</span>
-  <span style="color:#6ab825;font-weight:bold">&lt;source</span> <span style="color:#bbb">file=</span><span style="color:#ed9d13">&#39;/var/lib/libvirt/images/{{ item.name }}/{{ item.cloudinit_file | default(&#39;</span><span style="color:#a61717;background-color:#e3d2d2">cloud-init&#39;)</span> <span style="color:#a61717;background-color:#e3d2d2">}}_ci.iso&#39;</span><span style="color:#6ab825;font-weight:bold">/&gt;</span>
-  <span style="color:#6ab825;font-weight:bold">&lt;target</span> <span style="color:#bbb">dev=</span><span style="color:#ed9d13">&#39;hdc&#39;</span> <span style="color:#bbb">bus=</span><span style="color:#ed9d13">&#39;ide&#39;</span><span style="color:#6ab825;font-weight:bold">/&gt;</span>
-  <span style="color:#6ab825;font-weight:bold">&lt;readonly/&gt;</span>
-  <span style="color:#6ab825;font-weight:bold">&lt;address</span> <span style="color:#bbb">type=</span><span style="color:#ed9d13">&#39;drive&#39;</span> <span style="color:#bbb">controller=</span><span style="color:#ed9d13">&#39;0&#39;</span> <span style="color:#bbb">bus=</span><span style="color:#ed9d13">&#39;1&#39;</span> <span style="color:#bbb">target=</span><span style="color:#ed9d13">&#39;0&#39;</span> <span style="color:#bbb">unit=</span><span style="color:#ed9d13">&#39;0&#39;</span><span style="color:#6ab825;font-weight:bold">/&gt;</span>
-<span style="color:#6ab825;font-weight:bold">&lt;/disk&gt;</span></code></pre></div>
+<div class="highlight"><pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-xml" data-lang="xml"><span style="display:flex;"><span><span style="color:#6ab825;font-weight:bold">&lt;disk</span> <span style="color:#bbb">type=</span><span style="color:#ed9d13">&#39;file&#39;</span> <span style="color:#bbb">device=</span><span style="color:#ed9d13">&#39;cdrom&#39;</span><span style="color:#6ab825;font-weight:bold">&gt;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#6ab825;font-weight:bold">&lt;driver</span> <span style="color:#bbb">name=</span><span style="color:#ed9d13">&#39;qemu&#39;</span> <span style="color:#bbb">type=</span><span style="color:#ed9d13">&#39;raw&#39;</span><span style="color:#6ab825;font-weight:bold">/&gt;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#6ab825;font-weight:bold">&lt;source</span> <span style="color:#bbb">file=</span><span style="color:#ed9d13">&#39;/var/lib/libvirt/images/{{ item.name }}/{{ item.cloudinit_file | default(&#39;</span><span style="color:#a61717;background-color:#e3d2d2">cloud-init&#39;)</span> <span style="color:#a61717;background-color:#e3d2d2">}}_ci.iso&#39;</span><span style="color:#6ab825;font-weight:bold">/&gt;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#6ab825;font-weight:bold">&lt;target</span> <span style="color:#bbb">dev=</span><span style="color:#ed9d13">&#39;hdc&#39;</span> <span style="color:#bbb">bus=</span><span style="color:#ed9d13">&#39;ide&#39;</span><span style="color:#6ab825;font-weight:bold">/&gt;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#6ab825;font-weight:bold">&lt;readonly/&gt;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#6ab825;font-weight:bold">&lt;address</span> <span style="color:#bbb">type=</span><span style="color:#ed9d13">&#39;drive&#39;</span> <span style="color:#bbb">controller=</span><span style="color:#ed9d13">&#39;0&#39;</span> <span style="color:#bbb">bus=</span><span style="color:#ed9d13">&#39;1&#39;</span> <span style="color:#bbb">target=</span><span style="color:#ed9d13">&#39;0&#39;</span> <span style="color:#bbb">unit=</span><span style="color:#ed9d13">&#39;0&#39;</span><span style="color:#6ab825;font-weight:bold">/&gt;</span>
+</span></span><span style="display:flex;"><span><span style="color:#6ab825;font-weight:bold">&lt;/disk&gt;</span></span></span></code></pre></div>
 <p>and the one required to create virtual network interfaces, for that virtual machine, attached to ovs bridges we created earlier:</p>
-<div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-jinja" data-lang="jinja"><span style="color:#cd2828;font-weight:bold">{%</span> <span style="color:#6ab825;font-weight:bold">if</span> <span style="color:#40ffff">item.ovs</span> <span style="color:#6ab825;font-weight:bold">is</span> <span style="color:#447fcf">defined</span> <span style="color:#cd2828;font-weight:bold">%}</span>
-  <span style="color:#cd2828;font-weight:bold">{%</span> <span style="color:#6ab825;font-weight:bold">for</span> <span style="color:#40ffff">ovsbr</span> <span style="color:#6ab825;font-weight:bold">in</span> <span style="color:#40ffff">item.ovs</span> <span style="color:#cd2828;font-weight:bold">%}</span>
-    &lt;interface type=&#39;bridge&#39;&gt;
-      &lt;virtualport type=&#39;openvswitch&#39;&gt;&lt;/virtualport&gt;
-      &lt;model type=&#39;virtio&#39;/&gt;
-      &lt;target dev=&#39;veth-<span style="color:#cd2828;font-weight:bold">{{</span> <span style="color:#40ffff">item.name</span> <span style="color:#cd2828;font-weight:bold">}}</span>&#39;/&gt;
-      &lt;source bridge=&#39;<span style="color:#cd2828;font-weight:bold">{{</span> <span style="color:#40ffff">ovsbr.name</span> <span style="color:#cd2828;font-weight:bold">}}</span>&#39;/&gt;
-      <span style="color:#cd2828;font-weight:bold">{%</span> <span style="color:#6ab825;font-weight:bold">if</span> <span style="color:#40ffff">ovsbr.vlans</span> <span style="color:#6ab825;font-weight:bold">is</span> <span style="color:#447fcf">defined</span> <span style="color:#cd2828;font-weight:bold">%}</span>
-        &lt;vlan&gt;
-        <span style="color:#cd2828;font-weight:bold">{%</span> <span style="color:#6ab825;font-weight:bold">for</span> <span style="color:#40ffff">vlan</span> <span style="color:#6ab825;font-weight:bold">in</span> <span style="color:#40ffff">ovsbr.vlans</span> <span style="color:#cd2828;font-weight:bold">%}</span>
-          &lt;tag id=&#39;<span style="color:#cd2828;font-weight:bold">{{</span> <span style="color:#40ffff">vlan</span> <span style="color:#cd2828;font-weight:bold">}}</span>&#39;/&gt;
-        <span style="color:#cd2828;font-weight:bold">{%</span> <span style="color:#6ab825;font-weight:bold">endfor</span> <span style="color:#cd2828;font-weight:bold">%}</span>
-        &lt;/vlan&gt;
-      <span style="color:#cd2828;font-weight:bold">{%</span> <span style="color:#6ab825;font-weight:bold">endif</span> <span style="color:#cd2828;font-weight:bold">%}</span>
-    &lt;/interface&gt;
-  <span style="color:#cd2828;font-weight:bold">{%</span> <span style="color:#6ab825;font-weight:bold">endfor</span> <span style="color:#cd2828;font-weight:bold">%}</span>
-<span style="color:#cd2828;font-weight:bold">{%</span> <span style="color:#6ab825;font-weight:bold">endif</span> <span style="color:#cd2828;font-weight:bold">%}</span></code></pre></div>
+<div class="highlight"><pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-jinja" data-lang="jinja"><span style="display:flex;"><span><span style="color:#cd2828;font-weight:bold">{%</span> <span style="color:#6ab825;font-weight:bold">if</span> <span style="color:#40ffff">item.ovs</span> <span style="color:#6ab825;font-weight:bold">is</span> <span style="color:#447fcf">defined</span> <span style="color:#cd2828;font-weight:bold">%}</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#cd2828;font-weight:bold">{%</span> <span style="color:#6ab825;font-weight:bold">for</span> <span style="color:#40ffff">ovsbr</span> <span style="color:#6ab825;font-weight:bold">in</span> <span style="color:#40ffff">item.ovs</span> <span style="color:#cd2828;font-weight:bold">%}</span>
+</span></span><span style="display:flex;"><span>    &lt;interface type=&#39;bridge&#39;&gt;
+</span></span><span style="display:flex;"><span>      &lt;virtualport type=&#39;openvswitch&#39;&gt;&lt;/virtualport&gt;
+</span></span><span style="display:flex;"><span>      &lt;model type=&#39;virtio&#39;/&gt;
+</span></span><span style="display:flex;"><span>      &lt;target dev=&#39;veth-<span style="color:#cd2828;font-weight:bold">{{</span> <span style="color:#40ffff">item.name</span> <span style="color:#cd2828;font-weight:bold">}}</span>&#39;/&gt;
+</span></span><span style="display:flex;"><span>      &lt;source bridge=&#39;<span style="color:#cd2828;font-weight:bold">{{</span> <span style="color:#40ffff">ovsbr.name</span> <span style="color:#cd2828;font-weight:bold">}}</span>&#39;/&gt;
+</span></span><span style="display:flex;"><span>      <span style="color:#cd2828;font-weight:bold">{%</span> <span style="color:#6ab825;font-weight:bold">if</span> <span style="color:#40ffff">ovsbr.vlans</span> <span style="color:#6ab825;font-weight:bold">is</span> <span style="color:#447fcf">defined</span> <span style="color:#cd2828;font-weight:bold">%}</span>
+</span></span><span style="display:flex;"><span>        &lt;vlan&gt;
+</span></span><span style="display:flex;"><span>        <span style="color:#cd2828;font-weight:bold">{%</span> <span style="color:#6ab825;font-weight:bold">for</span> <span style="color:#40ffff">vlan</span> <span style="color:#6ab825;font-weight:bold">in</span> <span style="color:#40ffff">ovsbr.vlans</span> <span style="color:#cd2828;font-weight:bold">%}</span>
+</span></span><span style="display:flex;"><span>          &lt;tag id=&#39;<span style="color:#cd2828;font-weight:bold">{{</span> <span style="color:#40ffff">vlan</span> <span style="color:#cd2828;font-weight:bold">}}</span>&#39;/&gt;
+</span></span><span style="display:flex;"><span>        <span style="color:#cd2828;font-weight:bold">{%</span> <span style="color:#6ab825;font-weight:bold">endfor</span> <span style="color:#cd2828;font-weight:bold">%}</span>
+</span></span><span style="display:flex;"><span>        &lt;/vlan&gt;
+</span></span><span style="display:flex;"><span>      <span style="color:#cd2828;font-weight:bold">{%</span> <span style="color:#6ab825;font-weight:bold">endif</span> <span style="color:#cd2828;font-weight:bold">%}</span>
+</span></span><span style="display:flex;"><span>    &lt;/interface&gt;
+</span></span><span style="display:flex;"><span>  <span style="color:#cd2828;font-weight:bold">{%</span> <span style="color:#6ab825;font-weight:bold">endfor</span> <span style="color:#cd2828;font-weight:bold">%}</span>
+</span></span><span style="display:flex;"><span><span style="color:#cd2828;font-weight:bold">{%</span> <span style="color:#6ab825;font-weight:bold">endif</span> <span style="color:#cd2828;font-weight:bold">%}</span></span></span></code></pre></div>
 <p>Note that this configuration takes into account vlan tags (with the block ), you can then attach an interface in access mode on a specific vlan and isolate trafic between virtual machines from different groups.</p>
 <p>And then, the ansible tasks to deploy the new domain:</p>
-<div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml">- <span style="color:#6ab825;font-weight:bold">name</span>:<span style="color:#666"> </span>defining VM domain<span style="color:#666">
-</span><span style="color:#666">  </span><span style="color:#6ab825;font-weight:bold">virt</span>:<span style="color:#666">
-</span><span style="color:#666">    </span><span style="color:#6ab825;font-weight:bold">name</span>:<span style="color:#666"> </span><span style="color:#ed9d13">&#34;{{ item.name }}&#34;</span><span style="color:#666">
-</span><span style="color:#666">    </span><span style="color:#6ab825;font-weight:bold">command</span>:<span style="color:#666"> </span>define<span style="color:#666">
-</span><span style="color:#666">    </span><span style="color:#6ab825;font-weight:bold">xml</span>:<span style="color:#666"> </span><span style="color:#ed9d13">&#34;{{ lookup(&#39;template&#39;, &#39;libvirt/domain.xml.j2&#39;) }}&#34;</span><span style="color:#666">
-</span><span style="color:#666">    </span><span style="color:#6ab825;font-weight:bold">uri</span>:<span style="color:#666"> </span><span style="color:#ed9d13">&#34;qemu:///system&#34;</span><span style="color:#666">
-</span><span style="color:#666">  </span><span style="color:#6ab825;font-weight:bold">tags</span>:<span style="color:#666"> </span>define<span style="color:#666">
-</span><span style="color:#666">
-</span><span style="color:#666"></span>- <span style="color:#6ab825;font-weight:bold">name</span>:<span style="color:#666"> </span>VM state<span style="color:#666">
-</span><span style="color:#666">  </span><span style="color:#6ab825;font-weight:bold">virt</span>:<span style="color:#666">
-</span><span style="color:#666">    </span><span style="color:#6ab825;font-weight:bold">name</span>:<span style="color:#666"> </span><span style="color:#ed9d13">&#34;{{ item.name }}&#34;</span><span style="color:#666">
-</span><span style="color:#666">    </span><span style="color:#6ab825;font-weight:bold">state</span>:<span style="color:#666"> </span>running<span style="color:#666">
-</span><span style="color:#666">    </span><span style="color:#6ab825;font-weight:bold">uri</span>:<span style="color:#666"> </span><span style="color:#ed9d13">&#34;qemu:///system&#34;</span><span style="color:#666">
-</span><span style="color:#666">  </span><span style="color:#6ab825;font-weight:bold">tags</span>:<span style="color:#666"> </span>start</code></pre></div>
+<div class="highlight"><pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span>- <span style="color:#6ab825;font-weight:bold">name</span>:<span style="color:#666"> </span>defining VM domain<span style="color:#666">
+</span></span></span><span style="display:flex;"><span><span style="color:#666">  </span><span style="color:#6ab825;font-weight:bold">virt</span>:<span style="color:#666">
+</span></span></span><span style="display:flex;"><span><span style="color:#666">    </span><span style="color:#6ab825;font-weight:bold">name</span>:<span style="color:#666"> </span><span style="color:#ed9d13">&#34;{{ item.name }}&#34;</span><span style="color:#666">
+</span></span></span><span style="display:flex;"><span><span style="color:#666">    </span><span style="color:#6ab825;font-weight:bold">command</span>:<span style="color:#666"> </span>define<span style="color:#666">
+</span></span></span><span style="display:flex;"><span><span style="color:#666">    </span><span style="color:#6ab825;font-weight:bold">xml</span>:<span style="color:#666"> </span><span style="color:#ed9d13">&#34;{{ lookup(&#39;template&#39;, &#39;libvirt/domain.xml.j2&#39;) }}&#34;</span><span style="color:#666">
+</span></span></span><span style="display:flex;"><span><span style="color:#666">    </span><span style="color:#6ab825;font-weight:bold">uri</span>:<span style="color:#666"> </span><span style="color:#ed9d13">&#34;qemu:///system&#34;</span><span style="color:#666">
+</span></span></span><span style="display:flex;"><span><span style="color:#666">  </span><span style="color:#6ab825;font-weight:bold">tags</span>:<span style="color:#666"> </span>define<span style="color:#666">
+</span></span></span><span style="display:flex;"><span><span style="color:#666">
+</span></span></span><span style="display:flex;"><span><span style="color:#666"></span>- <span style="color:#6ab825;font-weight:bold">name</span>:<span style="color:#666"> </span>VM state<span style="color:#666">
+</span></span></span><span style="display:flex;"><span><span style="color:#666">  </span><span style="color:#6ab825;font-weight:bold">virt</span>:<span style="color:#666">
+</span></span></span><span style="display:flex;"><span><span style="color:#666">    </span><span style="color:#6ab825;font-weight:bold">name</span>:<span style="color:#666"> </span><span style="color:#ed9d13">&#34;{{ item.name }}&#34;</span><span style="color:#666">
+</span></span></span><span style="display:flex;"><span><span style="color:#666">    </span><span style="color:#6ab825;font-weight:bold">state</span>:<span style="color:#666"> </span>running<span style="color:#666">
+</span></span></span><span style="display:flex;"><span><span style="color:#666">    </span><span style="color:#6ab825;font-weight:bold">uri</span>:<span style="color:#666"> </span><span style="color:#ed9d13">&#34;qemu:///system&#34;</span><span style="color:#666">
+</span></span></span><span style="display:flex;"><span><span style="color:#666">  </span><span style="color:#6ab825;font-weight:bold">tags</span>:<span style="color:#666"> </span>start</span></span></code></pre></div>
 <h2 id="feed-the-variables-host_vars-and-group_vars">Feed the variables: host_vars and group_vars</h2>
 <p>If you reached those lines, first thank you (that post is a bit long, I&rsquo;m a new comer in terms of blogging). Second, you may want to see a vars file sample, to make all those configurations alive. Here it is:</p>
-<div class="highlight"><pre style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml"><span style="color:#6ab825;font-weight:bold">ovs</span>:<span style="color:#666">
-</span><span style="color:#666">    </span><span style="color:#6ab825;font-weight:bold">bridges</span>:<span style="color:#666">
-</span><span style="color:#666">      </span>- <span style="color:#6ab825;font-weight:bold">name</span>:<span style="color:#666"> </span>ovs-wan1<span style="color:#666">
-</span><span style="color:#666">        </span><span style="color:#6ab825;font-weight:bold">state</span>:<span style="color:#666"> </span>present<span style="color:#666">
-</span><span style="color:#666">    </span><span style="color:#6ab825;font-weight:bold">ports</span>:<span style="color:#666">
-</span><span style="color:#666">      </span>- <span style="color:#6ab825;font-weight:bold">bridge</span>:<span style="color:#666"> </span>ovs-wan1<span style="color:#666">
-</span><span style="color:#666">        </span><span style="color:#6ab825;font-weight:bold">port</span>:<span style="color:#666"> </span>itc-wan1<span style="color:#666">
-</span><span style="color:#666">        </span><span style="color:#6ab825;font-weight:bold">tag</span>:<span style="color:#666"> </span><span style="color:#3677a9">25</span><span style="color:#666">
-</span><span style="color:#666">        </span><span style="color:#6ab825;font-weight:bold">mode</span>:<span style="color:#666"> </span>static<span style="color:#666">
-</span><span style="color:#666">        </span><span style="color:#6ab825;font-weight:bold">address</span>:<span style="color:#666"> </span><span style="color:#3677a9">192.168.192.129</span><span style="color:#666">
-</span><span style="color:#666">        </span><span style="color:#6ab825;font-weight:bold">netmask</span>:<span style="color:#666"> </span><span style="color:#3677a9">255.255.255.248</span><span style="color:#666">
-</span><span style="color:#666">
-</span><span style="color:#666"></span><span style="color:#6ab825;font-weight:bold">vms</span>:<span style="color:#666">
-</span><span style="color:#666">  </span>- <span style="color:#6ab825;font-weight:bold">name</span>:<span style="color:#666"> </span>test<span style="color:#666">
-</span><span style="color:#666">    </span><span style="color:#6ab825;font-weight:bold">hostname</span>:<span style="color:#666"> </span>test<span style="color:#666">
-</span><span style="color:#666">    </span><span style="color:#6ab825;font-weight:bold">disk_name</span>:<span style="color:#666"> </span>template-debian-9<span style="color:#666">
-</span><span style="color:#666">    </span><span style="color:#6ab825;font-weight:bold">memory</span>:<span style="color:#666"> </span><span style="color:#3677a9">512024</span><span style="color:#666">
-</span><span style="color:#666">    </span><span style="color:#6ab825;font-weight:bold">archive_name</span>:<span style="color:#666"> </span>template-debian-9.qcow2<span style="color:#666">
-</span><span style="color:#666">    </span><span style="color:#6ab825;font-weight:bold">ovs</span>:<span style="color:#666">
-</span><span style="color:#666">      </span>- <span style="color:#6ab825;font-weight:bold">name</span>:<span style="color:#666"> </span>ovs-wan1<span style="color:#666">
-</span><span style="color:#666">        </span><span style="color:#6ab825;font-weight:bold">vlans</span>:<span style="color:#666">
-</span><span style="color:#666">          </span>- <span style="color:#3677a9">25</span><span style="color:#666">
-</span><span style="color:#666">    </span><span style="color:#6ab825;font-weight:bold">interfaces</span>:<span style="color:#666">
-</span><span style="color:#666">      </span>- <span style="color:#6ab825;font-weight:bold">name</span>:<span style="color:#666"> </span>eth0<span style="color:#666">
-</span><span style="color:#666">        </span><span style="color:#6ab825;font-weight:bold">mode</span>:<span style="color:#666"> </span>static<span style="color:#666">
-</span><span style="color:#666">        </span><span style="color:#6ab825;font-weight:bold">address</span>:<span style="color:#666"> </span><span style="color:#3677a9">192.168.192.130</span><span style="color:#666">
-</span><span style="color:#666">        </span><span style="color:#6ab825;font-weight:bold">netmask</span>:<span style="color:#666"> </span><span style="color:#3677a9">255.255.255.248</span><span style="color:#666">
-</span><span style="color:#666">        </span><span style="color:#6ab825;font-weight:bold">gateway</span>:<span style="color:#666"> </span><span style="color:#3677a9">192.168.192.129</span></code></pre></div>
+<div class="highlight"><pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#6ab825;font-weight:bold">ovs</span>:<span style="color:#666">
+</span></span></span><span style="display:flex;"><span><span style="color:#666">    </span><span style="color:#6ab825;font-weight:bold">bridges</span>:<span style="color:#666">
+</span></span></span><span style="display:flex;"><span><span style="color:#666">      </span>- <span style="color:#6ab825;font-weight:bold">name</span>:<span style="color:#666"> </span>ovs-wan1<span style="color:#666">
+</span></span></span><span style="display:flex;"><span><span style="color:#666">        </span><span style="color:#6ab825;font-weight:bold">state</span>:<span style="color:#666"> </span>present<span style="color:#666">
+</span></span></span><span style="display:flex;"><span><span style="color:#666">    </span><span style="color:#6ab825;font-weight:bold">ports</span>:<span style="color:#666">
+</span></span></span><span style="display:flex;"><span><span style="color:#666">      </span>- <span style="color:#6ab825;font-weight:bold">bridge</span>:<span style="color:#666"> </span>ovs-wan1<span style="color:#666">
+</span></span></span><span style="display:flex;"><span><span style="color:#666">        </span><span style="color:#6ab825;font-weight:bold">port</span>:<span style="color:#666"> </span>itc-wan1<span style="color:#666">
+</span></span></span><span style="display:flex;"><span><span style="color:#666">        </span><span style="color:#6ab825;font-weight:bold">tag</span>:<span style="color:#666"> </span><span style="color:#3677a9">25</span><span style="color:#666">
+</span></span></span><span style="display:flex;"><span><span style="color:#666">        </span><span style="color:#6ab825;font-weight:bold">mode</span>:<span style="color:#666"> </span>static<span style="color:#666">
+</span></span></span><span style="display:flex;"><span><span style="color:#666">        </span><span style="color:#6ab825;font-weight:bold">address</span>:<span style="color:#666"> </span><span style="color:#3677a9">192.168.192.129</span><span style="color:#666">
+</span></span></span><span style="display:flex;"><span><span style="color:#666">        </span><span style="color:#6ab825;font-weight:bold">netmask</span>:<span style="color:#666"> </span><span style="color:#3677a9">255.255.255.248</span><span style="color:#666">
+</span></span></span><span style="display:flex;"><span><span style="color:#666">
+</span></span></span><span style="display:flex;"><span><span style="color:#666"></span><span style="color:#6ab825;font-weight:bold">vms</span>:<span style="color:#666">
+</span></span></span><span style="display:flex;"><span><span style="color:#666">  </span>- <span style="color:#6ab825;font-weight:bold">name</span>:<span style="color:#666"> </span>test<span style="color:#666">
+</span></span></span><span style="display:flex;"><span><span style="color:#666">    </span><span style="color:#6ab825;font-weight:bold">hostname</span>:<span style="color:#666"> </span>test<span style="color:#666">
+</span></span></span><span style="display:flex;"><span><span style="color:#666">    </span><span style="color:#6ab825;font-weight:bold">disk_name</span>:<span style="color:#666"> </span>template-debian-9<span style="color:#666">
+</span></span></span><span style="display:flex;"><span><span style="color:#666">    </span><span style="color:#6ab825;font-weight:bold">memory</span>:<span style="color:#666"> </span><span style="color:#3677a9">512024</span><span style="color:#666">
+</span></span></span><span style="display:flex;"><span><span style="color:#666">    </span><span style="color:#6ab825;font-weight:bold">archive_name</span>:<span style="color:#666"> </span>template-debian-9.qcow2<span style="color:#666">
+</span></span></span><span style="display:flex;"><span><span style="color:#666">    </span><span style="color:#6ab825;font-weight:bold">ovs</span>:<span style="color:#666">
+</span></span></span><span style="display:flex;"><span><span style="color:#666">      </span>- <span style="color:#6ab825;font-weight:bold">name</span>:<span style="color:#666"> </span>ovs-wan1<span style="color:#666">
+</span></span></span><span style="display:flex;"><span><span style="color:#666">        </span><span style="color:#6ab825;font-weight:bold">vlans</span>:<span style="color:#666">
+</span></span></span><span style="display:flex;"><span><span style="color:#666">          </span>- <span style="color:#3677a9">25</span><span style="color:#666">
+</span></span></span><span style="display:flex;"><span><span style="color:#666">    </span><span style="color:#6ab825;font-weight:bold">interfaces</span>:<span style="color:#666">
+</span></span></span><span style="display:flex;"><span><span style="color:#666">      </span>- <span style="color:#6ab825;font-weight:bold">name</span>:<span style="color:#666"> </span>eth0<span style="color:#666">
+</span></span></span><span style="display:flex;"><span><span style="color:#666">        </span><span style="color:#6ab825;font-weight:bold">mode</span>:<span style="color:#666"> </span>static<span style="color:#666">
+</span></span></span><span style="display:flex;"><span><span style="color:#666">        </span><span style="color:#6ab825;font-weight:bold">address</span>:<span style="color:#666"> </span><span style="color:#3677a9">192.168.192.130</span><span style="color:#666">
+</span></span></span><span style="display:flex;"><span><span style="color:#666">        </span><span style="color:#6ab825;font-weight:bold">netmask</span>:<span style="color:#666"> </span><span style="color:#3677a9">255.255.255.248</span><span style="color:#666">
+</span></span></span><span style="display:flex;"><span><span style="color:#666">        </span><span style="color:#6ab825;font-weight:bold">gateway</span>:<span style="color:#666"> </span><span style="color:#3677a9">192.168.192.129</span></span></span></code></pre></div>
 <p>The first block sets variables for the OpenVSwitch part. Note that we tag the itc-wan1 interface as the vlan 25. We do the same on the interface defined by libvirt in order to be able to test the virtual machine connectivity, in the vlan 25, on the ovs-wan1 bridge.
 Is it working ?</p>
 <p>If I check connectivity from the hypervisor, to the virtual machine (remember, dummy setup, but good to test quickly, I could have booted two virtual machines to :) ):</p>
-<pre><code class="language-terminal" data-lang="terminal">ping 192.168.192.130
+<pre tabindex="0"><code class="language-terminal" data-lang="terminal">ping 192.168.192.130
 PING 192.168.192.130 (192.168.192.130) 56(84) bytes of data.
 64 bytes from 192.168.192.130: icmp_seq=1 ttl=64 time=0.308 ms
 64 bytes from 192.168.192.130: icmp_seq=2 ttl=64 time=0.153 ms</code></pre>
@@ -737,10 +735,10 @@ As I said in the introduction, this setup lacks a lot of features to be nice, I&
                 </a>
               </li>
               <li>
-                <a href="https://twitter.com/bpetit_" title="Twitter">
+                <a href="https://gitlab.com/bpetit1" title="GitLab">
                   <span class="fa-stack fa-lg">
                     <i class="fas fa-circle fa-stack-2x"></i>
-                    <i class="fab fa-twitter fa-stack-1x fa-inverse"></i>
+                    <i class="fab fa-gitlab fa-stack-1x fa-inverse"></i>
                   </span>
                 </a>
               </li>
@@ -749,6 +747,14 @@ As I said in the introduction, this setup lacks a lot of features to be nice, I&
                   <span class="fa-stack fa-lg">
                     <i class="fas fa-circle fa-stack-2x"></i>
                     <i class="fab fa-linkedin fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="https://bpetit@mastodon.green" title="Mastodon">
+                  <span class="fa-stack fa-lg">
+                    <i class="fas fa-circle fa-stack-2x"></i>
+                    <i class="fab fa-mastodon fa-stack-1x fa-inverse"></i>
                   </span>
                 </a>
               </li>
@@ -782,7 +788,7 @@ As I said in the introduction, this setup lacks a lot of features to be nice, I&
         </p>
         
         <p class="credits theme-by text-muted">
-          <a href="https://gohugo.io">Hugo v0.82.0</a> powered &nbsp;&bull;&nbsp; Theme <a href="https://github.com/halogenica/beautifulhugo">Beautiful Hugo</a> adapted from <a href="https://deanattali.com/beautiful-jekyll/">Beautiful Jekyll</a>
+          <a href="https://gohugo.io">Hugo v0.115.4</a> powered &nbsp;&bull;&nbsp; Theme <a href="https://github.com/halogenica/beautifulhugo">Beautiful Hugo</a> adapted from <a href="https://deanattali.com/beautiful-jekyll/">Beautiful Jekyll</a>
           
         </p>
       </div>
