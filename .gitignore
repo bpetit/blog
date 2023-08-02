@@ -1,0 +1,2 @@
+content/posts/*.draft
+.hugo_build.lock
