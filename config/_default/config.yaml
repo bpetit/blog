@@ -4,9 +4,10 @@ languageCode: "en-us"
 languageName: English
 theme: "beautifulhugo"
 Author:
-  twitter: bpetit_
+  mastodon: @bpetit@mastodon.green
   linkedin: bepetit
   github: bpetit
+  gitlab: bpetit1
   email: bpetit@nce.re
   name: Benoit Petit
 params:
