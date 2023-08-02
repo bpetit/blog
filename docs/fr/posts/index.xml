@@ -5,7 +5,7 @@
     <link>https://bpetit.nce.re/fr/posts/</link>
     <description>Recent content in Posts on Benoit Petit</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
+    <language>fr</language>
     <managingEditor>bpetit@nce.re (Benoit Petit)</managingEditor>
     <webMaster>bpetit@nce.re (Benoit Petit)</webMaster>
     <lastBuildDate>Mon, 09 Aug 2021 10:02:24 +0200</lastBuildDate><atom:link href="https://bpetit.nce.re/fr/posts/index.xml" rel="self" type="application/rss+xml" />
@@ -26,7 +26,7 @@
       <guid>https://bpetit.nce.re/fr/2021/03/coder-ses-dashboards-grafana-avec-grafonnet/</guid>
       <description>On ne présente plus Grafana en ce qui concerne la visualisation de graphiques et de données. Cet outil est très largement utilisé pour des besoins de monitoring, de métrologie&amp;hellip;
 Les avantages sont multiples:
- open-source pratique : on peut créer des dashboards pour divers besoin très simplement flexible : de nombreuses sources de données sont supportées et les plugins répondent aux besoins les plus exotiques  Grafana permet également de déclencher des alertes lorsqu&amp;rsquo;une métrique dépasse une certaine valeur (plus besoin de configurer un système d&amp;rsquo;alerte propre à chaque source de donnée).</description>
+open-source pratique : on peut créer des dashboards pour divers besoin très simplement flexible : de nombreuses sources de données sont supportées et les plugins répondent aux besoins les plus exotiques Grafana permet également de déclencher des alertes lorsqu&amp;rsquo;une métrique dépasse une certaine valeur (plus besoin de configurer un système d&amp;rsquo;alerte propre à chaque source de donnée).</description>
     </item>
     
     <item>

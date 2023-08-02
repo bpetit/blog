@@ -5,7 +5,7 @@
     <link>https://bpetit.nce.re/</link>
     <description>Recent content on Benoit Petit</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
+    <language>en</language>
     <managingEditor>bpetit@nce.re (Benoit Petit)</managingEditor>
     <webMaster>bpetit@nce.re (Benoit Petit)</webMaster>
     <lastBuildDate>Fri, 12 Mar 2021 10:22:24 +0200</lastBuildDate><atom:link href="https://bpetit.nce.re/index.xml" rel="self" type="application/rss+xml" />
@@ -37,7 +37,7 @@ DevOps, SRE, what&amp;rsquo;s the difference ? As we have used some buzzwords, l
       <guid>https://bpetit.nce.re/2018/03/automating-web-applications-proxying-dns-registration-and-tls-termination-with-ansible/</guid>
       <description>For the needs of an incoming project, that I&amp;rsquo;ll describe in a later post, I needed to automate public access configuration for existing web applications. In other words, I needed to automate, proxy vhost configuration, tls termination and dns registration on a given domain. What is presented here has been used on a simple libvirt/KVM architecture (managed as described in my latest post).
 The workflow is this one:
- deploy the DNS entry deploy nginx vhost for the given webapp and domain name (allowing access to .</description>
+deploy the DNS entry deploy nginx vhost for the given webapp and domain name (allowing access to .</description>
     </item>
     
     <item>

@@ -5,7 +5,7 @@
     <link>https://bpetit.nce.re/fr/tags/</link>
     <description>Recent content in Tags on Benoit Petit</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
+    <language>fr</language>
     <managingEditor>bpetit@nce.re (Benoit Petit)</managingEditor>
     <webMaster>bpetit@nce.re (Benoit Petit)</webMaster>
     <lastBuildDate>Mon, 09 Aug 2021 10:02:24 +0200</lastBuildDate><atom:link href="https://bpetit.nce.re/fr/tags/index.xml" rel="self" type="application/rss+xml" />
@@ -127,20 +127,20 @@
     </item>
     
     <item>
-      <title>rust</title>
-      <link>https://bpetit.nce.re/fr/tags/rust/</link>
-      <pubDate>Fri, 19 Feb 2021 19:25:24 +0200</pubDate>
-      <author>bpetit@nce.re (Benoit Petit)</author>
-      <guid>https://bpetit.nce.re/fr/tags/rust/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>résilience</title>
       <link>https://bpetit.nce.re/fr/tags/r%C3%A9silience/</link>
       <pubDate>Fri, 19 Feb 2021 19:25:24 +0200</pubDate>
       <author>bpetit@nce.re (Benoit Petit)</author>
       <guid>https://bpetit.nce.re/fr/tags/r%C3%A9silience/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>rust</title>
+      <link>https://bpetit.nce.re/fr/tags/rust/</link>
+      <pubDate>Fri, 19 Feb 2021 19:25:24 +0200</pubDate>
+      <author>bpetit@nce.re (Benoit Petit)</author>
+      <guid>https://bpetit.nce.re/fr/tags/rust/</guid>
       <description></description>
     </item>
     
@@ -163,15 +163,6 @@
     </item>
     
     <item>
-      <title>numérique</title>
-      <link>https://bpetit.nce.re/fr/tags/num%C3%A9rique/</link>
-      <pubDate>Wed, 13 Jan 2021 15:20:24 +0200</pubDate>
-      <author>bpetit@nce.re (Benoit Petit)</author>
-      <guid>https://bpetit.nce.re/fr/tags/num%C3%A9rique/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>écologie</title>
       <link>https://bpetit.nce.re/fr/tags/%C3%A9cologie/</link>
       <pubDate>Wed, 13 Jan 2021 15:20:24 +0200</pubDate>
@@ -186,6 +177,15 @@
       <pubDate>Wed, 13 Jan 2021 15:20:24 +0200</pubDate>
       <author>bpetit@nce.re (Benoit Petit)</author>
       <guid>https://bpetit.nce.re/fr/tags/%C3%A9nergie/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>numérique</title>
+      <link>https://bpetit.nce.re/fr/tags/num%C3%A9rique/</link>
+      <pubDate>Wed, 13 Jan 2021 15:20:24 +0200</pubDate>
+      <author>bpetit@nce.re (Benoit Petit)</author>
+      <guid>https://bpetit.nce.re/fr/tags/num%C3%A9rique/</guid>
       <description></description>
     </item>
     

@@ -139,6 +139,9 @@
                 href="https://bpetit.nce.re/fr/2021/02/les-pratiques-sre-et-le-climat/"
                 />
   </url><url>
+    <loc>https://bpetit.nce.re/fr/tags/r%C3%A9silience/</loc>
+    <lastmod>2021-02-19T19:25:24+02:00</lastmod>
+  </url><url>
     <loc>https://bpetit.nce.re/fr/tags/rust/</loc>
     <lastmod>2021-02-19T19:25:24+02:00</lastmod>
     <xhtml:link
@@ -151,9 +154,6 @@
                 hreflang="fr"
                 href="https://bpetit.nce.re/fr/tags/rust/"
                 />
-  </url><url>
-    <loc>https://bpetit.nce.re/fr/tags/r%C3%A9silience/</loc>
-    <lastmod>2021-02-19T19:25:24+02:00</lastmod>
   </url><url>
     <loc>https://bpetit.nce.re/fr/tags/scaphandre/</loc>
     <lastmod>2021-02-19T19:25:24+02:00</lastmod>
@@ -181,6 +181,12 @@
                 href="https://bpetit.nce.re/fr/tags/cloud/"
                 />
   </url><url>
+    <loc>https://bpetit.nce.re/fr/tags/%C3%A9cologie/</loc>
+    <lastmod>2021-01-13T15:20:24+02:00</lastmod>
+  </url><url>
+    <loc>https://bpetit.nce.re/fr/tags/%C3%A9nergie/</loc>
+    <lastmod>2021-01-13T15:20:24+02:00</lastmod>
+  </url><url>
     <loc>https://bpetit.nce.re/fr/tags/num%C3%A9rique/</loc>
     <lastmod>2021-01-13T15:20:24+02:00</lastmod>
   </url><url>
@@ -196,12 +202,6 @@
                 hreflang="fr"
                 href="https://bpetit.nce.re/fr/2021/01/scaphandre-v0.1.1-mesurer-la-consommation-d%C3%A9nergie-des-coulisses-du-num%C3%A9rique/"
                 />
-  </url><url>
-    <loc>https://bpetit.nce.re/fr/tags/%C3%A9cologie/</loc>
-    <lastmod>2021-01-13T15:20:24+02:00</lastmod>
-  </url><url>
-    <loc>https://bpetit.nce.re/fr/tags/%C3%A9nergie/</loc>
-    <lastmod>2021-01-13T15:20:24+02:00</lastmod>
   </url><url>
     <loc>https://bpetit.nce.re/fr/tags/emploi/</loc>
     <lastmod>2020-08-26T14:30:24+02:00</lastmod>
