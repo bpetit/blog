@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="en" itemscope itemtype="http://schema.org/WebPage">
+  <head>
+    
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+
+  <title>SRE methods and climate change - Benoit Petit</title>
+  <meta name="description" content="Site Reliability Engineering&rsquo;s goal is to ensure that software systems and services that are created in an organization are made to evolve easily and especially to be extremely reliable.
+To do that, many aspects of software engineering are applied to infrastructure topics. Those methods are born at Google and are increasingly popular since the release of the book &ldquo;Site Reliability Engineering&rdquo; in 2016.
+DevOps, SRE, what&rsquo;s the difference ? As we have used some buzzwords, let&rsquo;s make it clearer before we move forward.">
+  <meta name="author" content="Benoit Petit"/><script type="application/ld+json">
+{
+    "@context": "http://schema.org",
+    "@type": "WebSite",
+    "name": "Benoit Petit",
+    
+    "url": "https:\/\/bpetit.nce.re"
+}
+</script><script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Organization",
+  "name": "",
+  "url": "https:\/\/bpetit.nce.re"
+  
+  
+  
+  
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [{
+        "@type": "ListItem",
+        "position": 1,
+        "item": {
+          "@id": "https:\/\/bpetit.nce.re",
+          "name": "home"
+        }
+    },{
+        "@type": "ListItem",
+        "position": 3,
+        "item": {
+          "@id": "https:\/\/bpetit.nce.re\/2021\/03\/sre-methods-and-climate-change\/",
+          "name": "Sre methods and climate change"
+        }
+    }]
+}
+</script><script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Article",
+  "author": {
+    "name" : "Benoit Petit"
+  },
+  "headline": "SRE methods and climate change",
+  "description" : "Site Reliability Engineering\u0026rsquo;s goal is to ensure that software systems and services that are created in an organization are made to evolve easily and especially to be extremely reliable.\nTo do that, many aspects of software engineering are applied to infrastructure topics. Those methods are born at Google and are increasingly popular since the release of the book \u0026ldquo;Site Reliability Engineering\u0026rdquo; in 2016.\nDevOps, SRE, what\u0026rsquo;s the difference ? As we have used some buzzwords, let\u0026rsquo;s make it clearer before we move forward.",
+  "inLanguage" : "en",
+  "wordCount":  1702 ,
+  "datePublished" : "2021-03-12T10:22:24",
+  "dateModified" : "2021-03-12T10:22:24",
+  "image" : "https:\/\/bpetit.nce.re",
+  "keywords" : [ "sre, automation, energy, scaphandre, open-source, rust, devops, resiliency, climate, tech" ],
+  "mainEntityOfPage" : "https:\/\/bpetit.nce.re\/2021\/03\/sre-methods-and-climate-change\/",
+  "publisher" : {
+    "@type": "Organization",
+    "name" : "https:\/\/bpetit.nce.re",
+    "logo" : {
+        "@type" : "ImageObject",
+        "url" : "https:\/\/bpetit.nce.re",
+        "height" :  60 ,
+        "width" :  60
+    }
+  }
+}
+</script>
+
+<meta property="og:title" content="SRE methods and climate change" />
+<meta property="og:description" content="Site Reliability Engineering&rsquo;s goal is to ensure that software systems and services that are created in an organization are made to evolve easily and especially to be extremely reliable.
+To do that, many aspects of software engineering are applied to infrastructure topics. Those methods are born at Google and are increasingly popular since the release of the book &ldquo;Site Reliability Engineering&rdquo; in 2016.
+DevOps, SRE, what&rsquo;s the difference ? As we have used some buzzwords, let&rsquo;s make it clearer before we move forward.">
+<meta property="og:image" content="https://bpetit.nce.re/lizard.cleaned.jpg" />
+<meta property="og:url" content="https://bpetit.nce.re/2021/03/sre-methods-and-climate-change/" />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Benoit Petit" />
+
+  <meta name="twitter:title" content="SRE methods and climate change" />
+  <meta name="twitter:description" content="Site Reliability Engineering&rsquo;s goal is to ensure that software systems and services that are created in an organization are made to evolve easily and especially to be extremely reliable.
+To do …">
+  <meta name="twitter:image" content="https://bpetit.nce.re/lizard.cleaned.jpg" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="generator" content="Hugo 0.117.0">
+  <link rel="alternate" href="https://bpetit.nce.re/index.xml" type="application/rss+xml" title="Benoit Petit"><link rel="stylesheet" href="https://bpetit.nce.re/css/katex.min.css" />
+  <link rel="stylesheet" href="https://bpetit.nce.re/fontawesome/css/all.css" />
+  <link rel="stylesheet" href="https://bpetit.nce.re/css/bootstrap.min.css" /><link rel="stylesheet" href="https://bpetit.nce.re/css/main.css" /><link rel="stylesheet" href="https://bpetit.nce.re/css/fonts.css" /><link rel="stylesheet" href="https://bpetit.nce.re/css/syntax.css" /><link rel="stylesheet" href="https://bpetit.nce.re/css/codeblock.css" /><link rel="stylesheet" href="https://bpetit.nce.re/css/photoswipe.min.css" />
+  <link rel="stylesheet" href="https://bpetit.nce.re/css/photoswipe.default-skin.min.css" />
+
+
+
+  </head>
+  <body>
+    <nav class="navbar navbar-default navbar-fixed-top navbar-custom">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#main-navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="https://bpetit.nce.re">Benoit Petit</a>
+    </div>
+
+    <div class="collapse navbar-collapse" id="main-navbar">
+      <ul class="nav navbar-nav navbar-right">
+        
+          
+            <li>
+              <a title="Blog" href="/">Blog</a>
+            </li>
+          
+        
+          
+            <li>
+              <a title="Data" href="/page/data/">Data</a>
+            </li>
+          
+        
+
+        
+          
+            <li>
+              
+                
+              
+                
+                  <a href="/fr" lang="fr">Français</a>
+                
+              
+            </li>
+          
+        
+
+        
+      </ul>
+    </div>
+
+    
+
+  </div>
+</nav>
+
+
+
+
+    
+
+
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+<div class="pswp__bg"></div>
+
+<div class="pswp__scroll-wrap">
+    
+    <div class="pswp__container">
+      <div class="pswp__item"></div>
+      <div class="pswp__item"></div>
+      <div class="pswp__item"></div>
+    </div>
+    
+    <div class="pswp__ui pswp__ui--hidden">
+    <div class="pswp__top-bar">
+      
+      <div class="pswp__counter"></div>
+      <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+      <button class="pswp__button pswp__button--share" title="Share"></button>
+      <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+      <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+      
+      
+      <div class="pswp__preloader">
+        <div class="pswp__preloader__icn">
+          <div class="pswp__preloader__cut">
+            <div class="pswp__preloader__donut"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+      <div class="pswp__share-tooltip"></div>
+    </div>
+    <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+    </button>
+    <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+    </button>
+    <div class="pswp__caption">
+      <div class="pswp__caption__center"></div>
+    </div>
+    </div>
+    </div>
+</div>
+
+
+  
+  
+  
+
+
+
+
+
+
+  
+
+  <header class="header-section ">
+    
+    <div class="intro-header no-img">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+            <div class="posts-heading">
+              
+                <h1>SRE methods and climate change</h1>
+              
+              
+                <hr class="small">
+              
+              
+              
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+
+    
+<div class="container" role="main">
+  <div class="row">
+    <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+      <article role="main" class="blog-post">
+        <p><img src="/lizard.cleaned.jpg" alt="A lezard"></p>
+<p>Site Reliability Engineering&rsquo;s goal is to ensure that software systems and services that are created in an organization are made to evolve easily and especially to be <strong>extremely reliable</strong>.</p>
+<p>To do that, many aspects of software engineering are applied to infrastructure topics. Those methods are born at Google and are increasingly popular since the release of the book &ldquo;<a href="https://sre.google/sre-book/table-of-contents/">Site Reliability Engineering</a>&rdquo; in 2016.</p>
+<h2 id="devops-sre-whats-the-difference-">DevOps, SRE, what&rsquo;s the difference ?</h2>
+<p>As we have used some buzzwords, let&rsquo;s make it clearer before we move forward. If you are already familiar with DevOps and SRE methods, you can jump to the next <a href="#sli-slo-and-the-error-budget">section</a>.</p>
+<p>The SRE &ldquo;framework&rdquo; shares some principles with the DevOps movement:</p>
+<ul>
+<li><strong>Change is necessary to improve</strong>: adopting DevOps or SRE methods is really the opposite of V-model or infrastructure freezes. In both cases, identifying the improvements to make, perform the appropriate changes and learn from mistakes are key to achieve more velocity (DevOps), quality and reliability (SRE).</li>
+<li><strong>Break down silos</strong> : in opposition to the world described in the <a href="https://fr.wikipedia.org/wiki/The_IT_Crowd">IT crowd</a> TV show, DevOps and SRE pricniples encourage a tight and frequent collaboration between developpers team, product team and infrastructure team, at almost every step of a project. SRE books even talk about &ldquo;shared ownership model&rdquo;. In this context, product owners and managers are <strong>as much responsible</strong> (so <strong>invested</strong>) as the developpers and SREs, regarding the deployment of a new release.</li>
+<li><strong>Small, frequent changes</strong> are better than big developments taking months. This  permits to achieve more reliability, especially if every chang is tested automatically, contributing to the <a href="https://devops.com/faster-feedback/"><strong>feedback loop</strong></a>.</li>
+<li><strong>Outages or failures are never only one person&rsquo;s responsibility</strong>: it is extremely important to understand the systemic explanation of an issue (the dangerous button in the interface is not red enough and we don&rsquo;t ask the user if he is sure about triggering the action), rather than looking for someone to blame (this is because of the user)</li>
+</ul>
+<p>Both movements are very close so each other. Some people even consider that SRE is an implementation of the DevOps patterns, applied to infrastructure topics. One difference is that SRE can be a job in itself (Site Reliability Engineer), where DevOps is only a movement or a set of best practices.</p>
+<h2 id="sli-slo-and-the-error-budget">SLI, SLO and the error budget</h2>
+<p>I&rsquo;d like to tell you about a particular element in the SRE methods: the famous SLI and SLO, which stands for <strong>Service Level Indicator</strong> and <strong>Service Level Objectivs</strong>. Those are methods to choose which metrics are important for the success of a project during all its lifecycle.</p>
+<p>A Service Level Indicator is most of the time a ration beween two numbers, one being the number of &ldquo;positive&rdquo; events, the other one being the total number of events. Here a few examples of SLIs:</p>
+<p>The Service Level Indicator is most of the time a ratio of two numbers. First number is the number of positive events, the other one the total number of events of the same kind. Here are some SLI examples:</p>
+<ul>
+<li>number of successful HTTP requests / total number of HTTP requests</li>
+<li>number of requests on a datastore that got an answer in less than 2 seconds / total number of requests on this datastore</li>
+<li>number of gRPC calls on my service that succeeded in less than 80 milliseconds / total number of gRPC calls on that service</li>
+</ul>
+<p>A key point here is that an SLI is supposed to measure the customer satisfaction (when human) or the efficiency of the response to the client (when the client is a machine). That&rsquo;s why SLIs are more often about perceived errors than about how memory is consumed on a server, for example.</p>
+<p>The second important thing I wanted to talk about is the Service Level <strong>Objective</strong>. It&rsquo;s simply an objective to reach on an SLI, either on a floating or calendar-based a time window. That objective has to be <strong>collaboratively</strong> defined by the product team, the production team and the developpers. That objective success has to be owned by someone with enough power to assume tradeoffs between velocity (speed at which features are deployed) and reliability. It can be the CTO, in a small structure, or the product owner/manager in a bigger structure.</p>
+<p>The difference between 100% (of &ldquo;good&rdquo; events for the SLI) and the SLO (let&rsquo;s say 97% of requests getting a response in less than 50ms) is called the <strong>error budget</strong>. If the number of &ldquo;bad&rdquo; events (impacting the probability to reach the SLO) lowers the SLI below the SLO on the choosen time window, the error budget is exhausted. In this case we can either, redesign the technical stack or the product to reach the SLO on the next period, or redefine the SLO if it was simply too ambitious (a SLO of 100% being a bad idea most of the time).</p>
+<p>As you can imagine, having a proper monitoring and alerting of the health of the error budget is essential. Those pointers become then a main attention point for developpers, infrastructure people (Site Reliability Engineers) but also and especially <strong>product</strong> persons. We could then create a dashboard with the SLIs and the state of error budgets consumption, that will be accessible by all the concerned teams or squads.</p>
+<p>The asset of this method is that it encourages the product, infrastructure and development teams to collaborate on the <strong>same objective</strong>, which is most of the time the client satisfaction.</p>
+<p>Once those principles are applied to several tech services in the organization, it&rsquo;s possible to generate a dashboard showing the state of SLO&rsquo;s for each of those services. This dashboard could then be used as a communication tool to talk with the management and direction, to ask for instance:</p>
+<ul>
+<li>to hire: &ldquo;we defined and optimized our objectives but we could&rsquo;nt match all of them because it&rsquo;s too much work regarding the staffing&rdquo;</li>
+<li>tradeoffs: &ldquo;holding a satisfying reliability level on service X requires time that we cannot spend on other services with much higher business value, is this service still accurate on a business perspective ?&rdquo;</li>
+</ul>
+<p><img src="/slo-dashboard.png" alt="A fictive dashboard of SLOs"></p>
+<h2 id="redefining-reliability">Redefining reliability</h2>
+<p>There are several definitions of reliability, one being: &ldquo;reliability is the ability for a system to fulfill a mission in some defined conditions, for a given period of time&rdquo;. This definition allows to redefine the conditions that dictate if the system did actually fulfill its mission on the given period of time.</p>
+<p>As the tech industry has to lower its Green House Gas emissions of <a href="https://www.itu.int/en/mediacentre/Pages/PR04-2020-ICT-industry-to-reduce-greenhouse-gas-emissions-by-45-percent-by-2030.aspx">45% in the next 10 years</a> to match Paris agreement objectives, it seems essential to me that a tech service or system is considered reliable, not only if it satisfies the client on the short term, but also if it doesn&rsquo;t contribute to jeopardize the client&rsquo;s future. That means obviously, that it has to respect objectives smartly defined regarding GHG emissions related to it&rsquo;s very existence and usage.</p>
+<p>Adoption of SRE is increasing and the framework it provides is really interesting, as it encourages plain collaboration between tech and product teams. As brillantly said <a href="https://www.linkedin.com/in/alexis8nicolas/">Alexis Nicolas</a> during a recent  webinar, mitigating climate change is like an <strong>escape game that we are all participating to</strong>, whether we want it or not.</p>
+<p>If I participate to an escape game in which failure means a <a href="https://meteofrance.com/actualites-et-dossiers/actualites/meteo-france-eclaire-le-climat-en-france-jusquen-2100"><strong>real danger for my surroundings and myself</strong></a>, I&rsquo;d prefer to have a dynamic help to solve the challenges, alarms if I spend to much time on less important items and a team fully commited, transparently collaborating on the same objective. Don&rsquo;t you ?</p>
+<h2 id="how-to-get-those-metrics-">How to get those metrics ?</h2>
+<p>How to get dynamic metrics, frequently updated, regarding the impact of a tech service on the climate ? How to measure the result of efforts and actions on that topic ? There are very important things regarding this impact that are hardly measurable (Life Cycle Assesments experts know a lot about it): the production of user devices that will be used to access the service, the production of servers and network, the one of datacenters and their maintenance, how much oil is burned every year just to be sure that the oil based backup is effecttive when needed (or simply to avoid wasting oil once it&rsquo;s obsolete).</p>
+<p>There are other metrics that could be retrieved right now. Power consumption of servers and services they host, are one. It&rsquo;s then possible to <strong>watch and shrink</strong> the cut of power consumption in the <strong>climate impact of the service</strong>, but also to automatically fill some of the scope 2 of a Life Cycle Assessment.</p>
+<p><a href="https://github.com/hubblo-org/scaphandre/">Scaphandre</a> is a solution that enables that. It&rsquo;s simply an <strong>open-source</strong> and <strong>light</strong> monitoring daemon, dedicated to power consumption metrics. It fits easily in an existing monitoring toolchain. It&rsquo;s extensible and designed to easily integrate new <em><a href="https://hubblo-org.github.io/scaphandre/explanations/internal-structure.html">exporters</a></em>. The idea is Scaphandre has to adapt to your infrastructure, not the other way around. It already permits to store the data in <a href="https://prometheus.io">Prometheus</a>, <a href="http://riemann.io">Riemann</a> and very soon in <a href="https://www.warp10.io">Warp10</a>. This enables you to be very flexible when defining your SLIs and SLO regarding your service&rsquo;s impact on climate change.</p>
+<p>We could then go further and extend those metrics by estimating the GHG emissions associated to it, by leveraging an API like <a href="https://docs.co2signal.com/#introduction">co2signal</a>, another product from <a href="https://www.tmrow.com/">Tomorrow</a>, the company behind <a href="https://www.electricitymap.org/map">ElectricityMap</a>.</p>
+<h2 id="conclusion">Conclusion</h2>
+<p>This is one way to estimate the GHG emissions, <strong>per request</strong> or <strong>per user</strong> (leveraging metrics coming from APMs or other monitoring toolchains). Then we can define and setup SLOs like:</p>
+<ul>
+<li>95% of requests on the API lead to emissions lower than 0.4g eCO2, each month</li>
+<li>98% of users on the service, lead to a cumulated power consumption lower than 200Wh, each month</li>
+</ul>
+<p>Numbers are here completely arbitraty and don&rsquo;t mean much out of context. However, tracking such indices, collaboratively defined thanks to a global impact estimation, seems like an efficient strategy to <strong>lower the footprint</strong> of tech services on the long run. This approach is of course complementary with LCAs taking hardware related metrics into account.</p>
+<p>The role of eco-conception and sustainability best practices in the desing of tech services is very important. Such service have a growing complexity and the estimation of their impact is a bit more difficult every day. A <strong>bottom-up</strong> approach like the one introduced in this post is essential (even if not enough) to allow continuous improvements, at scale.</p>
+
+
+        
+          <div class="blog-tags">
+            
+              <a href="https://bpetit.nce.re/tags/sre/">sre</a>&nbsp;
+            
+              <a href="https://bpetit.nce.re/tags/automation/">automation</a>&nbsp;
+            
+              <a href="https://bpetit.nce.re/tags/energy/">energy</a>&nbsp;
+            
+              <a href="https://bpetit.nce.re/tags/scaphandre/">scaphandre</a>&nbsp;
+            
+              <a href="https://bpetit.nce.re/tags/open-source/">open-source</a>&nbsp;
+            
+              <a href="https://bpetit.nce.re/tags/rust/">rust</a>&nbsp;
+            
+              <a href="https://bpetit.nce.re/tags/devops/">devops</a>&nbsp;
+            
+              <a href="https://bpetit.nce.re/tags/resiliency/">resiliency</a>&nbsp;
+            
+              <a href="https://bpetit.nce.re/tags/climate/">climate</a>&nbsp;
+            
+              <a href="https://bpetit.nce.re/tags/tech/">tech</a>&nbsp;
+            
+          </div>
+        
+
+        
+
+        
+      </article>
+
+      
+        <ul class="pager blog-pager">
+          
+            <li class="previous">
+              <a href="https://bpetit.nce.re/2021/01/scaphandre-v0.1.1-measuring-the-energy-consumption-of-the-tech-industry-backstages/" data-toggle="tooltip" data-placement="top" title="Scaphandre v0.1.1: measuring the energy consumption of the tech industry (backstages)">&larr; Previous Post</a>
+            </li>
+          
+          
+        </ul>
+      
+
+
+      
+
+    </div>
+  </div>
+</div>
+
+      
+<footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <ul class="list-inline text-center footer-links">
+          
+              <li>
+                <a href="mailto:bpetit@nce.re" title="Email me">
+                  <span class="fa-stack fa-lg">
+                    <i class="fas fa-circle fa-stack-2x"></i>
+                    <i class="fas fa-envelope fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="https://github.com/bpetit" title="GitHub">
+                  <span class="fa-stack fa-lg">
+                    <i class="fas fa-circle fa-stack-2x"></i>
+                    <i class="fab fa-github fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="https://gitlab.com/bpetit1" title="GitLab">
+                  <span class="fa-stack fa-lg">
+                    <i class="fas fa-circle fa-stack-2x"></i>
+                    <i class="fab fa-gitlab fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="https://linkedin.com/in/bepetit" title="LinkedIn">
+                  <span class="fa-stack fa-lg">
+                    <i class="fas fa-circle fa-stack-2x"></i>
+                    <i class="fab fa-linkedin fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="https://mastodon.green/@bpetit" title="Mastodon">
+                  <span class="fa-stack fa-lg">
+                    <i class="fas fa-circle fa-stack-2x"></i>
+                    <i class="fab fa-mastodon fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+          
+          <li>
+            <a href="" title="RSS">
+              <span class="fa-stack fa-lg">
+                <i class="fas fa-circle fa-stack-2x"></i>
+                <i class="fas fa-rss fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          
+        </ul>
+        <p class="credits copyright text-muted">
+          
+            
+              Benoit Petit
+            
+          
+
+          &nbsp;&bull;&nbsp;&copy;
+          
+            2021
+          
+
+          
+            &nbsp;&bull;&nbsp;
+            <a href="https://bpetit.nce.re">Benoit Petit</a> on <a rel="me" href="https://mastodon.green/@bpetit">Mastodon</a>
+          
+        </p>
+        
+        <p class="credits theme-by text-muted">
+          <a href="https://gohugo.io">Hugo v0.117.0</a> powered &nbsp;&bull;&nbsp; Theme <a href="https://github.com/halogenica/beautifulhugo">Beautiful Hugo</a> adapted from <a href="https://deanattali.com/beautiful-jekyll/">Beautiful Jekyll</a>
+          
+        </p>
+      </div>
+    </div>
+  </div>
+</footer><script src="https://bpetit.nce.re/js/katex.min.js"></script>
+<script src="https://bpetit.nce.re/js/auto-render.min.js"></script>
+<script src="https://bpetit.nce.re/js/jquery.min.js"></script>
+<script src="https://bpetit.nce.re/js/bootstrap.min.js"></script>
+
+<script src="https://bpetit.nce.re/js/main.js"></script><script> renderMathInElement(document.body); </script><script src="https://bpetit.nce.re/js/photoswipe.min.js"></script>
+<script src="https://bpetit.nce.re/js/photoswipe-ui-default.min.js"></script><script src="https://bpetit.nce.re/js/load-photoswipe.js"></script>
+
+
+
+
+
+
+
+
+
+    
+  </body>
+</html>
+

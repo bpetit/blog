@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>société on Benoit Petit</title>
+    <link>https://bpetit.nce.re/fr/tags/soci%C3%A9t%C3%A9/</link>
+    <description>Recent content in société on Benoit Petit</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>fr</language>
+    <managingEditor>bpetit@nce.re (Benoit Petit)</managingEditor>
+    <webMaster>bpetit@nce.re (Benoit Petit)</webMaster>
+    <lastBuildDate>Wed, 26 Aug 2020 14:30:24 +0200</lastBuildDate><atom:link href="https://bpetit.nce.re/fr/tags/soci%C3%A9t%C3%A9/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Pourquoi j&#39;ai quitté mon job (qui avait tout pour plaire)</title>
+      <link>https://bpetit.nce.re/fr/2020/08/pourquoi-jai-quitt%C3%A9-mon-job-qui-avait-tout-pour-plaire/</link>
+      <pubDate>Wed, 26 Aug 2020 14:30:24 +0200</pubDate>
+      <author>bpetit@nce.re (Benoit Petit)</author>
+      <guid>https://bpetit.nce.re/fr/2020/08/pourquoi-jai-quitt%C3%A9-mon-job-qui-avait-tout-pour-plaire/</guid>
+      <description>Voilà maintenant un peu moins d&amp;rsquo;un mois que j&amp;rsquo;ai quitté mon emploi (ingénieur cloud/SRE, dans une scale-up française). Ce travail avait pourtant beaucoup d&amp;rsquo;arguments: le luxe de la croissance, d&amp;rsquo;excellentes conditions de travail, beaucoup d&amp;rsquo;autonomie, un bon salaire, beaucoup de moyens investis pour le bien-être des employés. Ca ne faisait pas tout à fait deux ans que j&amp;rsquo;avais commencé ce travail et je n&amp;rsquo;avais rien à reprocher concrètement à mon employeur.</description>
+    </item>
+    
+    <item>
+      <title>Au fait, pourquoi on bosse dans l&#39;IT ?</title>
+      <link>https://bpetit.nce.re/fr/2020/07/au-fait-pourquoi-on-bosse-dans-lit/</link>
+      <pubDate>Sat, 18 Jul 2020 14:30:55 +0200</pubDate>
+      <author>bpetit@nce.re (Benoit Petit)</author>
+      <guid>https://bpetit.nce.re/fr/2020/07/au-fait-pourquoi-on-bosse-dans-lit/</guid>
+      <description>Voilà environ deux ans que la perception que j&amp;rsquo;ai de mon métier évolue énormément. Je souhaite partager ici mes réflexions, d&amp;rsquo;abord car écrire les choses permet de mieux les appréhender, puis, si par chance vous lisez ce texte et partager mes questionnements, nous pourrons peut-être en discuter.
+Des communautés obnubilées par le comment ? A chaque conférence technique, le sentiment d&amp;rsquo;appartenir à une même communauté reste intact. Les conversations sont fluides et j&amp;rsquo;adore échanger longuement sur les problématiques du quotidien, les technos à la mode, les bonnes pratiques.</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -20,13 +20,13 @@ languages:
   en:
     title: "Benoit Petit"
     homeTitle: "The cloud is a lie"
-    subtitle: "ICT infrastructure engineer, focussed on sustainability. Nothing is virtual."
+    subtitle: "IT infrastructures, environment, climate, social justice, not necessarily in that order."
     languageName: English
     weight: 1
   fr:
     title: "Benoit Petit"
     homeTitle: "Derrière les nuages"
-    subtitle: "Ingénieur infrastructure, spécialisé en durabilité et sobriété numérique. Rien n'est virtuel."
+    subtitle: "Infrastructures IT, environnement, climat, justice sociale, pas forcément dans cet ordre."
     languageName: Français
     weight: 2
 permalinks:
@@ -36,3 +36,11 @@ pygmentsStyle: "native"
 publishDir: docs
 taxonomies:
   tag: tags
+menu:
+  main:
+    - name: "Blog"
+      url: ""
+      weight: 1
+    - name: "Data"
+      url: "page/data/"
+      weight: 2

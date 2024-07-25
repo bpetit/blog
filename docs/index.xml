@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Benoit Petit</title>
+    <link>https://bpetit.nce.re/</link>
+    <description>Recent content on Benoit Petit</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <managingEditor>bpetit@nce.re (Benoit Petit)</managingEditor>
+    <webMaster>bpetit@nce.re (Benoit Petit)</webMaster>
+    <lastBuildDate>Fri, 12 Mar 2021 10:22:24 +0200</lastBuildDate><atom:link href="https://bpetit.nce.re/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>SRE methods and climate change</title>
+      <link>https://bpetit.nce.re/2021/03/sre-methods-and-climate-change/</link>
+      <pubDate>Fri, 12 Mar 2021 10:22:24 +0200</pubDate>
+      <author>bpetit@nce.re (Benoit Petit)</author>
+      <guid>https://bpetit.nce.re/2021/03/sre-methods-and-climate-change/</guid>
+      <description>Site Reliability Engineering&amp;rsquo;s goal is to ensure that software systems and services that are created in an organization are made to evolve easily and especially to be extremely reliable.
+To do that, many aspects of software engineering are applied to infrastructure topics. Those methods are born at Google and are increasingly popular since the release of the book &amp;ldquo;Site Reliability Engineering&amp;rdquo; in 2016.
+DevOps, SRE, what&amp;rsquo;s the difference ? As we have used some buzzwords, let&amp;rsquo;s make it clearer before we move forward.</description>
+    </item>
+    
+    <item>
+      <title>Scaphandre v0.1.1: measuring the energy consumption of the tech industry (backstages)</title>
+      <link>https://bpetit.nce.re/2021/01/scaphandre-v0.1.1-measuring-the-energy-consumption-of-the-tech-industry-backstages/</link>
+      <pubDate>Wed, 20 Jan 2021 11:10:24 +0200</pubDate>
+      <author>bpetit@nce.re (Benoit Petit)</author>
+      <guid>https://bpetit.nce.re/2021/01/scaphandre-v0.1.1-measuring-the-energy-consumption-of-the-tech-industry-backstages/</guid>
+      <description>The roots of the project As many other tech workers in startups, I&amp;rsquo;ve worked on pretty large scale projects (even if that&amp;rsquo;s subjective). I&amp;rsquo;m talking about projects involving machine learning, for example, that are often about showing the right advertisment to the right person at the right moment. Training the machine learning models for that requires a lot of resources (CPU, RAM, GPU, etc.). The same is true with APIs that are in charge of collecting data from the clients (the data will very often be used to train the ML models).</description>
+    </item>
+    
+    <item>
+      <title>Automating web applications proxying, DNS registration and TLS termination with ansible</title>
+      <link>https://bpetit.nce.re/2018/03/automating-web-applications-proxying-dns-registration-and-tls-termination-with-ansible/</link>
+      <pubDate>Sat, 17 Mar 2018 20:12:45 +0200</pubDate>
+      <author>bpetit@nce.re (Benoit Petit)</author>
+      <guid>https://bpetit.nce.re/2018/03/automating-web-applications-proxying-dns-registration-and-tls-termination-with-ansible/</guid>
+      <description>For the needs of an incoming project, that I&amp;rsquo;ll describe in a later post, I needed to automate public access configuration for existing web applications. In other words, I needed to automate, proxy vhost configuration, tls termination and dns registration on a given domain. What is presented here has been used on a simple libvirt/KVM architecture (managed as described in my latest post).
+The workflow is this one:
+deploy the DNS entry deploy nginx vhost for the given webapp and domain name (allowing access to .</description>
+    </item>
+    
+    <item>
+      <title>How to build a simplistic private cloud piece by piece</title>
+      <link>https://bpetit.nce.re/2017/11/how-to-build-a-simplistic-private-cloud-piece-by-piece/</link>
+      <pubDate>Tue, 21 Nov 2017 20:44:12 +0200</pubDate>
+      <author>bpetit@nce.re (Benoit Petit)</author>
+      <guid>https://bpetit.nce.re/2017/11/how-to-build-a-simplistic-private-cloud-piece-by-piece/</guid>
+      <description>I you are, like me, concerned about privacy, you may be the administrator of a few physical servers, either at home or rented to some dedicated server providers. Virtual machine instances (or VPS) bought in public clouds are great, but if you can&amp;rsquo;t configure yourself the underlying network and the hypervisors, where is the fun ? (just kidding, there is so much to do above a cloud-like infrastructure too). Here I&amp;rsquo;ll describe a little configuration I made for my own needs.</description>
+    </item>
+    
+    <item>
+      <title>Automate your virtual machine templates creation with Packer</title>
+      <link>https://bpetit.nce.re/2017/09/automate-your-virtual-machine-templates-creation-with-packer/</link>
+      <pubDate>Fri, 01 Sep 2017 19:44:12 +0200</pubDate>
+      <author>bpetit@nce.re (Benoit Petit)</author>
+      <guid>https://bpetit.nce.re/2017/09/automate-your-virtual-machine-templates-creation-with-packer/</guid>
+      <description>Context If you operate an IaaS infrastructure, either private (OpenStack, OpenNebula, &amp;hellip;) or public cloud (AWS, GCP, &amp;hellip;), you certainly already wondered how to properly bootstrap your first virtual machines templates. IaaS solutions are often linked to a public repository of basic virtual machines images that can be used to quickly start deploying instances. If this is good for initial tests, it&amp;rsquo;s not that safe to bootstrap all your instances from a guest operating system someone you don&amp;rsquo;t has built for you.</description>
+    </item>
+    
+    <item>
+      <title>Make Ansible Run on Debian 9</title>
+      <link>https://bpetit.nce.re/2017/07/make-ansible-run-on-debian-9/</link>
+      <pubDate>Thu, 27 Jul 2017 21:44:12 +0200</pubDate>
+      <author>bpetit@nce.re (Benoit Petit)</author>
+      <guid>https://bpetit.nce.re/2017/07/make-ansible-run-on-debian-9/</guid>
+      <description>How to make ansible run on debian 9 ? Ansible version running: 2.3.1.0
+Recently I upgraded personnal servers to debian stretch, as it is the new stable version. By default, the only python version installed on stretch is python3 which is not ok for ansible playbooks to execute properly. I already met that kind of issue (like everyone else) on Ubuntu above version 16.04.
+Obviously the solution is to install python2.</description>
+    </item>
+    
+    <item>
+      <title>Initiatives d&#39;intérêt général</title>
+      <link>https://bpetit.nce.re/page/data/initiatives/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <author>bpetit@nce.re (Benoit Petit)</author>
+      <guid>https://bpetit.nce.re/page/data/initiatives/</guid>
+      <description>Graphique Données sources Une suggestion ? N&amp;rsquo;hésitez pas à me soumettre vos suggestions et critiques sur Github</description>
+    </item>
+    
+    <item>
+      <title>Open-Data</title>
+      <link>https://bpetit.nce.re/page/data/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <author>bpetit@nce.re (Benoit Petit)</author>
+      <guid>https://bpetit.nce.re/page/data/</guid>
+      <description>Intitatives à encourager</description>
+    </item>
+    
+  </channel>
+</rss>

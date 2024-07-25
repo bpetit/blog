@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Pages on Benoit Petit</title>
+    <link>https://bpetit.nce.re/page/</link>
+    <description>Recent content in Pages on Benoit Petit</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <managingEditor>bpetit@nce.re (Benoit Petit)</managingEditor>
+    <webMaster>bpetit@nce.re (Benoit Petit)</webMaster><atom:link href="https://bpetit.nce.re/page/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Initiatives d&#39;intérêt général</title>
+      <link>https://bpetit.nce.re/page/data/initiatives/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <author>bpetit@nce.re (Benoit Petit)</author>
+      <guid>https://bpetit.nce.re/page/data/initiatives/</guid>
+      <description>Graphique Données sources Une suggestion ? N&amp;rsquo;hésitez pas à me soumettre vos suggestions et critiques sur Github</description>
+    </item>
+    
+    <item>
+      <title>Open-Data</title>
+      <link>https://bpetit.nce.re/page/data/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <author>bpetit@nce.re (Benoit Petit)</author>
+      <guid>https://bpetit.nce.re/page/data/</guid>
+      <description>Intitatives à encourager</description>
+    </item>
+    
+  </channel>
+</rss>

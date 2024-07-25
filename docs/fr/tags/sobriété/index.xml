@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>sobriété on Benoit Petit</title>
+    <link>https://bpetit.nce.re/fr/tags/sobri%C3%A9t%C3%A9/</link>
+    <description>Recent content in sobriété on Benoit Petit</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>fr</language>
+    <managingEditor>bpetit@nce.re (Benoit Petit)</managingEditor>
+    <webMaster>bpetit@nce.re (Benoit Petit)</webMaster>
+    <lastBuildDate>Mon, 09 Aug 2021 10:02:24 +0200</lastBuildDate><atom:link href="https://bpetit.nce.re/fr/tags/sobri%C3%A9t%C3%A9/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Climat et numérique: pourquoi le mouvement DevOps a un rôle à jouer</title>
+      <link>https://bpetit.nce.re/fr/2021/08/climat-et-num%C3%A9rique-pourquoi-le-mouvement-devops-a-un-r%C3%B4le-%C3%A0-jouer/</link>
+      <pubDate>Mon, 09 Aug 2021 10:02:24 +0200</pubDate>
+      <author>bpetit@nce.re (Benoit Petit)</author>
+      <guid>https://bpetit.nce.re/fr/2021/08/climat-et-num%C3%A9rique-pourquoi-le-mouvement-devops-a-un-r%C3%B4le-%C3%A0-jouer/</guid>
+      <description>En ce moment je travaille sur une formation à l&amp;rsquo;attention des techs, côté infrastructure (avec un penchant pour les méthodes SRE/DevOps), concernant la sobriété numérique. J&amp;rsquo;en ai parlé un peu autour de moi pour savoir ce que les pros du domaine aimeraient trouver dans ce type de formation. J&amp;rsquo;ai entendu plein de bonnes idées et j&amp;rsquo;en ai gardé une bonne partie (merci à celles et ceux qui me les ont soufflé).</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="fr" itemscope itemtype="http://schema.org/WebPage">
+  <head>
+    
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+
+  <title>Les pratiques SRE et le climat - Benoit Petit</title>
+  <meta name="description" content="L&rsquo;ingénierie de la fiabilité des sites (Site Reliability Engineering), a pour objectif au sein d&rsquo;une organisation de s&rsquo;assurer que les systèmes et services logiciels qui y sont créés sont évolutifs et surtout très fiables.
+Pour ce faire, de nombreux aspects de l&rsquo;ingénierie logicielle sont appliqués aux problèmes d&rsquo;infrastructure. Ce sont des pratiques mises en avant par Google, notamment depuis la sortie du premier livre &ldquo;référence&rdquo; intitulé &ldquo;Site Reliability Engineering&rdquo; en 2016.">
+  <meta name="author" content="Benoit Petit"/><script type="application/ld+json">
+{
+    "@context": "http://schema.org",
+    "@type": "WebSite",
+    "name": "Benoit Petit",
+    
+    "url": "https:\/\/bpetit.nce.re"
+}
+</script><script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Organization",
+  "name": "",
+  "url": "https:\/\/bpetit.nce.re"
+  
+  
+  
+  
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [{
+        "@type": "ListItem",
+        "position": 1,
+        "item": {
+          "@id": "https:\/\/bpetit.nce.re",
+          "name": "home"
+        }
+    },{
+        "@type": "ListItem",
+        "position": 3,
+        "item": {
+          "@id": "https:\/\/bpetit.nce.re\/fr\/2021\/02\/les-pratiques-sre-et-le-climat\/",
+          "name": "Les pratiques sre et le climat"
+        }
+    }]
+}
+</script><script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Article",
+  "author": {
+    "name" : "Benoit Petit"
+  },
+  "headline": "Les pratiques SRE et le climat",
+  "description" : "L\u0026rsquo;ingénierie de la fiabilité des sites (Site Reliability Engineering), a pour objectif au sein d\u0026rsquo;une organisation de s\u0026rsquo;assurer que les systèmes et services logiciels qui y sont créés sont évolutifs et surtout très fiables.\nPour ce faire, de nombreux aspects de l\u0026rsquo;ingénierie logicielle sont appliqués aux problèmes d\u0026rsquo;infrastructure. Ce sont des pratiques mises en avant par Google, notamment depuis la sortie du premier livre \u0026ldquo;référence\u0026rdquo; intitulé \u0026ldquo;Site Reliability Engineering\u0026rdquo; en 2016.",
+  "inLanguage" : "fr",
+  "wordCount":  1899 ,
+  "datePublished" : "2021-02-19T19:25:24",
+  "dateModified" : "2021-02-19T19:25:24",
+  "image" : "https:\/\/bpetit.nce.re",
+  "keywords" : [ "sre, automatisation, energie, scaphandre, open-source, rust, devops, résilience, climat, tech" ],
+  "mainEntityOfPage" : "https:\/\/bpetit.nce.re\/fr\/2021\/02\/les-pratiques-sre-et-le-climat\/",
+  "publisher" : {
+    "@type": "Organization",
+    "name" : "https:\/\/bpetit.nce.re",
+    "logo" : {
+        "@type" : "ImageObject",
+        "url" : "https:\/\/bpetit.nce.re",
+        "height" :  60 ,
+        "width" :  60
+    }
+  }
+}
+</script>
+
+<meta property="og:title" content="Les pratiques SRE et le climat" />
+<meta property="og:description" content="L&rsquo;ingénierie de la fiabilité des sites (Site Reliability Engineering), a pour objectif au sein d&rsquo;une organisation de s&rsquo;assurer que les systèmes et services logiciels qui y sont créés sont évolutifs et surtout très fiables.
+Pour ce faire, de nombreux aspects de l&rsquo;ingénierie logicielle sont appliqués aux problèmes d&rsquo;infrastructure. Ce sont des pratiques mises en avant par Google, notamment depuis la sortie du premier livre &ldquo;référence&rdquo; intitulé &ldquo;Site Reliability Engineering&rdquo; en 2016.">
+<meta property="og:image" content="https://bpetit.nce.re/lizard.cleaned.jpg" />
+<meta property="og:url" content="https://bpetit.nce.re/fr/2021/02/les-pratiques-sre-et-le-climat/" />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Benoit Petit" />
+
+  <meta name="twitter:title" content="Les pratiques SRE et le climat" />
+  <meta name="twitter:description" content="L&rsquo;ingénierie de la fiabilité des sites (Site Reliability Engineering), a pour objectif au sein d&rsquo;une organisation de s&rsquo;assurer que les systèmes et services logiciels qui y sont créés …">
+  <meta name="twitter:image" content="https://bpetit.nce.re/lizard.cleaned.jpg" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="generator" content="Hugo 0.117.0">
+  <link rel="alternate" href="https://bpetit.nce.re/fr/index.xml" type="application/rss+xml" title="Benoit Petit"><link rel="stylesheet" href="https://bpetit.nce.re/css/katex.min.css" />
+  <link rel="stylesheet" href="https://bpetit.nce.re/fontawesome/css/all.css" />
+  <link rel="stylesheet" href="https://bpetit.nce.re/css/bootstrap.min.css" /><link rel="stylesheet" href="https://bpetit.nce.re/css/main.css" /><link rel="stylesheet" href="https://bpetit.nce.re/css/fonts.css" /><link rel="stylesheet" href="https://bpetit.nce.re/css/syntax.css" /><link rel="stylesheet" href="https://bpetit.nce.re/css/codeblock.css" /><link rel="stylesheet" href="https://bpetit.nce.re/css/photoswipe.min.css" />
+  <link rel="stylesheet" href="https://bpetit.nce.re/css/photoswipe.default-skin.min.css" />
+
+
+
+  </head>
+  <body>
+    <nav class="navbar navbar-default navbar-fixed-top navbar-custom">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#main-navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="https://bpetit.nce.re/fr/">Benoit Petit</a>
+    </div>
+
+    <div class="collapse navbar-collapse" id="main-navbar">
+      <ul class="nav navbar-nav navbar-right">
+        
+          
+            <li>
+              <a title="Blog" href="/fr">Blog</a>
+            </li>
+          
+        
+          
+            <li>
+              <a title="Data" href="/fr/page/data/">Data</a>
+            </li>
+          
+        
+
+        
+          
+            <li>
+              
+                
+                  <a href="/en" lang="en">English</a>
+                
+              
+                
+              
+            </li>
+          
+        
+
+        
+      </ul>
+    </div>
+
+    
+
+  </div>
+</nav>
+
+
+
+
+    
+
+
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+<div class="pswp__bg"></div>
+
+<div class="pswp__scroll-wrap">
+    
+    <div class="pswp__container">
+      <div class="pswp__item"></div>
+      <div class="pswp__item"></div>
+      <div class="pswp__item"></div>
+    </div>
+    
+    <div class="pswp__ui pswp__ui--hidden">
+    <div class="pswp__top-bar">
+      
+      <div class="pswp__counter"></div>
+      <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+      <button class="pswp__button pswp__button--share" title="Share"></button>
+      <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+      <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+      
+      
+      <div class="pswp__preloader">
+        <div class="pswp__preloader__icn">
+          <div class="pswp__preloader__cut">
+            <div class="pswp__preloader__donut"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+      <div class="pswp__share-tooltip"></div>
+    </div>
+    <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+    </button>
+    <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+    </button>
+    <div class="pswp__caption">
+      <div class="pswp__caption__center"></div>
+    </div>
+    </div>
+    </div>
+</div>
+
+
+  
+  
+  
+
+
+
+
+
+
+  
+
+  <header class="header-section ">
+    
+    <div class="intro-header no-img">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+            <div class="posts-heading">
+              
+                <h1>Les pratiques SRE et le climat</h1>
+              
+              
+                <hr class="small">
+              
+              
+              
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+
+    
+<div class="container" role="main">
+  <div class="row">
+    <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+      <article role="main" class="blog-post">
+        <p><img src="/lizard.cleaned.jpg" alt="Un lézard"></p>
+<p>L&rsquo;ingénierie de la fiabilité des sites (Site Reliability Engineering), a pour objectif au sein d&rsquo;une organisation de s&rsquo;assurer que les systèmes et services logiciels qui y sont créés sont évolutifs et surtout <strong>très fiables</strong>.</p>
+<p>Pour ce faire, de nombreux aspects de l&rsquo;ingénierie logicielle sont appliqués aux problèmes d&rsquo;infrastructure. Ce sont des pratiques mises en avant par Google, notamment depuis la sortie du premier livre &ldquo;référence&rdquo; intitulé &ldquo;<a href="https://sre.google/sre-book/table-of-contents/">Site Reliability Engineering</a>&rdquo; en 2016.</p>
+<h2 id="devops-sre-quelle-différence-">DevOps, SRE, quelle différence ?</h2>
+<p>Puisque nous avons mis un pied dans le dangereux royaume des buzzwords, tentons d&rsquo;y voir plus clair avant de continuer. Si vous êtes déjà familiers avec le DevOps et les pratiques SRE, vous pouvez passer directement <a href="#sli-slo-et-le-budget-derreur">à la suite de cet article</a>.</p>
+<p>Le cadre de travail SRE a quelques points communs avec le mouvement DevOps, notamment :</p>
+<ul>
+<li><strong>Le changement est nécessaire pour s&rsquo;améliorer</strong>: adopter les méthodes DevOps ou les pratiques SRE, c&rsquo;est l&rsquo;inverse du cycle en V et des gels de déploiements sur une infrastructure. Dans les deux cas, identifier les axes d&rsquo;amélioration, faire des changements et apprendre de ses erreurs, est essentiel pour atteindre plus de vélocité (DevOps), de qualité et de fiabilité (SRE).</li>
+<li><strong>Casser les silos</strong> : contrairement au monde décrit dans <a href="https://fr.wikipedia.org/wiki/The_IT_Crowd">IT crowd</a>, les pratiques DevOps comme SRE encouragent une collaboration régulière et systématique entre les développeurs, le produit et l&rsquo;infrastructure, à chaque étape d&rsquo;un projet. La littérature SRE parle même de &ldquo;shared ownership model&rdquo; ou modèle de responsabilité partagée. Dans ce contexte, les responsables produit sont tout autant <strong>responsables</strong> (et donc <strong>investis</strong>) que les développeurs ou que les SRE, lors de la mise en place d&rsquo;un changement dans un service ou une application.</li>
+<li><strong>De petits changements, fréquents</strong> sont préférés à de grosses mises à jour issues de plusieurs mois de développements. Ceci permet une plus grande fiabilité, en particulier si chacun d&rsquo;entre eux est testé automatiquement, ce qui contribue à la <a href="https://devops.com/faster-feedback/"><strong>feedback loop</strong></a>.</li>
+<li><strong>Un incident ou un échec n&rsquo;est jamais la faute d&rsquo;une seule personne</strong> : il convient donc de comprendre l&rsquo;explication systémique d&rsquo;un problème (le bouton dangereux dans l&rsquo;interface X n&rsquo;est pas assez rouge et on ne demande pas à l&rsquo;utilisateur Michel s&rsquo;il est sûr de lui), plutôt que de chercher un coupable (c&rsquo;est la faute de Michel).</li>
+</ul>
+<p>Les deux mouvements sont donc très proches, si bien que certains considèrent que SRE est une implémentation de la méthode DevOps qui prend en compte les problématiques d&rsquo;infrastructure. On pourra souligner que contrairement à DevOps, SRE peut être un métier en tant que tel (Site Reliability Engineer), là où DevOps est seulement un mouvement, ou un ensemble de bonnes pratiques.</p>
+<h2 id="sli-slo-et-le-budget-derreur">SLI, SLO et le budget d&rsquo;erreur</h2>
+<p>Je souhaite vous parler aujourd&rsquo;hui d&rsquo;un élément particulier parmi les pratiques SRE : les fameux SLI et SLO, pour <strong>Service Level Indicators</strong> et <strong>Service Level Objectives</strong>. Ces notions donnent un cadre pour déterminer quelles métriques sont importantes pour la réussite d&rsquo;un projet dans sa phase de run.</p>
+<p>Un Service Level Indicator est le plus souvent un ratio entre deux nombres. L&rsquo;un étant le nombre d&rsquo;événements &ldquo;positifs&rdquo;, l&rsquo;autre le nombre total d&rsquo;événements correspondants. Quelques exemples de SLI:</p>
+<ul>
+<li>nombre de requêtes HTTP soldées par un succès / nombre total de requêtes HTTP sur le même service</li>
+<li>nombre de demandes sur mon datastore, qui ont retourné un résultat en moins de 2 secondes / nombre total de demandes sur le datastore</li>
+<li>nombre d&rsquo;appels gRPC qui ont terminé en moins de 80ms / nombre total d&rsquo;appels gRPC sur le même service</li>
+</ul>
+<p>Un point important pour bien choisir un SLI est qu&rsquo;il doit permettre de mesurer la satisfaction d&rsquo;un client ou d&rsquo;un utilisateur (humain ou machine). C&rsquo;est pour ça que l&rsquo;on va souvent s&rsquo;intéresser aux notions d&rsquo;erreurs perçues par le client ou de latence, plutôt que de savoir quelle quantité de mémoire est utilisée sur le serveur, par exemple.</p>
+<p>La deuxième notion importante ici est le Service Level <strong>Objective</strong>. Il s&rsquo;agit ni plus ni moins que d&rsquo;un objectif à atteindre sur un SLI, sur une fenêtre de temps flottante ou basée sur le calendrier (chaque mois par exemple). Cet objectif doit être défini <strong>conjointement</strong> entre l&rsquo;équipe produit, l&rsquo;équipe en charge de l&rsquo;environnement de production et les développeurs. Le respect de cet objectif doit également être porté/assumé par une personne ayant suffisamment de &ldquo;pouvoir&rdquo; pour faire des compromis entre la vélocité (la vitesse à laquelle les fonctionnalités sont déployées) et la fiabilité. Ce peut donc être le CTO si c&rsquo;est une petite organisation ou le product owner/manager, dans une structure plus conséquente.</p>
+<p>La différence entre 100% (de cas positifs pour le SLI) et le SLO (disons par exemple 97% de requêtes dont la réponse prend moins de 50 ms de latence) est appelée le <strong>budget d&rsquo;erreur</strong> (error budget). Si le nombre de cas &ldquo;négatifs&rdquo; (dommageables pour la réalisation du SLO) fait tomber le SLI en dessous du SLO sur la période, on a épuisé notre budget d&rsquo;erreur. Dans ce cas il faut, soit revoir la conception ou l&rsquo;implémentation technique du service pour respecter le SLO sur la prochaine période, ou bien redéfinir le SLO si l&rsquo;on se rend compte qu&rsquo;il était trop ambitieux (un SLO de 100% est rarement une bonne idée).</p>
+<p>Vous vous en doutez, un monitoring adéquat et la mise en place d&rsquo;alertes lorsque le budget d&rsquo;erreur est entamé ou menacé sont nécessaires. Ces indicateurs deviennent un point d&rsquo;attention central des équipes de développement, de production, mais aussi de <strong>l&rsquo;équipe produit</strong>. On pourra par exemple mettre en place un dashboard faisant état des SLI et de l&rsquo;état de consommation des budgets d&rsquo;erreur sur le mois, qui sera accessible de toutes les équipes concernées.</p>
+<p>L&rsquo;intérêt de cette méthode est qu&rsquo;elle encourage les équipes produit, infrastructure et de développement à collaborer autour d&rsquo;un <strong>même objectif</strong>, à savoir dans la plupart des cas, la satisfaction utilisateur.</p>
+<p>Une fois ces principes appliqués à plusieurs services/produits numériques de l&rsquo;organisation, il est possible de générer un dashboard montrant si les SLO sont atteints, mois par mois (si c&rsquo;est la période choisie), pour chacun des services. Ce tableau servira de support de communication auprès de la direction pour demander :</p>
+<ul>
+<li>des recrutements : &ldquo;nous avons bien affiné nos objectifs, mais nous n&rsquo;avons pas pu en respecter certains car nous manquons de personnel&rdquo;</li>
+<li>des compromis : &ldquo;maintenir le service X à un niveau de fiabilité satisfaisant nous demande beaucoup de travail et nous empêche de passer ce temps sur d&rsquo;autres services à forte valeur ajoutée (et de respecter leurs SLO), est ce qu&rsquo;il est toujours pertinent d&rsquo;un point de vue business ?&rdquo;</li>
+</ul>
+<p><img src="/slo-dashboard.png" alt="Dashboard fictif de SLOs"></p>
+<h2 id="redéfinir-la-notion-de-fiabilité">Redéfinir la notion de fiabilité</h2>
+<p>Il existe plusieurs définitions de la fiabilité (notamment dans le cadre juridique). L&rsquo;une d&rsquo;elle a été proposée par l&rsquo;<a href="https://fr.wikipedia.org/wiki/Union_technique_de_l%27%C3%A9lectricit%C3%A9">UTE</a>: &ldquo;la fiabilité est l’aptitude d’un dispositif à accomplir une fonction requise dans des conditions données pour une période de temps donnée&rdquo;. Dans ce cadre on se rend compte qu&rsquo;il est possible de définir les conditions pour estimer que le dispositif (ou système dans notre cas) a bien rempli sa mission dans la dite période.</p>
+<p>Puisque l&rsquo;IT doit baisser ses émissions de gaz à effets de serre de <a href="https://www.itu.int/en/mediacentre/Pages/PR04-2020-ICT-industry-to-reduce-greenhouse-gas-emissions-by-45-percent-by-2030.aspx">45% dans les 10 prochaines années</a> si l&rsquo;on veut espérer atteindre les objectifs des accords de Paris, il me semble capital qu&rsquo;un système numérique ne soit considéré fiable, que si les conditions de validation de cette fiabilité incluent <strong>des objectifs</strong> concernant ses <strong>émissions de gaz à effet de serre</strong>.</p>
+<p>Peut-on dire que l&rsquo;on satisfait durablement le client si l&rsquo;on contribue à rendre le monde dans lequel il vivra en 2050 encore plus incertain qu&rsquo;aujourd&rsquo;hui ?</p>
+<p>La méthode SRE fait de plus en plus d&rsquo;adeptes et fournis un cadre de travail réellement intéressant, car elle encourage une collaboration entre les équipes techniques et le métier. Comme l&rsquo;a très justement rappelé <a href="https://www.linkedin.com/in/alexis8nicolas/">Alexis Nicolas</a> dans son <a href="https://sync.nce.re/index.php/s/igFsLRjZteaLst4">retour d&rsquo;expérience</a> à <a href="http://www.frugagile.org/">Frug&rsquo;agile</a>, lutter pour amortir le changement climatique est comme un <strong>escape game dont nous faisons tous partie</strong>, qu&rsquo;on le veuille ou non.</p>
+<p>Si je suis dans un escape game dans lequel l&rsquo;échec signifie <strong>un réel danger pour mon entourage et moi-même</strong> (ce qui est <a href="https://meteofrance.com/actualites-et-dossiers/actualites/meteo-france-eclaire-le-climat-en-france-jusquen-2100">le cas dans celui-ci</a>), je préférerai avoir une aide dynamique pour résoudre les énigmes, des alertes automatisées si je perds trop de temps sur les mauvais éléments et une équipe qui collabore en toute transparence et qui soit pleinement concentrée sur le même objectif. Pas vous ?</p>
+<h2 id="comment-obtenir-ces-métriques-">Comment obtenir ces métriques ?</h2>
+<p>Comment avoir des métriques dynamiques, comparables, mises à jour régulièrement, concernant l&rsquo;impact climatique d&rsquo;un service numérique ? Comment mesurer le résultat de ses efforts sur le sujet ? Il y a des sujets majeurs concernant cet impact pour lesquels avoir des métriques dynamiques est très compliqué (les experts de l&rsquo;<a href="https://fr.wikipedia.org/wiki/Analyse_du_cycle_de_vie">ACV</a> en savent quelque chose): le coût environnemental et climatique de la fabrication des terminaux qui seront client du service, celui de la fabrication des serveurs et du réseau, celui de la fabrication et de l&rsquo;entretien des datacenters et des infrastructures, la quantité de fioul brulée dans l&rsquo;année pour assurer la continuité de service dans le datacenter (ou simplement pour éviter que le fioul ne soit bon pour la poubelle) etc.</p>
+<p>Il en est d&rsquo;autres pour lesquels c&rsquo;est possible dès à présent. La consommation d&rsquo;énergie finale (ou <a href="https://bpetit.nce.re/fr/2021/01/scaphandre-v0.1.1-mesurer-la-consommation-d%C3%A9nergie-des-coulisses-du-num%C3%A9rique/#petites-pr%C3%A9cisions-de-rigueur">secondaire</a>) des serveurs et des applications qu&rsquo;ils hébergent en est une. Il est donc possible, en plus de <strong>surveiller et réduire</strong> la part de <strong>l&rsquo;impact climatique de son service</strong>, liée à la consommation d&rsquo;énergie finale, d&rsquo;alimenter en partie le &ldquo;scope 2&rdquo; d&rsquo;une ACV automatiquement.</p>
+<p><a href="https://github.com/hubblo-org/scaphandre/">Scaphandre</a> est une des solutions pour y parvenir. C&rsquo;est un agent de monitoring <strong>open-source</strong>, <strong>léger</strong>, dédié aux métriques de consommation d&rsquo;énergie finale (électricité), qui <a href="https://metrics.hubblo.org">s&rsquo;insère simplement dans une suite de monitoring existante</a>. Il est modulaire et est pensé pour accueillir simplement de nouveaux <em><a href="https://hubblo-org.github.io/scaphandre/explanations/internal-structure.html">exporters</a></em>. L&rsquo;idée est que c&rsquo;est l&rsquo;agent qui s&rsquo;adapte à votre infrastructure et à vos besoins et non l&rsquo;inverse. Il permet déjà de stocker les données dans <a href="https://prometheus.io">Prometheus</a>, <a href="http://riemann.io/">Riemann</a> et bientôt dans <a href="https://www.warp10.io/">Warp10</a>. Ceci vous permet d&rsquo;avoir toute la souplesse nécessaire par la suite pour définir vos SLI et SLO en rapport avec l&rsquo;impact climatique de votre service.</p>
+<p>On pourra alors aller plus loin et agrémenter ces métriques de consommation en estimant les émissions de GES associées, par exemple en s&rsquo;appuyant sur une API comme <a href="https://docs.co2signal.com/#introduction">co2signal</a>, un autre produit de <a href="https://www.tmrow.com/">Tomorrow</a>, également à l&rsquo;origine d&rsquo;<a href="https://www.electricitymap.org/map">ElectricityMap</a>.</p>
+<h2 id="conclusion">Conclusion</h2>
+<p>De cette manière on peut calculer la consommation et les émissions estimées, <strong>par requête</strong> ou <strong>par utilisateur</strong> (en associant les métriques de monitoring/APM usuelles et les métriques de consommation/émission), puis mettre en place des SLO tels que :</p>
+<ul>
+<li>95% des requêtes sur l&rsquo;API entrainent moins de 0.4g eCO2, sur un mois</li>
+<li>98% des utilisateurs entrainent une consommation cumulée inférieure à 200 Wh sur le mois</li>
+</ul>
+<p>Les chiffres sont ici complètement arbitraires et ne veulent pas dire grand chose hors contexte. Mais traquer des indicateurs de ce type, définis conjointement suite à une analyse de l&rsquo;impact global, me semble être une stratégie efficace pour <strong>réduire l&rsquo;empreinte</strong> des services numériques dans la durée. Cette approche est évidemment complémentaire des ACV et d&rsquo;un bilan carbone complet prenant en compte les aspects matériels que l&rsquo;on ne peut bien souvent pas mesurer automatiquement.</p>
+<p>Je pense cependant que le rôle de la conception et de l&rsquo;implémentation des services n&rsquo;est pas à sous-estimer concernant la réduction de l&rsquo;empreinte de l&rsquo;IT. La complexité de ces services est grandissante et l&rsquo;estimation de leur impact toujours plus inaccessible. Une approche <strong>bottom-up</strong> comme celle présentée ici est selon moi nécessaire et indispensable (bien que non suffisante) pour permettre une amélioration continue à grande échelle.</p>
+
+
+        
+          <div class="blog-tags">
+            
+              <a href="https://bpetit.nce.re/fr/tags/sre/">sre</a>&nbsp;
+            
+              <a href="https://bpetit.nce.re/fr/tags/automatisation/">automatisation</a>&nbsp;
+            
+              <a href="https://bpetit.nce.re/fr/tags/energie/">energie</a>&nbsp;
+            
+              <a href="https://bpetit.nce.re/fr/tags/scaphandre/">scaphandre</a>&nbsp;
+            
+              <a href="https://bpetit.nce.re/fr/tags/open-source/">open-source</a>&nbsp;
+            
+              <a href="https://bpetit.nce.re/fr/tags/rust/">rust</a>&nbsp;
+            
+              <a href="https://bpetit.nce.re/fr/tags/devops/">devops</a>&nbsp;
+            
+              <a href="https://bpetit.nce.re/fr/tags/r%C3%A9silience/">résilience</a>&nbsp;
+            
+              <a href="https://bpetit.nce.re/fr/tags/climat/">climat</a>&nbsp;
+            
+              <a href="https://bpetit.nce.re/fr/tags/tech/">tech</a>&nbsp;
+            
+          </div>
+        
+
+        
+
+        
+      </article>
+
+      
+        <ul class="pager blog-pager">
+          
+            <li class="previous">
+              <a href="https://bpetit.nce.re/fr/2021/01/scaphandre-v0.1.1-mesurer-la-consommation-d%C3%A9nergie-des-coulisses-du-num%C3%A9rique/" data-toggle="tooltip" data-placement="top" title="Scaphandre v0.1.1: mesurer la consommation d&#39;énergie (des coulisses) du numérique">&larr; Post précédent</a>
+            </li>
+          
+          
+            <li class="next">
+              <a href="https://bpetit.nce.re/fr/2021/03/coder-ses-dashboards-grafana-avec-grafonnet/" data-toggle="tooltip" data-placement="top" title="Coder ses dashboards Grafana avec Grafonnet">Post suivant &rarr;</a>
+            </li>
+          
+        </ul>
+      
+
+
+      
+
+    </div>
+  </div>
+</div>
+
+      
+<footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <ul class="list-inline text-center footer-links">
+          
+              <li>
+                <a href="mailto:bpetit@nce.re" title="Email me">
+                  <span class="fa-stack fa-lg">
+                    <i class="fas fa-circle fa-stack-2x"></i>
+                    <i class="fas fa-envelope fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="https://github.com/bpetit" title="GitHub">
+                  <span class="fa-stack fa-lg">
+                    <i class="fas fa-circle fa-stack-2x"></i>
+                    <i class="fab fa-github fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="https://gitlab.com/bpetit1" title="GitLab">
+                  <span class="fa-stack fa-lg">
+                    <i class="fas fa-circle fa-stack-2x"></i>
+                    <i class="fab fa-gitlab fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="https://linkedin.com/in/bepetit" title="LinkedIn">
+                  <span class="fa-stack fa-lg">
+                    <i class="fas fa-circle fa-stack-2x"></i>
+                    <i class="fab fa-linkedin fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="https://mastodon.green/@bpetit" title="Mastodon">
+                  <span class="fa-stack fa-lg">
+                    <i class="fas fa-circle fa-stack-2x"></i>
+                    <i class="fab fa-mastodon fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+          
+          <li>
+            <a href="" title="RSS">
+              <span class="fa-stack fa-lg">
+                <i class="fas fa-circle fa-stack-2x"></i>
+                <i class="fas fa-rss fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          
+        </ul>
+        <p class="credits copyright text-muted">
+          
+            
+              Benoit Petit
+            
+          
+
+          &nbsp;&bull;&nbsp;&copy;
+          
+            2021
+          
+
+          
+            &nbsp;&bull;&nbsp;
+            <a href="https://bpetit.nce.re/fr/">Benoit Petit</a> on <a rel="me" href="https://mastodon.green/@bpetit">Mastodon</a>
+          
+        </p>
+        
+        <p class="credits theme-by text-muted">
+          Carbure avec <a href="https://gohugo.io">Hugo v0.117.0</a>&nbsp;&bull;&nbsp; Avec le Theme <a href="https://github.com/halogenica/beautifulhugo">Beautiful Hugo</a> adapté de <a href="https://deanattali.com/beautiful-jekyll/">Beautiful Jekyll</a>
+          
+        </p>
+      </div>
+    </div>
+  </div>
+</footer><script src="https://bpetit.nce.re/js/katex.min.js"></script>
+<script src="https://bpetit.nce.re/js/auto-render.min.js"></script>
+<script src="https://bpetit.nce.re/js/jquery.min.js"></script>
+<script src="https://bpetit.nce.re/js/bootstrap.min.js"></script>
+
+<script src="https://bpetit.nce.re/js/main.js"></script><script> renderMathInElement(document.body); </script><script src="https://bpetit.nce.re/js/photoswipe.min.js"></script>
+<script src="https://bpetit.nce.re/js/photoswipe-ui-default.min.js"></script><script src="https://bpetit.nce.re/js/load-photoswipe.js"></script>
+
+
+
+
+
+
+
+
+
+    
+  </body>
+</html>
+

@@ -1,0 +1,59 @@
+
+The more we postpone the efforts, the more important those efforts will need to be. In that context, every industries have to change deeply, starting today. ICT is no exception.
+
+ICT represents about 4% of world’s GreenHouse Gas emissions in 2020. The current trend could lead this number up to 8% in 2025. ICT is the economy sector with the fastest growing impact.
+
+User devices are the major explanation of those emissions, mostly because of manufacturing. On the other hand networks and datacenters still represent together 54% of the electricity consumption of ICT and 37% of the GHG emissions. Knowing that 1.5 billion smartphones are sold every year, compared to the 20 million servers deployed each year, it’s obvious that changing the way we design online services, in addition to extending the lifetime of user devices,  is key to reduce the overall impact.
+
+While a study shows that the electricity consumption of US hyperscale datacenters has plateaued. This same study concludes that the plateau will most probably not be a long term truth. Other studies even estimate that electricity consumption of datacenters [could be tripled by 2030](). 
+
+# ICT sustainability: a matter of transparency
+
+## Knowledge is key
+
+From one estimation to another, power consumption of datacenters is said to be about 200 TWh and 500 TWh. Such a gap in estimates shows a simple fact : we only rely on top-down estimations that are limited to the datasets available or need a huge effort to be made. The ICT opacity regarding its impact is the cause of this lack of knowledge.
+
+Another consequence of this lack of transparency is that online services providers can't understand nor act on their own impact. Only organizations that have access to the machines running their workloads can have a glimpse of their impact and be proactive. 
+
+## The public cloud issue
+
+Companies building online services, being customers of infrastructure services, need to get live metrics of the impact of their activities to properly understand their impact, then act and reduce it.
+
+In an on-premise context, those metrics can be gathered either thanks to smart PDUs, or by software when working on bare metal machines or virtual machines that are running on a self-hosted hypervisor. Section "How does it work ?" gets into details about that.
+
+This is much more complicated when working on virtual instances or managed services, not having remote access to the underlying hypervisor.
+
+
+## Cloud shared responsibility, applied to sustainability
+
+Most cloud providers, when talking to their clients about security, explain the shared responsibility model. This is a great and honest way to get everyone doing the best thing on his scope. This should be applied to sustainability. The cloud does have a responsibility : optimizing datacenter cooling system, shrinking the Power Usage Effectiveness, ensuring water used is not drinkable water, being transparent about the datacenter own indicators regarding sustainability...
+
+But the cloud provider himself can't solve the whole problem on his own, because nobody can. A fictive "perfectly sustainable" datacenter with a PUE of 1.0, running at 100% of the time on renewable energies (which is completely utopic), would still emit Greenhouse Gazes, mostly because of manufacturing, moving people, materials and hardware. Building a solar panel or a wind turbine emits Green House Gas (and accelerates abiotic ressources depletion). The better energy is the one that is not consumed, or at least only when another way is not possible.
+
+So how to collaborate effectively and see tech companies building products on public cloud optimizing their products and reducing their impact ? How to make those companies helping the cloud provider by reducing the demand of power from their applications and so enable renewables based strategies become effective, thanks to much more reasonable needs ?
+
+At Hubblo, we believe that the answer is, again, transparency. Showing clients the metrics of their own impact, both in terms of power consumption and estimated Green House Gas emissions, is the first, unavoidable step. Data leads to action.
+
+# How does it work ?
+
+Hubblo provides solutions to measure tech services impact from the infrastructure perspective, as well as to know if an action targeting more sustainability is effective and how much. The first project we have launched is Scaphandre: an open-source monitoring agent dedicated to power consumption metrics.
+
+## Scaphandre: a building block for decision-making solutions
+
+As the goal of the project is transparency, the first caracteristic of Scaphandre is to be open-source. This way both the methodology and the implementation to collect and transform the data can be audited and challenged. The Apache-2.0 license allows companies to use, fork, package, or even sell the tool. We put no restriction on Scaphandre usage, except the ones cited in the license. We do however encourage users to contribute to the project, starting with their feedbacks, bug reports, features requests and criticisms.
+
+Scaphandre is lightweight, in terms of IT resources, power consumption and toil. Tell the agent where to send the metrics and in which format, then let it do the job. There is no big difference with a lot of monitoring agents there.
+
+Thanks to its light footprint and open-source codebase and license, climate impact measurement methodologies and tools built on top of Scaphandre, can be replicated and used in many different organizations. This enables global collaboration on finding the most accurate methods to measure and then reduce the impact of tech services on climate.
+
+The architecture of the project is an important topic. Scaphandre is extensible and designed to fit in an existing montioring stack. There should be no change to be made in an infrastructure and monitoring or metrology stack to get those metrics. This modular architecture is mostly composed of Sensors and Exporters. Sensors are modules responsible for collecting power consumption data, where it is. Exporters are responsible of transforming and/or sending the data to a time series database, monitoring tool, a file, or anything that suits the user needs regarding the analysis of the data.
+
+## Enabling sustainability from the application : metrics at the process level
+
+Scaphandre tracks power consumption at the process level, which enables to analyze applications behavior regarding power consumption.
+
+## Getting the data at the source : the bare metal hypervisor
+
+The main data source of Scaphandre today is RAPL (Running Average Power Limit). This technology is embedded in Intel and AMD x86 CPUs and permits to gather power consumption data from the CPU, integrated GPU, caches, controllers and RAM. Those metrics are very valuable, but only available when accessed from the bare metal machine.
+
+To enable each client to get power consumption metrics from his virtual instances, firstpower consumption data of the whole bare metal hypervisor. Then we have to estimate what portion of this consumption is due to each virtual machine. 

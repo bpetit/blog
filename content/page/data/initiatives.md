@@ -7,7 +7,6 @@ author: Benoit Petit
 
 ## Données sources
 
-{{< csv-to-table "initiatives.csv" >}}
 
 ## Une suggestion ?
 
