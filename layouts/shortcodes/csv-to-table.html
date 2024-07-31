@@ -1,0 +1,64 @@
+<div id="data-table"></div>
+<script>    
+ let table = document.getElementById("data-table");
+ let url = "https://raw.githubusercontent.com/bpetit/blog/master/assets/initiatives.csv";
+
+Tabulator.extendModule("mutator", "mutators", {
+    removePrefix:function(value, data, accessorParams) {
+      return value.replace(/http(s)*:\/\//, '');
+    },
+});
+Tabulator.extendModule("mutator", "mutators", {
+    cleanTags:function(value, data, accessorParams) {
+      return value.replace(/"/g, '').replace(/\|/g, ", ");
+    },
+});
+
+ let tabledata = [];
+ fetch(url)
+   .then(response => response.text())
+   .then(data => {
+     let rows = data.split("\n");
+     for (let i = 1; i < rows.length; i++) {
+        rowdata = rows[i].split(",");
+        console.log("ROWDATA");
+        console.log(rowdata);
+        finalrowdata = {
+          name: rowdata[0],
+          url: rowdata[1],
+          type: rowdata[2],
+          themes: rowdata[3],
+          description: rowdata[4]
+        };
+        //finalrowdata = rowdata;
+        console.log(finalrowdata);
+        if (rowdata[0].length > 0) {
+          tabledata.push(finalrowdata);
+        }
+     }
+     var tabulator = new Tabulator("#data-table", {
+       data:tabledata,           //load row data from array
+       layout:"fitColumns",      //fit columns to width of table
+       responsiveLayout:"hide",  //hide columns that don't fit on the table
+       addRowPos:"top",          //when adding a new row, add it to the top of the table
+       history:true,             //allow undo and redo actions on the table
+       pagination:"local",       //paginate the data
+       paginationSize:25,         //allow 7 rows per page of data
+       paginationCounter:"rows", //display count of paginated rows in footer
+       movableColumns:true,      //allow column order to be changed
+       initialSort:[             //set the initial sort order of the data
+           {column:"name", dir:"asc"},
+       ],
+       columnDefaults:{
+           tooltip:true,         //show tool tips on cells
+       },
+       columns:[                 //define the table columns
+           {title: "URL", field:"url", hozAlign:"left", width: 250, formatter: "link", mutator:"removePrefix"},
+           {title: "Type", field:"type", width: 90, editor:"select"},
+           {title: "Thêmes", field:"themes", mutator: "cleanTags"},
+           {title: "Description", field:"description", hozAlign:"center", editor:"select"},
+       ],
+     });
+     })
+     .catch(error => console.log(error));
+</script>
