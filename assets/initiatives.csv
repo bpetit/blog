@@ -1,86 +1,86 @@
 name,url,type,themes,description
-Datagora,https://datagora.fr/,Entreprise,"open-data|dataviz",""
-arbres,https://www.arbres.org,Association,"",""
-aspas-nature,https://www.aspas-nature.org/,Association,"",""
-foretprimaire-francishalle,https://www.foretprimaire-francishalle.org,Association,"",""
-sosforetfrance,https://sosforetfrance.org/,Association,"",""
-vieillesforets,http://www.vieillesforets.com/,Association,"",""
-refora,http://refora.online.fr/FRENE/Rapport_activites_FRENE_2009-2013.pdf,Association,"",""
-foret-naturalite,https://www.foret-naturalite.be/,Association,"",""
-agroforesterie,https://www.agroforesterie.fr,Association,"",""
-canopee-asso,https://www.canopee-asso.org/,Association,"",""
-coordination-libre-evolution,https://www.coordination-libre-evolution.fr/,Association,"",""
-foretsanciennes,https://www.foretsanciennes.fr/,Association,"",""
-forest-art-project,http://www.forest-art-project.fr/,Association,"",""
-histoiresdeforets,https://histoiresdeforets.com/,Association,"",""
-alternativesforestieres,https://www.alternativesforestieres.org/,Association,"",""
-ofb,https://www.ofb.gouv.fr/,Institution,"",""
-onf,https://www.onf.fr/,Institution,"",""
-cnrs,https://www.cnrs.fr/fr,Institution,"",""
-mnhn,https://www.mnhn.fr/fr,Institution,"",""
-fr,https://fr.unesco.org/mab,Institution,"",""
-foret-naturalite,https://www.foret-naturalite.be/dossiers/,Media,"",""
-my,https://my.sendinblue.com/users/subscribe/js_id/3mr5e/id/1,Media,"",""
-garance-voyageuse,https://garance-voyageuse.org/,Media,"",""
-snpn,https://www.snpn.com/lecourrierdelanature/,Media,"",""
-fondationfrancoissommer,https://fondationfrancoissommer.org/#,Media,"",""
-salamandre,https://www.salamandre.org/,Media,"",""
-kaizen-magazine,https://kaizen-magazine.com/,Media,"",""
-socialter,https://www.socialter.fr/,Media,"",""
-sans-transition-magazine,https://www.sans-transition-magazine.info/,Media,"",""
-lezephyrmag,https://www.lezephyrmag.com/,Media,"",""
-inpn,https://inpn.mnhn.fr/programme/trame-verte-et-bleue/carte-nationale,,"",""
-inpn,https://inpn.mnhn.fr/programme/trame-verte-et-bleue/carte-nationale,Publications,"",""
-lacorneille,https://lacorneille.kessel.media/posts?ref=2847ac21-4788-46c4-9e8b-95f1e4c7561f&landing=true,Media,"",""
-mooc-biodiversite,https://www.mooc-biodiversite.com/,Media,"",""
-infos,https://infos.ademe.fr/magazine-mars-2023/dossier/?utm_campaign=Newsletter_ADEME_ACTUS_352&utm_source=Connect&utm_medium=email,Publications,"",""
-engager-pour-la-nature,https://engager-pour-la-nature.netlify.app,Association,"",""
-ASPAS,https://aspas-reserves-vie-sauvage.org/havre-vie-sauvage/,Association,"",""
-opensourcegardens,https://opensourcegardens.info/,,"",""
-createurdeforet,https://www.createurdeforet.fr,Institution,"",""
-prosilva,https://prosilva.fr/,Institution,"",""
-semeursdeforets,https://semeursdeforets.org/,Association,"",""
-Semeurs de forêts,https://www.goodreads.com/book/show/124033525-semeurs-de-for-ts?ac=1&from_search=true&qid=NBPFKLQ7qZ&rank=1,Livre,forets|carbon-capture,""
-laforetbouge,https://www.laforetbouge.fr/,Institution,"",""
-gvSIG,http://www.gvsig.com/en,Communauté,open-data|geomatics,""
-Aldo Carbone,https://aldo-carbone.ademe.fr,Institution,"open-data|carbon capture","Outil d'évaluation/reporting des capacité de captation carbone des communes françaises"
-DVF,https://app.dvf.etalab.gouv.fr/,Institution,open-data|cadastre,""
-Cadastre,https://cadastre.data.gouv.fr/,Institution,open-data|cadastre,""
-Pappers Immobilier,https://immobilier.pappers.fr,Entreprise,open-data|cadastre|estate,""
-StreetPress,https://www.streetpress.com/,Média,politics|far-right|democracy,""
-Le Media,https://www.lemediatv.fr/,Média,politics|democracy,""
-Global Energy Monitor,https://globalenergymonitor.org/projects/global-gas-plant-tracker/,Association,gas|power|open-data|studies,""
-Capa Réseau,https://www.capareseau.fr/,Association,electricity|open-data,""
-Calm Tech,https://calmtech.com/,Entreprise,alternatives|design|calm-tech,"Site web (et entreprise) qui promeut la calm tech, sous l'angle du design."
-Interaktiv,https://interaktiv.morgenpost.de/klimawandel-hitze-meeresspiegel-wassermangel-stuerme-unbewohnbar/en.html,,map|climate|uninhabitability,"Carte des zones qui deviendront inhabitables à cause du dérèglement climatique."
-Calm Code,https://calmcode.io,Community,open-source|tech|tips|calm-tech,"Dépot de ressources en communs, par des personnes de la tech qui préfèrent du contenu épuré, utile et simple, que la course à la hype."
-Open Route Service,https://openrouteservice.org/,Community,open-source|map|itinerary,""
-Bruegel,https://www.bruegel.org,Media,EU|europe|economics|regulation,""
-Kai Zenner,https://www.kaizenner.eu,Individual,EU|europe|AI|economics|regulation,""
-Liberty Rider,https://liberty-rider.com/,,motorbike|map,""
-Hourrail,https://www.hourrail.voyage/,Entreprise,train|map,""
-Kurviger,https://kurviger.de,,map|car|sail|boat,""
-Mollow,https://www.mollow.eu/,Entreprise,train|sail|boat|map,""
-Hexplo,https://app.hexplo.fr/,Entreprise,bike|train|map,""
-Carte Graou,https://carto.graou.info/,,train|map,""
-Nacht Zugkarte,https://nachtzugkarte.de/en/,,train|map,""
-Transport Data Gouv,https://transport.data.gouv.fr/,,open-data|train,""
-Villes Cyclables,https://villes-cyclables.org/le-club/les-adherents-des-territoires-engages-pour-le-velo#list,,open-data|bike,""
-Baromètre Parlons Vélo,https://barometre.parlons-velo.fr/2021/palmares/#5.4/46.789/2.222,,bike,""
-Vélo Territoires,https://www.velo-territoires.org/schemas-itineraires/schema-europeen-eurovelo/,,bike|map,""
-"France Vélotourisme",https://www.francevelotourisme.com/itineraire,,bike|map,""
-Af3v,https://www.af3v.org/,,bike,""
-Pistes cyclables sur OpenStreetMap,https://www.openstreetmap.org/#map=11/47.3621/-2.3373&layers=C,,bike|map|open-data,"Pistes cyclables sur OpenStreetMap"
-Aménagements Cyclables,https://www.amenagements-cyclables.fr/fr/stats,,bike|map,""
-Documentation pistes cyclables OpenStreetMap,https://wiki.openstreetmap.org/wiki/France/Itin%C3%A9raires_cyclable,,bike|map|open-data,""
-La Trace,https://www.latrace.com/,,bike|train,""
-Zoom Earth,https://zoom.earth,,weather|map,""
-Météo & Radar,https://www.meteoetradar.com/,,weather,""
-The European Correspondent,https://www.europeancorrespondent.com,Media,EU|europe|politics,""
-La Fresque du Climat,https://fresqueduclimat.org/,Association,climate|fresk|sensitization|game,""
-Climate Change Tracker,https://climatechangetracker.org/igcc,Community,climate|dataviz,""
-Empreinte,https://empreinte.castoretpollux.com/en/,Community,ecodesign|climate|calmtech,"Support interractif de recommendations pour écoconcevoir concrêtement un site web."
-Solidaires Informatique,https://solidairesinformatique.org/,Syndicate,politics|workers-rights|tech,"Syndicat des travailleurs⋅euses du numérique 💾 du conseil 🖥️ et du jeu vidéo 🕹️."
+Datagora,https://datagora.fr/,Entreprise,open-data|dataviz,
+arbres,https://www.arbres.org,Association,,
+aspas-nature,https://www.aspas-nature.org/,Association,,
+foretprimaire-francishalle,https://www.foretprimaire-francishalle.org,Association,,
+sosforetfrance,https://sosforetfrance.org/,Association,,
+vieillesforets,http://www.vieillesforets.com/,Association,,
+refora,http://refora.online.fr/FRENE/Rapport_activites_FRENE_2009-2013.pdf,Association,,
+foret-naturalite,https://www.foret-naturalite.be/,Association,,
+agroforesterie,https://www.agroforesterie.fr,Association,,
+canopee-asso,https://www.canopee-asso.org/,Association,,
+coordination-libre-evolution,https://www.coordination-libre-evolution.fr/,Association,,
+foretsanciennes,https://www.foretsanciennes.fr/,Association,,
+forest-art-project,http://www.forest-art-project.fr/,Association,,
+histoiresdeforets,https://histoiresdeforets.com/,Association,,
+alternativesforestieres,https://www.alternativesforestieres.org/,Association,,
+ofb,https://www.ofb.gouv.fr/,Institution,,
+onf,https://www.onf.fr/,Institution,,
+cnrs,https://www.cnrs.fr/fr,Institution,,
+mnhn,https://www.mnhn.fr/fr,Institution,,
+fr,https://fr.unesco.org/mab,Institution,,
+foret-naturalite,https://www.foret-naturalite.be/dossiers/,Media,,
+my,https://my.sendinblue.com/users/subscribe/js_id/3mr5e/id/1,Media,,
+garance-voyageuse,https://garance-voyageuse.org/,Media,,
+snpn,https://www.snpn.com/lecourrierdelanature/,Media,,
+fondationfrancoissommer,https://fondationfrancoissommer.org/#,Media,,
+salamandre,https://www.salamandre.org/,Media,,
+kaizen-magazine,https://kaizen-magazine.com/,Media,,
+socialter,https://www.socialter.fr/,Media,,
+sans-transition-magazine,https://www.sans-transition-magazine.info/,Media,,
+lezephyrmag,https://www.lezephyrmag.com/,Media,,
+inpn,https://inpn.mnhn.fr/programme/trame-verte-et-bleue/carte-nationale,,,
+inpn,https://inpn.mnhn.fr/programme/trame-verte-et-bleue/carte-nationale,Publications,,
+lacorneille,https://lacorneille.kessel.media/posts?ref=2847ac21-4788-46c4-9e8b-95f1e4c7561f&landing=true,Media,,
+mooc-biodiversite,https://www.mooc-biodiversite.com/,Media,,
+infos,https://infos.ademe.fr/magazine-mars-2023/dossier/?utm_campaign=Newsletter_ADEME_ACTUS_352&utm_source=Connect&utm_medium=email,Publications,,
+engager-pour-la-nature,https://engager-pour-la-nature.netlify.app,Association,,
+ASPAS,https://aspas-reserves-vie-sauvage.org/havre-vie-sauvage/,Association,,
+opensourcegardens,https://opensourcegardens.info/,,,
+createurdeforet,https://www.createurdeforet.fr,Institution,,
+prosilva,https://prosilva.fr/,Institution,,
+semeursdeforets,https://semeursdeforets.org/,Association,,
+Semeurs de forêts,https://www.goodreads.com/book/show/124033525-semeurs-de-for-ts?ac=1&from_search=true&qid=NBPFKLQ7qZ&rank=1,Livre,forets|carbon-capture,
+laforetbouge,https://www.laforetbouge.fr/,Institution,,
+gvSIG,http://www.gvsig.com/en,Communauté,open-data|geomatics,
+Aldo Carbone,https://aldo-carbone.ademe.fr,Institution,open-data|carbon capture,Outil d'évaluation/reporting des capacité de captation carbone des communes françaises
+DVF,https://app.dvf.etalab.gouv.fr/,Institution,open-data|cadastre,
+Cadastre,https://cadastre.data.gouv.fr/,Institution,open-data|cadastre,
+Pappers Immobilier,https://immobilier.pappers.fr,Entreprise,open-data|cadastre|estate,
+StreetPress,https://www.streetpress.com/,Média,politics|far-right|democracy,
+Le Media,https://www.lemediatv.fr/,Média,politics|democracy,
+Global Energy Monitor,https://globalenergymonitor.org/projects/global-gas-plant-tracker/,Association,gas|power|open-data|studies,
+Capa Réseau,https://www.capareseau.fr/,Association,electricity|open-data,
+Calm Tech,https://calmtech.com/,Entreprise,alternatives|design|calm-tech,Site web (et entreprise) qui promeut la calm tech, sous l'angle du design.
+Interaktiv,https://interaktiv.morgenpost.de/klimawandel-hitze-meeresspiegel-wassermangel-stuerme-unbewohnbar/en.html,,map|climate|uninhabitability,Carte des zones qui deviendront inhabitables à cause du dérèglement climatique.
+Calm Code,https://calmcode.io,Community,open-source|tech|tips|calm-tech,Dépot de ressources en communs, par des personnes de la tech qui préfèrent du contenu épuré, utile et simple, que la course à la hype.
+Open Route Service,https://openrouteservice.org/,Community,open-source|map|itinerary,
+Bruegel,https://www.bruegel.org,Media,EU|europe|economics|regulation,
+Kai Zenner,https://www.kaizenner.eu,Individual,EU|europe|AI|economics|regulation,
+Liberty Rider,https://liberty-rider.com/,,motorbike|map,
+Hourrail,https://www.hourrail.voyage/,Entreprise,train|map,
+Kurviger,https://kurviger.de,,map|car|sail|boat,
+Mollow,https://www.mollow.eu/,Entreprise,train|sail|boat|map,
+Hexplo,https://app.hexplo.fr/,Entreprise,bike|train|map,
+Carte Graou,https://carto.graou.info/,,train|map,
+Nacht Zugkarte,https://nachtzugkarte.de/en/,,train|map,
+Transport Data Gouv,https://transport.data.gouv.fr/,,open-data|train,
+Villes Cyclables,https://villes-cyclables.org/le-club/les-adherents-des-territoires-engages-pour-le-velo#list,,open-data|bike,
+Baromètre Parlons Vélo,https://barometre.parlons-velo.fr/2021/palmares/#5.4/46.789/2.222,,bike,
+Vélo Territoires,https://www.velo-territoires.org/schemas-itineraires/schema-europeen-eurovelo/,,bike|map,
+France Vélotourisme,https://www.francevelotourisme.com/itineraire,,bike|map,
+Af3v,https://www.af3v.org/,,bike,
+Pistes cyclables sur OpenStreetMap,https://www.openstreetmap.org/#map=11/47.3621/-2.3373&layers=C,,bike|map|open-data,Pistes cyclables sur OpenStreetMap
+Aménagements Cyclables,https://www.amenagements-cyclables.fr/fr/stats,,bike|map,
+Documentation pistes cyclables OpenStreetMap,https://wiki.openstreetmap.org/wiki/France/Itin%C3%A9raires_cyclable,,bike|map|open-data,
+La Trace,https://www.latrace.com/,,bike|train,
+Zoom Earth,https://zoom.earth,,weather|map,
+Météo & Radar,https://www.meteoetradar.com/,,weather,
+The European Correspondent,https://www.europeancorrespondent.com,Media,EU|europe|politics,
+La Fresque du Climat,https://fresqueduclimat.org/,Association,climate|fresk|sensitization|game,
+Climate Change Tracker,https://climatechangetracker.org/igcc,Community,climate|dataviz,
+Empreinte,https://empreinte.castoretpollux.com/en/,Community,ecodesign|climate|calmtech,Support interractif de recommendations pour écoconcevoir concrêtement un site web.
+Solidaires Informatique,https://solidairesinformatique.org/,Syndicate,politics|workers-rights|tech,Syndicat des travailleurs⋅euses du numérique 💾 du conseil 🖥️ et du jeu vidéo 🕹️.
 Wikirate,https://wikirate.org,Association,esg|open-data,Open-data and open research community focussed on companies ESG data
 Résistance à l'Agression Publicitaire,https://antipub.org/,Association,advertisement|politics,Association de lutte contre le système publicitaire
 VillageOne,https://www.village.one/,Entreprise,tech|calm-tech|ecodesign,A team of researchers designers and software engineers working with clients big and small on solving digital challenges towards economic and social justice
