@@ -1,6 +1,6 @@
 ---
 title: "Le \"Numérique Responsable\" a échoué, mais c'était prévisible."
-date: 2025-02-11T16:00:00+02:00
+date: 2025-02-14T09:00:00+02:00
 tags:
   - numérique responsable
   - greenIT
@@ -20,7 +20,7 @@ author: Benoit Petit
 
 _**Disclaimer** : je crois que l’interdisciplinarité est essentielle pour comprendre les enjeux actuels et futurs. S’y essayer apporte forcément son lot d’erreurs et d’approximations, puisque l’on ne peut pas être spécialiste de tout. Je vais m’y essayer dans cet article et ferai donc certainement des erreurs. Dans le cadre d’un débat apaisé et constructif je serai à l’écoute des critiques et tâcherai d’amender cet article par la suite si nécessaire en citant la personne concernée._
 
-_Merci: aux relecteur-ice-s pour leurs précieux conseils, Lorraine De Montenay, Muleine Su Lim, Laurent Eskenazi, Cécile Diguet, Gillo Alain Malpart_
+_Merci: aux relecteur-ice-s pour leurs précieux conseils, Lorraine De Montenay, Muleine Su Lim, Laurent Eskenazi, Cécile Diguet, Gillo Alain Malpart, Adeline Agut_
 
 ## Introduction
 
