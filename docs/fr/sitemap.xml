@@ -3,7 +3,7 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://bpetit.nce.re/fr/</loc>
-    <lastmod>2021-08-09T10:02:24+02:00</lastmod>
+    <lastmod>2025-02-14T09:00:00+02:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -16,7 +16,70 @@
                 />
   </url><url>
     <loc>https://bpetit.nce.re/fr/tags/climat/</loc>
-    <lastmod>2021-08-09T10:02:24+02:00</lastmod>
+    <lastmod>2025-02-14T09:00:00+02:00</lastmod>
+  </url><url>
+    <loc>https://bpetit.nce.re/fr/tags/engagement/</loc>
+    <lastmod>2025-02-14T09:00:00+02:00</lastmod>
+  </url><url>
+    <loc>https://bpetit.nce.re/fr/tags/environnement/</loc>
+    <lastmod>2025-02-14T09:00:00+02:00</lastmod>
+  </url><url>
+    <loc>https://bpetit.nce.re/fr/tags/greenit/</loc>
+    <lastmod>2025-02-14T09:00:00+02:00</lastmod>
+  </url><url>
+    <loc>https://bpetit.nce.re/fr/2025/02/le-num%C3%A9rique-responsable-a-%C3%A9chou%C3%A9-mais-c%C3%A9tait-pr%C3%A9visible./</loc>
+    <lastmod>2025-02-14T09:00:00+02:00</lastmod>
+  </url><url>
+    <loc>https://bpetit.nce.re/fr/tags/num%C3%A9rique-responsable/</loc>
+    <lastmod>2025-02-14T09:00:00+02:00</lastmod>
+  </url><url>
+    <loc>https://bpetit.nce.re/fr/tags/politique/</loc>
+    <lastmod>2025-02-14T09:00:00+02:00</lastmod>
+  </url><url>
+    <loc>https://bpetit.nce.re/fr/posts/</loc>
+    <lastmod>2025-02-14T09:00:00+02:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://bpetit.nce.re/posts/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="fr"
+                href="https://bpetit.nce.re/fr/posts/"
+                />
+  </url><url>
+    <loc>https://bpetit.nce.re/fr/tags/rse/</loc>
+    <lastmod>2025-02-14T09:00:00+02:00</lastmod>
+  </url><url>
+    <loc>https://bpetit.nce.re/fr/tags/sobri%C3%A9t%C3%A9/</loc>
+    <lastmod>2025-02-14T09:00:00+02:00</lastmod>
+  </url><url>
+    <loc>https://bpetit.nce.re/fr/tags/</loc>
+    <lastmod>2025-02-14T09:00:00+02:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://bpetit.nce.re/tags/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="fr"
+                href="https://bpetit.nce.re/fr/tags/"
+                />
+  </url><url>
+    <loc>https://bpetit.nce.re/fr/tags/tech/</loc>
+    <lastmod>2025-02-14T09:00:00+02:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://bpetit.nce.re/tags/tech/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="fr"
+                href="https://bpetit.nce.re/fr/tags/tech/"
+                />
   </url><url>
     <loc>https://bpetit.nce.re/fr/2021/08/climat-et-num%C3%A9rique-pourquoi-le-mouvement-devops-a-un-r%C3%B4le-%C3%A0-jouer/</loc>
     <lastmod>2021-08-09T10:02:24+02:00</lastmod>
@@ -34,29 +97,7 @@
                 href="https://bpetit.nce.re/fr/tags/devops/"
                 />
   </url><url>
-    <loc>https://bpetit.nce.re/fr/tags/environnement/</loc>
-    <lastmod>2021-08-09T10:02:24+02:00</lastmod>
-  </url><url>
-    <loc>https://bpetit.nce.re/fr/posts/</loc>
-    <lastmod>2021-08-09T10:02:24+02:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://bpetit.nce.re/posts/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="fr"
-                href="https://bpetit.nce.re/fr/posts/"
-                />
-  </url><url>
-    <loc>https://bpetit.nce.re/fr/tags/rse/</loc>
-    <lastmod>2021-08-09T10:02:24+02:00</lastmod>
-  </url><url>
     <loc>https://bpetit.nce.re/fr/tags/slo/</loc>
-    <lastmod>2021-08-09T10:02:24+02:00</lastmod>
-  </url><url>
-    <loc>https://bpetit.nce.re/fr/tags/sobri%C3%A9t%C3%A9/</loc>
     <lastmod>2021-08-09T10:02:24+02:00</lastmod>
   </url><url>
     <loc>https://bpetit.nce.re/fr/tags/sre/</loc>
@@ -70,32 +111,6 @@
                 rel="alternate"
                 hreflang="fr"
                 href="https://bpetit.nce.re/fr/tags/sre/"
-                />
-  </url><url>
-    <loc>https://bpetit.nce.re/fr/tags/</loc>
-    <lastmod>2021-08-09T10:02:24+02:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://bpetit.nce.re/tags/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="fr"
-                href="https://bpetit.nce.re/fr/tags/"
-                />
-  </url><url>
-    <loc>https://bpetit.nce.re/fr/tags/tech/</loc>
-    <lastmod>2021-08-09T10:02:24+02:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://bpetit.nce.re/tags/tech/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="fr"
-                href="https://bpetit.nce.re/fr/tags/tech/"
                 />
   </url><url>
     <loc>https://bpetit.nce.re/fr/tags/automatisation/</loc>

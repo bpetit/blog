@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 <html lang="en" itemscope itemtype="http://schema.org/WebPage">
   <head>
@@ -7,24 +9,33 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
 
-  <title>Automating web applications proxying, DNS registration and TLS termination with ansible - Benoit Petit</title>
+ 
+
+
+      <title>Automating web applications proxying, DNS registration and TLS termination with ansible - </title>
+
   <meta name="description" content="For the needs of an incoming project, that I&rsquo;ll describe in a later post, I needed to automate public access configuration for existing web applications. In other words, I needed to automate, proxy vhost configuration, tls termination and dns registration on a given domain. What is presented here has been used on a simple libvirt/KVM architecture (managed as described in my latest post).
 The workflow is this one:
-deploy the DNS entry deploy nginx vhost for the given webapp and domain name (allowing access to .">
-  <meta name="author" content="Benoit Petit"/><script type="application/ld+json">
+
+deploy the DNS entry
+deploy nginx vhost for the given webapp and domain name (allowing access to .well-known directory for letsencrypt http based authentication and authorization)
+ask for letsencrypt certificate
+retrieve certificate and configure tcp/443 vhost with tls
+
+Here are the components I used:"><script type="application/ld+json">
 {
     "@context": "http://schema.org",
     "@type": "WebSite",
     "name": "Benoit Petit",
     
-    "url": "https:\/\/bpetit.nce.re"
+    "url": "https:\/\/bpetit.nce.re\/"
 }
 </script><script type="application/ld+json">
 {
   "@context": "http://schema.org",
   "@type": "Organization",
   "name": "",
-  "url": "https:\/\/bpetit.nce.re"
+  "url": "https:\/\/bpetit.nce.re\/"
   
   
   
@@ -39,7 +50,7 @@ deploy the DNS entry deploy nginx vhost for the given webapp and domain name (al
         "@type": "ListItem",
         "position": 1,
         "item": {
-          "@id": "https:\/\/bpetit.nce.re",
+          "@id": "https:\/\/bpetit.nce.re\/",
           "name": "home"
         }
     },{
@@ -59,20 +70,20 @@ deploy the DNS entry deploy nginx vhost for the given webapp and domain name (al
     "name" : "Benoit Petit"
   },
   "headline": "Automating web applications proxying, DNS registration and TLS termination with ansible",
-  "description" : "For the needs of an incoming project, that I\u0026rsquo;ll describe in a later post, I needed to automate public access configuration for existing web applications. In other words, I needed to automate, proxy vhost configuration, tls termination and dns registration on a given domain. What is presented here has been used on a simple libvirt\/KVM architecture (managed as described in my latest post).\nThe workflow is this one:\ndeploy the DNS entry deploy nginx vhost for the given webapp and domain name (allowing access to .",
+  "description" : "For the needs of an incoming project, that I\u0026rsquo;ll describe in a later post, I needed to automate public access configuration for existing web applications. In other words, I needed to automate, proxy vhost configuration, tls termination and dns registration on a given domain. What is presented here has been used on a simple libvirt\/KVM architecture (managed as described in my latest post).\nThe workflow is this one:\ndeploy the DNS entry deploy nginx vhost for the given webapp and domain name (allowing access to .well-known directory for letsencrypt http based authentication and authorization) ask for letsencrypt certificate retrieve certificate and configure tcp\/443 vhost with tls Here are the components I used:\n",
   "inLanguage" : "en",
   "wordCount":  1697 ,
-  "datePublished" : "2018-03-17T20:12:45",
-  "dateModified" : "2018-03-17T20:12:45",
-  "image" : "https:\/\/bpetit.nce.re",
+  "datePublished" : "2018-03-17T20:12:45\u002b02:00",
+  "dateModified" : "2018-03-17T20:12:45\u002b02:00",
+  "image" : "https:\/\/bpetit.nce.re\/",
   "keywords" : [ "automation, cd, ansible, dns, letsencrypt, knot, tls" ],
   "mainEntityOfPage" : "https:\/\/bpetit.nce.re\/2018\/03\/automating-web-applications-proxying-dns-registration-and-tls-termination-with-ansible\/",
   "publisher" : {
     "@type": "Organization",
-    "name" : "https:\/\/bpetit.nce.re",
+    "name" : "https:\/\/bpetit.nce.re\/",
     "logo" : {
         "@type" : "ImageObject",
-        "url" : "https:\/\/bpetit.nce.re",
+        "url" : "https:\/\/bpetit.nce.re\/",
         "height" :  60 ,
         "width" :  60
     }
@@ -80,25 +91,30 @@ deploy the DNS entry deploy nginx vhost for the given webapp and domain name (al
 }
 </script>
 
+
 <meta property="og:title" content="Automating web applications proxying, DNS registration and TLS termination with ansible" />
 <meta property="og:description" content="For the needs of an incoming project, that I&rsquo;ll describe in a later post, I needed to automate public access configuration for existing web applications. In other words, I needed to automate, proxy vhost configuration, tls termination and dns registration on a given domain. What is presented here has been used on a simple libvirt/KVM architecture (managed as described in my latest post).
 The workflow is this one:
-deploy the DNS entry deploy nginx vhost for the given webapp and domain name (allowing access to .">
+
+deploy the DNS entry
+deploy nginx vhost for the given webapp and domain name (allowing access to .well-known directory for letsencrypt http based authentication and authorization)
+ask for letsencrypt certificate
+retrieve certificate and configure tcp/443 vhost with tls
+
+Here are the components I used:">
 <meta property="og:url" content="https://bpetit.nce.re/2018/03/automating-web-applications-proxying-dns-registration-and-tls-termination-with-ansible/" />
 <meta property="og:type" content="website" />
 <meta property="og:site_name" content="Benoit Petit" />
 
   <meta name="twitter:title" content="Automating web applications proxying, DNS registration and TLS …" />
   <meta name="twitter:description" content="For the needs of an incoming project, that I&rsquo;ll describe in a later post, I needed to automate public access configuration for existing web applications. In other words, I needed to automate, …">
-  <meta name="twitter:card" content="summary" />
-  <meta name="generator" content="Hugo 0.117.0">
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="generator" content="Hugo 0.143.1">
   <link rel="alternate" href="https://bpetit.nce.re/index.xml" type="application/rss+xml" title="Benoit Petit"><link rel="stylesheet" href="https://bpetit.nce.re/css/katex.min.css" />
   <link rel="stylesheet" href="https://bpetit.nce.re/fontawesome/css/all.css" />
   <link rel="stylesheet" href="https://bpetit.nce.re/css/bootstrap.min.css" /><link rel="stylesheet" href="https://bpetit.nce.re/css/main.css" /><link rel="stylesheet" href="https://bpetit.nce.re/css/fonts.css" /><link rel="stylesheet" href="https://bpetit.nce.re/css/syntax.css" /><link rel="stylesheet" href="https://bpetit.nce.re/css/codeblock.css" /><link rel="stylesheet" href="https://bpetit.nce.re/css/photoswipe.min.css" />
   <link rel="stylesheet" href="https://bpetit.nce.re/css/photoswipe.default-skin.min.css" /><link href="/tabulator-6.2.5/dist/css/tabulator.min.css" rel="stylesheet">
 <script type="text/javascript" src="/tabulator-6.2.5/dist/js/tabulator.min.js"></script>
-
-
 
   </head>
   <body>
@@ -111,7 +127,7 @@ deploy the DNS entry deploy nginx vhost for the given webapp and domain name (al
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="https://bpetit.nce.re">Benoit Petit</a>
+      <a class="navbar-brand" href="https://bpetit.nce.re/">Benoit Petit</a>
     </div>
 
     <div class="collapse navbar-collapse" id="main-navbar">
@@ -133,12 +149,6 @@ deploy the DNS entry deploy nginx vhost for the given webapp and domain name (al
         
           
             <li>
-              
-                
-              
-                
-                  <a href="/fr" lang="fr">Français</a>
-                
               
             </li>
           
@@ -217,6 +227,7 @@ deploy the DNS entry deploy nginx vhost for the given webapp and domain name (al
 
   <header class="header-section ">
     
+    
     <div class="intro-header no-img">
       <div class="container">
         <div class="row">
@@ -235,6 +246,7 @@ deploy the DNS entry deploy nginx vhost for the given webapp and domain name (al
         </div>
       </div>
     </div>
+  
   </header>
 
 
@@ -410,7 +422,7 @@ deploy the DNS entry deploy nginx vhost for the given webapp and domain name (al
 <li>ensure nginx is reloaded to consider our changes</li>
 </ul>
 <h2 id="3-nginx-configuration">3. Nginx configuration</h2>
-<p>I use this role: <a href="https://github.com/bpetit/Stouts.nginx">https://github.com/bpetit/Stouts.nginx</a> which is a fork (of <a href="https://github.com/Stouts/Stouts.nginx)">https://github.com/Stouts/Stouts.nginx)</a>. Same as earlier, next steps include proposing a PR with my changes, and resynchronize with upstream. I only wanted to permit inclusion of external templates for vhost configurations. (Templates are called by the <code>nginx_templatized_vhosts</code> variable in the host vars file)</p>
+<p>I use this role: <a href="https://github.com/bpetit/Stouts.nginx">https://github.com/bpetit/Stouts.nginx</a> which is a fork (of <a href="https://github.com/Stouts/Stouts.nginx%29">https://github.com/Stouts/Stouts.nginx)</a>. Same as earlier, next steps include proposing a PR with my changes, and resynchronize with upstream. I only wanted to permit inclusion of external templates for vhost configurations. (Templates are called by the <code>nginx_templatized_vhosts</code> variable in the host vars file)</p>
 <h2 id="4-letsencrypt-validation-and-deployment">4. Letsencrypt validation and deployment</h2>
 <p>In the same main playbook I include a tasks file dedicated to this part, with the domain list as a parameter:</p>
 <div class="highlight"><pre tabindex="0" style="color:#d0d0d0;background-color:#202020;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span>- <span style="color:#6ab825;font-weight:bold">hosts</span>:<span style="color:#666"> </span>proxy<span style="color:#666">
@@ -478,18 +490,25 @@ Conclusion</p>
         
           <div class="blog-tags">
             
+              
               <a href="https://bpetit.nce.re/tags/automation/">automation</a>&nbsp;
             
+              
               <a href="https://bpetit.nce.re/tags/cd/">cd</a>&nbsp;
             
+              
               <a href="https://bpetit.nce.re/tags/ansible/">ansible</a>&nbsp;
             
+              
               <a href="https://bpetit.nce.re/tags/dns/">dns</a>&nbsp;
             
+              
               <a href="https://bpetit.nce.re/tags/letsencrypt/">letsencrypt</a>&nbsp;
             
+              
               <a href="https://bpetit.nce.re/tags/knot/">knot</a>&nbsp;
             
+              
               <a href="https://bpetit.nce.re/tags/tls/">tls</a>&nbsp;
             
           </div>
@@ -522,69 +541,18 @@ Conclusion</p>
   </div>
 </div>
 
-      
-<footer>
+      <footer>
   <div class="container">
+    
     <div class="row">
       <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
         <ul class="list-inline text-center footer-links">
           
-              <li>
-                <a href="mailto:bpetit@nce.re" title="Email me">
-                  <span class="fa-stack fa-lg">
-                    <i class="fas fa-circle fa-stack-2x"></i>
-                    <i class="fas fa-envelope fa-stack-1x fa-inverse"></i>
-                  </span>
-                </a>
-              </li>
-              <li>
-                <a href="https://github.com/bpetit" title="GitHub">
-                  <span class="fa-stack fa-lg">
-                    <i class="fas fa-circle fa-stack-2x"></i>
-                    <i class="fab fa-github fa-stack-1x fa-inverse"></i>
-                  </span>
-                </a>
-              </li>
-              <li>
-                <a href="https://gitlab.com/bpetit1" title="GitLab">
-                  <span class="fa-stack fa-lg">
-                    <i class="fas fa-circle fa-stack-2x"></i>
-                    <i class="fab fa-gitlab fa-stack-1x fa-inverse"></i>
-                  </span>
-                </a>
-              </li>
-              <li>
-                <a href="https://linkedin.com/in/bepetit" title="LinkedIn">
-                  <span class="fa-stack fa-lg">
-                    <i class="fas fa-circle fa-stack-2x"></i>
-                    <i class="fab fa-linkedin fa-stack-1x fa-inverse"></i>
-                  </span>
-                </a>
-              </li>
-              <li>
-                <a href="https://mastodon.green/@bpetit" title="Mastodon">
-                  <span class="fa-stack fa-lg">
-                    <i class="fas fa-circle fa-stack-2x"></i>
-                    <i class="fab fa-mastodon fa-stack-1x fa-inverse"></i>
-                  </span>
-                </a>
-              </li>
           
-          <li>
-            <a href="" title="RSS">
-              <span class="fa-stack fa-lg">
-                <i class="fas fa-circle fa-stack-2x"></i>
-                <i class="fas fa-rss fa-stack-1x fa-inverse"></i>
-              </span>
-            </a>
-          </li>
+          
           
         </ul>
         <p class="credits copyright text-muted">
-          
-            
-              Benoit Petit
-            
           
 
           &nbsp;&bull;&nbsp;&copy;
@@ -594,24 +562,25 @@ Conclusion</p>
 
           
             &nbsp;&bull;&nbsp;
-            <a href="https://bpetit.nce.re">Benoit Petit</a> on <a rel="me" href="https://mastodon.green/@bpetit">Mastodon</a>
+            <a href="https://bpetit.nce.re/">Benoit Petit</a> on <a rel="me" href="https://mastodon.green/@bpetit">Mastodon</a>
           
         </p>
         
         <p class="credits theme-by text-muted">
-          <a href="https://gohugo.io">Hugo v0.117.0</a> powered &nbsp;&bull;&nbsp; Theme <a href="https://github.com/halogenica/beautifulhugo">Beautiful Hugo</a> adapted from <a href="https://deanattali.com/beautiful-jekyll/">Beautiful Jekyll</a>
+          <a href="https://gohugo.io">Hugo v0.143.1</a> powered &nbsp;&bull;&nbsp; Theme <a href="https://github.com/halogenica/beautifulhugo">Beautiful Hugo</a> adapted from <a href="https://deanattali.com/beautiful-jekyll/">Beautiful Jekyll</a>
           
         </p>
       </div>
     </div>
   </div>
-</footer><script src="https://bpetit.nce.re/js/katex.min.js"></script>
-<script src="https://bpetit.nce.re/js/auto-render.min.js"></script>
-<script src="https://bpetit.nce.re/js/jquery.min.js"></script>
+</footer><script defer src="https://bpetit.nce.re/js/katex.min.js"></script>
+<script defer src="https://bpetit.nce.re/js/auto-render.min.js" onload="renderMathInElement(document.body);"></script>
+<script src="https://bpetit.nce.re/js/jquery-3.7.0.slim.min.js"></script>
 <script src="https://bpetit.nce.re/js/bootstrap.min.js"></script>
 
-<script src="https://bpetit.nce.re/js/main.js"></script><script> renderMathInElement(document.body); </script><script src="https://bpetit.nce.re/js/photoswipe.min.js"></script>
+<script src="https://bpetit.nce.re/js/main.js"></script><script src="https://bpetit.nce.re/js/photoswipe.min.js"></script>
 <script src="https://bpetit.nce.re/js/photoswipe-ui-default.min.js"></script><script src="https://bpetit.nce.re/js/load-photoswipe.js"></script>
+
 
 
 

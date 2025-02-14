@@ -1,33 +1,26 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>debian on Benoit Petit</title>
+    <title>Debian on Benoit Petit</title>
     <link>https://bpetit.nce.re/tags/debian/</link>
-    <description>Recent content in debian on Benoit Petit</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <description>Recent content in Debian on Benoit Petit</description>
+    <generator>Hugo</generator>
     <language>en</language>
-    <managingEditor>bpetit@nce.re (Benoit Petit)</managingEditor>
-    <webMaster>bpetit@nce.re (Benoit Petit)</webMaster>
-    <lastBuildDate>Fri, 01 Sep 2017 19:44:12 +0200</lastBuildDate><atom:link href="https://bpetit.nce.re/tags/debian/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 01 Sep 2017 19:44:12 +0200</lastBuildDate>
+    <atom:link href="https://bpetit.nce.re/tags/debian/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Automate your virtual machine templates creation with Packer</title>
       <link>https://bpetit.nce.re/2017/09/automate-your-virtual-machine-templates-creation-with-packer/</link>
       <pubDate>Fri, 01 Sep 2017 19:44:12 +0200</pubDate>
-      <author>bpetit@nce.re (Benoit Petit)</author>
       <guid>https://bpetit.nce.re/2017/09/automate-your-virtual-machine-templates-creation-with-packer/</guid>
-      <description>Context If you operate an IaaS infrastructure, either private (OpenStack, OpenNebula, &amp;hellip;) or public cloud (AWS, GCP, &amp;hellip;), you certainly already wondered how to properly bootstrap your first virtual machines templates. IaaS solutions are often linked to a public repository of basic virtual machines images that can be used to quickly start deploying instances. If this is good for initial tests, it&amp;rsquo;s not that safe to bootstrap all your instances from a guest operating system someone you don&amp;rsquo;t has built for you.</description>
+      <description>&lt;h2 id=&#34;context&#34;&gt;Context&lt;/h2&gt;&#xA;&lt;p&gt;If you operate an IaaS infrastructure, either private (OpenStack, OpenNebula, &amp;hellip;) or public cloud (AWS, GCP, &amp;hellip;), you certainly already wondered how to properly bootstrap your first virtual machines templates. IaaS solutions are often linked to a public repository of basic virtual machines images that can be used to quickly start deploying instances. If this is good for initial tests, it&amp;rsquo;s not that safe to bootstrap all your instances from a guest operating system someone you don&amp;rsquo;t has built for you. You then certainly want to build your own images and you want that part to be automated to (why running a fully automated infrastructure and still provisioning guest OS by hand ?). Why not use PXE for this ? Well, you&amp;rsquo;d have to deploy and maintain a dhcp and http server just for that purpose. Deploying new distributions and their releases on that server is not that cumfortable neither.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Make Ansible Run on Debian 9</title>
       <link>https://bpetit.nce.re/2017/07/make-ansible-run-on-debian-9/</link>
       <pubDate>Thu, 27 Jul 2017 21:44:12 +0200</pubDate>
-      <author>bpetit@nce.re (Benoit Petit)</author>
       <guid>https://bpetit.nce.re/2017/07/make-ansible-run-on-debian-9/</guid>
-      <description>How to make ansible run on debian 9 ? Ansible version running: 2.3.1.0
-Recently I upgraded personnal servers to debian stretch, as it is the new stable version. By default, the only python version installed on stretch is python3 which is not ok for ansible playbooks to execute properly. I already met that kind of issue (like everyone else) on Ubuntu above version 16.04.
-Obviously the solution is to install python2.</description>
+      <description>&lt;h2 id=&#34;how-to-make-ansible-run-on-debian-9-&#34;&gt;How to make ansible run on debian 9 ?&lt;/h2&gt;&#xA;&lt;p&gt;Ansible version running: 2.3.1.0&lt;/p&gt;&#xA;&lt;p&gt;Recently I upgraded personnal servers to debian stretch, as it is the new stable version. By default, the only python version installed on stretch is python3 which is not ok for ansible playbooks to execute properly. I already met that kind of issue (like everyone else) on Ubuntu above version 16.04.&lt;/p&gt;&#xA;&lt;p&gt;Obviously the solution is to install python2.7 before running playbooks. I prefer to do that with ansible, so I have to avoid gathering_facts and run a dirty raw task on the remote host:&lt;/p&gt;</description>
     </item>
-    
   </channel>
 </rss>

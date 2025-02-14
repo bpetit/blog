@@ -1,22 +1,19 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>packer on Benoit Petit</title>
+    <title>Packer on Benoit Petit</title>
     <link>https://bpetit.nce.re/tags/packer/</link>
-    <description>Recent content in packer on Benoit Petit</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <description>Recent content in Packer on Benoit Petit</description>
+    <generator>Hugo</generator>
     <language>en</language>
-    <managingEditor>bpetit@nce.re (Benoit Petit)</managingEditor>
-    <webMaster>bpetit@nce.re (Benoit Petit)</webMaster>
-    <lastBuildDate>Fri, 01 Sep 2017 19:44:12 +0200</lastBuildDate><atom:link href="https://bpetit.nce.re/tags/packer/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 01 Sep 2017 19:44:12 +0200</lastBuildDate>
+    <atom:link href="https://bpetit.nce.re/tags/packer/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Automate your virtual machine templates creation with Packer</title>
       <link>https://bpetit.nce.re/2017/09/automate-your-virtual-machine-templates-creation-with-packer/</link>
       <pubDate>Fri, 01 Sep 2017 19:44:12 +0200</pubDate>
-      <author>bpetit@nce.re (Benoit Petit)</author>
       <guid>https://bpetit.nce.re/2017/09/automate-your-virtual-machine-templates-creation-with-packer/</guid>
-      <description>Context If you operate an IaaS infrastructure, either private (OpenStack, OpenNebula, &amp;hellip;) or public cloud (AWS, GCP, &amp;hellip;), you certainly already wondered how to properly bootstrap your first virtual machines templates. IaaS solutions are often linked to a public repository of basic virtual machines images that can be used to quickly start deploying instances. If this is good for initial tests, it&amp;rsquo;s not that safe to bootstrap all your instances from a guest operating system someone you don&amp;rsquo;t has built for you.</description>
+      <description>&lt;h2 id=&#34;context&#34;&gt;Context&lt;/h2&gt;&#xA;&lt;p&gt;If you operate an IaaS infrastructure, either private (OpenStack, OpenNebula, &amp;hellip;) or public cloud (AWS, GCP, &amp;hellip;), you certainly already wondered how to properly bootstrap your first virtual machines templates. IaaS solutions are often linked to a public repository of basic virtual machines images that can be used to quickly start deploying instances. If this is good for initial tests, it&amp;rsquo;s not that safe to bootstrap all your instances from a guest operating system someone you don&amp;rsquo;t has built for you. You then certainly want to build your own images and you want that part to be automated to (why running a fully automated infrastructure and still provisioning guest OS by hand ?). Why not use PXE for this ? Well, you&amp;rsquo;d have to deploy and maintain a dhcp and http server just for that purpose. Deploying new distributions and their releases on that server is not that cumfortable neither.&lt;/p&gt;</description>
     </item>
-    
   </channel>
 </rss>
