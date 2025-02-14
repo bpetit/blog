@@ -2,33 +2,33 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Cloud on Benoit Petit</title>
-    <link>http://localhost:1313/tags/cloud/</link>
+    <link>https://bpetit.nce.re/tags/cloud/</link>
     <description>Recent content in Cloud on Benoit Petit</description>
     <generator>Hugo</generator>
     <language>en</language>
     <managingEditor>bpetit@nce.re (Benoit Petit)</managingEditor>
     <webMaster>bpetit@nce.re (Benoit Petit)</webMaster>
     <lastBuildDate>Wed, 20 Jan 2021 11:10:24 +0200</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/cloud/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://bpetit.nce.re/tags/cloud/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Scaphandre v0.1.1: measuring the energy consumption of the tech industry (backstages)</title>
-      <link>http://localhost:1313/2021/01/scaphandre-v0.1.1-measuring-the-energy-consumption-of-the-tech-industry-backstages/</link>
+      <link>https://bpetit.nce.re/2021/01/scaphandre-v0.1.1-measuring-the-energy-consumption-of-the-tech-industry-backstages/</link>
       <pubDate>Wed, 20 Jan 2021 11:10:24 +0200</pubDate><author>bpetit@nce.re (Benoit Petit)</author>
-      <guid>http://localhost:1313/2021/01/scaphandre-v0.1.1-measuring-the-energy-consumption-of-the-tech-industry-backstages/</guid>
-      <description>&lt;p&gt;&lt;img src=&#34;http://localhost:1313/scaphandre.large.cleaned.png&#34; alt=&#34;scaphandre&#34;&gt;&lt;/p&gt;&#xA;&lt;h2 id=&#34;the-roots-of-the-project&#34;&gt;The roots of the project&lt;/h2&gt;&#xA;&lt;p&gt;As many other tech workers in startups, I&amp;rsquo;ve worked on pretty large scale projects (even if that&amp;rsquo;s subjective). I&amp;rsquo;m talking about projects involving machine learning, for example, that are often about showing the right advertisment to the right person at the right moment. Training the machine learning models for that requires a lot of resources (CPU, RAM, GPU, etc.). The same is true with APIs that are in charge of collecting data from the clients (the data will very often be used to train the ML models). Those APIs, depending on how many clients are contacting them, will receive up to several billions requests per day (or even more, but I only speak about what I&amp;rsquo;ve seen).&lt;/p&gt;</description>
+      <guid>https://bpetit.nce.re/2021/01/scaphandre-v0.1.1-measuring-the-energy-consumption-of-the-tech-industry-backstages/</guid>
+      <description>As many other tech workers in startups, I&amp;rsquo;ve worked on pretty large scale projects (even if that&amp;rsquo;s subjective). I&amp;rsquo;m talking about projects involving machine learning, for example, that are often about showing the right advertisment to the right person at the right moment. Training the machine learning models for that requires a lot of resources (CPU, RAM, GPU, etc.). The same is true with APIs that are in charge of collecting data from the clients (the data will very often be used to train the ML models). Those APIs, depending on how many clients are contacting them, will receive up to several billions requests per day (or even more, but I only speak about what I&amp;rsquo;ve seen).</description>
     </item>
     <item>
       <title>How to build a simplistic private cloud piece by piece</title>
-      <link>http://localhost:1313/2017/11/how-to-build-a-simplistic-private-cloud-piece-by-piece/</link>
+      <link>https://bpetit.nce.re/2017/11/how-to-build-a-simplistic-private-cloud-piece-by-piece/</link>
       <pubDate>Tue, 21 Nov 2017 20:44:12 +0200</pubDate><author>bpetit@nce.re (Benoit Petit)</author>
-      <guid>http://localhost:1313/2017/11/how-to-build-a-simplistic-private-cloud-piece-by-piece/</guid>
+      <guid>https://bpetit.nce.re/2017/11/how-to-build-a-simplistic-private-cloud-piece-by-piece/</guid>
       <description>&lt;p&gt;I you are, like me, concerned about privacy, you may be the administrator of a few physical servers, either at home or rented to some dedicated server providers. Virtual machine instances (or VPS) bought in public clouds are great, but if you can&amp;rsquo;t configure yourself the underlying network and the hypervisors, where is the fun ? (just kidding, there is so much to do above a cloud-like infrastructure too). Here I&amp;rsquo;ll describe a little configuration I made for my own needs. The purpose is to deploy automatically (via ansible) virtual machines, and the networks they rely on, on multiple debian 9 kvm hypervisors. The result is really basic compared to the feature you can get, either from a public cloud service or from a fully configured and integrated private cloud software suite (let&amp;rsquo;s say OpenStack). The idea here is not to provide a full featured infrastructure, but to build a lightweight IaaS infrastructure, piece by piece. Here we will focus on virtual machines deployment and basic networking, virtual machines disks will be stored on hypervisors local hard drives (yeah, not so good for live migration, but let&amp;rsquo;s keep some fun for later).&lt;/p&gt;</description>
     </item>
     <item>
       <title>Automate your virtual machine templates creation with Packer</title>
-      <link>http://localhost:1313/2017/09/automate-your-virtual-machine-templates-creation-with-packer/</link>
+      <link>https://bpetit.nce.re/2017/09/automate-your-virtual-machine-templates-creation-with-packer/</link>
       <pubDate>Fri, 01 Sep 2017 19:44:12 +0200</pubDate><author>bpetit@nce.re (Benoit Petit)</author>
-      <guid>http://localhost:1313/2017/09/automate-your-virtual-machine-templates-creation-with-packer/</guid>
+      <guid>https://bpetit.nce.re/2017/09/automate-your-virtual-machine-templates-creation-with-packer/</guid>
       <description>&lt;h2 id=&#34;context&#34;&gt;Context&lt;/h2&gt;&#xA;&lt;p&gt;If you operate an IaaS infrastructure, either private (OpenStack, OpenNebula, &amp;hellip;) or public cloud (AWS, GCP, &amp;hellip;), you certainly already wondered how to properly bootstrap your first virtual machines templates. IaaS solutions are often linked to a public repository of basic virtual machines images that can be used to quickly start deploying instances. If this is good for initial tests, it&amp;rsquo;s not that safe to bootstrap all your instances from a guest operating system someone you don&amp;rsquo;t has built for you. You then certainly want to build your own images and you want that part to be automated to (why running a fully automated infrastructure and still provisioning guest OS by hand ?). Why not use PXE for this ? Well, you&amp;rsquo;d have to deploy and maintain a dhcp and http server just for that purpose. Deploying new distributions and their releases on that server is not that cumfortable neither.&lt;/p&gt;</description>
     </item>
   </channel>

@@ -2,27 +2,27 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tech on Benoit Petit</title>
-    <link>http://localhost:1313/tags/tech/</link>
+    <link>https://bpetit.nce.re/tags/tech/</link>
     <description>Recent content in Tech on Benoit Petit</description>
     <generator>Hugo</generator>
     <language>en</language>
     <managingEditor>bpetit@nce.re (Benoit Petit)</managingEditor>
     <webMaster>bpetit@nce.re (Benoit Petit)</webMaster>
     <lastBuildDate>Fri, 12 Mar 2021 10:22:24 +0200</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/tech/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://bpetit.nce.re/tags/tech/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>SRE methods and climate change</title>
-      <link>http://localhost:1313/2021/03/sre-methods-and-climate-change/</link>
+      <link>https://bpetit.nce.re/2021/03/sre-methods-and-climate-change/</link>
       <pubDate>Fri, 12 Mar 2021 10:22:24 +0200</pubDate><author>bpetit@nce.re (Benoit Petit)</author>
-      <guid>http://localhost:1313/2021/03/sre-methods-and-climate-change/</guid>
-      <description>&lt;p&gt;&lt;img src=&#34;http://localhost:1313/lizard.cleaned.jpg&#34; alt=&#34;A lezard&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;Site Reliability Engineering&amp;rsquo;s goal is to ensure that software systems and services that are created in an organization are made to evolve easily and especially to be &lt;strong&gt;extremely reliable&lt;/strong&gt;.&lt;/p&gt;&#xA;&lt;p&gt;To do that, many aspects of software engineering are applied to infrastructure topics. Those methods are born at Google and are increasingly popular since the release of the book &amp;ldquo;&lt;a href=&#34;https://sre.google/sre-book/table-of-contents/&#34;&gt;Site Reliability Engineering&lt;/a&gt;&amp;rdquo; in 2016.&lt;/p&gt;&#xA;&lt;h2 id=&#34;devops-sre-whats-the-difference-&#34;&gt;DevOps, SRE, what&amp;rsquo;s the difference ?&lt;/h2&gt;&#xA;&lt;p&gt;As we have used some buzzwords, let&amp;rsquo;s make it clearer before we move forward. If you are already familiar with DevOps and SRE methods, you can jump to the next &lt;a href=&#34;http://localhost:1313/2021/03/sre-methods-and-climate-change/#sli-slo-and-the-error-budget&#34;&gt;section&lt;/a&gt;.&lt;/p&gt;</description>
+      <guid>https://bpetit.nce.re/2021/03/sre-methods-and-climate-change/</guid>
+      <description>Site Reliability Engineering&amp;rsquo;s goal is to ensure that software systems and services that are created in an organization are made to evolve easily and especially to be &lt;strong&gt;extremely reliable&lt;/strong&gt;.</description>
     </item>
     <item>
       <title>Scaphandre v0.1.1: measuring the energy consumption of the tech industry (backstages)</title>
-      <link>http://localhost:1313/2021/01/scaphandre-v0.1.1-measuring-the-energy-consumption-of-the-tech-industry-backstages/</link>
+      <link>https://bpetit.nce.re/2021/01/scaphandre-v0.1.1-measuring-the-energy-consumption-of-the-tech-industry-backstages/</link>
       <pubDate>Wed, 20 Jan 2021 11:10:24 +0200</pubDate><author>bpetit@nce.re (Benoit Petit)</author>
-      <guid>http://localhost:1313/2021/01/scaphandre-v0.1.1-measuring-the-energy-consumption-of-the-tech-industry-backstages/</guid>
-      <description>&lt;p&gt;&lt;img src=&#34;http://localhost:1313/scaphandre.large.cleaned.png&#34; alt=&#34;scaphandre&#34;&gt;&lt;/p&gt;&#xA;&lt;h2 id=&#34;the-roots-of-the-project&#34;&gt;The roots of the project&lt;/h2&gt;&#xA;&lt;p&gt;As many other tech workers in startups, I&amp;rsquo;ve worked on pretty large scale projects (even if that&amp;rsquo;s subjective). I&amp;rsquo;m talking about projects involving machine learning, for example, that are often about showing the right advertisment to the right person at the right moment. Training the machine learning models for that requires a lot of resources (CPU, RAM, GPU, etc.). The same is true with APIs that are in charge of collecting data from the clients (the data will very often be used to train the ML models). Those APIs, depending on how many clients are contacting them, will receive up to several billions requests per day (or even more, but I only speak about what I&amp;rsquo;ve seen).&lt;/p&gt;</description>
+      <guid>https://bpetit.nce.re/2021/01/scaphandre-v0.1.1-measuring-the-energy-consumption-of-the-tech-industry-backstages/</guid>
+      <description>As many other tech workers in startups, I&amp;rsquo;ve worked on pretty large scale projects (even if that&amp;rsquo;s subjective). I&amp;rsquo;m talking about projects involving machine learning, for example, that are often about showing the right advertisment to the right person at the right moment. Training the machine learning models for that requires a lot of resources (CPU, RAM, GPU, etc.). The same is true with APIs that are in charge of collecting data from the clients (the data will very often be used to train the ML models). Those APIs, depending on how many clients are contacting them, will receive up to several billions requests per day (or even more, but I only speak about what I&amp;rsquo;ve seen).</description>
     </item>
   </channel>
 </rss>
