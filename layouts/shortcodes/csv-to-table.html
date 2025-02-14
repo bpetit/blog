@@ -1,9 +1,24 @@
+<select id="filter-field">
+  <option value="name">Nom</option>
+  <option value="url">URL</option>
+  <option value="type">Type</option>
+  <option value="themes">Thêmes</option>
+</select>
+
+<input id="filter-value" type="text" placeholder="Texte à chercher">
+
+<button id="filter-clear">Effacer la recherche</button>
 <div id="data-table"></div>
 <script>    
- let table = document.getElementById("data-table");
+let table = document.getElementById("data-table");
+//Define variables for input elements
+var fieldEl = document.getElementById("filter-field");
+var typeEl = "like";
+var valueEl = document.getElementById("filter-value");
+
  let url = "https://raw.githubusercontent.com/bpetit/blog/master/assets/initiatives.csv";
 
-Tabulator.extendModule("mutator", "mutators", {
+Tabulator.extendModule("accessor", "accessors", {
     removePrefix:function(value, data, accessorParams) {
       return value.replace(/http(s)*:\/\//, '');
     },
@@ -43,7 +58,7 @@ Tabulator.extendModule("mutator", "mutators", {
        addRowPos:"top",          //when adding a new row, add it to the top of the table
        history:true,             //allow undo and redo actions on the table
        pagination:"local",       //paginate the data
-       paginationSize:25,         //allow 7 rows per page of data
+       paginationSize:40,         //allow 7 rows per page of data
        paginationCounter:"rows", //display count of paginated rows in footer
        movableColumns:true,      //allow column order to be changed
        initialSort:[             //set the initial sort order of the data
@@ -53,12 +68,49 @@ Tabulator.extendModule("mutator", "mutators", {
            tooltip:true,         //show tool tips on cells
        },
        columns:[                 //define the table columns
-           {title: "URL", field:"url", hozAlign:"left", width: 250, formatter: "link", mutator:"removePrefix"},
+           {title: "Name", field: "name", hozAlign:"center"},
+           {title: "URL", field:"url", hozAlign:"left", width: 250, formatter: "link", accessor:"removePrefix"},
            {title: "Type", field:"type", width: 90, editor:"select"},
            {title: "Thêmes", field:"themes", mutator: "cleanTags"},
            {title: "Description", field:"description", hozAlign:"center", editor:"select"},
        ],
      });
+    //Custom filter example
+    function customFilter(data){
+        return data.car && data.rating < 3;
+    }
+    
+    //Trigger setFilter function with correct parameters
+    function updateFilter(){
+      let table = document.getElementById("data-table");
+      var filterVal = fieldEl.options[fieldEl.selectedIndex].value;
+    
+      var filter = filterVal == "function" ? customFilter : filterVal;
+    
+      if(filterVal == "function" ){
+        valueEl.disabled = true;
+      } else {
+        valueEl.disabled = false;
+      }
+    
+      if(filterVal){
+        table.setFilter(filter,"like", valueEl.value);
+      }
+    }
+    
+    //Update filters on value change
+    document.getElementById("filter-field").addEventListener("change", updateFilter);
+    //document.getElementById("filter-type").addEventListener("change", updateFilter);
+    document.getElementById("filter-value").addEventListener("keyup", updateFilter);
+    
+    //Clear filters on "Clear Filters" button click
+    document.getElementById("filter-clear").addEventListener("click", function(){
+      fieldEl.value = "";
+      typeEl.value = "=";
+      valueEl.value = "";
+    
+      table.clearFilter();
+    });
      })
      .catch(error => console.log(error));
 </script>

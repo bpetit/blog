@@ -9,12 +9,15 @@
     <managingEditor>bpetit@nce.re (Benoit Petit)</managingEditor>
     <webMaster>bpetit@nce.re (Benoit Petit)</webMaster><atom:link href="https://bpetit.nce.re/page/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Initiatives d&#39;intérêt général</title>
+      <title>Initiatives d&#39;intérêt</title>
       <link>https://bpetit.nce.re/page/data/initiatives/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <author>bpetit@nce.re (Benoit Petit)</author>
       <guid>https://bpetit.nce.re/page/data/initiatives/</guid>
-      <description>Graphique Données sources Une suggestion ? N&amp;rsquo;hésitez pas à me soumettre vos suggestions et critiques sur Github</description>
+      <description>Ce jeu de données est alimenté dans le prisme suivant.
+Les thématiques recherchées sont, de manière non exhaustive :
+Sols, Forêts, Biodiversité, Eau douce Économie, Politique et Réglementations Justice sociale, Équité, Féminisme, Décolonialisme, Anti-Racisme, Anti-Facsisme Technologie, Contrôle, Vie Privée, Libertés individuelles Compréhension et réduction des impacts environnementaux, secteur par secteur Mobilités et aménagement du territoire Les types de projets particulièrement recherchés sont :
+Open-Data : tout projet qui partage des données de valeurs, qu&amp;rsquo;il s&amp;rsquo;agisse de cartes enrichies, d&amp;rsquo;APIs, de données brutes sous forme de fichier, etc.</description>
     </item>
     
     <item>
