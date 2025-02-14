@@ -131,7 +131,7 @@ Cette représentation a certainement le défaut de laisser entendre que l’enga
 
 Pouvons-nous prétendre à des leviers significatifs en ne considérant que l’un de ces aspects ?
 
-## Être conscient de nos privilèges (et être prêt-e-s à y renoncer en partie) …
+## Être conscient-e-s de nos privilèges (et être prêt-e-s à y renoncer) …
 
 _**TL;DR** il faut être au clair et assumer que l’engagement d’une part et l’avènement d’un changement profond d’autre part, impliquent une perte de privilèges, puisque nous (le NR), sommes plus proches du haut de la pyramide que du bas. Le système économique et le marketing moderne nous ont convaincus que nos avantages devraient être indexés sur le “mérite”, mais cette notion est vérolée._
 
