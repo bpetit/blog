@@ -3,20 +3,20 @@ DefaultContentLanguage: en
 languageCode: "en-us"
 languageName: English
 theme: "beautifulhugo"
-Author:
-  mastodon: "mastodon.green/@bpetit"
-  linkedin: bepetit
-  github: bpetit
-  gitlab: bpetit1
-  bluesky: bpetit.bsky.social
-  email: bpetit@nce.re
-  name: Benoit Petit
 params:
   AuthorName: Benoit Petit
   GitHubUser: bpetit
   SidebarRecentLimit: 5
   selfHosted: true
   rss: true
+  author:
+    mastodon: "mastodon.green/@bpetit"
+    linkedin: bepetit
+    github: bpetit
+    gitlab: bpetit1
+    bluesky: bpetit.bsky.social
+    email: bpetit@nce.re
+    name: Benoit Petit
 languages:
   en:
     title: "Benoit Petit"

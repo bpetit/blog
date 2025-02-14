@@ -13,6 +13,7 @@ image: /scaphandre.large.cleaned.png
 thumbnail: /scaphandre.large.cleaned.png
 share_img: /scaphandre.large.cleaned.png
 author: Benoit Petit
+summary: Comme d'autres petites mains de la "startup nation", j'ai été amené à travailler sur des projets à "gros volume" (tout est relatif). Je pense par exemple à des projets mettant en oeuvre des modèles de machine learning, bien souvent pour montrer la bonne publicité à la bonne personne, au bon moment. Entraîner ces modèles nécessite beaucoup de ressources (CPU, RAM, GPU, etc.). Il en va de même pour les API qui collectent des données (qui bien souvent vont permettre d'entrainer ces mêmes modèles de ML). Ces APIs, selon le nombre de *clients* qui les contactent, peuvent recevoir jusqu'à quelques milliards de requêtes par jour (voire plus, mais je n'ai pas eu l'occasion de travailler sur plus "gros").
 ---
 
 ![scaphandre](/scaphandre.large.cleaned.png)
@@ -30,9 +31,9 @@ J'étais moi-même incapable à cette époque de mesurer les conséquences de ce
 Je me suis rendu compte que dans un tel contexte, **la ressource IT** (CPU/RAM/GPU/...) n'a plus **aucun lien** "cognitif" avec le **monde réel**. Il est impossible en l'état de se représenter ne serait-ce qu'un ordre de grandeur de ce que le service que l'on opère consomme en terme d'énergie. Impossible alors de se rendre compte de son impact sur le climat.
 
 Comment alors :
-* rendre visible l'invisible ?  
-* remettre **au centre de l'attention** des entreprises, à commencer par les gens comme moi qui y travaill([ai](https://bpetit.nce.re/fr/2020/08/pourquoi-jai-quitt%C3%A9-mon-job-qui-avait-tout-pour-plaire/))ent, **l'impact** de ces pratiques ?  
-* les inciter à réduire cet impact ?  
+* rendre visible l'invisible ?
+* remettre **au centre de l'attention** des entreprises, à commencer par les gens comme moi qui y travaill([ai](https://bpetit.nce.re/fr/2020/08/pourquoi-jai-quitt%C3%A9-mon-job-qui-avait-tout-pour-plaire/))ent, **l'impact** de ces pratiques ?
+* les inciter à réduire cet impact ?
 (voire à changer de modèle mais c'est un autre débat)
 
 ## Le pouvoir des graphes
@@ -47,10 +48,10 @@ Vous l'aurez compris, pour que la "tech" agisse sur son impact carbone, en comme
 
 Venons en au sujet de cet article qui est de vous présenter [scaphandre](https://github.com/hubblo-org/scaphandre), un logiciel open-source de **mesure de la consommation d'énergie d'un serveur informatique** ou ordinateur, **mais aussi des services et applications qu'il exécute**. Plus précisément, scaphandre est à la fois un outil utilisable en ligne de commande et un **démon** (service).
 
-Le projet a notamment pour objectif de rendre la mesure de consommation d'énergie suffisamment simple pour que ça devienne "un basique", au même titre que le nombre de requêtes par seconde ou la latence, le temps CPU consommé ou la RAM, etc...  
-  
+Le projet a notamment pour objectif de rendre la mesure de consommation d'énergie suffisamment simple pour que ça devienne "un basique", au même titre que le nombre de requêtes par seconde ou la latence, le temps CPU consommé ou la RAM, etc...
+
   Scaphandre est **extensible**, il peut faire appel à différentes "logiques" pour collecter les métriques (*[sensors](https://hubblo-org.github.io/scaphandre/explanations/internal-structure.html#sensors)*) et différentes logiques pour envoyer ou exposer ces métriques (*[exporters](https://hubblo-org.github.io/scaphandre/explanations/internal-structure.html#exporters)*). Cependant, il n'exécute qu'un *sensor* et qu'un *exporter* à la fois (rien n'empêche de lancer plusieurs instances de scaphandre pour répondre à des besoins différents).
-  
+
   Il peut donc être mis en place dans une infrastructure, **quelque soit la stack de monitoring**, puisqu'il est possible de développer un nouvel exporter pour votre [TSDB](https://blog.octo.com/introduction-aux-bases-de-donnees-temporelles/) ou outil d'analyse de données préféré, si l'*exporter* en question n'existe pas déjà. L'idée sous-jacente est que pour que ces mesures soient faites et exploitées par une majorité d'informaticiens, l'outil doit **s'adapter à l'existant** et non l'inverse.
 
 Scaphandre est de plus développé pour être le plus léger possible, à la fois en termes de ressources et de consommation d'énergie (l'inverse serait dommageable). Sa configuration est simplissime de manière à ne pas ajouter de charge de travail supplémentaire aux personnes qui opèrent l'infrastructure.

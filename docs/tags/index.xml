@@ -2,192 +2,194 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on Benoit Petit</title>
-    <link>https://bpetit.nce.re/tags/</link>
+    <link>http://localhost:1313/tags/</link>
     <description>Recent content in Tags on Benoit Petit</description>
     <generator>Hugo</generator>
     <language>en</language>
+    <managingEditor>bpetit@nce.re (Benoit Petit)</managingEditor>
+    <webMaster>bpetit@nce.re (Benoit Petit)</webMaster>
     <lastBuildDate>Fri, 12 Mar 2021 10:22:24 +0200</lastBuildDate>
-    <atom:link href="https://bpetit.nce.re/tags/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Automation</title>
-      <link>https://bpetit.nce.re/tags/automation/</link>
-      <pubDate>Fri, 12 Mar 2021 10:22:24 +0200</pubDate>
-      <guid>https://bpetit.nce.re/tags/automation/</guid>
+      <link>http://localhost:1313/tags/automation/</link>
+      <pubDate>Fri, 12 Mar 2021 10:22:24 +0200</pubDate><author>bpetit@nce.re (Benoit Petit)</author>
+      <guid>http://localhost:1313/tags/automation/</guid>
       <description></description>
     </item>
     <item>
       <title>Climate</title>
-      <link>https://bpetit.nce.re/tags/climate/</link>
-      <pubDate>Fri, 12 Mar 2021 10:22:24 +0200</pubDate>
-      <guid>https://bpetit.nce.re/tags/climate/</guid>
+      <link>http://localhost:1313/tags/climate/</link>
+      <pubDate>Fri, 12 Mar 2021 10:22:24 +0200</pubDate><author>bpetit@nce.re (Benoit Petit)</author>
+      <guid>http://localhost:1313/tags/climate/</guid>
       <description></description>
     </item>
     <item>
       <title>Devops</title>
-      <link>https://bpetit.nce.re/tags/devops/</link>
-      <pubDate>Fri, 12 Mar 2021 10:22:24 +0200</pubDate>
-      <guid>https://bpetit.nce.re/tags/devops/</guid>
+      <link>http://localhost:1313/tags/devops/</link>
+      <pubDate>Fri, 12 Mar 2021 10:22:24 +0200</pubDate><author>bpetit@nce.re (Benoit Petit)</author>
+      <guid>http://localhost:1313/tags/devops/</guid>
       <description></description>
     </item>
     <item>
       <title>Energy</title>
-      <link>https://bpetit.nce.re/tags/energy/</link>
-      <pubDate>Fri, 12 Mar 2021 10:22:24 +0200</pubDate>
-      <guid>https://bpetit.nce.re/tags/energy/</guid>
+      <link>http://localhost:1313/tags/energy/</link>
+      <pubDate>Fri, 12 Mar 2021 10:22:24 +0200</pubDate><author>bpetit@nce.re (Benoit Petit)</author>
+      <guid>http://localhost:1313/tags/energy/</guid>
       <description></description>
     </item>
     <item>
       <title>Open-Source</title>
-      <link>https://bpetit.nce.re/tags/open-source/</link>
-      <pubDate>Fri, 12 Mar 2021 10:22:24 +0200</pubDate>
-      <guid>https://bpetit.nce.re/tags/open-source/</guid>
+      <link>http://localhost:1313/tags/open-source/</link>
+      <pubDate>Fri, 12 Mar 2021 10:22:24 +0200</pubDate><author>bpetit@nce.re (Benoit Petit)</author>
+      <guid>http://localhost:1313/tags/open-source/</guid>
       <description></description>
     </item>
     <item>
       <title>Resiliency</title>
-      <link>https://bpetit.nce.re/tags/resiliency/</link>
-      <pubDate>Fri, 12 Mar 2021 10:22:24 +0200</pubDate>
-      <guid>https://bpetit.nce.re/tags/resiliency/</guid>
+      <link>http://localhost:1313/tags/resiliency/</link>
+      <pubDate>Fri, 12 Mar 2021 10:22:24 +0200</pubDate><author>bpetit@nce.re (Benoit Petit)</author>
+      <guid>http://localhost:1313/tags/resiliency/</guid>
       <description></description>
     </item>
     <item>
       <title>Rust</title>
-      <link>https://bpetit.nce.re/tags/rust/</link>
-      <pubDate>Fri, 12 Mar 2021 10:22:24 +0200</pubDate>
-      <guid>https://bpetit.nce.re/tags/rust/</guid>
+      <link>http://localhost:1313/tags/rust/</link>
+      <pubDate>Fri, 12 Mar 2021 10:22:24 +0200</pubDate><author>bpetit@nce.re (Benoit Petit)</author>
+      <guid>http://localhost:1313/tags/rust/</guid>
       <description></description>
     </item>
     <item>
       <title>Scaphandre</title>
-      <link>https://bpetit.nce.re/tags/scaphandre/</link>
-      <pubDate>Fri, 12 Mar 2021 10:22:24 +0200</pubDate>
-      <guid>https://bpetit.nce.re/tags/scaphandre/</guid>
+      <link>http://localhost:1313/tags/scaphandre/</link>
+      <pubDate>Fri, 12 Mar 2021 10:22:24 +0200</pubDate><author>bpetit@nce.re (Benoit Petit)</author>
+      <guid>http://localhost:1313/tags/scaphandre/</guid>
       <description></description>
     </item>
     <item>
       <title>Sre</title>
-      <link>https://bpetit.nce.re/tags/sre/</link>
-      <pubDate>Fri, 12 Mar 2021 10:22:24 +0200</pubDate>
-      <guid>https://bpetit.nce.re/tags/sre/</guid>
+      <link>http://localhost:1313/tags/sre/</link>
+      <pubDate>Fri, 12 Mar 2021 10:22:24 +0200</pubDate><author>bpetit@nce.re (Benoit Petit)</author>
+      <guid>http://localhost:1313/tags/sre/</guid>
       <description></description>
     </item>
     <item>
       <title>Tech</title>
-      <link>https://bpetit.nce.re/tags/tech/</link>
-      <pubDate>Fri, 12 Mar 2021 10:22:24 +0200</pubDate>
-      <guid>https://bpetit.nce.re/tags/tech/</guid>
+      <link>http://localhost:1313/tags/tech/</link>
+      <pubDate>Fri, 12 Mar 2021 10:22:24 +0200</pubDate><author>bpetit@nce.re (Benoit Petit)</author>
+      <guid>http://localhost:1313/tags/tech/</guid>
       <description></description>
     </item>
     <item>
       <title>Cloud</title>
-      <link>https://bpetit.nce.re/tags/cloud/</link>
-      <pubDate>Wed, 20 Jan 2021 11:10:24 +0200</pubDate>
-      <guid>https://bpetit.nce.re/tags/cloud/</guid>
+      <link>http://localhost:1313/tags/cloud/</link>
+      <pubDate>Wed, 20 Jan 2021 11:10:24 +0200</pubDate><author>bpetit@nce.re (Benoit Petit)</author>
+      <guid>http://localhost:1313/tags/cloud/</guid>
       <description></description>
     </item>
     <item>
       <title>Ecology</title>
-      <link>https://bpetit.nce.re/tags/ecology/</link>
-      <pubDate>Wed, 20 Jan 2021 11:10:24 +0200</pubDate>
-      <guid>https://bpetit.nce.re/tags/ecology/</guid>
+      <link>http://localhost:1313/tags/ecology/</link>
+      <pubDate>Wed, 20 Jan 2021 11:10:24 +0200</pubDate><author>bpetit@nce.re (Benoit Petit)</author>
+      <guid>http://localhost:1313/tags/ecology/</guid>
       <description></description>
     </item>
     <item>
       <title>Ansible</title>
-      <link>https://bpetit.nce.re/tags/ansible/</link>
-      <pubDate>Sat, 17 Mar 2018 20:12:45 +0200</pubDate>
-      <guid>https://bpetit.nce.re/tags/ansible/</guid>
+      <link>http://localhost:1313/tags/ansible/</link>
+      <pubDate>Sat, 17 Mar 2018 20:12:45 +0200</pubDate><author>bpetit@nce.re (Benoit Petit)</author>
+      <guid>http://localhost:1313/tags/ansible/</guid>
       <description></description>
     </item>
     <item>
       <title>Cd</title>
-      <link>https://bpetit.nce.re/tags/cd/</link>
-      <pubDate>Sat, 17 Mar 2018 20:12:45 +0200</pubDate>
-      <guid>https://bpetit.nce.re/tags/cd/</guid>
+      <link>http://localhost:1313/tags/cd/</link>
+      <pubDate>Sat, 17 Mar 2018 20:12:45 +0200</pubDate><author>bpetit@nce.re (Benoit Petit)</author>
+      <guid>http://localhost:1313/tags/cd/</guid>
       <description></description>
     </item>
     <item>
       <title>Dns</title>
-      <link>https://bpetit.nce.re/tags/dns/</link>
-      <pubDate>Sat, 17 Mar 2018 20:12:45 +0200</pubDate>
-      <guid>https://bpetit.nce.re/tags/dns/</guid>
+      <link>http://localhost:1313/tags/dns/</link>
+      <pubDate>Sat, 17 Mar 2018 20:12:45 +0200</pubDate><author>bpetit@nce.re (Benoit Petit)</author>
+      <guid>http://localhost:1313/tags/dns/</guid>
       <description></description>
     </item>
     <item>
       <title>Knot</title>
-      <link>https://bpetit.nce.re/tags/knot/</link>
-      <pubDate>Sat, 17 Mar 2018 20:12:45 +0200</pubDate>
-      <guid>https://bpetit.nce.re/tags/knot/</guid>
+      <link>http://localhost:1313/tags/knot/</link>
+      <pubDate>Sat, 17 Mar 2018 20:12:45 +0200</pubDate><author>bpetit@nce.re (Benoit Petit)</author>
+      <guid>http://localhost:1313/tags/knot/</guid>
       <description></description>
     </item>
     <item>
       <title>Letsencrypt</title>
-      <link>https://bpetit.nce.re/tags/letsencrypt/</link>
-      <pubDate>Sat, 17 Mar 2018 20:12:45 +0200</pubDate>
-      <guid>https://bpetit.nce.re/tags/letsencrypt/</guid>
+      <link>http://localhost:1313/tags/letsencrypt/</link>
+      <pubDate>Sat, 17 Mar 2018 20:12:45 +0200</pubDate><author>bpetit@nce.re (Benoit Petit)</author>
+      <guid>http://localhost:1313/tags/letsencrypt/</guid>
       <description></description>
     </item>
     <item>
       <title>Tls</title>
-      <link>https://bpetit.nce.re/tags/tls/</link>
-      <pubDate>Sat, 17 Mar 2018 20:12:45 +0200</pubDate>
-      <guid>https://bpetit.nce.re/tags/tls/</guid>
+      <link>http://localhost:1313/tags/tls/</link>
+      <pubDate>Sat, 17 Mar 2018 20:12:45 +0200</pubDate><author>bpetit@nce.re (Benoit Petit)</author>
+      <guid>http://localhost:1313/tags/tls/</guid>
       <description></description>
     </item>
     <item>
       <title>Cloud-Init</title>
-      <link>https://bpetit.nce.re/tags/cloud-init/</link>
-      <pubDate>Tue, 21 Nov 2017 20:44:12 +0200</pubDate>
-      <guid>https://bpetit.nce.re/tags/cloud-init/</guid>
+      <link>http://localhost:1313/tags/cloud-init/</link>
+      <pubDate>Tue, 21 Nov 2017 20:44:12 +0200</pubDate><author>bpetit@nce.re (Benoit Petit)</author>
+      <guid>http://localhost:1313/tags/cloud-init/</guid>
       <description></description>
     </item>
     <item>
       <title>Kvm</title>
-      <link>https://bpetit.nce.re/tags/kvm/</link>
-      <pubDate>Tue, 21 Nov 2017 20:44:12 +0200</pubDate>
-      <guid>https://bpetit.nce.re/tags/kvm/</guid>
+      <link>http://localhost:1313/tags/kvm/</link>
+      <pubDate>Tue, 21 Nov 2017 20:44:12 +0200</pubDate><author>bpetit@nce.re (Benoit Petit)</author>
+      <guid>http://localhost:1313/tags/kvm/</guid>
       <description></description>
     </item>
     <item>
       <title>Libvirt</title>
-      <link>https://bpetit.nce.re/tags/libvirt/</link>
-      <pubDate>Tue, 21 Nov 2017 20:44:12 +0200</pubDate>
-      <guid>https://bpetit.nce.re/tags/libvirt/</guid>
+      <link>http://localhost:1313/tags/libvirt/</link>
+      <pubDate>Tue, 21 Nov 2017 20:44:12 +0200</pubDate><author>bpetit@nce.re (Benoit Petit)</author>
+      <guid>http://localhost:1313/tags/libvirt/</guid>
       <description></description>
     </item>
     <item>
       <title>Openvswitch</title>
-      <link>https://bpetit.nce.re/tags/openvswitch/</link>
-      <pubDate>Tue, 21 Nov 2017 20:44:12 +0200</pubDate>
-      <guid>https://bpetit.nce.re/tags/openvswitch/</guid>
+      <link>http://localhost:1313/tags/openvswitch/</link>
+      <pubDate>Tue, 21 Nov 2017 20:44:12 +0200</pubDate><author>bpetit@nce.re (Benoit Petit)</author>
+      <guid>http://localhost:1313/tags/openvswitch/</guid>
       <description></description>
     </item>
     <item>
       <title>Qemu</title>
-      <link>https://bpetit.nce.re/tags/qemu/</link>
-      <pubDate>Tue, 21 Nov 2017 20:44:12 +0200</pubDate>
-      <guid>https://bpetit.nce.re/tags/qemu/</guid>
+      <link>http://localhost:1313/tags/qemu/</link>
+      <pubDate>Tue, 21 Nov 2017 20:44:12 +0200</pubDate><author>bpetit@nce.re (Benoit Petit)</author>
+      <guid>http://localhost:1313/tags/qemu/</guid>
       <description></description>
     </item>
     <item>
       <title>Debian</title>
-      <link>https://bpetit.nce.re/tags/debian/</link>
-      <pubDate>Fri, 01 Sep 2017 19:44:12 +0200</pubDate>
-      <guid>https://bpetit.nce.re/tags/debian/</guid>
+      <link>http://localhost:1313/tags/debian/</link>
+      <pubDate>Fri, 01 Sep 2017 19:44:12 +0200</pubDate><author>bpetit@nce.re (Benoit Petit)</author>
+      <guid>http://localhost:1313/tags/debian/</guid>
       <description></description>
     </item>
     <item>
       <title>Packer</title>
-      <link>https://bpetit.nce.re/tags/packer/</link>
-      <pubDate>Fri, 01 Sep 2017 19:44:12 +0200</pubDate>
-      <guid>https://bpetit.nce.re/tags/packer/</guid>
+      <link>http://localhost:1313/tags/packer/</link>
+      <pubDate>Fri, 01 Sep 2017 19:44:12 +0200</pubDate><author>bpetit@nce.re (Benoit Petit)</author>
+      <guid>http://localhost:1313/tags/packer/</guid>
       <description></description>
     </item>
     <item>
       <title>Virtualization</title>
-      <link>https://bpetit.nce.re/tags/virtualization/</link>
-      <pubDate>Fri, 01 Sep 2017 19:44:12 +0200</pubDate>
-      <guid>https://bpetit.nce.re/tags/virtualization/</guid>
+      <link>http://localhost:1313/tags/virtualization/</link>
+      <pubDate>Fri, 01 Sep 2017 19:44:12 +0200</pubDate><author>bpetit@nce.re (Benoit Petit)</author>
+      <guid>http://localhost:1313/tags/virtualization/</guid>
       <description></description>
     </item>
   </channel>

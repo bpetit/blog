@@ -14,6 +14,7 @@ image: /bird.jpg
 thumbnail: /bird.jpg
 share_img: /bird.jpg
 author: Benoit Petit
+summary: En ce moment je travaille sur une formation à l'attention des techs, côté infrastructure (avec un penchant pour les méthodes SRE/DevOps), concernant la sobriété numérique. J'en ai parlé un peu autour de moi pour savoir ce que les pros du domaine aimeraient trouver dans ce type de formation. J'ai entendu plein de bonnes idées et j'en ai gardé une bonne partie (merci à celles et ceux qui me les ont soufflé). En plus de ces idées, j'ai eu droit à des avis sur le sujet, bien entendu. Certains avis m'ont interpellé.
 ---
 ![Un oiseau](/bird.jpg)
 
@@ -55,8 +56,8 @@ C'est vrai. Mais depuis quand reste t'on dans les sentiers battus ? L'IT évolue
 
 DevOps est un bon exemple : créer de la valeur en développant avec des cycles plus courts, mettre l'emphase sur des projets plutôt que sur des tâches et collaborer entre les équipes... Ces évolutions concernent autant le management et la gestion de projet que la partie technique. Elles ont bien sûr permis d'apporter au business, mais aussi au bien être des employés, à une meilleure compréhension du métier de chacun, etc. Bien sûr les moyens techniques ont évolué pour permettre ces évolutions, mais ce n'est pas le point de départ.
 
-Dans un [précédent article](https://bpetit.nce.re/fr/2021/02/les-pratiques-sre-et-le-climat/), j'ai expliqué pourquoi je pense que le Site Reliability Engineering est un bon framework pour remonter les métriques de mesure d'impact sur le climat et en faire des indicateurs d'aide à la décision (sous forme de SLI/SLO). Pourquoi ne pas pousser dans cette direction ?  
-  
+Dans un [précédent article](https://bpetit.nce.re/fr/2021/02/les-pratiques-sre-et-le-climat/), j'ai expliqué pourquoi je pense que le Site Reliability Engineering est un bon framework pour remonter les métriques de mesure d'impact sur le climat et en faire des indicateurs d'aide à la décision (sous forme de SLI/SLO). Pourquoi ne pas pousser dans cette direction ?
+
 Cette proposition est une partie de ce qu'[Hubblo](https://hubblo.org/fr) propose. Mais je suis convaincu que ça ne doit pas être uniquement le sujet de quelques "experts" et que le monde de la tech dans son ensemble doit être un moteur de l'indispensable transition vers plus de transparence et de sobriété. Il faut pour ce faire que chaque pôle technique s'empare du sujet et se l'approprie, comme c'est le cas pour les méthodes DevOps et la modernisation des SI.
 
 J'espère que cet article "food for thoughts" vous aura intéressé. J'aimerai que ça découle sur des discussions de fond. De même, si vous êtes arrivé à la conclusion (logique) qu'il faut agir, mais que vous ne savez pas comment ou par quoi commencer, je serai également ravi d'en parler.

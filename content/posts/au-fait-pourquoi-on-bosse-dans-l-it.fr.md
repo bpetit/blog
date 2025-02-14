@@ -8,6 +8,7 @@ tags:
   - écologie
   - société
 author: Benoit Petit
+summary: Voilà environ deux ans que la perception que j'ai de mon métier évolue énormément. Je souhaite partager ici mes réflexions, d'abord car écrire les choses permet de mieux les appréhender, puis, si par chance vous lisez ce texte et partager mes questionnements, nous pourrons peut-être en discuter.
 ---
 
 Voilà environ deux ans que la perception que j'ai de mon métier évolue énormément. Je souhaite partager ici mes réflexions, d'abord car écrire les choses permet de mieux les appréhender, puis, si par chance vous lisez ce texte et partager mes questionnements, nous pourrons peut-être en discuter.

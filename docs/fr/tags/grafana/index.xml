@@ -2,17 +2,19 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Grafana on Benoit Petit</title>
-    <link>https://bpetit.nce.re/fr/tags/grafana/</link>
+    <link>http://localhost:1313/fr/tags/grafana/</link>
     <description>Recent content in Grafana on Benoit Petit</description>
     <generator>Hugo</generator>
     <language>fr</language>
+    <managingEditor>bpetit@nce.re (Benoit Petit)</managingEditor>
+    <webMaster>bpetit@nce.re (Benoit Petit)</webMaster>
     <lastBuildDate>Mon, 22 Mar 2021 15:40:24 +0200</lastBuildDate>
-    <atom:link href="https://bpetit.nce.re/fr/tags/grafana/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/fr/tags/grafana/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Coder ses dashboards Grafana avec Grafonnet</title>
-      <link>https://bpetit.nce.re/fr/2021/03/coder-ses-dashboards-grafana-avec-grafonnet/</link>
-      <pubDate>Mon, 22 Mar 2021 15:40:24 +0200</pubDate>
-      <guid>https://bpetit.nce.re/fr/2021/03/coder-ses-dashboards-grafana-avec-grafonnet/</guid>
+      <link>http://localhost:1313/fr/2021/03/coder-ses-dashboards-grafana-avec-grafonnet/</link>
+      <pubDate>Mon, 22 Mar 2021 15:40:24 +0200</pubDate><author>bpetit@nce.re (Benoit Petit)</author>
+      <guid>http://localhost:1313/fr/2021/03/coder-ses-dashboards-grafana-avec-grafonnet/</guid>
       <description>&lt;p&gt;On ne présente plus &lt;a href=&#34;https://grafana.com/&#34;&gt;Grafana&lt;/a&gt; en ce qui concerne la visualisation de graphiques et de données. Cet outil est très largement utilisé pour des besoins de monitoring, de métrologie&amp;hellip;&lt;/p&gt;&#xA;&lt;p&gt;Les avantages sont multiples:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;open-source&lt;/li&gt;&#xA;&lt;li&gt;pratique : on peut créer des dashboards pour divers besoin très simplement&lt;/li&gt;&#xA;&lt;li&gt;flexible : de nombreuses sources de données sont supportées et les plugins répondent aux besoins les plus exotiques&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;Grafana permet également de déclencher des alertes lorsqu&amp;rsquo;une métrique dépasse une certaine valeur (plus besoin de configurer un système d&amp;rsquo;alerte propre à chaque source de donnée). C&amp;rsquo;est devenu un incontournable (en tout cas pour moi).&lt;/p&gt;</description>
     </item>
   </channel>

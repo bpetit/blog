@@ -2,25 +2,27 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Scaphandre on Benoit Petit</title>
-    <link>https://bpetit.nce.re/fr/tags/scaphandre/</link>
+    <link>http://localhost:1313/fr/tags/scaphandre/</link>
     <description>Recent content in Scaphandre on Benoit Petit</description>
     <generator>Hugo</generator>
     <language>fr</language>
+    <managingEditor>bpetit@nce.re (Benoit Petit)</managingEditor>
+    <webMaster>bpetit@nce.re (Benoit Petit)</webMaster>
     <lastBuildDate>Fri, 19 Feb 2021 19:25:24 +0200</lastBuildDate>
-    <atom:link href="https://bpetit.nce.re/fr/tags/scaphandre/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/fr/tags/scaphandre/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Les pratiques SRE et le climat</title>
-      <link>https://bpetit.nce.re/fr/2021/02/les-pratiques-sre-et-le-climat/</link>
-      <pubDate>Fri, 19 Feb 2021 19:25:24 +0200</pubDate>
-      <guid>https://bpetit.nce.re/fr/2021/02/les-pratiques-sre-et-le-climat/</guid>
-      <description>&lt;p&gt;&lt;img src=&#34;https://bpetit.nce.re/lizard.cleaned.jpg&#34; alt=&#34;Un lézard&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;L&amp;rsquo;ingénierie de la fiabilité des sites (Site Reliability Engineering), a pour objectif au sein d&amp;rsquo;une organisation de s&amp;rsquo;assurer que les systèmes et services logiciels qui y sont créés sont évolutifs et surtout &lt;strong&gt;très fiables&lt;/strong&gt;.&lt;/p&gt;&#xA;&lt;p&gt;Pour ce faire, de nombreux aspects de l&amp;rsquo;ingénierie logicielle sont appliqués aux problèmes d&amp;rsquo;infrastructure. Ce sont des pratiques mises en avant par Google, notamment depuis la sortie du premier livre &amp;ldquo;référence&amp;rdquo; intitulé &amp;ldquo;&lt;a href=&#34;https://sre.google/sre-book/table-of-contents/&#34;&gt;Site Reliability Engineering&lt;/a&gt;&amp;rdquo; en 2016.&lt;/p&gt;</description>
+      <link>http://localhost:1313/fr/2021/02/les-pratiques-sre-et-le-climat/</link>
+      <pubDate>Fri, 19 Feb 2021 19:25:24 +0200</pubDate><author>bpetit@nce.re (Benoit Petit)</author>
+      <guid>http://localhost:1313/fr/2021/02/les-pratiques-sre-et-le-climat/</guid>
+      <description>&lt;p&gt;&lt;img src=&#34;http://localhost:1313/lizard.cleaned.jpg&#34; alt=&#34;Un lézard&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;L&amp;rsquo;ingénierie de la fiabilité des sites (Site Reliability Engineering), a pour objectif au sein d&amp;rsquo;une organisation de s&amp;rsquo;assurer que les systèmes et services logiciels qui y sont créés sont évolutifs et surtout &lt;strong&gt;très fiables&lt;/strong&gt;.&lt;/p&gt;&#xA;&lt;p&gt;Pour ce faire, de nombreux aspects de l&amp;rsquo;ingénierie logicielle sont appliqués aux problèmes d&amp;rsquo;infrastructure. Ce sont des pratiques mises en avant par Google, notamment depuis la sortie du premier livre &amp;ldquo;référence&amp;rdquo; intitulé &amp;ldquo;&lt;a href=&#34;https://sre.google/sre-book/table-of-contents/&#34;&gt;Site Reliability Engineering&lt;/a&gt;&amp;rdquo; en 2016.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Scaphandre v0.1.1: mesurer la consommation d&#39;énergie (des coulisses) du numérique</title>
-      <link>https://bpetit.nce.re/fr/2021/01/scaphandre-v0.1.1-mesurer-la-consommation-d%C3%A9nergie-des-coulisses-du-num%C3%A9rique/</link>
-      <pubDate>Wed, 13 Jan 2021 15:20:24 +0200</pubDate>
-      <guid>https://bpetit.nce.re/fr/2021/01/scaphandre-v0.1.1-mesurer-la-consommation-d%C3%A9nergie-des-coulisses-du-num%C3%A9rique/</guid>
-      <description>&lt;p&gt;&lt;img src=&#34;https://bpetit.nce.re/scaphandre.large.cleaned.png&#34; alt=&#34;scaphandre&#34;&gt;&lt;/p&gt;&#xA;&lt;h2 id=&#34;les-origines-du-projet&#34;&gt;Les origines du projet&lt;/h2&gt;&#xA;&lt;p&gt;Comme d&amp;rsquo;autres petites mains de la &amp;ldquo;startup nation&amp;rdquo;, j&amp;rsquo;ai été amené à travailler sur des projets à &amp;ldquo;gros volume&amp;rdquo; (tout est relatif). Je pense par exemple à des projets mettant en oeuvre des modèles de machine learning, bien souvent pour montrer la bonne publicité à la bonne personne, au bon moment. Entraîner ces modèles nécessite beaucoup de ressources (CPU, RAM, GPU, etc.). Il en va de même pour les API qui collectent des données (qui bien souvent vont permettre d&amp;rsquo;entrainer ces mêmes modèles de ML). Ces APIs, selon le nombre de &lt;em&gt;clients&lt;/em&gt; qui les contactent, peuvent recevoir jusqu&amp;rsquo;à quelques milliards de requêtes par jour (voire plus, mais je n&amp;rsquo;ai pas eu l&amp;rsquo;occasion de travailler sur plus &amp;ldquo;gros&amp;rdquo;).&lt;/p&gt;</description>
+      <link>http://localhost:1313/fr/2021/01/scaphandre-v0.1.1-mesurer-la-consommation-d%C3%A9nergie-des-coulisses-du-num%C3%A9rique/</link>
+      <pubDate>Wed, 13 Jan 2021 15:20:24 +0200</pubDate><author>bpetit@nce.re (Benoit Petit)</author>
+      <guid>http://localhost:1313/fr/2021/01/scaphandre-v0.1.1-mesurer-la-consommation-d%C3%A9nergie-des-coulisses-du-num%C3%A9rique/</guid>
+      <description>&lt;p&gt;&lt;img src=&#34;http://localhost:1313/scaphandre.large.cleaned.png&#34; alt=&#34;scaphandre&#34;&gt;&lt;/p&gt;&#xA;&lt;h2 id=&#34;les-origines-du-projet&#34;&gt;Les origines du projet&lt;/h2&gt;&#xA;&lt;p&gt;Comme d&amp;rsquo;autres petites mains de la &amp;ldquo;startup nation&amp;rdquo;, j&amp;rsquo;ai été amené à travailler sur des projets à &amp;ldquo;gros volume&amp;rdquo; (tout est relatif). Je pense par exemple à des projets mettant en oeuvre des modèles de machine learning, bien souvent pour montrer la bonne publicité à la bonne personne, au bon moment. Entraîner ces modèles nécessite beaucoup de ressources (CPU, RAM, GPU, etc.). Il en va de même pour les API qui collectent des données (qui bien souvent vont permettre d&amp;rsquo;entrainer ces mêmes modèles de ML). Ces APIs, selon le nombre de &lt;em&gt;clients&lt;/em&gt; qui les contactent, peuvent recevoir jusqu&amp;rsquo;à quelques milliards de requêtes par jour (voire plus, mais je n&amp;rsquo;ai pas eu l&amp;rsquo;occasion de travailler sur plus &amp;ldquo;gros&amp;rdquo;).&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

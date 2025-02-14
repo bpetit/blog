@@ -2,25 +2,27 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Rse on Benoit Petit</title>
-    <link>https://bpetit.nce.re/fr/tags/rse/</link>
+    <link>http://localhost:1313/fr/tags/rse/</link>
     <description>Recent content in Rse on Benoit Petit</description>
     <generator>Hugo</generator>
     <language>fr</language>
+    <managingEditor>bpetit@nce.re (Benoit Petit)</managingEditor>
+    <webMaster>bpetit@nce.re (Benoit Petit)</webMaster>
     <lastBuildDate>Fri, 14 Feb 2025 09:00:00 +0200</lastBuildDate>
-    <atom:link href="https://bpetit.nce.re/fr/tags/rse/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/fr/tags/rse/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Le &#34;Numérique Responsable&#34; a échoué, mais c&#39;était prévisible.</title>
-      <link>https://bpetit.nce.re/fr/2025/02/le-num%C3%A9rique-responsable-a-%C3%A9chou%C3%A9-mais-c%C3%A9tait-pr%C3%A9visible./</link>
-      <pubDate>Fri, 14 Feb 2025 09:00:00 +0200</pubDate>
-      <guid>https://bpetit.nce.re/fr/2025/02/le-num%C3%A9rique-responsable-a-%C3%A9chou%C3%A9-mais-c%C3%A9tait-pr%C3%A9visible./</guid>
-      <description>&lt;p&gt;&lt;img src=&#34;https://bpetit.nce.re/datacenter_lights.webp&#34; alt=&#34;Photographie de baies informatiques et de serveur, plongés dans le noir mais sortant de la pénombre par les multiples lumières LED venant des serveurs informatiques. Une photo prise par Tristan Schmurr. Licence CC-BY 2.0&#34;&gt;&lt;em&gt;Photographie de baies informatiques et de serveur, plongés dans le noir mais sortant de la pénombre par les multiples lumières LED venant des serveurs informatiques. Une photo &lt;a href=&#34;https://www.flickr.com/photos/58411470@N00/8475764430&#34;&gt;prise par Tristan Schmurr&lt;/a&gt;. Licence CC-BY 2.0&lt;/em&gt;&lt;/p&gt;&#xA;&lt;p&gt;&lt;em&gt;&lt;strong&gt;Disclaimer&lt;/strong&gt; : je crois que l’interdisciplinarité est essentielle pour comprendre les enjeux actuels et futurs. S’y essayer apporte forcément son lot d’erreurs et d’approximations, puisque l’on ne peut pas être spécialiste de tout. Je vais m’y essayer dans cet article et ferai donc certainement des erreurs. Dans le cadre d’un débat apaisé et constructif je serai à l’écoute des critiques et tâcherai d’amender cet article par la suite si nécessaire en citant la personne concernée.&lt;/em&gt;&lt;/p&gt;</description>
+      <link>http://localhost:1313/fr/2025/02/le-num%C3%A9rique-responsable-a-%C3%A9chou%C3%A9-mais-c%C3%A9tait-pr%C3%A9visible./</link>
+      <pubDate>Fri, 14 Feb 2025 09:00:00 +0200</pubDate><author>bpetit@nce.re (Benoit Petit)</author>
+      <guid>http://localhost:1313/fr/2025/02/le-num%C3%A9rique-responsable-a-%C3%A9chou%C3%A9-mais-c%C3%A9tait-pr%C3%A9visible./</guid>
+      <description>&lt;p&gt;&lt;img src=&#34;http://localhost:1313/datacenter_lights.webp&#34; alt=&#34;Photographie de baies informatiques et de serveur, plongés dans le noir mais sortant de la pénombre par les multiples lumières LED venant des serveurs informatiques. Une photo prise par Tristan Schmurr. Licence CC-BY 2.0&#34;&gt;&lt;em&gt;Photographie de baies informatiques et de serveur, plongés dans le noir mais sortant de la pénombre par les multiples lumières LED venant des serveurs informatiques. Une photo &lt;a href=&#34;https://www.flickr.com/photos/58411470@N00/8475764430&#34;&gt;prise par Tristan Schmurr&lt;/a&gt;. Licence CC-BY 2.0&lt;/em&gt;&lt;/p&gt;&#xA;&lt;p&gt;&lt;em&gt;&lt;strong&gt;Disclaimer&lt;/strong&gt; : je crois que l’interdisciplinarité est essentielle pour comprendre les enjeux actuels et futurs. S’y essayer apporte forcément son lot d’erreurs et d’approximations, puisque l’on ne peut pas être spécialiste de tout. Je vais m’y essayer dans cet article et ferai donc certainement des erreurs. Dans le cadre d’un débat apaisé et constructif je serai à l’écoute des critiques et tâcherai d’amender cet article par la suite si nécessaire en citant la personne concernée.&lt;/em&gt;&lt;/p&gt;</description>
     </item>
     <item>
       <title>Climat et numérique: pourquoi le mouvement DevOps a un rôle à jouer</title>
-      <link>https://bpetit.nce.re/fr/2021/08/climat-et-num%C3%A9rique-pourquoi-le-mouvement-devops-a-un-r%C3%B4le-%C3%A0-jouer/</link>
-      <pubDate>Mon, 09 Aug 2021 10:02:24 +0200</pubDate>
-      <guid>https://bpetit.nce.re/fr/2021/08/climat-et-num%C3%A9rique-pourquoi-le-mouvement-devops-a-un-r%C3%B4le-%C3%A0-jouer/</guid>
-      <description>&lt;p&gt;&lt;img src=&#34;https://bpetit.nce.re/bird.jpg&#34; alt=&#34;Un oiseau&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;En ce moment je travaille sur une formation à l&amp;rsquo;attention des techs, côté infrastructure (avec un penchant pour les méthodes SRE/DevOps), concernant la sobriété numérique. J&amp;rsquo;en ai parlé un peu autour de moi pour savoir ce que les pros du domaine aimeraient trouver dans ce type de formation. J&amp;rsquo;ai entendu plein de bonnes idées et j&amp;rsquo;en ai gardé une bonne partie (merci à celles et ceux qui me les ont soufflé). En plus de ces idées, j&amp;rsquo;ai eu droit à des avis sur le sujet, bien entendu. Certains avis m&amp;rsquo;ont interpellé.&lt;/p&gt;</description>
+      <link>http://localhost:1313/fr/2021/08/climat-et-num%C3%A9rique-pourquoi-le-mouvement-devops-a-un-r%C3%B4le-%C3%A0-jouer/</link>
+      <pubDate>Mon, 09 Aug 2021 10:02:24 +0200</pubDate><author>bpetit@nce.re (Benoit Petit)</author>
+      <guid>http://localhost:1313/fr/2021/08/climat-et-num%C3%A9rique-pourquoi-le-mouvement-devops-a-un-r%C3%B4le-%C3%A0-jouer/</guid>
+      <description>&lt;p&gt;&lt;img src=&#34;http://localhost:1313/bird.jpg&#34; alt=&#34;Un oiseau&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;En ce moment je travaille sur une formation à l&amp;rsquo;attention des techs, côté infrastructure (avec un penchant pour les méthodes SRE/DevOps), concernant la sobriété numérique. J&amp;rsquo;en ai parlé un peu autour de moi pour savoir ce que les pros du domaine aimeraient trouver dans ce type de formation. J&amp;rsquo;ai entendu plein de bonnes idées et j&amp;rsquo;en ai gardé une bonne partie (merci à celles et ceux qui me les ont soufflé). En plus de ces idées, j&amp;rsquo;ai eu droit à des avis sur le sujet, bien entendu. Certains avis m&amp;rsquo;ont interpellé.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

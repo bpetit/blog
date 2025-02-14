@@ -13,6 +13,7 @@ image: /scaphandre.large.cleaned.png
 thumbnail: /scaphandre.large.cleaned.png
 share_img: /scaphandre.large.cleaned.png
 author: Benoit Petit
+summary: As many other tech workers in startups, I've worked on pretty large scale projects (even if that's subjective). I'm talking about projects involving machine learning, for example, that are often about showing the right advertisment to the right person at the right moment. Training the machine learning models for that requires a lot of resources (CPU, RAM, GPU, etc.). The same is true with APIs that are in charge of collecting data from the clients (the data will very often be used to train the ML models). Those APIs, depending on how many clients are contacting them, will receive up to several billions requests per day (or even more, but I only speak about what I've seen).
 ---
 
 ![scaphandre](/scaphandre.large.cleaned.png)
@@ -30,9 +31,9 @@ I was unable myself to understand the importance of the consequences of those pr
 I noticed then, that **tech resources** (CPU/RAM/GPU/...) **don't have any cognitive relationship** with the **real world**. It's almost impossible in that situation to visualize even a sketch of how much energy is consumed. It's even harder then to understand the consequences on the climate.
 
 How then :
-* make the invisible visible ?  
-* put in sight and attention of the tech companies, starting with people like me wo are (or were) working for those companies, the **impact** of those practices ?  
-* incentive them to reduce that impact ?  
+* make the invisible visible ?
+* put in sight and attention of the tech companies, starting with people like me wo are (or were) working for those companies, the **impact** of those practices ?
+* incentive them to reduce that impact ?
 (or to change their business model, but that's another story)
 
 ## The power of graphs
@@ -47,10 +48,10 @@ To have the tech industry reflect and act on its own climate impact, starting wi
 
 Let's go the to core of this article which is to present you [scaphandre](https://github.com/hubblo-org/scaphandre), an open-source software to **measure power consumption on a server** or a personnal computer. It can also measure the power consumption of a **single process or application** on the host. To be more precise, scaphandre is a CLI tool and system service (daemon).
 
-This project intends to be simple enough to setup and use, so that power consumption metrics become basic stuff, like the number of requests per second, the latency, the CPU usage, etc. There shall be **no more excuses** to not measure and understand the power consumption of a tech service or system.  
-  
+This project intends to be simple enough to setup and use, so that power consumption metrics become basic stuff, like the number of requests per second, the latency, the CPU usage, etc. There shall be **no more excuses** to not measure and understand the power consumption of a tech service or system.
+
   Scaphandre is **extensible**, as he can collect the metrics in different ways (*[sensors](https://hubblo-org.github.io/scaphandre/explanations/internal-structure.html#sensors)*) and send or expose those metrics in different ways (*[exporters](https://hubblo-org.github.io/scaphandre/explanations/internal-structure.html#exporters)*). However, it only executes one *sensor* and one *exporter* at a time (it's okay to run several instance of scaphandre on the same host for different needs).
-  
+
   Because of that, scaphandre can be setup in an infrastructure, **whatever the monitoring stack is**, as you can develop a new exporter for your favorite [TSDB](https://en.wikipedia.org/wiki/Time_series_database) or data analysis tool, if the needed exporter doesn't exist already. The idea behind that is that for many tech companies and workers to use it, **the tool must adapt to what's in place** and not the opposite.
 
 Scaphandre aims to be as light as possible, both in terms of ressources and of energy consumption (the opposite would be sad). Its configuration is very simple to not add extra work to the people using it.

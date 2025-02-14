@@ -16,6 +16,7 @@ image: /lizard.cleaned.jpg
 thumbnail: /lizard.cleaned.jpg
 share_img: /lizard.cleaned.jpg
 author: Benoit Petit
+summary: Site Reliability Engineering's goal is to ensure that software systems and services that are created in an organization are made to evolve easily and especially to be **extremely reliable**.
 ---
 
 ![A lezard](/lizard.cleaned.jpg)
@@ -23,7 +24,7 @@ author: Benoit Petit
 Site Reliability Engineering's goal is to ensure that software systems and services that are created in an organization are made to evolve easily and especially to be **extremely reliable**.
 
  To do that, many aspects of software engineering are applied to infrastructure topics. Those methods are born at Google and are increasingly popular since the release of the book "[Site Reliability Engineering](https://sre.google/sre-book/table-of-contents/)" in 2016.
- 
+
 ## DevOps, SRE, what's the difference ?
 
 As we have used some buzzwords, let's make it clearer before we move forward. If you are already familiar with DevOps and SRE methods, you can jump to the next [section](#sli-slo-and-the-error-budget).

@@ -16,6 +16,7 @@ image: /lizard.cleaned.jpg
 thumbnail: /lizard.cleaned.jpg
 share_img: /lizard.cleaned.jpg
 author: Benoit Petit
+summary: L'ingénierie de la fiabilité des sites (Site Reliability Engineering), a pour objectif au sein d'une organisation de s'assurer que les systèmes et services logiciels qui y sont créés sont évolutifs et surtout **très fiables**.
 ---
 
 ![Un lézard](/lizard.cleaned.jpg)
