@@ -1,6 +1,7 @@
 ---
 title: "Les pratiques SRE et le climat"
 date: 2021-02-19T19:25:24+02:00
+toc: true
 tags:
   - sre
   - automatisation
@@ -18,8 +19,6 @@ share_img: /lizard.cleaned.jpg
 author: Benoit Petit
 summary: L'ingénierie de la fiabilité des sites (Site Reliability Engineering), a pour objectif au sein d'une organisation de s'assurer que les systèmes et services logiciels qui y sont créés sont évolutifs et surtout **très fiables**.
 ---
-
-![Un lézard](/lizard.cleaned.jpg)
 
 L'ingénierie de la fiabilité des sites (Site Reliability Engineering), a pour objectif au sein d'une organisation de s'assurer que les systèmes et services logiciels qui y sont créés sont évolutifs et surtout **très fiables**.
 

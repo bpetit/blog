@@ -2,34 +2,87 @@ baseURL: https://bpetit.nce.re
 DefaultContentLanguage: en
 languageCode: "en-us"
 languageName: English
-theme: "beautifulhugo"
 params:
   AuthorName: Benoit Petit
+  author: Benoit Petit
   GitHubUser: bpetit
   SidebarRecentLimit: 5
   selfHosted: true
   rss: true
-  author:
-    mastodon: "mastodon.green/@bpetit"
-    linkedin: bepetit
-    github: bpetit
-    gitlab: bpetit1
-    bluesky: bpetit.bsky.social
-    email: bpetit@nce.re
-    name: Benoit Petit
+  profilePicture: "profile.jpeg"
+  favicon: "static/favicon.ico"
+  socialIcons:
+    - url: "https://mastodon.green/@bpetit"
+      icon: "fab fa-mastodon"
+      title: "Mastodon"
+    - url: "https://linkedin.com/in/bepetit"
+      icon: "fab fa-linkedin"
+      title: "Linkedin"
+    - url: "https://github.com/bpetit"
+      icon: "fab fa-github"
+      title: "Github"
+    - url: "https://gitlab.com/bpetit1"
+      icon: "fab fa-gitlab"
+      title: "Gitlab"
+    - url: "https://bsky.app/profile/did:plc:yrnndxpff3wqc7kedczen335"
+      icon: "fab fa-bluesky"
+      title: "Bluesky"
+    - url: "mailto:bpetit@nce.re"
+      icon: "fas fa-envelope"
+      title: "e-mail"
+  description: "Co-founder of Hubblo and active contributor to Boavizta, analyzing the effects of Tech on the environment and society. ICT infrastructures and Datacenters specialist, IT system engineer. Open-Source developer. Read more in the About section."
+  contentratio: 0.75
+  hidesidebar: false
+  readMore: true
+  relatedPosts:  true
+  numberOfRelatedPosts: 3
 languages:
   en:
-    title: "Benoit Petit"
-    homeTitle: "The cloud is a lie"
+    title: "Benoit Petit's website"
+    description: "This is my personnal website. \nTo know more see About section."
     subtitle: "IT infrastructures, environment, climate, social justice, not necessarily in that order."
     languageName: English
     weight: 1
+    menu:
+      main:
+        - name: "Home"
+          url: "/"
+          weight: 1
+        - name: "Blog"
+          url: "/posts"
+          weight: 2
+        - name: "About"
+          url: "/page/about/"
+          weight: 3
+        - name: "Press"
+          url: "/page/press/"
+          weight: 4
+        - name: "Talks"
+          url: "/page/talks/"
+          weight: 5
   fr:
-    title: "Benoit Petit"
-    homeTitle: "Derrière les nuages"
+    title: "Blog de Benoit Petit"
+    description: "This is my personnal website.\nTo know more see About section"
     subtitle: "Infrastructures IT, environnement, climat, justice sociale, pas forcément dans cet ordre."
     languageName: Français
     weight: 2
+    menu:
+      main:
+        - name: "Accueil"
+          url: "/fr"
+          weight: 1
+        - name: "Blog"
+          url: "/fr/posts"
+          weight: 2
+        - name: "A propos"
+          url: "/fr/page/about/"
+          weight: 3
+        - name: "Presse"
+          url: "/page/press/"
+          weight: 4
+        - name: "Média"
+          url: "/page/talks/"
+          weight: 5
 permalinks:
   posts: /:year/:month/:title/
 pygmentsCodeFences: true
@@ -37,11 +90,8 @@ pygmentsStyle: "native"
 publishDir: docs
 taxonomies:
   tag: tags
-menu:
-  main:
-    - name: "Blog"
-      url: ""
-      weight: 1
-    - name: "Data"
-      url: "page/data/"
-      weight: 2
+  series: "series"
+module:
+  imports:
+    path: "github.com/lxndrblz/anatole"
+    disable:  false

@@ -1,244 +1,525 @@
-
-
-<!DOCTYPE html>
-<html lang="en" itemscope itemtype="http://schema.org/WebPage">
-  <head>
-    
-
+<!doctype html>
+<html
+  dir="ltr"
+  lang="en"
+  data-theme=""
+  
+    class="html theme--light"
+  
+><head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
   <meta charset="utf-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+  <title>
+    Benoit Petit
+        |
+        How to build a simplistic private cloud piece by piece
+      
 
- 
-
-
-      <title>How to build a simplistic private cloud piece by piece - </title>
-
-  <meta name="description" content="I you are, like me, concerned about privacy, you may be the administrator of a few physical servers, either at home or rented to some dedicated server providers. Virtual machine instances (or VPS) bought in public clouds are great, but if you can&rsquo;t configure yourself the underlying network and the hypervisors, where is the fun ? (just kidding, there is so much to do above a cloud-like infrastructure too). Here I&rsquo;ll describe a little configuration I made for my own needs. The purpose is to deploy automatically (via ansible) virtual machines, and the networks they rely on, on multiple debian 9 kvm hypervisors. The result is really basic compared to the feature you can get, either from a public cloud service or from a fully configured and integrated private cloud software suite (let&rsquo;s say OpenStack). The idea here is not to provide a full featured infrastructure, but to build a lightweight IaaS infrastructure, piece by piece. Here we will focus on virtual machines deployment and basic networking, virtual machines disks will be stored on hypervisors local hard drives (yeah, not so good for live migration, but let&rsquo;s keep some fun for later).">
-  <meta name="author" content="Benoit Petit"/><script type="application/ld+json">
-{
-    "@context": "http://schema.org",
-    "@type": "WebSite",
-    "name": "Benoit Petit",
     
-    "url": "https:\/\/bpetit.nce.re\/"
-}
-</script><script type="application/ld+json">
-{
-  "@context": "http://schema.org",
-  "@type": "Organization",
-  "name": "",
-  "url": "https:\/\/bpetit.nce.re\/"
+
+  </title>
+
+  <meta name="generator" content="Hugo 0.151.2"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+  <meta name="author" content="Benoit Petit" />
+  <meta
+    name="description"
+    content="Co-founder of Hubblo and active contributor to Boavizta, analyzing the effects of Tech on the environment and society. ICT infrastructures and Datacenters specialist, IT system engineer. Open-Source developer. Read more in the About section."
+  />
+  
+  
+        <link rel="stylesheet" href="/css/anatole.css" />
+      
+  <link
+    rel="stylesheet"
+    href="/css/markupHighlight.min.73ccfdf28df555e11009c13c20ced067af3cb021504cba43644c705930428b00.css"
+    integrity="sha256-c8z98o31VeEQCcE8IM7QZ688sCFQTLpDZExwWTBCiwA="
+    crossorigin="anonymous"
+    type="text/css"
+  />
+  
+  
+  <link
+    rel="stylesheet"
+    href="/fontawesome/css/fontawesome.min.137b1cf3cea9a8adb7884343a9a5ddddf4280f59153f74dc782fb7f7bf0d0519.css"
+    integrity="sha256-E3sc886pqK23iENDqaXd3fQoD1kVP3TceC&#43;3978NBRk="
+    crossorigin="anonymous"
+    type="text/css"
+  />
+  
+  <link
+    rel="stylesheet"
+    href="/fontawesome/css/solid.min.e65dc5b48fb5f39b142360c57c3a215744c94e56c755c929cc3e88fe12aab4d3.css"
+    integrity="sha256-5l3FtI&#43;185sUI2DFfDohV0TJTlbHVckpzD6I/hKqtNM="
+    crossorigin="anonymous"
+    type="text/css"
+  />
+  
+  <link
+    rel="stylesheet"
+    href="/fontawesome/css/regular.min.6f4f16d58da1c82c0c3a3436e021a3d39b4742f741192c546e73e947eacfd92f.css"
+    integrity="sha256-b08W1Y2hyCwMOjQ24CGj05tHQvdBGSxUbnPpR&#43;rP2S8="
+    crossorigin="anonymous"
+    type="text/css"
+  />
+  
+  <link
+    rel="stylesheet"
+    href="/fontawesome/css/brands.min.e10425ad768bc98ff1fb272a0ac8420f9d1ba22f0612c08ff1010c95080ffe7e.css"
+    integrity="sha256-4QQlrXaLyY/x&#43;ycqCshCD50boi8GEsCP8QEMlQgP/n4="
+    crossorigin="anonymous"
+    type="text/css"
+  />
+  
+  <link rel="shortcut icon" href="/static/favicon.icofavicon.ico" type="image/x-icon" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/static/favicon.icoapple-touch-icon.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/static/favicon.icofavicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/static/favicon.icofavicon-16x16.png" />
+
+  <link rel="canonical" href="http://localhost:1313/2017/11/how-to-build-a-simplistic-private-cloud-piece-by-piece/" />
   
   
   
   
-}
-</script>
-<script type="application/ld+json">
-{
-  "@context": "http://schema.org",
-  "@type": "BreadcrumbList",
-  "itemListElement": [{
-        "@type": "ListItem",
-        "position": 1,
-        "item": {
-          "@id": "https:\/\/bpetit.nce.re\/",
-          "name": "home"
-        }
-    },{
-        "@type": "ListItem",
-        "position": 3,
-        "item": {
-          "@id": "https:\/\/bpetit.nce.re\/2017\/11\/how-to-build-a-simplistic-private-cloud-piece-by-piece\/",
-          "name": "How to build a simplistic private cloud piece by piece"
-        }
-    }]
-}
-</script><script type="application/ld+json">
-{
-  "@context": "http://schema.org",
-  "@type": "Article",
-  "author": {
-    "name" : "Benoit Petit"
-  },
-  "headline": "How to build a simplistic private cloud piece by piece",
-  "description" : "I you are, like me, concerned about privacy, you may be the administrator of a few physical servers, either at home or rented to some dedicated server providers. Virtual machine instances (or VPS) bought in public clouds are great, but if you can\u0026rsquo;t configure yourself the underlying network and the hypervisors, where is the fun ? (just kidding, there is so much to do above a cloud-like infrastructure too). Here I\u0026rsquo;ll describe a little configuration I made for my own needs. The purpose is to deploy automatically (via ansible) virtual machines, and the networks they rely on, on multiple debian 9 kvm hypervisors. The result is really basic compared to the feature you can get, either from a public cloud service or from a fully configured and integrated private cloud software suite (let\u0026rsquo;s say OpenStack). The idea here is not to provide a full featured infrastructure, but to build a lightweight IaaS infrastructure, piece by piece. Here we will focus on virtual machines deployment and basic networking, virtual machines disks will be stored on hypervisors local hard drives (yeah, not so good for live migration, but let\u0026rsquo;s keep some fun for later).\n",
-  "inLanguage" : "en",
-  "wordCount":  2090 ,
-  "datePublished" : "2017-11-21T20:44:12\u002b02:00",
-  "dateModified" : "2017-11-21T20:44:12\u002b02:00",
-  "image" : "https:\/\/bpetit.nce.re\/",
-  "keywords" : [ "automation, cloud, ansible, cloud-init, libvirt, qemu, kvm, openvswitch" ],
-  "mainEntityOfPage" : "https:\/\/bpetit.nce.re\/2017\/11\/how-to-build-a-simplistic-private-cloud-piece-by-piece\/",
-  "publisher" : {
-    "@type": "Organization",
-    "name" : "https:\/\/bpetit.nce.re\/",
-    "logo" : {
-        "@type" : "ImageObject",
-        "url" : "https:\/\/bpetit.nce.re\/",
-        "height" :  60 ,
-        "width" :  60
+  <script
+    type="text/javascript"
+    src="/js/anatole-header.min.f9132794301a01ff16550ed66763482bd848f62243d278f5e550229a158bfd32.js"
+    integrity="sha256-&#43;RMnlDAaAf8WVQ7WZ2NIK9hI9iJD0nj15VAimhWL/TI="
+    crossorigin="anonymous"
+  ></script>
+
+  
+    
+    
+    <script
+      type="text/javascript"
+      src="/js/anatole-theme-switcher.min.8724ddf9268dee451060f191961647573c7f592fbccc6d858746236b3f915813.js"
+      integrity="sha256-hyTd&#43;SaN7kUQYPGRlhZHVzx/WS&#43;8zG2Fh0Yjaz&#43;RWBM="
+      crossorigin="anonymous"
+    ></script>
+  
+
+  
+
+  
+
+  
+
+
+  
+  
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="How to build a simplistic private cloud piece by piece">
+  <meta name="twitter:description" content="I you are, like me, concerned about privacy, you may be the administrator of a few physical servers, either at home or rented to some dedicated server providers. Virtual machine instances (or VPS) bought in public clouds are great, but if you can’t configure yourself the underlying network and the hypervisors, where is the fun ? (just kidding, there is so much to do above a cloud-like infrastructure too). Here I’ll describe a little configuration I made for my own needs. The purpose is to deploy automatically (via ansible) virtual machines, and the networks they rely on, on multiple debian 9 kvm hypervisors. The result is really basic compared to the feature you can get, either from a public cloud service or from a fully configured and integrated private cloud software suite (let’s say OpenStack). The idea here is not to provide a full featured infrastructure, but to build a lightweight IaaS infrastructure, piece by piece. Here we will focus on virtual machines deployment and basic networking, virtual machines disks will be stored on hypervisors local hard drives (yeah, not so good for live migration, but let’s keep some fun for later).">
+
+
+
+  
+  <meta property="og:url" content="http://localhost:1313/2017/11/how-to-build-a-simplistic-private-cloud-piece-by-piece/">
+  <meta property="og:site_name" content="Benoit Petit&#39;s website">
+  <meta property="og:title" content="How to build a simplistic private cloud piece by piece">
+  <meta property="og:description" content="I you are, like me, concerned about privacy, you may be the administrator of a few physical servers, either at home or rented to some dedicated server providers. Virtual machine instances (or VPS) bought in public clouds are great, but if you can’t configure yourself the underlying network and the hypervisors, where is the fun ? (just kidding, there is so much to do above a cloud-like infrastructure too). Here I’ll describe a little configuration I made for my own needs. The purpose is to deploy automatically (via ansible) virtual machines, and the networks they rely on, on multiple debian 9 kvm hypervisors. The result is really basic compared to the feature you can get, either from a public cloud service or from a fully configured and integrated private cloud software suite (let’s say OpenStack). The idea here is not to provide a full featured infrastructure, but to build a lightweight IaaS infrastructure, piece by piece. Here we will focus on virtual machines deployment and basic networking, virtual machines disks will be stored on hypervisors local hard drives (yeah, not so good for live migration, but let’s keep some fun for later).">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2017-11-21T20:44:12+02:00">
+    <meta property="article:modified_time" content="2017-11-21T20:44:12+02:00">
+    <meta property="article:tag" content="Automation">
+    <meta property="article:tag" content="Cloud">
+    <meta property="article:tag" content="Ansible">
+    <meta property="article:tag" content="Cloud-Init">
+    <meta property="article:tag" content="Libvirt">
+    <meta property="article:tag" content="Qemu">
+
+
+
+  
+  
+  
+  
+  <script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "articleSection": "posts",
+        "name": "How to build a simplistic private cloud piece by piece",
+        "headline": "How to build a simplistic private cloud piece by piece",
+        "alternativeHeadline": "",
+        "description": "
+      
+        \u003cp\u003eI you are, like me, concerned about privacy, you may be the administrator of a few physical servers, either at home or rented to some dedicated server providers. Virtual machine instances (or VPS) bought in public clouds are great, but if you can\u0026rsquo;t configure yourself the underlying network and the hypervisors, where is the fun ? (just kidding, there is so much to do above a cloud-like infrastructure too). Here I\u0026rsquo;ll describe a little configuration I made for my own needs. The purpose is to deploy automatically (via ansible) virtual machines, and the networks they rely on, on multiple debian 9 kvm hypervisors. The result is really basic compared to the feature you can get, either from a public cloud service or from a fully configured and integrated private cloud software suite (let\u0026rsquo;s say OpenStack). The idea here is not to provide a full featured infrastructure, but to build a lightweight IaaS infrastructure, piece by piece. Here we will focus on virtual machines deployment and basic networking, virtual machines disks will be stored on hypervisors local hard drives (yeah, not so good for live migration, but let\u0026rsquo;s keep some fun for later).\u003c\/p\u003e
+
+
+      
+
+
+    ",
+        "license": "",
+        
+        "inLanguage": "en",
+        "isFamilyFriendly": "true",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "http:\/\/localhost:1313\/2017\/11\/how-to-build-a-simplistic-private-cloud-piece-by-piece\/"
+        },
+        "author" : {
+            "@type": "Person",
+            "name": "Benoit Petit"
+        },
+        "creator" : {
+            "@type": "Person",
+            "name": "Benoit Petit"
+        },
+        "accountablePerson" : {
+            "@type": "Person",
+            "name": "Benoit Petit"
+        },
+        "copyrightHolder" : {
+            "@type": "Person",
+            "name": "Benoit Petit"
+        },
+        "dateCreated": "2017-11-21T20:44:12.00Z",
+        "datePublished": "2017-11-21T20:44:12.00Z",
+        "dateModified": "2017-11-21T20:44:12.00Z",
+        "publisher":{
+            "@type":"Organization",
+            "name": "Benoit Petit",
+            "url": "http://localhost:1313/",
+            "logo": {
+                "@type": "ImageObject",
+                "url": "http:\/\/localhost:1313\/static\/favicon.icofavicon-32x32.png",
+                "width":"32",
+                "height":"32"
+            }
+        },
+        "image": 
+      [
+      ]
+
+    ,
+        "url" : "http:\/\/localhost:1313\/2017\/11\/how-to-build-a-simplistic-private-cloud-piece-by-piece\/",
+        "wordCount" : "2090",
+        "genre" : [ ],
+        "keywords" : [ 
+      
+      "automation"
+
+    
+      
+        ,
+
+      
+      "cloud"
+
+    
+      
+        ,
+
+      
+      "ansible"
+
+    
+      
+        ,
+
+      
+      "cloud-init"
+
+    
+      
+        ,
+
+      
+      "libvirt"
+
+    
+      
+        ,
+
+      
+      "qemu"
+
+    
+      
+        ,
+
+      
+      "kvm"
+
+    
+      
+        ,
+
+      
+      "openvswitch"
+
+    ]
     }
-  }
-}
-</script>
+  </script>
 
 
-<meta property="og:title" content="How to build a simplistic private cloud piece by piece" />
-<meta property="og:description" content="I you are, like me, concerned about privacy, you may be the administrator of a few physical servers, either at home or rented to some dedicated server providers. Virtual machine instances (or VPS) bought in public clouds are great, but if you can&rsquo;t configure yourself the underlying network and the hypervisors, where is the fun ? (just kidding, there is so much to do above a cloud-like infrastructure too). Here I&rsquo;ll describe a little configuration I made for my own needs. The purpose is to deploy automatically (via ansible) virtual machines, and the networks they rely on, on multiple debian 9 kvm hypervisors. The result is really basic compared to the feature you can get, either from a public cloud service or from a fully configured and integrated private cloud software suite (let&rsquo;s say OpenStack). The idea here is not to provide a full featured infrastructure, but to build a lightweight IaaS infrastructure, piece by piece. Here we will focus on virtual machines deployment and basic networking, virtual machines disks will be stored on hypervisors local hard drives (yeah, not so good for live migration, but let&rsquo;s keep some fun for later).">
-<meta property="og:url" content="https://bpetit.nce.re/2017/11/how-to-build-a-simplistic-private-cloud-piece-by-piece/" />
-<meta property="og:type" content="website" />
-<meta property="og:site_name" content="Benoit Petit" />
 
-  <meta name="twitter:title" content="How to build a simplistic private cloud piece by piece" />
-  <meta name="twitter:description" content="I you are, like me, concerned about privacy, you may be the administrator of a few physical servers, either at home or rented to some dedicated server providers. Virtual machine instances (or VPS) …">
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="generator" content="Hugo 0.143.1">
-  <link rel="alternate" href="https://bpetit.nce.re/index.xml" type="application/rss+xml" title="Benoit Petit"><link rel="stylesheet" href="https://bpetit.nce.re/css/katex.min.css" />
-  <link rel="stylesheet" href="https://bpetit.nce.re/fontawesome/css/all.css" />
-  <link rel="stylesheet" href="https://bpetit.nce.re/css/bootstrap.min.css" /><link rel="stylesheet" href="https://bpetit.nce.re/css/main.css" /><link rel="stylesheet" href="https://bpetit.nce.re/css/fonts.css" /><link rel="stylesheet" href="https://bpetit.nce.re/css/syntax.css" /><link rel="stylesheet" href="https://bpetit.nce.re/css/codeblock.css" /><link rel="stylesheet" href="https://bpetit.nce.re/css/photoswipe.min.css" />
-  <link rel="stylesheet" href="https://bpetit.nce.re/css/photoswipe.default-skin.min.css" />
-  </head>
-  <body>
-    <nav class="navbar navbar-default navbar-fixed-top navbar-custom">
-  <div class="container-fluid">
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#main-navbar">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <a class="navbar-brand" href="https://bpetit.nce.re/">Benoit Petit</a>
-    </div>
 
-    <div class="collapse navbar-collapse" id="main-navbar">
-      <ul class="nav navbar-nav navbar-right">
+  
+  
+  
+</head>
+<body class="body">
+    <div class="wrapper">
+      <aside
         
-          
-            <li>
-              <a title="Blog" href="/">Blog</a>
-            </li>
-          
+          class="wrapper__sidebar"
         
-          
-            <li>
-              <a title="Data" href="/page/data/">Data</a>
-            </li>
-          
-        
-
-        
-          
-            <li>
-              
-            </li>
-          
-        
-
-        
-      </ul>
-    </div>
-
-    
-
-  </div>
-</nav>
-
-
-
-
-    
-
-
-<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
-
-<div class="pswp__bg"></div>
-
-<div class="pswp__scroll-wrap">
-    
-    <div class="pswp__container">
-      <div class="pswp__item"></div>
-      <div class="pswp__item"></div>
-      <div class="pswp__item"></div>
-    </div>
-    
-    <div class="pswp__ui pswp__ui--hidden">
-    <div class="pswp__top-bar">
+      ><div
+  class="sidebar
+    animated fadeInDown
+  "
+>
+  <div class="sidebar__content">
+    <div class="sidebar__introduction">
+      <img
+        class="sidebar__introduction-profileimage"
+        src="/profile.jpeg"
+        alt="profile picture"
+      />
       
-      <div class="pswp__counter"></div>
-      <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
-      <button class="pswp__button pswp__button--share" title="Share"></button>
-      <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
-      <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
-      
-      
-      <div class="pswp__preloader">
-        <div class="pswp__preloader__icn">
-          <div class="pswp__preloader__cut">
-            <div class="pswp__preloader__donut"></div>
-          </div>
+        <div class="sidebar__introduction-title">
+          <a href="/"></a>
         </div>
+      
+      <div class="sidebar__introduction-description">
+        <p>Co-founder of Hubblo and active contributor to Boavizta, analyzing the effects of Tech on the environment and society. ICT infrastructures and Datacenters specialist, IT system engineer. Open-Source developer. Read more in the About section.</p>
       </div>
     </div>
-    <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
-      <div class="pswp__share-tooltip"></div>
-    </div>
-    <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
-    </button>
-    <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
-    </button>
-    <div class="pswp__caption">
-      <div class="pswp__caption__center"></div>
-    </div>
-    </div>
-    </div>
+    <ul class="sidebar__list">
+      
+        <li class="sidebar__list-item">
+          <a
+            href="https://mastodon.green/@bpetit"
+            target="_blank"
+            rel="noopener me"
+            aria-label="Mastodon"
+            title="Mastodon"
+          >
+            <i class="fab fa-mastodon fa-2x" aria-hidden="true"></i>
+          </a>
+        </li>
+      
+        <li class="sidebar__list-item">
+          <a
+            href="https://linkedin.com/in/bepetit"
+            target="_blank"
+            rel="noopener me"
+            aria-label="Linkedin"
+            title="Linkedin"
+          >
+            <i class="fab fa-linkedin fa-2x" aria-hidden="true"></i>
+          </a>
+        </li>
+      
+        <li class="sidebar__list-item">
+          <a
+            href="https://github.com/bpetit"
+            target="_blank"
+            rel="noopener me"
+            aria-label="Github"
+            title="Github"
+          >
+            <i class="fab fa-github fa-2x" aria-hidden="true"></i>
+          </a>
+        </li>
+      
+        <li class="sidebar__list-item">
+          <a
+            href="https://gitlab.com/bpetit1"
+            target="_blank"
+            rel="noopener me"
+            aria-label="Gitlab"
+            title="Gitlab"
+          >
+            <i class="fab fa-gitlab fa-2x" aria-hidden="true"></i>
+          </a>
+        </li>
+      
+        <li class="sidebar__list-item">
+          <a
+            href="https://bsky.app/profile/did:plc:yrnndxpff3wqc7kedczen335"
+            target="_blank"
+            rel="noopener me"
+            aria-label="Bluesky"
+            title="Bluesky"
+          >
+            <i class="fab fa-bluesky fa-2x" aria-hidden="true"></i>
+          </a>
+        </li>
+      
+        <li class="sidebar__list-item">
+          <a
+            href="mailto:bpetit@nce.re"
+            target="_blank"
+            rel="noopener me"
+            aria-label="e-mail"
+            title="e-mail"
+          >
+            <i class="fas fa-envelope fa-2x" aria-hidden="true"></i>
+          </a>
+        </li>
+      
+    </ul>
+  </div><footer class="footer footer__sidebar">
+  <ul class="footer__list">
+    <li class="footer__item">
+      &copy;
+      
+        Benoit Petit
+        2025
+      
+    </li>
+    
+  </ul>
+</footer>
+  
+  <script
+    type="text/javascript"
+    src="/js/medium-zoom.min.9531b4a2217a70c5a1fce89c1f81c9ebbdd586708fcd4130b417320c7230c8d6.js"
+    integrity="sha256-lTG0oiF6cMWh/OicH4HJ673VhnCPzUEwtBcyDHIwyNY="
+    crossorigin="anonymous"
+  ></script></div>
+</aside>
+      <main
+        
+          class="wrapper__main"
+        
+      >
+        <header class="header"><div
+  class="
+    animated fadeInDown
+  "
+>
+  <a role="button" class="navbar-burger" data-target="navMenu" aria-label="menu" aria-expanded="false">
+    <span aria-hidden="true" class="navbar-burger__line"></span>
+    <span aria-hidden="true" class="navbar-burger__line"></span>
+    <span aria-hidden="true" class="navbar-burger__line"></span>
+  </a>
+  <nav class="nav">
+    <ul class="nav__list" id="navMenu">
+      
+      
+        
+        
+          <li class="nav__list-item">
+            
+            <a
+              
+              href="/"
+              
+              title=""
+              >Home</a
+            >
+          </li>
+        
+
+      
+        
+        
+          <li class="nav__list-item">
+            
+            <a
+              
+              href="/posts"
+              
+              title=""
+              >Blog</a
+            >
+          </li>
+        
+
+      
+        
+        
+          <li class="nav__list-item">
+            
+            <a
+              
+              href="/page/about/"
+              
+              title=""
+              >About</a
+            >
+          </li>
+        
+
+      
+        
+        
+          <li class="nav__list-item">
+            
+            <a
+              
+              href="/page/press/"
+              
+              title=""
+              >Press</a
+            >
+          </li>
+        
+
+      
+        
+        
+          <li class="nav__list-item">
+            
+            <a
+              
+              href="/page/talks/"
+              
+              title=""
+              >Talks</a
+            >
+          </li>
+        
+
+      
+    </ul>
+    <ul class="nav__list nav__list--end">
+      
+      
+        <li class="nav__list-item">
+          <div class="themeswitch">
+            <a title="Switch Theme">
+              <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+            </a>
+          </div>
+        </li>
+      
+    </ul>
+  </nav>
 </div>
-
-
-  
-  
-  
-
-
-
-
-
-
-  
-
-  <header class="header-section ">
+</header>
+  <div
+    class="post 
+      animated fadeInDown
+    "
+  >
     
-    
-    <div class="intro-header no-img">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-            <div class="posts-heading">
-              
-                <h1>How to build a simplistic private cloud piece by piece</h1>
-              
-              
-                <hr class="small">
-              
-              
-              
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  
-  </header>
-
-
-    
-<div class="container" role="main">
-  <div class="row">
-    <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-      <article role="main" class="blog-post">
-        <p>I you are, like me, concerned about privacy, you may be the administrator of a few physical servers, either at home or rented to some dedicated server providers. Virtual machine instances (or VPS) bought in public clouds are great, but if you can&rsquo;t configure yourself the underlying network and the hypervisors, where is the fun ? (just kidding, there is so much to do above a cloud-like infrastructure too). Here I&rsquo;ll describe a little configuration I made for my own needs. The purpose is to deploy automatically (via ansible) virtual machines, and the networks they rely on, on multiple debian 9 kvm hypervisors. The result is really basic compared to the feature you can get, either from a public cloud service or from a fully configured and integrated private cloud software suite (let&rsquo;s say OpenStack). The idea here is not to provide a full featured infrastructure, but to build a lightweight IaaS infrastructure, piece by piece. Here we will focus on virtual machines deployment and basic networking, virtual machines disks will be stored on hypervisors local hard drives (yeah, not so good for live migration, but let&rsquo;s keep some fun for later).</p>
+    <div class="post__content">
+      
+        <h1>How to Build a Simplistic Private Cloud Piece by Piece</h1>
+      
+      <h3>Table of contents</h3>
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#project-workflow">Project workflow</a>
+      <ul>
+        <li><a href="#0-requirements-installation">0. Requirements installation</a></li>
+        <li><a href="#1-openvswitch-configuration">1. Openvswitch configuration</a></li>
+        <li><a href="#4-cloud-init-configuration-and-libvirt-domain-creation">4. Cloud-init configuration and libvirt domain creation</a></li>
+        <li><a href="#5-define-domain-and-boot-the-guest">5. Define domain and boot the guest</a></li>
+      </ul>
+    </li>
+    <li><a href="#feed-the-variables-host_vars-and-group_vars">Feed the variables: host_vars and group_vars</a></li>
+    <li><a href="#flaws">Flaws</a></li>
+  </ul>
+</nav>
+<p>I you are, like me, concerned about privacy, you may be the administrator of a few physical servers, either at home or rented to some dedicated server providers. Virtual machine instances (or VPS) bought in public clouds are great, but if you can&rsquo;t configure yourself the underlying network and the hypervisors, where is the fun ? (just kidding, there is so much to do above a cloud-like infrastructure too). Here I&rsquo;ll describe a little configuration I made for my own needs. The purpose is to deploy automatically (via ansible) virtual machines, and the networks they rely on, on multiple debian 9 kvm hypervisors. The result is really basic compared to the feature you can get, either from a public cloud service or from a fully configured and integrated private cloud software suite (let&rsquo;s say OpenStack). The idea here is not to provide a full featured infrastructure, but to build a lightweight IaaS infrastructure, piece by piece. Here we will focus on virtual machines deployment and basic networking, virtual machines disks will be stored on hypervisors local hard drives (yeah, not so good for live migration, but let&rsquo;s keep some fun for later).</p>
 <p>First, let&rsquo;s present the building blocks of this workshop:</p>
 <ul>
 <li>Packer: description here, permits to build fresh virtual machine images from a json template</li>
@@ -674,177 +955,47 @@ As I said in the introduction, this setup lacks a lot of features to be nice, I&
 <p>Feel free to contact me or comment on any social media listed below.</p>
 
 
-        
-          <div class="blog-tags">
-            
-              
-              <a href="https://bpetit.nce.re/tags/automation/">automation</a>&nbsp;
-            
-              
-              <a href="https://bpetit.nce.re/tags/cloud/">cloud</a>&nbsp;
-            
-              
-              <a href="https://bpetit.nce.re/tags/ansible/">ansible</a>&nbsp;
-            
-              
-              <a href="https://bpetit.nce.re/tags/cloud-init/">cloud-init</a>&nbsp;
-            
-              
-              <a href="https://bpetit.nce.re/tags/libvirt/">libvirt</a>&nbsp;
-            
-              
-              <a href="https://bpetit.nce.re/tags/qemu/">qemu</a>&nbsp;
-            
-              
-              <a href="https://bpetit.nce.re/tags/kvm/">kvm</a>&nbsp;
-            
-              
-              <a href="https://bpetit.nce.re/tags/openvswitch/">openvswitch</a>&nbsp;
-            
-          </div>
-        
+  <h3>Related Posts</h3>
+  <ul>
+    
+      <li><a href="/2017/09/automate-your-virtual-machine-templates-creation-with-packer/">Automate your virtual machine templates creation with Packer</a></li>
+    
+      <li><a href="/2017/07/make-ansible-run-on-debian-9/">Make Ansible Run on Debian 9</a></li>
+    
+  </ul>
 
-        
-
-        
-      </article>
-
-      
-        <ul class="pager blog-pager">
-          
-            <li class="previous">
-              <a href="https://bpetit.nce.re/2017/09/automate-your-virtual-machine-templates-creation-with-packer/" data-toggle="tooltip" data-placement="top" title="Automate your virtual machine templates creation with Packer">&larr; Previous Post</a>
-            </li>
-          
-          
-            <li class="next">
-              <a href="https://bpetit.nce.re/2018/03/automating-web-applications-proxying-dns-registration-and-tls-termination-with-ansible/" data-toggle="tooltip" data-placement="top" title="Automating web applications proxying, DNS registration and TLS termination with ansible">Next Post &rarr;</a>
-            </li>
-          
-        </ul>
-      
-
-
-      
-
-    </div>
-  </div>
 </div>
+    <div class="post__footer">
+      
 
-      <footer>
-  <div class="container">
-    
-    <div class="row">
-      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-        <ul class="list-inline text-center footer-links">
-          
-              <li>
-		
-		  <a href="mailto:bpetit@nce.re" title="Email me">
-		
-                  <span class="fa-stack fa-lg">
-                    <i class="fas fa-circle fa-stack-2x"></i>
-                    <i class="fas fa-envelope fa-stack-1x fa-inverse"></i>
-                  </span>
-                </a>
-              </li>
-              <li>
-		
-		  <a href="https://github.com/bpetit" title="GitHub">
-		
-                  <span class="fa-stack fa-lg">
-                    <i class="fas fa-circle fa-stack-2x"></i>
-                    <i class="fab fa-github fa-stack-1x fa-inverse"></i>
-                  </span>
-                </a>
-              </li>
-              <li>
-		
-		  <a href="https://gitlab.com/bpetit1" title="GitLab">
-		
-                  <span class="fa-stack fa-lg">
-                    <i class="fas fa-circle fa-stack-2x"></i>
-                    <i class="fab fa-gitlab fa-stack-1x fa-inverse"></i>
-                  </span>
-                </a>
-              </li>
-              <li>
-		
-		  <a href="https://linkedin.com/in/bepetit" title="LinkedIn">
-		
-                  <span class="fa-stack fa-lg">
-                    <i class="fas fa-circle fa-stack-2x"></i>
-                    <i class="fab fa-linkedin fa-stack-1x fa-inverse"></i>
-                  </span>
-                </a>
-              </li>
-              <li>
-		
-		  <a rel="me"href="https://mastodon.green/@bpetit" title="Mastodon">
-		
-                  <span class="fa-stack fa-lg">
-                    <i class="fas fa-circle fa-stack-2x"></i>
-                    <i class="fab fa-mastodon fa-stack-1x fa-inverse"></i>
-                  </span>
-                </a>
-              </li>
-              <li>
-		
-		  <a href="https://bsky.app/profile/bpetit.bsky.social" title="Bluesky">
-		
-                  <span class="fa-stack fa-lg">
-                    <i class="fas fa-circle fa-stack-2x"></i>
-                    <i class="fab fa-bluesky fa-stack-1x fa-inverse"></i>
-                  </span>
-                </a>
-              </li>
-          
-          
-          
-        </ul>
-        <p class="credits copyright text-muted">
-          
-            
-              Benoit Petit
-            
-          
+      
+        <span><a class="tag" href="/tags/automation/">automation</a><a class="tag" href="/tags/cloud/">cloud</a><a class="tag" href="/tags/ansible/">ansible</a><a class="tag" href="/tags/cloud-init/">cloud-init</a><a class="tag" href="/tags/libvirt/">libvirt</a><a class="tag" href="/tags/qemu/">qemu</a><a class="tag" href="/tags/kvm/">kvm</a><a class="tag" href="/tags/openvswitch/">openvswitch</a></span>
 
-          &nbsp;&bull;&nbsp;&copy;
-          
-            2021
-          
 
-          
-            &nbsp;&bull;&nbsp;
-            <a href="https://bpetit.nce.re/">Benoit Petit</a>
-          
-        </p>
-        
-        <p class="credits theme-by text-muted">
-          <a href="https://gohugo.io">Hugo v0.143.1</a> powered &nbsp;&bull;&nbsp; Theme <a href="https://github.com/halogenica/beautifulhugo">Beautiful Hugo</a> adapted from <a href="https://deanattali.com/beautiful-jekyll/">Beautiful Jekyll</a>
-          
-        </p>
-      </div>
+      
     </div>
-  </div>
-</footer><script defer src="https://bpetit.nce.re/js/katex.min.js"></script>
-<script defer src="https://bpetit.nce.re/js/auto-render.min.js" onload="renderMathInElement(document.body);"></script>
-<script src="https://bpetit.nce.re/js/jquery-3.7.0.slim.min.js"></script>
-<script src="https://bpetit.nce.re/js/bootstrap.min.js"></script>
-
-<script src="https://bpetit.nce.re/js/main.js"></script><script src="https://bpetit.nce.re/js/photoswipe.min.js"></script>
-<script src="https://bpetit.nce.re/js/photoswipe-ui-default.min.js"></script><script src="https://bpetit.nce.re/js/load-photoswipe.js"></script>
-
-
-
-
-
-
-
-
-
 
     
-  </body>
-</html>
+  </div>
 
+      </main>
+    </div><footer class="footer footer__base">
+  <ul class="footer__list">
+    <li class="footer__item">
+      &copy;
+      
+        Benoit Petit
+        2025
+      
+    </li>
+    
+  </ul>
+</footer>
+  
+  <script
+    type="text/javascript"
+    src="/js/medium-zoom.min.9531b4a2217a70c5a1fce89c1f81c9ebbdd586708fcd4130b417320c7230c8d6.js"
+    integrity="sha256-lTG0oiF6cMWh/OicH4HJ673VhnCPzUEwtBcyDHIwyNY="
+    crossorigin="anonymous"
+  ></script></body>
+</html>

@@ -1,0 +1,17 @@
+portfolioitems:
+  # portfolio category
+  - title: Press articles
+    # items within a category
+    portfolioitem:
+      - name: 'Soirée Numérique Responsable - Les mains dans le Cambouis !, Codeurs en Seine'
+        image: '/images/portfolio/code.jpg'
+        link: 'https://www.youtube.com/watch?v=DIlozib-Z_Q'
+        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'
+        tags:
+          - Tag 1
+          - Tag 2
+        status: 'Finished'
+        start: '2024'
+        end: '2024'
+        authors:
+          - Benoit Petit

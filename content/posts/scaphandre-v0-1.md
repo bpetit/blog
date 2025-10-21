@@ -1,5 +1,6 @@
 ---
 title: "Scaphandre v0.1.1: measuring the energy consumption of the tech industry (backstages)"
+toc: true
 date: 2021-01-20T11:10:24+02:00
 tags:
   - tech
@@ -15,8 +16,6 @@ share_img: /scaphandre.large.cleaned.png
 author: Benoit Petit
 summary: As many other tech workers in startups, I've worked on pretty large scale projects (even if that's subjective). I'm talking about projects involving machine learning, for example, that are often about showing the right advertisment to the right person at the right moment. Training the machine learning models for that requires a lot of resources (CPU, RAM, GPU, etc.). The same is true with APIs that are in charge of collecting data from the clients (the data will very often be used to train the ML models). Those APIs, depending on how many clients are contacting them, will receive up to several billions requests per day (or even more, but I only speak about what I've seen).
 ---
-
-![scaphandre](/scaphandre.large.cleaned.png)
 
 ## The roots of the project
 

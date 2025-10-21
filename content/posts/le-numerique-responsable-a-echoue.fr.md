@@ -1,6 +1,7 @@
 ---
 title: "Le \"Numérique Responsable\" a échoué, mais c'était prévisible."
 date: 2025-02-14T09:00:00+02:00
+toc: true
 tags:
   - numérique responsable
   - greenIT
@@ -17,7 +18,7 @@ share_img: /datacenter_lights.webp
 author: Benoit Petit
 summary: Il y a un peu moins de 5 ans je quittais mon job ([qui avait tout pour plaire](https://bpetit.nce.re/fr/2020/08/pourquoi-jai-quitt%C3%A9-mon-job-qui-avait-tout-pour-plaire/)), pour tenter de contribuer à une évolution du numérique compatible avec les enjeux environnementaux de la décennie. J'ai cheminé depuis, beaucoup appris, à travers mon engagement aux côtés des membres de l’association [Boavizta](https://boavizta.org/) et de mes collègues chez [Hubblo](https://hubblo.org/fr) (qui ont vraiment tout pour plaire). La concrétisation à la fois dans le cadre professionnel et associatif, des questionnements que j’avais commencé à développer à l'époque, a enrichi mes réflexions, mais me semble aujourd’hui largement insuffisante. J’exposerai mes impressions dans cet article, qui, je le précise, n’engage que ma personne et pas les structures pour lesquelles je m'investis professionnellement ou bénévolement.
 ---
-![Photographie de baies informatiques et de serveur, plongés dans le noir mais sortant de la pénombre par les multiples lumières LED venant des serveurs informatiques. Une photo prise par Tristan Schmurr. Licence CC-BY 2.0](/datacenter_lights.webp)*Photographie de baies informatiques et de serveur, plongés dans le noir mais sortant de la pénombre par les multiples lumières LED venant des serveurs informatiques. Une photo [prise par Tristan Schmurr](https://www.flickr.com/photos/58411470@N00/8475764430). Licence CC-BY 2.0*
+*Photographie de baies informatiques et de serveur, plongés dans le noir mais sortant de la pénombre par les multiples lumières LED venant des serveurs informatiques. Une photo [prise par Tristan Schmurr](https://www.flickr.com/photos/58411470@N00/8475764430). Licence CC-BY 2.0*
 
 _**Disclaimer** : je crois que l’interdisciplinarité est essentielle pour comprendre les enjeux actuels et futurs. S’y essayer apporte forcément son lot d’erreurs et d’approximations, puisque l’on ne peut pas être spécialiste de tout. Je vais m’y essayer dans cet article et ferai donc certainement des erreurs. Dans le cadre d’un débat apaisé et constructif je serai à l’écoute des critiques et tâcherai d’amender cet article par la suite si nécessaire en citant la personne concernée._
 
@@ -206,7 +207,7 @@ A vouloir changer les choses, on peut rapidement se retrouver cerné d’injonct
 - Tracer les changements de politiques et de conditions d’utilisation des services en ligne, en soutenant des projets comme [Open Terms Archive](https://opentermsarchive.org/fr/), inspirations [1](https://les-enovateurs.com/flash-news/1#doctolib-modifie-politique-entrainer-ia-donnes-anonymisees), [2](https://www.francetvinfo.fr/internet/reseaux-sociaux/les-nouvelles-regles-de-meta-autorisant-a-traiter-les-personnes-lgbt-de-malades-mentaux-qui-suscitent-l-indignation-sont-elles-applicables-en-france_7003538.html)
 - Intégrer la géopolitique du numérique dans nos prismes, systématiquement, inspirations: [Travaux d'Ophélie Coelho](https://www.youtube.com/watch?v=DC-YU3rgxCc)
 - Contribuer aux associations qui font du plaidoyer, inspirations: [Hiatus](https://hiatus.ooo/), [GreenScreen Network](https://greenscreen.network/en/blog/within-bounds-limiting-ai-environmental-impact/)
-- Soutenir le journalisme indépendant et d’investigation, inspirations: [Blast](https://www.blast-info.fr/), [Mediapart](https://www.mediapart.fr/), [Reflets](https://reflets.info/), [Un bout des médias](https://www.unboutdesmedias.org/), [StreetPress](https://www.streetpress.com/), [Les e-novateurs](https://les-enovateurs.com/), [Vert.eco](https://vert.eco), [CoopMedias] (www.coop-medias.org)
+- Soutenir le journalisme indépendant et d’investigation, inspirations: [Blast](https://www.blast-info.fr/), [Mediapart](https://www.mediapart.fr/), [Reflets](https://reflets.info/), [Un bout des médias](https://www.unboutdesmedias.org/), [StreetPress](https://www.streetpress.com/), [Les e-novateurs](https://les-enovateurs.com/), [Vert.eco](https://vert.eco), [CoopMedias](www.coop-medias.org)
 - Contribuer à l’investigation décentralisée et citoyenne, inspirations: [Bellingcat](https://www.bellingcat.com/), [Le Vent Se Lève](https://lvsl.fr/)
 - Soutenir les mouvement décoloniaux du numérique, inspirations: [Tribe-X](https://www.tribe-x.org/)
 - Contribuer aux projets de documentation en open-data des infrastructures essentielles comme le réseau de distribution électrique, inspiration: [OpenStreetMap](https://www.openstreetmap.fr/adaptation-reseaux-electriques-changement-climatique-openstreetmap/), [OpenInfraMap](https://www.data.gouv.fr/fr/reuses/openinframap/)

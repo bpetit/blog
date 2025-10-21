@@ -1,6 +1,7 @@
 ---
 title: "Automate your virtual machine templates creation with Packer"
 date: 2017-09-01T19:44:12+02:00
+toc: true
 tags:
   - automation
   - cloud

@@ -1,35 +1,44 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Climat on Benoit Petit</title>
-    <link>https://bpetit.nce.re/fr/tags/climat/</link>
-    <description>Recent content in Climat on Benoit Petit</description>
-    <generator>Hugo</generator>
+    <title>Climat on Blog de Benoit Petit</title>
+    <link>http://localhost:1313/fr/tags/climat/</link>
+    <description>Recent content in Climat on Blog de Benoit Petit</description>
+    <generator>Hugo -- gohugo.io</generator>
     <language>fr</language>
-    <managingEditor>bpetit@nce.re (Benoit Petit)</managingEditor>
-    <webMaster>bpetit@nce.re (Benoit Petit)</webMaster>
-    <lastBuildDate>Fri, 14 Feb 2025 09:00:00 +0200</lastBuildDate>
-    <atom:link href="https://bpetit.nce.re/fr/tags/climat/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 14 Feb 2025 09:00:00 +0200</lastBuildDate><atom:link href="http://localhost:1313/fr/tags/climat/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Le &#34;Numérique Responsable&#34; a échoué, mais c&#39;était prévisible.</title>
-      <link>https://bpetit.nce.re/fr/2025/02/le-num%C3%A9rique-responsable-a-%C3%A9chou%C3%A9-mais-c%C3%A9tait-pr%C3%A9visible./</link>
-      <pubDate>Fri, 14 Feb 2025 09:00:00 +0200</pubDate><author>bpetit@nce.re (Benoit Petit)</author>
-      <guid>https://bpetit.nce.re/fr/2025/02/le-num%C3%A9rique-responsable-a-%C3%A9chou%C3%A9-mais-c%C3%A9tait-pr%C3%A9visible./</guid>
-      <description>Il y a un peu moins de 5 ans je quittais mon job (&lt;a href=&#34;https://bpetit.nce.re/fr/2020/08/pourquoi-jai-quitt%C3%A9-mon-job-qui-avait-tout-pour-plaire/&#34;&gt;qui avait tout pour plaire&lt;/a&gt;), pour tenter de contribuer à une évolution du numérique compatible avec les enjeux environnementaux de la décennie. J&amp;rsquo;ai cheminé depuis, beaucoup appris, à travers mon engagement aux côtés des membres de l’association &lt;a href=&#34;https://boavizta.org/&#34;&gt;Boavizta&lt;/a&gt; et de mes collègues chez &lt;a href=&#34;https://hubblo.org/fr&#34;&gt;Hubblo&lt;/a&gt; (qui ont vraiment tout pour plaire). La concrétisation à la fois dans le cadre professionnel et associatif, des questionnements que j’avais commencé à développer à l&amp;rsquo;époque, a enrichi mes réflexions, mais me semble aujourd’hui largement insuffisante. J’exposerai mes impressions dans cet article, qui, je le précise, n’engage que ma personne et pas les structures pour lesquelles je m&amp;rsquo;investis professionnellement ou bénévolement.</description>
+      <link>http://localhost:1313/fr/2025/02/le-num%C3%A9rique-responsable-a-%C3%A9chou%C3%A9-mais-c%C3%A9tait-pr%C3%A9visible./</link>
+      <pubDate>Fri, 14 Feb 2025 09:00:00 +0200</pubDate>
+      
+      <guid>http://localhost:1313/fr/2025/02/le-num%C3%A9rique-responsable-a-%C3%A9chou%C3%A9-mais-c%C3%A9tait-pr%C3%A9visible./</guid>
+      
+        <description>Il y a un peu moins de 5 ans je quittais mon job (&lt;a href=&#34;https://bpetit.nce.re/fr/2020/08/pourquoi-jai-quitt%C3%A9-mon-job-qui-avait-tout-pour-plaire/&#34;&gt;qui avait tout pour plaire&lt;/a&gt;), pour tenter de contribuer à une évolution du numérique compatible avec les enjeux environnementaux de la décennie. J&amp;rsquo;ai cheminé depuis, beaucoup appris, à travers mon engagement aux côtés des membres de l’association &lt;a href=&#34;https://boavizta.org/&#34;&gt;Boavizta&lt;/a&gt; et de mes collègues chez &lt;a href=&#34;https://hubblo.org/fr&#34;&gt;Hubblo&lt;/a&gt; (qui ont vraiment tout pour plaire). La concrétisation à la fois dans le cadre professionnel et associatif, des questionnements que j’avais commencé à développer à l&amp;rsquo;époque, a enrichi mes réflexions, mais me semble aujourd’hui largement insuffisante. J’exposerai mes impressions dans cet article, qui, je le précise, n’engage que ma personne et pas les structures pour lesquelles je m&amp;rsquo;investis professionnellement ou bénévolement.</description>
+      
     </item>
+    
     <item>
       <title>Climat et numérique: pourquoi le mouvement DevOps a un rôle à jouer</title>
-      <link>https://bpetit.nce.re/fr/2021/08/climat-et-num%C3%A9rique-pourquoi-le-mouvement-devops-a-un-r%C3%B4le-%C3%A0-jouer/</link>
-      <pubDate>Mon, 09 Aug 2021 10:02:24 +0200</pubDate><author>bpetit@nce.re (Benoit Petit)</author>
-      <guid>https://bpetit.nce.re/fr/2021/08/climat-et-num%C3%A9rique-pourquoi-le-mouvement-devops-a-un-r%C3%B4le-%C3%A0-jouer/</guid>
-      <description>En ce moment je travaille sur une formation à l&amp;rsquo;attention des techs, côté infrastructure (avec un penchant pour les méthodes SRE/DevOps), concernant la sobriété numérique. J&amp;rsquo;en ai parlé un peu autour de moi pour savoir ce que les pros du domaine aimeraient trouver dans ce type de formation. J&amp;rsquo;ai entendu plein de bonnes idées et j&amp;rsquo;en ai gardé une bonne partie (merci à celles et ceux qui me les ont soufflé). En plus de ces idées, j&amp;rsquo;ai eu droit à des avis sur le sujet, bien entendu. Certains avis m&amp;rsquo;ont interpellé.</description>
+      <link>http://localhost:1313/fr/2021/08/climat-et-num%C3%A9rique-pourquoi-le-mouvement-devops-a-un-r%C3%B4le-%C3%A0-jouer/</link>
+      <pubDate>Mon, 09 Aug 2021 10:02:24 +0200</pubDate>
+      
+      <guid>http://localhost:1313/fr/2021/08/climat-et-num%C3%A9rique-pourquoi-le-mouvement-devops-a-un-r%C3%B4le-%C3%A0-jouer/</guid>
+      
+        <description>En ce moment je travaille sur une formation à l&amp;rsquo;attention des techs, côté infrastructure (avec un penchant pour les méthodes SRE/DevOps), concernant la sobriété numérique. J&amp;rsquo;en ai parlé un peu autour de moi pour savoir ce que les pros du domaine aimeraient trouver dans ce type de formation. J&amp;rsquo;ai entendu plein de bonnes idées et j&amp;rsquo;en ai gardé une bonne partie (merci à celles et ceux qui me les ont soufflé). En plus de ces idées, j&amp;rsquo;ai eu droit à des avis sur le sujet, bien entendu. Certains avis m&amp;rsquo;ont interpellé.</description>
+      
     </item>
+    
     <item>
       <title>Les pratiques SRE et le climat</title>
-      <link>https://bpetit.nce.re/fr/2021/02/les-pratiques-sre-et-le-climat/</link>
-      <pubDate>Fri, 19 Feb 2021 19:25:24 +0200</pubDate><author>bpetit@nce.re (Benoit Petit)</author>
-      <guid>https://bpetit.nce.re/fr/2021/02/les-pratiques-sre-et-le-climat/</guid>
-      <description>L&amp;rsquo;ingénierie de la fiabilité des sites (Site Reliability Engineering), a pour objectif au sein d&amp;rsquo;une organisation de s&amp;rsquo;assurer que les systèmes et services logiciels qui y sont créés sont évolutifs et surtout &lt;strong&gt;très fiables&lt;/strong&gt;.</description>
+      <link>http://localhost:1313/fr/2021/02/les-pratiques-sre-et-le-climat/</link>
+      <pubDate>Fri, 19 Feb 2021 19:25:24 +0200</pubDate>
+      
+      <guid>http://localhost:1313/fr/2021/02/les-pratiques-sre-et-le-climat/</guid>
+      
+        <description>L&amp;rsquo;ingénierie de la fiabilité des sites (Site Reliability Engineering), a pour objectif au sein d&amp;rsquo;une organisation de s&amp;rsquo;assurer que les systèmes et services logiciels qui y sont créés sont évolutifs et surtout &lt;strong&gt;très fiables&lt;/strong&gt;.</description>
+      
     </item>
+    
   </channel>
 </rss>

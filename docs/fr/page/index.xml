@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Pages on Blog de Benoit Petit</title>
+    <link>http://localhost:1313/fr/page/</link>
+    <description>Recent content in Pages on Blog de Benoit Petit</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>fr</language><atom:link href="http://localhost:1313/fr/page/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>About</title>
+      <link>http://localhost:1313/fr/page/about/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/fr/page/about/</guid>
+      
+        <description>&lt;p&gt;Je suis président et co-fondateur d&amp;rsquo;&lt;a href=&#34;https://hubblo.org&#34;&gt;Hubblo&lt;/a&gt;, un bureau d&amp;rsquo;étude spécialisé dans l&amp;rsquo;analyse des impacts environnementaux du numérique et la transformation des organisations pour être compatible avec les limites planétaires vis-à-vis leur usage et conception des technologies.&lt;/p&gt;
+&lt;p&gt;Au sein d&amp;rsquo;hubblo, j&amp;rsquo;interviens sur les sujets liés aux infrastructures numériques et en particulier les datacenters et l&amp;rsquo;IA générative, dans le cadre d&amp;rsquo;études et/ou d&amp;rsquo;Analyses de Cycle de Vie.&lt;/p&gt;
+&lt;p&gt;Je suis aussi un membre actif de l&amp;rsquo;association &lt;a href=&#34;https://boavizta.org&#34;&gt;Boavizta&lt;/a&gt;, dans laquelle je contribue aux communs numériques pour aider les organisations et les personnes à mieux comprendre et réduiore l&amp;rsquo;empreinte environnementale des services et produits numériques.&lt;/p&gt;</description>
+      
+    </item>
+    
+  </channel>
+</rss>

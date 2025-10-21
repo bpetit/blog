@@ -5,6 +5,7 @@ tags:
   - debian
   - ansible
 author: Benoit Petit
+toc: true
 ---
 
 ## How to make ansible run on debian 9 ?

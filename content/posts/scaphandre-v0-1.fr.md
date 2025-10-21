@@ -1,6 +1,7 @@
 ---
 title: "Scaphandre v0.1.1: mesurer la consommation d'énergie (des coulisses) du numérique"
 date: 2021-01-13T15:20:24+02:00
+toc: true
 tags:
   - numérique
   - écologie
@@ -15,8 +16,6 @@ share_img: /scaphandre.large.cleaned.png
 author: Benoit Petit
 summary: Comme d'autres petites mains de la "startup nation", j'ai été amené à travailler sur des projets à "gros volume" (tout est relatif). Je pense par exemple à des projets mettant en oeuvre des modèles de machine learning, bien souvent pour montrer la bonne publicité à la bonne personne, au bon moment. Entraîner ces modèles nécessite beaucoup de ressources (CPU, RAM, GPU, etc.). Il en va de même pour les API qui collectent des données (qui bien souvent vont permettre d'entrainer ces mêmes modèles de ML). Ces APIs, selon le nombre de *clients* qui les contactent, peuvent recevoir jusqu'à quelques milliards de requêtes par jour (voire plus, mais je n'ai pas eu l'occasion de travailler sur plus "gros").
 ---
-
-![scaphandre](/scaphandre.large.cleaned.png)
 
 ## Les origines du projet
 
