@@ -19,7 +19,7 @@ Voilà maintenant un peu moins d'un mois que j'ai quitté mon emploi (ingénieur
 Je me suis contenté, jusqu'à récemment, de baser mes critères sur le défi technique, les conditions de travail et le salaire. Dans ce contexte, accepter ce poste était un très bon choix. Je vais tenter d'expliquer en quoi et pourquoi mes aspirations ont progressivement changé.
 
 
-# Vie privée, souveraineté numérique, éthique, cloud et logiciel libre
+## Vie privée, souveraineté numérique, éthique, cloud et logiciel libre
 
 Dès le début de mes études supérieures (2009), j'ai vite été plongé dans ce conflit latent, entre l'utopie numérique portée par les libristes, le [monde cynique](https://www.zdnet.fr/actualites/rachat-de-sun-par-oracle-inquietude-chez-les-pros-du-logiciel-libre-39393070.htm) des grandes entreprises du secteur et le gouvernement [visiblement dépassé](https://www.numerama.com/magazine/12508-albanel-le-ministere-de-la-culture-a-comme-pare-feu-open-office-maj.html) par le sujet, mais tout de même prompt à légiférer à tour de bras. La vie privée en ligne, l'accès au code source et la question de la souveraineté numérique sont des sujets qui m'ont été chers dès le départ et sont devenus [incontournables](https://fr.wikipedia.org/wiki/PRISM_%28programme_de_surveillance%29) [au cours de ma carrière](https://fr.wikipedia.org/wiki/CLOUD_Act).
 
@@ -29,7 +29,7 @@ Toujours est-il que ma trajectoire professionnelle a progressivement dévié de 
 
 J'ai cette impression d'un glissement de terrain, [les](https://www.goodreads.com/book/show/34762552-algorithms-of-oppression) [tares](https://www.goodreads.com/book/show/43730245-race-after-technology) du numérique s'exacerbant, les professionnels français du secteur passant des certifications pour officialiser leur dépendance aux entreprises hégémoniques (je plaide aussi coupable), chacun se félicitant du dernier service de bases de données piloté par AWS si pratique que savoir reconstruire la stack sur une autre plateforme ou restaurer les données parrait alors secondaire. Le mariage entre l'état et ces entreprises est d'ailleurs consommé, nous aurons bientôt toutes [nos données de santé sur Azure](https://www.ticsante.com/story/4937/microsoft-prestataire-du-health-data-hub-un-choix-d-opportunite-pour-aller-vite.html), le ministre du numérique applaudit et ce n'est certainement qu'un échauffement. J'ai même pu lire ça et là des avis de mes homologues, expliquant que puisque les données étaient chiffrées, ça ne poserait pas de problème, le [mythe de la solution technique](https://www.frenchweb.fr/doctolib-lorsque-vous-faites-le-chiffrement-des-donnees-lhebergeur-a-peu-dimportance/402057) parfaite, [indépendante du réel et de l'humain](https://www.undernews.fr/hacking-hacktivisme/piratage-doctolib-victime-dune-fuite-de-donnees.html) fonctionne à merveille, même chez certains experts.
 
-# Le [cyber espace](https://www.eff.org/cyberspace-independence) n'existe pas
+## Le [cyber espace](https://www.eff.org/cyberspace-independence) n'existe pas
 
 Mais ces raisons ne suffisent pas à expliquer ma volonté de changer de modèle. Puisque le numérique glisse dans la mauvaise direction, il suffit de bien choisir son camp et contribuer à le remettre dans le droit chemin, pas vrai ?
 J'ai d'abord pensé de cette manière, sauf que j'ai peu à peu pris conscience, que bien que structurant et important, le secteur dans lequel je travaille n'échappe, ni aux biais humains, ni aux logiques sociales, ni aux lois physiques de notre monde. J'étais jusque là dans une bulle intellectuelle. [John Perry Barlow](https://fr.wikipedia.org/wiki/John_Perry_Barlow) et [ses amis](https://www.goodreads.com/book/show/36381834-aux-sources-de-l-utopie-num-rique) sont passés par là et j'ai baigné dans l'illusion que l'on pourrait construire un monde meilleur avec le numérique, en laissant le réel de côté. Ces idées semblent avoir fait leur chemin chez de nombreux informaticiens et là aussi, j'ai inconsciemment suivi le mouvement. Il me semble maintenant qu'il faut prendre du recul, même avec les idées les mieux intentionnées. Les choses sont [bien plus nuancées](https://www.goodreads.com/book/show/36381834-aux-sources-de-l-utopie-num-rique) qu'il n'y paraît, l'[entre soi et l'élitisme ont la peau dure](https://www.goodreads.com/book/show/42527493-race-after-technology?ac=1&from_search=true&qid=IwNkVeq5hE&rank=1). Il faut replacer notre métier dans un [contexte plus global](https://www.goodreads.com/book/show/52872306-l-utopie-d-chue---une-contre-histoire-d-internet-xve-xxi-si-cle) et prendre en compte ses impacts et ses conséquences.
@@ -38,7 +38,7 @@ D'ailleurs, à quoi servira un numérique (seulement) plus éthique et plus tran
 
 ![Evolution de la température moyenne sur Terre](/temperature-anomaly.svg)
 
-# Relever la tête de l'écran
+## Relever la tête de l'écran
 
 J'essaie d'[élargir](https://www.goodreads.com/book/show/27787036-dormez-tranquilles-jusqu-en-2100?ac=1&from_search=true&qid=JipizggPnL&rank=1) ma [compréhension](https://www.goodreads.com/book/show/23925822-l-ge-des-low-tech) [du](https://www.goodreads.com/book/show/49689479-comment-j-ai-arr-t-de-manger-les-animaux) [monde](https://www.goodreads.com/book/show/44769306-introduction-au-si-cle-des-menaces). L'informatique est très chronophage et comme d'autres, je suis resté concentré sur les mêmes thèmes pendant des années. Rester à jour techniquement prends énormément de temps et il me semble que c'est l'une des explications du [manque de recul](https://bpetit.nce.re/fr/2020/07/au-fait-pourquoi-on-bosse-dans-lit/index.html) ambiant dans notre profession. Sauf qu'une fois les yeux ouverts, impossibles de les refermer.
 
@@ -48,7 +48,7 @@ Nous sommes face à des risques majeurs pour la **survie de notre espèce** (c'e
 
 ![Concentration de CO2 dans l'atmosphère à long terme](/co2-concentration-long-term.svg)
 
-# Le numérique, problème ou solution ?
+## Le numérique, problème ou solution ?
 
 Le sujet du poids, positif et négatif, du numérique sur **notre pollution** de l'environnement et sur le **cancer climatique** commence à faire sa place dans le débat public. Comme souvent, les propositions semblent viser à côté de la plaque.
 
@@ -61,7 +61,7 @@ Le sujet du poids, positif et négatif, du numérique sur **notre pollution** de
 
 On parle même du rôle positif du numérique pour une meilleure utilisation de l'énergie. Les *smart grids* et *smart cities* ont la côte, mais personne ne chiffre le [coût environnemental de fabrication](https://www.thinkerview.com/guillaume-pitron-lenfumage-de-la-transition-ecologique/) des équipements IoT et d'infrastructure nécessaires.
 
-# Le cas du cloud
+## Le cas du cloud
 
 Je parlais dans la section précédente de l'hégémonie du cloud . En terme de consommation énergétique et donc d'émissions de [GES](https://fr.wikipedia.org/wiki/Gaz_%C3%A0_effet_de_serre), le cloud est plutôt une bonne chose de par l'hyper-centralisation des infrastructures (et non par les sources d'énergie sollicités). Comme le montre [cette étude](https://science.sciencemag.org/content/367/6481/984) qui fut [reprise](https://www.iea.org/reports/data-centres-and-data-transmission-networks) dans [plusieurs](https://www.nytimes.com/2020/02/27/technology/cloud-computing-energy-usage.html?referringSource=articleShare) articles début 2020, la centralisation des infrastructures a du bon, puisqu'elle permet une optimisation de la consommation énergétique globale des serveurs et des équipements qui est bien plus compliquée à mettre en place lorsque le même nombre de machines se trouve disséminé dans des datacenters distants. Le [PUE](https://fr.wikipedia.org/wiki/Indicateur_d%27efficacit%C3%A9_%C3%A9nerg%C3%A9tique) est notamment meilleur dans les grand centres de données gérés par une même entreprise qui met les moyens nécessaires pour réduire sa facture d'électricité. A ces explications s'ajoute les progrès en terme d'efficacité énergétique des équipements réseaux et des serveurs au fil des générations. Le tout a permis, d'après cette étude, de 2010 à 2019, d'avoir une consommation énergétique globale stagnante des datacenters non proportionelle à l'augmentation fulgurante des usages.
 
@@ -79,7 +79,7 @@ Ces conclusions sont restées discrètes dans les articles que j'ai pu lire, tra
 
 Pour effectivement réduire, ou au moins plafonner l'impact du secteur, il me semble impératif de mesurer la consommation réelle et les autres impacts (extraction minière et ses conséquences, cout énergétique de fabrication, recyclage et pollution liés aux déchets électroniques, etc...) et de se baser sur des données vérifiables.
 
-# Mesurer, itérer, comprendre... et changer
+## Mesurer, itérer, comprendre... et changer
 
 Vous l'aurez compris, pour parler de l'impact du numérique sur l'environnement et le climat, on manque de données réelles. C'est exactement le projet dans lequel je me lance aujourd'hui. Je veux proposer une solution à ce manque. L'objectif est de permettre aux clients des services cloud, de mesurer l'impact de leur consommation. La première partie du projet consiste à créer une solution logicielle, libre, de mesure, simple à installer et à piloter pour collecter les métriques de consommation, à destination des hébergeurs, fournisseurs de cloud ou entreprises gérant des infrastructures *on premise*. La seconde consiste à créer un fournisseur de cloud, transparent et éthique, qui propose pour chaque service, application ou projet, ces métriques (consommation, émissions de GES) à ses clients et des pistes pour réduire l'impact de leur consommation.
 

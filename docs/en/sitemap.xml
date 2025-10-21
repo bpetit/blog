@@ -258,16 +258,6 @@
     <loc>http://localhost:1313/portfolio/</loc>
   </url><url>
     <loc>http://localhost:1313/page/press/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="fr"
-                href="http://localhost:1313/fr/page/press/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="http://localhost:1313/page/press/"
-                />
   </url><url>
     <loc>http://localhost:1313/series/</loc>
     <xhtml:link
@@ -282,15 +272,5 @@
                 />
   </url><url>
     <loc>http://localhost:1313/page/talks/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="fr"
-                href="http://localhost:1313/fr/page/talks/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="http://localhost:1313/page/talks/"
-                />
   </url>
 </urlset>

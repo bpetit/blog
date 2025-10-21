@@ -92,68 +92,15 @@
     </item>
     
     <item>
-      <title>About</title>
+      <title>A propos</title>
       <link>http://localhost:1313/fr/page/about/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>http://localhost:1313/fr/page/about/</guid>
       
-        <description>&lt;p&gt;Je suis co-fondateur d&amp;rsquo;&lt;a href=&#34;https://hubblo.org&#34;&gt;Hubblo&lt;/a&gt;, une soci
-a&amp;rsquo;m one of the co-founders of , a consulting and a study office specialized in environmental, climate, social and societal effects of the tech industry. In this position, I work especially on topics related to Datacenters, AI, Cloud services and wider ICT infrastrctures.&lt;/p&gt;
-&lt;p&gt;I&amp;rsquo;m also an active contributor to the &lt;a href=&#34;https://boavizta.org&#34;&gt;Boavizta&lt;/a&gt; non-profit, in which I contribute to digital commons helping organizations and individuals to better understand, evaluate and reduce the environmental impacts of digital services.&lt;/p&gt;</description>
-      
-    </item>
-    
-    <item>
-      <title>Interventions</title>
-      <link>http://localhost:1313/fr/page/talks/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>http://localhost:1313/fr/page/talks/</guid>
-      
-        <description>&lt;h2 id=&#34;2025&#34;&gt;2025&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://www.youtube.com/watch?v=J3yT2zXTJH4&#34;&gt;The Cloud Screener - Il accompagne les entreprises dans leurs transformations ecologiques&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;2024&#34;&gt;2024&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://www.youtube.com/watch?v=fRrDhxuJAiU&#34;&gt;WAX conf - Comment l&amp;rsquo;open-source peut aider à la compréhension des impacts environnementaux du numérique ?&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;2023&#34;&gt;2023&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://www.youtube.com/watch?v=OnMNyfDEogg&#34;&gt;CTO&amp;rsquo;z - &amp;ldquo;Mirage de la dematerialisation&amp;rdquo;&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://www.ifttd.io/episodes/prendre-la-mesure-de-lurgence&#34;&gt;IFTTD - Prendre la mesure de l&amp;rsquo;urgence, par Bruno Soulez&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;2022&#34;&gt;2022&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://www.youtube.com/watch?v=cjfcX0h7b8A&#34;&gt;JCSA22 - Méthodologie et outillage d&amp;rsquo;évaluation des impacts environnementaux du numérique&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://www.youtube.com/watch?v=dFu1mnD5Efc&#34;&gt;Tech Rocks meetup - IT et impact environnemental&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://www.youtube.com/watch?v=2cGQdsUv2GI&#34;&gt;Electro Monkeys - &amp;ldquo;IT et impact environnemental&amp;rdquo;&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;2021&#34;&gt;2021&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://www.standblog.org/blog/post/2021/03/05/Second-episode-de-l-Octet-Vert-avec-Benoit-Petit&#34;&gt;L&amp;rsquo;Octet Vert, par Tristan Nitot&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://www.youtube.com/watch?v=a4S8i3wa-6Y&#34;&gt;Radio DevOps #15 - Hardware et pollution&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</description>
-      
-    </item>
-    
-    <item>
-      <title>Presse</title>
-      <link>http://localhost:1313/fr/page/press/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>http://localhost:1313/fr/page/press/</guid>
-      
-        <description>&lt;h2 id=&#34;2025&#34;&gt;2025&lt;/h2&gt;
-&lt;h3 id=&#34;aout&#34;&gt;Aout&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://fr.linkedin.com/pulse/interview-de-benoit-petit-est-encore-tr%C3%A8s-loin-dun-bole-richard-knmbe&#34;&gt;Interview: De la Tech a la Terre - &amp;ldquo;On est encore très loin d’un numérique soutenable&amp;rdquo; - par Yannick Bole-Richard&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&#34;janvier&#34;&gt;Janvier&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://www.greentech-forum.com/media/datacenters-cloud-comment-mieux-evaluer-leur-empreinte-environnementale&#34;&gt;Datacenters, Cloud : comment mieux évaluer leur empreinte environnementale ?, GreenTech Forum, par Remy Marrone&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</description>
+        <description>&lt;p&gt;Je suis président et co-fondateur d&amp;rsquo;&lt;a href=&#34;https://hubblo.org&#34;&gt;Hubblo&lt;/a&gt;, un bureau d&amp;rsquo;étude spécialisé dans l&amp;rsquo;analyse des impacts environnementaux du numérique et la transformation des organisations pour être compatible avec les limites planétaires vis-à-vis leur usage et conception des technologies.&lt;/p&gt;
+&lt;p&gt;Au sein d&amp;rsquo;hubblo, j&amp;rsquo;interviens sur les sujets liés aux infrastructures numériques et en particulier les datacenters et l&amp;rsquo;IA générative, dans le cadre d&amp;rsquo;études et/ou d&amp;rsquo;Analyses de Cycle de Vie.&lt;/p&gt;
+&lt;p&gt;Je suis aussi un membre actif de l&amp;rsquo;association &lt;a href=&#34;https://boavizta.org&#34;&gt;Boavizta&lt;/a&gt;, dans laquelle je contribue aux communs numériques pour aider les organisations et les personnes à mieux comprendre et réduiore l&amp;rsquo;empreinte environnementale des services et produits numériques.&lt;/p&gt;</description>
       
     </item>
     

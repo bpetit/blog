@@ -245,18 +245,6 @@
                 href="http://localhost:1313/fr/page/about/"
                 />
   </url><url>
-    <loc>http://localhost:1313/fr/page/talks/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="http://localhost:1313/page/talks/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="fr"
-                href="http://localhost:1313/fr/page/talks/"
-                />
-  </url><url>
     <loc>http://localhost:1313/fr/page/</loc>
     <xhtml:link
                 rel="alternate"
@@ -267,18 +255,6 @@
                 rel="alternate"
                 hreflang="fr"
                 href="http://localhost:1313/fr/page/"
-                />
-  </url><url>
-    <loc>http://localhost:1313/fr/page/press/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="http://localhost:1313/page/press/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="fr"
-                href="http://localhost:1313/fr/page/press/"
                 />
   </url><url>
     <loc>http://localhost:1313/fr/series/</loc>

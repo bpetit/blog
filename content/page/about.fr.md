@@ -1,15 +1,16 @@
 ---
-title: "About"
+title: "A propos"
 author: Benoit Petit
 ---
 
-Je suis co-fondateur d'[Hubblo](https://hubblo.org), une soci
-a'm one of the co-founders of , a consulting and a study office specialized in environmental, climate, social and societal effects of the tech industry. In this position, I work especially on topics related to Datacenters, AI, Cloud services and wider ICT infrastrctures.
+Je suis président et co-fondateur d'[Hubblo](https://hubblo.org), un bureau d'étude spécialisé dans l'analyse des impacts environnementaux du numérique et la transformation des organisations pour être compatible avec les limites planétaires vis-à-vis leur usage et conception des technologies.
 
-I'm also an active contributor to the [Boavizta](https://boavizta.org) non-profit, in which I contribute to digital commons helping organizations and individuals to better understand, evaluate and reduce the environmental impacts of digital services.
+Au sein d'hubblo, j'interviens sur les sujets liés aux infrastructures numériques et en particulier les datacenters et l'IA générative, dans le cadre d'études et/ou d'Analyses de Cycle de Vie.
 
-Previously I've worked for 10 years in the tech industry, as a system and network engineer, in the contexts of: hosting services provider, Internet Service Providers, Cloud consultancy and Video Game editor.
+Je suis aussi un membre actif de l'association [Boavizta](https://boavizta.org), dans laquelle je contribue aux communs numériques pour aider les organisations et les personnes à mieux comprendre et réduiore l'empreinte environnementale des services et produits numériques.
 
-See the [talks](/talks) section of this website, for an overview of my previous conference talks, and the [press](/press) section for articles I wrote or interviews in medias.
+Précédemment, j'ai travaillé une dizaine d'années dans la "tech", d'abord comme ingénieur systèmes et réseaux dans différents contextes: fournisseur de service d'hébergements, opérateur télécom, conseil en services cloud et automatisation, éditeur de jeux vidéo.
 
-At the edge of professional and leisure time, I like to work on open-source projects. I maintain [Scaphandre](https://github.com/hubblo-org/scaphandre), a monitoring tool for energy consumption of IT servers. I contribute to several projects, including: [Boagent](https://github.com/boavizta/boagent), [BoaviztAPI](https://github.com/boavizta/boaviztapi), [windows-rapl-driver](https://github.com/hubblo-org/windows-rapl-driver).
+Mes interventions en conférence et podcasts sont listées dans la section [talks](/talks) de ce site et mes interviews ou contributions à des articles de presse dans [press](/press).
+
+À la frontière entre mes loisirs et mon travail, j'aime contribuer à des projets open-source. Je maintiens [Scaphandre](https://github.com/hubblo-org/scaphandre), un logiciel de supervision de la consommation d'énergie des serveurs informatiques. Je contribue également à plusieurs projets, notamment: [Boagent](https://github.com/boavizta/boagent), [BoaviztAPI](https://github.com/boavizta/boaviztapi), [windows-rapl-driver](https://github.com/hubblo-org/windows-rapl-driver).
