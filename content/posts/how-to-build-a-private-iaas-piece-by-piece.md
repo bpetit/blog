@@ -1,6 +1,7 @@
 ---
 title: "How to build a simplistic private cloud piece by piece"
 date: 2017-11-21T20:44:12+02:00
+toc: true
 tags:
   - automation
   - cloud

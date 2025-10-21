@@ -2,235 +2,295 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://bpetit.nce.re/tags/automation/</loc>
+    <loc>http://localhost:1313/tags/automation/</loc>
     <lastmod>2021-03-12T10:22:24+02:00</lastmod>
   </url><url>
-    <loc>https://bpetit.nce.re/</loc>
-    <lastmod>2021-03-12T10:22:24+02:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="fr"
-                href="https://bpetit.nce.re/fr/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://bpetit.nce.re/"
-                />
-  </url><url>
-    <loc>https://bpetit.nce.re/tags/climate/</loc>
-    <lastmod>2021-03-12T10:22:24+02:00</lastmod>
-  </url><url>
-    <loc>https://bpetit.nce.re/tags/devops/</loc>
+    <loc>http://localhost:1313/</loc>
     <lastmod>2021-03-12T10:22:24+02:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="fr"
-                href="https://bpetit.nce.re/fr/tags/devops/"
+                href="http://localhost:1313/fr/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://bpetit.nce.re/tags/devops/"
+                href="http://localhost:1313/"
                 />
   </url><url>
-    <loc>https://bpetit.nce.re/tags/energy/</loc>
+    <loc>http://localhost:1313/tags/climate/</loc>
     <lastmod>2021-03-12T10:22:24+02:00</lastmod>
   </url><url>
-    <loc>https://bpetit.nce.re/tags/open-source/</loc>
+    <loc>http://localhost:1313/tags/devops/</loc>
     <lastmod>2021-03-12T10:22:24+02:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="fr"
-                href="https://bpetit.nce.re/fr/tags/open-source/"
+                href="http://localhost:1313/fr/tags/devops/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://bpetit.nce.re/tags/open-source/"
+                href="http://localhost:1313/tags/devops/"
                 />
   </url><url>
-    <loc>https://bpetit.nce.re/posts/</loc>
+    <loc>http://localhost:1313/tags/energy/</loc>
+    <lastmod>2021-03-12T10:22:24+02:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/open-source/</loc>
     <lastmod>2021-03-12T10:22:24+02:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="fr"
-                href="https://bpetit.nce.re/fr/posts/"
+                href="http://localhost:1313/fr/tags/open-source/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://bpetit.nce.re/posts/"
+                href="http://localhost:1313/tags/open-source/"
                 />
   </url><url>
-    <loc>https://bpetit.nce.re/tags/resiliency/</loc>
-    <lastmod>2021-03-12T10:22:24+02:00</lastmod>
-  </url><url>
-    <loc>https://bpetit.nce.re/tags/rust/</loc>
+    <loc>http://localhost:1313/posts/</loc>
     <lastmod>2021-03-12T10:22:24+02:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="fr"
-                href="https://bpetit.nce.re/fr/tags/rust/"
+                href="http://localhost:1313/fr/posts/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://bpetit.nce.re/tags/rust/"
+                href="http://localhost:1313/posts/"
                 />
   </url><url>
-    <loc>https://bpetit.nce.re/tags/scaphandre/</loc>
+    <loc>http://localhost:1313/tags/resiliency/</loc>
+    <lastmod>2021-03-12T10:22:24+02:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/rust/</loc>
     <lastmod>2021-03-12T10:22:24+02:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="fr"
-                href="https://bpetit.nce.re/fr/tags/scaphandre/"
+                href="http://localhost:1313/fr/tags/rust/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://bpetit.nce.re/tags/scaphandre/"
+                href="http://localhost:1313/tags/rust/"
                 />
   </url><url>
-    <loc>https://bpetit.nce.re/tags/sre/</loc>
+    <loc>http://localhost:1313/tags/scaphandre/</loc>
     <lastmod>2021-03-12T10:22:24+02:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="fr"
-                href="https://bpetit.nce.re/fr/tags/sre/"
+                href="http://localhost:1313/fr/tags/scaphandre/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://bpetit.nce.re/tags/sre/"
+                href="http://localhost:1313/tags/scaphandre/"
                 />
   </url><url>
-    <loc>https://bpetit.nce.re/2021/03/sre-methods-and-climate-change/</loc>
+    <loc>http://localhost:1313/tags/sre/</loc>
     <lastmod>2021-03-12T10:22:24+02:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="fr"
-                href="https://bpetit.nce.re/fr/2021/02/les-pratiques-sre-et-le-climat/"
+                href="http://localhost:1313/fr/tags/sre/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://bpetit.nce.re/2021/03/sre-methods-and-climate-change/"
+                href="http://localhost:1313/tags/sre/"
                 />
   </url><url>
-    <loc>https://bpetit.nce.re/tags/</loc>
+    <loc>http://localhost:1313/2021/03/sre-methods-and-climate-change/</loc>
     <lastmod>2021-03-12T10:22:24+02:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="fr"
-                href="https://bpetit.nce.re/fr/tags/"
+                href="http://localhost:1313/fr/2021/02/les-pratiques-sre-et-le-climat/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://bpetit.nce.re/tags/"
+                href="http://localhost:1313/2021/03/sre-methods-and-climate-change/"
                 />
   </url><url>
-    <loc>https://bpetit.nce.re/tags/tech/</loc>
+    <loc>http://localhost:1313/tags/</loc>
     <lastmod>2021-03-12T10:22:24+02:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="fr"
-                href="https://bpetit.nce.re/fr/tags/tech/"
+                href="http://localhost:1313/fr/tags/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://bpetit.nce.re/tags/tech/"
+                href="http://localhost:1313/tags/"
                 />
   </url><url>
-    <loc>https://bpetit.nce.re/tags/cloud/</loc>
+    <loc>http://localhost:1313/tags/tech/</loc>
+    <lastmod>2021-03-12T10:22:24+02:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="fr"
+                href="http://localhost:1313/fr/tags/tech/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="http://localhost:1313/tags/tech/"
+                />
+  </url><url>
+    <loc>http://localhost:1313/tags/cloud/</loc>
     <lastmod>2021-01-20T11:10:24+02:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="fr"
-                href="https://bpetit.nce.re/fr/tags/cloud/"
+                href="http://localhost:1313/fr/tags/cloud/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://bpetit.nce.re/tags/cloud/"
+                href="http://localhost:1313/tags/cloud/"
                 />
   </url><url>
-    <loc>https://bpetit.nce.re/tags/ecology/</loc>
+    <loc>http://localhost:1313/tags/ecology/</loc>
     <lastmod>2021-01-20T11:10:24+02:00</lastmod>
   </url><url>
-    <loc>https://bpetit.nce.re/2021/01/scaphandre-v0.1.1-measuring-the-energy-consumption-of-the-tech-industry-backstages/</loc>
+    <loc>http://localhost:1313/2021/01/scaphandre-v0.1.1-measuring-the-energy-consumption-of-the-tech-industry-backstages/</loc>
     <lastmod>2021-01-20T11:10:24+02:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="fr"
-                href="https://bpetit.nce.re/fr/2021/01/scaphandre-v0.1.1-mesurer-la-consommation-d%C3%A9nergie-des-coulisses-du-num%C3%A9rique/"
+                href="http://localhost:1313/fr/2021/01/scaphandre-v0.1.1-mesurer-la-consommation-d%C3%A9nergie-des-coulisses-du-num%C3%A9rique/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://bpetit.nce.re/2021/01/scaphandre-v0.1.1-measuring-the-energy-consumption-of-the-tech-industry-backstages/"
+                href="http://localhost:1313/2021/01/scaphandre-v0.1.1-measuring-the-energy-consumption-of-the-tech-industry-backstages/"
                 />
   </url><url>
-    <loc>https://bpetit.nce.re/tags/ansible/</loc>
+    <loc>http://localhost:1313/tags/ansible/</loc>
     <lastmod>2018-03-17T20:12:45+02:00</lastmod>
   </url><url>
-    <loc>https://bpetit.nce.re/2018/03/automating-web-applications-proxying-dns-registration-and-tls-termination-with-ansible/</loc>
+    <loc>http://localhost:1313/2018/03/automating-web-applications-proxying-dns-registration-and-tls-termination-with-ansible/</loc>
     <lastmod>2018-03-17T20:12:45+02:00</lastmod>
   </url><url>
-    <loc>https://bpetit.nce.re/tags/cd/</loc>
+    <loc>http://localhost:1313/tags/cd/</loc>
     <lastmod>2018-03-17T20:12:45+02:00</lastmod>
   </url><url>
-    <loc>https://bpetit.nce.re/tags/dns/</loc>
+    <loc>http://localhost:1313/tags/dns/</loc>
     <lastmod>2018-03-17T20:12:45+02:00</lastmod>
   </url><url>
-    <loc>https://bpetit.nce.re/tags/knot/</loc>
+    <loc>http://localhost:1313/tags/knot/</loc>
     <lastmod>2018-03-17T20:12:45+02:00</lastmod>
   </url><url>
-    <loc>https://bpetit.nce.re/tags/letsencrypt/</loc>
+    <loc>http://localhost:1313/tags/letsencrypt/</loc>
     <lastmod>2018-03-17T20:12:45+02:00</lastmod>
   </url><url>
-    <loc>https://bpetit.nce.re/tags/tls/</loc>
+    <loc>http://localhost:1313/tags/tls/</loc>
     <lastmod>2018-03-17T20:12:45+02:00</lastmod>
   </url><url>
-    <loc>https://bpetit.nce.re/tags/cloud-init/</loc>
+    <loc>http://localhost:1313/tags/cloud-init/</loc>
     <lastmod>2017-11-21T20:44:12+02:00</lastmod>
   </url><url>
-    <loc>https://bpetit.nce.re/2017/11/how-to-build-a-simplistic-private-cloud-piece-by-piece/</loc>
+    <loc>http://localhost:1313/2017/11/how-to-build-a-simplistic-private-cloud-piece-by-piece/</loc>
     <lastmod>2017-11-21T20:44:12+02:00</lastmod>
   </url><url>
-    <loc>https://bpetit.nce.re/tags/kvm/</loc>
+    <loc>http://localhost:1313/tags/kvm/</loc>
     <lastmod>2017-11-21T20:44:12+02:00</lastmod>
   </url><url>
-    <loc>https://bpetit.nce.re/tags/libvirt/</loc>
+    <loc>http://localhost:1313/tags/libvirt/</loc>
     <lastmod>2017-11-21T20:44:12+02:00</lastmod>
   </url><url>
-    <loc>https://bpetit.nce.re/tags/openvswitch/</loc>
+    <loc>http://localhost:1313/tags/openvswitch/</loc>
     <lastmod>2017-11-21T20:44:12+02:00</lastmod>
   </url><url>
-    <loc>https://bpetit.nce.re/tags/qemu/</loc>
+    <loc>http://localhost:1313/tags/qemu/</loc>
     <lastmod>2017-11-21T20:44:12+02:00</lastmod>
   </url><url>
-    <loc>https://bpetit.nce.re/2017/09/automate-your-virtual-machine-templates-creation-with-packer/</loc>
+    <loc>http://localhost:1313/2017/09/automate-your-virtual-machine-templates-creation-with-packer/</loc>
     <lastmod>2017-09-01T19:44:12+02:00</lastmod>
   </url><url>
-    <loc>https://bpetit.nce.re/tags/debian/</loc>
+    <loc>http://localhost:1313/tags/debian/</loc>
     <lastmod>2017-09-01T19:44:12+02:00</lastmod>
   </url><url>
-    <loc>https://bpetit.nce.re/tags/packer/</loc>
+    <loc>http://localhost:1313/tags/packer/</loc>
     <lastmod>2017-09-01T19:44:12+02:00</lastmod>
   </url><url>
-    <loc>https://bpetit.nce.re/tags/virtualization/</loc>
+    <loc>http://localhost:1313/tags/virtualization/</loc>
     <lastmod>2017-09-01T19:44:12+02:00</lastmod>
   </url><url>
-    <loc>https://bpetit.nce.re/2017/07/make-ansible-run-on-debian-9/</loc>
+    <loc>http://localhost:1313/2017/07/make-ansible-run-on-debian-9/</loc>
     <lastmod>2017-07-27T21:44:12+02:00</lastmod>
   </url><url>
-    <loc>https://bpetit.nce.re/page/data/initiatives/</loc>
+    <loc>http://localhost:1313/page/about/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="fr"
+                href="http://localhost:1313/fr/page/about/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="http://localhost:1313/page/about/"
+                />
   </url><url>
-    <loc>https://bpetit.nce.re/page/data/</loc>
+    <loc>http://localhost:1313/page/data/initiatives/</loc>
   </url><url>
-    <loc>https://bpetit.nce.re/page/</loc>
+    <loc>http://localhost:1313/page/data/</loc>
+  </url><url>
+    <loc>http://localhost:1313/page/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="fr"
+                href="http://localhost:1313/fr/page/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="http://localhost:1313/page/"
+                />
+  </url><url>
+    <loc>http://localhost:1313/portfolio/</loc>
+  </url><url>
+    <loc>http://localhost:1313/page/press/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="fr"
+                href="http://localhost:1313/fr/page/press/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="http://localhost:1313/page/press/"
+                />
+  </url><url>
+    <loc>http://localhost:1313/series/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="fr"
+                href="http://localhost:1313/fr/series/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="http://localhost:1313/series/"
+                />
+  </url><url>
+    <loc>http://localhost:1313/page/talks/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="fr"
+                href="http://localhost:1313/fr/page/talks/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="http://localhost:1313/page/talks/"
+                />
   </url>
 </urlset>

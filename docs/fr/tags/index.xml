@@ -1,203 +1,308 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Tags on Benoit Petit</title>
-    <link>https://bpetit.nce.re/fr/tags/</link>
-    <description>Recent content in Tags on Benoit Petit</description>
-    <generator>Hugo</generator>
+    <title>Tags on Blog de Benoit Petit</title>
+    <link>http://localhost:1313/fr/tags/</link>
+    <description>Recent content in Tags on Blog de Benoit Petit</description>
+    <generator>Hugo -- gohugo.io</generator>
     <language>fr</language>
-    <managingEditor>bpetit@nce.re (Benoit Petit)</managingEditor>
-    <webMaster>bpetit@nce.re (Benoit Petit)</webMaster>
-    <lastBuildDate>Fri, 14 Feb 2025 09:00:00 +0200</lastBuildDate>
-    <atom:link href="https://bpetit.nce.re/fr/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 14 Feb 2025 09:00:00 +0200</lastBuildDate><atom:link href="http://localhost:1313/fr/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Climat</title>
-      <link>https://bpetit.nce.re/fr/tags/climat/</link>
-      <pubDate>Fri, 14 Feb 2025 09:00:00 +0200</pubDate><author>bpetit@nce.re (Benoit Petit)</author>
-      <guid>https://bpetit.nce.re/fr/tags/climat/</guid>
-      <description></description>
+      <link>http://localhost:1313/fr/tags/climat/</link>
+      <pubDate>Fri, 14 Feb 2025 09:00:00 +0200</pubDate>
+      
+      <guid>http://localhost:1313/fr/tags/climat/</guid>
+      
+        <description></description>
+      
     </item>
+    
     <item>
       <title>Engagement</title>
-      <link>https://bpetit.nce.re/fr/tags/engagement/</link>
-      <pubDate>Fri, 14 Feb 2025 09:00:00 +0200</pubDate><author>bpetit@nce.re (Benoit Petit)</author>
-      <guid>https://bpetit.nce.re/fr/tags/engagement/</guid>
-      <description></description>
+      <link>http://localhost:1313/fr/tags/engagement/</link>
+      <pubDate>Fri, 14 Feb 2025 09:00:00 +0200</pubDate>
+      
+      <guid>http://localhost:1313/fr/tags/engagement/</guid>
+      
+        <description></description>
+      
     </item>
+    
     <item>
       <title>Environnement</title>
-      <link>https://bpetit.nce.re/fr/tags/environnement/</link>
-      <pubDate>Fri, 14 Feb 2025 09:00:00 +0200</pubDate><author>bpetit@nce.re (Benoit Petit)</author>
-      <guid>https://bpetit.nce.re/fr/tags/environnement/</guid>
-      <description></description>
+      <link>http://localhost:1313/fr/tags/environnement/</link>
+      <pubDate>Fri, 14 Feb 2025 09:00:00 +0200</pubDate>
+      
+      <guid>http://localhost:1313/fr/tags/environnement/</guid>
+      
+        <description></description>
+      
     </item>
+    
     <item>
       <title>GreenIT</title>
-      <link>https://bpetit.nce.re/fr/tags/greenit/</link>
-      <pubDate>Fri, 14 Feb 2025 09:00:00 +0200</pubDate><author>bpetit@nce.re (Benoit Petit)</author>
-      <guid>https://bpetit.nce.re/fr/tags/greenit/</guid>
-      <description></description>
+      <link>http://localhost:1313/fr/tags/greenit/</link>
+      <pubDate>Fri, 14 Feb 2025 09:00:00 +0200</pubDate>
+      
+      <guid>http://localhost:1313/fr/tags/greenit/</guid>
+      
+        <description></description>
+      
     </item>
+    
     <item>
       <title>Numérique Responsable</title>
-      <link>https://bpetit.nce.re/fr/tags/num%C3%A9rique-responsable/</link>
-      <pubDate>Fri, 14 Feb 2025 09:00:00 +0200</pubDate><author>bpetit@nce.re (Benoit Petit)</author>
-      <guid>https://bpetit.nce.re/fr/tags/num%C3%A9rique-responsable/</guid>
-      <description></description>
+      <link>http://localhost:1313/fr/tags/num%C3%A9rique-responsable/</link>
+      <pubDate>Fri, 14 Feb 2025 09:00:00 +0200</pubDate>
+      
+      <guid>http://localhost:1313/fr/tags/num%C3%A9rique-responsable/</guid>
+      
+        <description></description>
+      
     </item>
+    
     <item>
       <title>Politique</title>
-      <link>https://bpetit.nce.re/fr/tags/politique/</link>
-      <pubDate>Fri, 14 Feb 2025 09:00:00 +0200</pubDate><author>bpetit@nce.re (Benoit Petit)</author>
-      <guid>https://bpetit.nce.re/fr/tags/politique/</guid>
-      <description></description>
+      <link>http://localhost:1313/fr/tags/politique/</link>
+      <pubDate>Fri, 14 Feb 2025 09:00:00 +0200</pubDate>
+      
+      <guid>http://localhost:1313/fr/tags/politique/</guid>
+      
+        <description></description>
+      
     </item>
+    
     <item>
       <title>Rse</title>
-      <link>https://bpetit.nce.re/fr/tags/rse/</link>
-      <pubDate>Fri, 14 Feb 2025 09:00:00 +0200</pubDate><author>bpetit@nce.re (Benoit Petit)</author>
-      <guid>https://bpetit.nce.re/fr/tags/rse/</guid>
-      <description></description>
+      <link>http://localhost:1313/fr/tags/rse/</link>
+      <pubDate>Fri, 14 Feb 2025 09:00:00 +0200</pubDate>
+      
+      <guid>http://localhost:1313/fr/tags/rse/</guid>
+      
+        <description></description>
+      
     </item>
+    
     <item>
       <title>Sobriété</title>
-      <link>https://bpetit.nce.re/fr/tags/sobri%C3%A9t%C3%A9/</link>
-      <pubDate>Fri, 14 Feb 2025 09:00:00 +0200</pubDate><author>bpetit@nce.re (Benoit Petit)</author>
-      <guid>https://bpetit.nce.re/fr/tags/sobri%C3%A9t%C3%A9/</guid>
-      <description></description>
+      <link>http://localhost:1313/fr/tags/sobri%C3%A9t%C3%A9/</link>
+      <pubDate>Fri, 14 Feb 2025 09:00:00 +0200</pubDate>
+      
+      <guid>http://localhost:1313/fr/tags/sobri%C3%A9t%C3%A9/</guid>
+      
+        <description></description>
+      
     </item>
+    
     <item>
       <title>Tech</title>
-      <link>https://bpetit.nce.re/fr/tags/tech/</link>
-      <pubDate>Fri, 14 Feb 2025 09:00:00 +0200</pubDate><author>bpetit@nce.re (Benoit Petit)</author>
-      <guid>https://bpetit.nce.re/fr/tags/tech/</guid>
-      <description></description>
+      <link>http://localhost:1313/fr/tags/tech/</link>
+      <pubDate>Fri, 14 Feb 2025 09:00:00 +0200</pubDate>
+      
+      <guid>http://localhost:1313/fr/tags/tech/</guid>
+      
+        <description></description>
+      
     </item>
+    
     <item>
       <title>Devops</title>
-      <link>https://bpetit.nce.re/fr/tags/devops/</link>
-      <pubDate>Mon, 09 Aug 2021 10:02:24 +0200</pubDate><author>bpetit@nce.re (Benoit Petit)</author>
-      <guid>https://bpetit.nce.re/fr/tags/devops/</guid>
-      <description></description>
+      <link>http://localhost:1313/fr/tags/devops/</link>
+      <pubDate>Mon, 09 Aug 2021 10:02:24 +0200</pubDate>
+      
+      <guid>http://localhost:1313/fr/tags/devops/</guid>
+      
+        <description></description>
+      
     </item>
+    
     <item>
       <title>Slo</title>
-      <link>https://bpetit.nce.re/fr/tags/slo/</link>
-      <pubDate>Mon, 09 Aug 2021 10:02:24 +0200</pubDate><author>bpetit@nce.re (Benoit Petit)</author>
-      <guid>https://bpetit.nce.re/fr/tags/slo/</guid>
-      <description></description>
+      <link>http://localhost:1313/fr/tags/slo/</link>
+      <pubDate>Mon, 09 Aug 2021 10:02:24 +0200</pubDate>
+      
+      <guid>http://localhost:1313/fr/tags/slo/</guid>
+      
+        <description></description>
+      
     </item>
+    
     <item>
       <title>Sre</title>
-      <link>https://bpetit.nce.re/fr/tags/sre/</link>
-      <pubDate>Mon, 09 Aug 2021 10:02:24 +0200</pubDate><author>bpetit@nce.re (Benoit Petit)</author>
-      <guid>https://bpetit.nce.re/fr/tags/sre/</guid>
-      <description></description>
+      <link>http://localhost:1313/fr/tags/sre/</link>
+      <pubDate>Mon, 09 Aug 2021 10:02:24 +0200</pubDate>
+      
+      <guid>http://localhost:1313/fr/tags/sre/</guid>
+      
+        <description></description>
+      
     </item>
+    
     <item>
       <title>Automatisation</title>
-      <link>https://bpetit.nce.re/fr/tags/automatisation/</link>
-      <pubDate>Mon, 22 Mar 2021 15:40:24 +0200</pubDate><author>bpetit@nce.re (Benoit Petit)</author>
-      <guid>https://bpetit.nce.re/fr/tags/automatisation/</guid>
-      <description></description>
+      <link>http://localhost:1313/fr/tags/automatisation/</link>
+      <pubDate>Mon, 22 Mar 2021 15:40:24 +0200</pubDate>
+      
+      <guid>http://localhost:1313/fr/tags/automatisation/</guid>
+      
+        <description></description>
+      
     </item>
+    
     <item>
       <title>Grafana</title>
-      <link>https://bpetit.nce.re/fr/tags/grafana/</link>
-      <pubDate>Mon, 22 Mar 2021 15:40:24 +0200</pubDate><author>bpetit@nce.re (Benoit Petit)</author>
-      <guid>https://bpetit.nce.re/fr/tags/grafana/</guid>
-      <description></description>
+      <link>http://localhost:1313/fr/tags/grafana/</link>
+      <pubDate>Mon, 22 Mar 2021 15:40:24 +0200</pubDate>
+      
+      <guid>http://localhost:1313/fr/tags/grafana/</guid>
+      
+        <description></description>
+      
     </item>
+    
     <item>
       <title>Monitoring</title>
-      <link>https://bpetit.nce.re/fr/tags/monitoring/</link>
-      <pubDate>Mon, 22 Mar 2021 15:40:24 +0200</pubDate><author>bpetit@nce.re (Benoit Petit)</author>
-      <guid>https://bpetit.nce.re/fr/tags/monitoring/</guid>
-      <description></description>
+      <link>http://localhost:1313/fr/tags/monitoring/</link>
+      <pubDate>Mon, 22 Mar 2021 15:40:24 +0200</pubDate>
+      
+      <guid>http://localhost:1313/fr/tags/monitoring/</guid>
+      
+        <description></description>
+      
     </item>
+    
     <item>
       <title>Open-Source</title>
-      <link>https://bpetit.nce.re/fr/tags/open-source/</link>
-      <pubDate>Mon, 22 Mar 2021 15:40:24 +0200</pubDate><author>bpetit@nce.re (Benoit Petit)</author>
-      <guid>https://bpetit.nce.re/fr/tags/open-source/</guid>
-      <description></description>
+      <link>http://localhost:1313/fr/tags/open-source/</link>
+      <pubDate>Mon, 22 Mar 2021 15:40:24 +0200</pubDate>
+      
+      <guid>http://localhost:1313/fr/tags/open-source/</guid>
+      
+        <description></description>
+      
     </item>
+    
     <item>
       <title>Energie</title>
-      <link>https://bpetit.nce.re/fr/tags/energie/</link>
-      <pubDate>Fri, 19 Feb 2021 19:25:24 +0200</pubDate><author>bpetit@nce.re (Benoit Petit)</author>
-      <guid>https://bpetit.nce.re/fr/tags/energie/</guid>
-      <description></description>
+      <link>http://localhost:1313/fr/tags/energie/</link>
+      <pubDate>Fri, 19 Feb 2021 19:25:24 +0200</pubDate>
+      
+      <guid>http://localhost:1313/fr/tags/energie/</guid>
+      
+        <description></description>
+      
     </item>
+    
     <item>
       <title>Résilience</title>
-      <link>https://bpetit.nce.re/fr/tags/r%C3%A9silience/</link>
-      <pubDate>Fri, 19 Feb 2021 19:25:24 +0200</pubDate><author>bpetit@nce.re (Benoit Petit)</author>
-      <guid>https://bpetit.nce.re/fr/tags/r%C3%A9silience/</guid>
-      <description></description>
+      <link>http://localhost:1313/fr/tags/r%C3%A9silience/</link>
+      <pubDate>Fri, 19 Feb 2021 19:25:24 +0200</pubDate>
+      
+      <guid>http://localhost:1313/fr/tags/r%C3%A9silience/</guid>
+      
+        <description></description>
+      
     </item>
+    
     <item>
       <title>Rust</title>
-      <link>https://bpetit.nce.re/fr/tags/rust/</link>
-      <pubDate>Fri, 19 Feb 2021 19:25:24 +0200</pubDate><author>bpetit@nce.re (Benoit Petit)</author>
-      <guid>https://bpetit.nce.re/fr/tags/rust/</guid>
-      <description></description>
+      <link>http://localhost:1313/fr/tags/rust/</link>
+      <pubDate>Fri, 19 Feb 2021 19:25:24 +0200</pubDate>
+      
+      <guid>http://localhost:1313/fr/tags/rust/</guid>
+      
+        <description></description>
+      
     </item>
+    
     <item>
       <title>Scaphandre</title>
-      <link>https://bpetit.nce.re/fr/tags/scaphandre/</link>
-      <pubDate>Fri, 19 Feb 2021 19:25:24 +0200</pubDate><author>bpetit@nce.re (Benoit Petit)</author>
-      <guid>https://bpetit.nce.re/fr/tags/scaphandre/</guid>
-      <description></description>
+      <link>http://localhost:1313/fr/tags/scaphandre/</link>
+      <pubDate>Fri, 19 Feb 2021 19:25:24 +0200</pubDate>
+      
+      <guid>http://localhost:1313/fr/tags/scaphandre/</guid>
+      
+        <description></description>
+      
     </item>
+    
     <item>
       <title>Cloud</title>
-      <link>https://bpetit.nce.re/fr/tags/cloud/</link>
-      <pubDate>Wed, 13 Jan 2021 15:20:24 +0200</pubDate><author>bpetit@nce.re (Benoit Petit)</author>
-      <guid>https://bpetit.nce.re/fr/tags/cloud/</guid>
-      <description></description>
+      <link>http://localhost:1313/fr/tags/cloud/</link>
+      <pubDate>Wed, 13 Jan 2021 15:20:24 +0200</pubDate>
+      
+      <guid>http://localhost:1313/fr/tags/cloud/</guid>
+      
+        <description></description>
+      
     </item>
+    
     <item>
       <title>Écologie</title>
-      <link>https://bpetit.nce.re/fr/tags/%C3%A9cologie/</link>
-      <pubDate>Wed, 13 Jan 2021 15:20:24 +0200</pubDate><author>bpetit@nce.re (Benoit Petit)</author>
-      <guid>https://bpetit.nce.re/fr/tags/%C3%A9cologie/</guid>
-      <description></description>
+      <link>http://localhost:1313/fr/tags/%C3%A9cologie/</link>
+      <pubDate>Wed, 13 Jan 2021 15:20:24 +0200</pubDate>
+      
+      <guid>http://localhost:1313/fr/tags/%C3%A9cologie/</guid>
+      
+        <description></description>
+      
     </item>
+    
     <item>
       <title>Énergie</title>
-      <link>https://bpetit.nce.re/fr/tags/%C3%A9nergie/</link>
-      <pubDate>Wed, 13 Jan 2021 15:20:24 +0200</pubDate><author>bpetit@nce.re (Benoit Petit)</author>
-      <guid>https://bpetit.nce.re/fr/tags/%C3%A9nergie/</guid>
-      <description></description>
+      <link>http://localhost:1313/fr/tags/%C3%A9nergie/</link>
+      <pubDate>Wed, 13 Jan 2021 15:20:24 +0200</pubDate>
+      
+      <guid>http://localhost:1313/fr/tags/%C3%A9nergie/</guid>
+      
+        <description></description>
+      
     </item>
+    
     <item>
       <title>Numérique</title>
-      <link>https://bpetit.nce.re/fr/tags/num%C3%A9rique/</link>
-      <pubDate>Wed, 13 Jan 2021 15:20:24 +0200</pubDate><author>bpetit@nce.re (Benoit Petit)</author>
-      <guid>https://bpetit.nce.re/fr/tags/num%C3%A9rique/</guid>
-      <description></description>
+      <link>http://localhost:1313/fr/tags/num%C3%A9rique/</link>
+      <pubDate>Wed, 13 Jan 2021 15:20:24 +0200</pubDate>
+      
+      <guid>http://localhost:1313/fr/tags/num%C3%A9rique/</guid>
+      
+        <description></description>
+      
     </item>
+    
     <item>
       <title>Emploi</title>
-      <link>https://bpetit.nce.re/fr/tags/emploi/</link>
-      <pubDate>Wed, 26 Aug 2020 14:30:24 +0200</pubDate><author>bpetit@nce.re (Benoit Petit)</author>
-      <guid>https://bpetit.nce.re/fr/tags/emploi/</guid>
-      <description></description>
+      <link>http://localhost:1313/fr/tags/emploi/</link>
+      <pubDate>Wed, 26 Aug 2020 14:30:24 +0200</pubDate>
+      
+      <guid>http://localhost:1313/fr/tags/emploi/</guid>
+      
+        <description></description>
+      
     </item>
+    
     <item>
       <title>Humeur</title>
-      <link>https://bpetit.nce.re/fr/tags/humeur/</link>
-      <pubDate>Wed, 26 Aug 2020 14:30:24 +0200</pubDate><author>bpetit@nce.re (Benoit Petit)</author>
-      <guid>https://bpetit.nce.re/fr/tags/humeur/</guid>
-      <description></description>
+      <link>http://localhost:1313/fr/tags/humeur/</link>
+      <pubDate>Wed, 26 Aug 2020 14:30:24 +0200</pubDate>
+      
+      <guid>http://localhost:1313/fr/tags/humeur/</guid>
+      
+        <description></description>
+      
     </item>
+    
     <item>
       <title>Société</title>
-      <link>https://bpetit.nce.re/fr/tags/soci%C3%A9t%C3%A9/</link>
-      <pubDate>Wed, 26 Aug 2020 14:30:24 +0200</pubDate><author>bpetit@nce.re (Benoit Petit)</author>
-      <guid>https://bpetit.nce.re/fr/tags/soci%C3%A9t%C3%A9/</guid>
-      <description></description>
+      <link>http://localhost:1313/fr/tags/soci%C3%A9t%C3%A9/</link>
+      <pubDate>Wed, 26 Aug 2020 14:30:24 +0200</pubDate>
+      
+      <guid>http://localhost:1313/fr/tags/soci%C3%A9t%C3%A9/</guid>
+      
+        <description></description>
+      
     </item>
+    
   </channel>
 </rss>

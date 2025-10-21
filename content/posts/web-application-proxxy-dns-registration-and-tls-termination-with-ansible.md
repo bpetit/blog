@@ -1,5 +1,6 @@
 ---
 title: "Automating web applications proxying, DNS registration and TLS termination with ansible"
+toc: true
 tags:
   - automation
   - cd

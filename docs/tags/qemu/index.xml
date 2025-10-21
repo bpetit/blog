@@ -1,21 +1,22 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Qemu on Benoit Petit</title>
-    <link>https://bpetit.nce.re/tags/qemu/</link>
-    <description>Recent content in Qemu on Benoit Petit</description>
-    <generator>Hugo</generator>
+    <title>Qemu on Benoit Petit&#39;s website</title>
+    <link>http://localhost:1313/tags/qemu/</link>
+    <description>Recent content in Qemu on Benoit Petit&#39;s website</description>
+    <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <managingEditor>bpetit@nce.re (Benoit Petit)</managingEditor>
-    <webMaster>bpetit@nce.re (Benoit Petit)</webMaster>
-    <lastBuildDate>Tue, 21 Nov 2017 20:44:12 +0200</lastBuildDate>
-    <atom:link href="https://bpetit.nce.re/tags/qemu/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 21 Nov 2017 20:44:12 +0200</lastBuildDate><atom:link href="http://localhost:1313/tags/qemu/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>How to build a simplistic private cloud piece by piece</title>
-      <link>https://bpetit.nce.re/2017/11/how-to-build-a-simplistic-private-cloud-piece-by-piece/</link>
-      <pubDate>Tue, 21 Nov 2017 20:44:12 +0200</pubDate><author>bpetit@nce.re (Benoit Petit)</author>
-      <guid>https://bpetit.nce.re/2017/11/how-to-build-a-simplistic-private-cloud-piece-by-piece/</guid>
-      <description>&lt;p&gt;I you are, like me, concerned about privacy, you may be the administrator of a few physical servers, either at home or rented to some dedicated server providers. Virtual machine instances (or VPS) bought in public clouds are great, but if you can&amp;rsquo;t configure yourself the underlying network and the hypervisors, where is the fun ? (just kidding, there is so much to do above a cloud-like infrastructure too). Here I&amp;rsquo;ll describe a little configuration I made for my own needs. The purpose is to deploy automatically (via ansible) virtual machines, and the networks they rely on, on multiple debian 9 kvm hypervisors. The result is really basic compared to the feature you can get, either from a public cloud service or from a fully configured and integrated private cloud software suite (let&amp;rsquo;s say OpenStack). The idea here is not to provide a full featured infrastructure, but to build a lightweight IaaS infrastructure, piece by piece. Here we will focus on virtual machines deployment and basic networking, virtual machines disks will be stored on hypervisors local hard drives (yeah, not so good for live migration, but let&amp;rsquo;s keep some fun for later).&lt;/p&gt;</description>
+      <link>http://localhost:1313/2017/11/how-to-build-a-simplistic-private-cloud-piece-by-piece/</link>
+      <pubDate>Tue, 21 Nov 2017 20:44:12 +0200</pubDate>
+      
+      <guid>http://localhost:1313/2017/11/how-to-build-a-simplistic-private-cloud-piece-by-piece/</guid>
+      
+        <description>&lt;p&gt;I you are, like me, concerned about privacy, you may be the administrator of a few physical servers, either at home or rented to some dedicated server providers. Virtual machine instances (or VPS) bought in public clouds are great, but if you can&amp;rsquo;t configure yourself the underlying network and the hypervisors, where is the fun ? (just kidding, there is so much to do above a cloud-like infrastructure too). Here I&amp;rsquo;ll describe a little configuration I made for my own needs. The purpose is to deploy automatically (via ansible) virtual machines, and the networks they rely on, on multiple debian 9 kvm hypervisors. The result is really basic compared to the feature you can get, either from a public cloud service or from a fully configured and integrated private cloud software suite (let&amp;rsquo;s say OpenStack). The idea here is not to provide a full featured infrastructure, but to build a lightweight IaaS infrastructure, piece by piece. Here we will focus on virtual machines deployment and basic networking, virtual machines disks will be stored on hypervisors local hard drives (yeah, not so good for live migration, but let&amp;rsquo;s keep some fun for later).&lt;/p&gt;</description>
+      
     </item>
+    
   </channel>
 </rss>

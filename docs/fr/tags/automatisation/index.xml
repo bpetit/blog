@@ -1,28 +1,40 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Automatisation on Benoit Petit</title>
-    <link>https://bpetit.nce.re/fr/tags/automatisation/</link>
-    <description>Recent content in Automatisation on Benoit Petit</description>
-    <generator>Hugo</generator>
+    <title>Automatisation on Blog de Benoit Petit</title>
+    <link>http://localhost:1313/fr/tags/automatisation/</link>
+    <description>Recent content in Automatisation on Blog de Benoit Petit</description>
+    <generator>Hugo -- gohugo.io</generator>
     <language>fr</language>
-    <managingEditor>bpetit@nce.re (Benoit Petit)</managingEditor>
-    <webMaster>bpetit@nce.re (Benoit Petit)</webMaster>
-    <lastBuildDate>Mon, 22 Mar 2021 15:40:24 +0200</lastBuildDate>
-    <atom:link href="https://bpetit.nce.re/fr/tags/automatisation/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 22 Mar 2021 15:40:24 +0200</lastBuildDate><atom:link href="http://localhost:1313/fr/tags/automatisation/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Coder ses dashboards Grafana avec Grafonnet</title>
-      <link>https://bpetit.nce.re/fr/2021/03/coder-ses-dashboards-grafana-avec-grafonnet/</link>
-      <pubDate>Mon, 22 Mar 2021 15:40:24 +0200</pubDate><author>bpetit@nce.re (Benoit Petit)</author>
-      <guid>https://bpetit.nce.re/fr/2021/03/coder-ses-dashboards-grafana-avec-grafonnet/</guid>
-      <description>&lt;p&gt;On ne présente plus &lt;a href=&#34;https://grafana.com/&#34;&gt;Grafana&lt;/a&gt; en ce qui concerne la visualisation de graphiques et de données. Cet outil est très largement utilisé pour des besoins de monitoring, de métrologie&amp;hellip;&lt;/p&gt;&#xA;&lt;p&gt;Les avantages sont multiples:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;open-source&lt;/li&gt;&#xA;&lt;li&gt;pratique : on peut créer des dashboards pour divers besoin très simplement&lt;/li&gt;&#xA;&lt;li&gt;flexible : de nombreuses sources de données sont supportées et les plugins répondent aux besoins les plus exotiques&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;Grafana permet également de déclencher des alertes lorsqu&amp;rsquo;une métrique dépasse une certaine valeur (plus besoin de configurer un système d&amp;rsquo;alerte propre à chaque source de donnée). C&amp;rsquo;est devenu un incontournable (en tout cas pour moi).&lt;/p&gt;</description>
+      <link>http://localhost:1313/fr/2021/03/coder-ses-dashboards-grafana-avec-grafonnet/</link>
+      <pubDate>Mon, 22 Mar 2021 15:40:24 +0200</pubDate>
+      
+      <guid>http://localhost:1313/fr/2021/03/coder-ses-dashboards-grafana-avec-grafonnet/</guid>
+      
+        <description>&lt;p&gt;On ne présente plus &lt;a href=&#34;https://grafana.com/&#34;&gt;Grafana&lt;/a&gt; en ce qui concerne la visualisation de graphiques et de données. Cet outil est très largement utilisé pour des besoins de monitoring, de métrologie&amp;hellip;&lt;/p&gt;
+&lt;p&gt;Les avantages sont multiples:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;open-source&lt;/li&gt;
+&lt;li&gt;pratique : on peut créer des dashboards pour divers besoin très simplement&lt;/li&gt;
+&lt;li&gt;flexible : de nombreuses sources de données sont supportées et les plugins répondent aux besoins les plus exotiques&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Grafana permet également de déclencher des alertes lorsqu&amp;rsquo;une métrique dépasse une certaine valeur (plus besoin de configurer un système d&amp;rsquo;alerte propre à chaque source de donnée). C&amp;rsquo;est devenu un incontournable (en tout cas pour moi).&lt;/p&gt;</description>
+      
     </item>
+    
     <item>
       <title>Les pratiques SRE et le climat</title>
-      <link>https://bpetit.nce.re/fr/2021/02/les-pratiques-sre-et-le-climat/</link>
-      <pubDate>Fri, 19 Feb 2021 19:25:24 +0200</pubDate><author>bpetit@nce.re (Benoit Petit)</author>
-      <guid>https://bpetit.nce.re/fr/2021/02/les-pratiques-sre-et-le-climat/</guid>
-      <description>L&amp;rsquo;ingénierie de la fiabilité des sites (Site Reliability Engineering), a pour objectif au sein d&amp;rsquo;une organisation de s&amp;rsquo;assurer que les systèmes et services logiciels qui y sont créés sont évolutifs et surtout &lt;strong&gt;très fiables&lt;/strong&gt;.</description>
+      <link>http://localhost:1313/fr/2021/02/les-pratiques-sre-et-le-climat/</link>
+      <pubDate>Fri, 19 Feb 2021 19:25:24 +0200</pubDate>
+      
+      <guid>http://localhost:1313/fr/2021/02/les-pratiques-sre-et-le-climat/</guid>
+      
+        <description>L&amp;rsquo;ingénierie de la fiabilité des sites (Site Reliability Engineering), a pour objectif au sein d&amp;rsquo;une organisation de s&amp;rsquo;assurer que les systèmes et services logiciels qui y sont créés sont évolutifs et surtout &lt;strong&gt;très fiables&lt;/strong&gt;.</description>
+      
     </item>
+    
   </channel>
 </rss>

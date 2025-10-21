@@ -1,63 +1,161 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Benoit Petit</title>
-    <link>https://bpetit.nce.re/fr/</link>
-    <description>Recent content on Benoit Petit</description>
-    <generator>Hugo</generator>
+    <title>Blog de Benoit Petit</title>
+    <link>http://localhost:1313/fr/</link>
+    <description>Recent content on Blog de Benoit Petit</description>
+    <generator>Hugo -- gohugo.io</generator>
     <language>fr</language>
-    <managingEditor>bpetit@nce.re (Benoit Petit)</managingEditor>
-    <webMaster>bpetit@nce.re (Benoit Petit)</webMaster>
-    <lastBuildDate>Fri, 14 Feb 2025 09:00:00 +0200</lastBuildDate>
-    <atom:link href="https://bpetit.nce.re/fr/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 14 Feb 2025 09:00:00 +0200</lastBuildDate><atom:link href="http://localhost:1313/fr/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Le &#34;Numérique Responsable&#34; a échoué, mais c&#39;était prévisible.</title>
-      <link>https://bpetit.nce.re/fr/2025/02/le-num%C3%A9rique-responsable-a-%C3%A9chou%C3%A9-mais-c%C3%A9tait-pr%C3%A9visible./</link>
-      <pubDate>Fri, 14 Feb 2025 09:00:00 +0200</pubDate><author>bpetit@nce.re (Benoit Petit)</author>
-      <guid>https://bpetit.nce.re/fr/2025/02/le-num%C3%A9rique-responsable-a-%C3%A9chou%C3%A9-mais-c%C3%A9tait-pr%C3%A9visible./</guid>
-      <description>Il y a un peu moins de 5 ans je quittais mon job (&lt;a href=&#34;https://bpetit.nce.re/fr/2020/08/pourquoi-jai-quitt%C3%A9-mon-job-qui-avait-tout-pour-plaire/&#34;&gt;qui avait tout pour plaire&lt;/a&gt;), pour tenter de contribuer à une évolution du numérique compatible avec les enjeux environnementaux de la décennie. J&amp;rsquo;ai cheminé depuis, beaucoup appris, à travers mon engagement aux côtés des membres de l’association &lt;a href=&#34;https://boavizta.org/&#34;&gt;Boavizta&lt;/a&gt; et de mes collègues chez &lt;a href=&#34;https://hubblo.org/fr&#34;&gt;Hubblo&lt;/a&gt; (qui ont vraiment tout pour plaire). La concrétisation à la fois dans le cadre professionnel et associatif, des questionnements que j’avais commencé à développer à l&amp;rsquo;époque, a enrichi mes réflexions, mais me semble aujourd’hui largement insuffisante. J’exposerai mes impressions dans cet article, qui, je le précise, n’engage que ma personne et pas les structures pour lesquelles je m&amp;rsquo;investis professionnellement ou bénévolement.</description>
+      <link>http://localhost:1313/fr/2025/02/le-num%C3%A9rique-responsable-a-%C3%A9chou%C3%A9-mais-c%C3%A9tait-pr%C3%A9visible./</link>
+      <pubDate>Fri, 14 Feb 2025 09:00:00 +0200</pubDate>
+      
+      <guid>http://localhost:1313/fr/2025/02/le-num%C3%A9rique-responsable-a-%C3%A9chou%C3%A9-mais-c%C3%A9tait-pr%C3%A9visible./</guid>
+      
+        <description>Il y a un peu moins de 5 ans je quittais mon job (&lt;a href=&#34;https://bpetit.nce.re/fr/2020/08/pourquoi-jai-quitt%C3%A9-mon-job-qui-avait-tout-pour-plaire/&#34;&gt;qui avait tout pour plaire&lt;/a&gt;), pour tenter de contribuer à une évolution du numérique compatible avec les enjeux environnementaux de la décennie. J&amp;rsquo;ai cheminé depuis, beaucoup appris, à travers mon engagement aux côtés des membres de l’association &lt;a href=&#34;https://boavizta.org/&#34;&gt;Boavizta&lt;/a&gt; et de mes collègues chez &lt;a href=&#34;https://hubblo.org/fr&#34;&gt;Hubblo&lt;/a&gt; (qui ont vraiment tout pour plaire). La concrétisation à la fois dans le cadre professionnel et associatif, des questionnements que j’avais commencé à développer à l&amp;rsquo;époque, a enrichi mes réflexions, mais me semble aujourd’hui largement insuffisante. J’exposerai mes impressions dans cet article, qui, je le précise, n’engage que ma personne et pas les structures pour lesquelles je m&amp;rsquo;investis professionnellement ou bénévolement.</description>
+      
     </item>
+    
     <item>
       <title>Climat et numérique: pourquoi le mouvement DevOps a un rôle à jouer</title>
-      <link>https://bpetit.nce.re/fr/2021/08/climat-et-num%C3%A9rique-pourquoi-le-mouvement-devops-a-un-r%C3%B4le-%C3%A0-jouer/</link>
-      <pubDate>Mon, 09 Aug 2021 10:02:24 +0200</pubDate><author>bpetit@nce.re (Benoit Petit)</author>
-      <guid>https://bpetit.nce.re/fr/2021/08/climat-et-num%C3%A9rique-pourquoi-le-mouvement-devops-a-un-r%C3%B4le-%C3%A0-jouer/</guid>
-      <description>En ce moment je travaille sur une formation à l&amp;rsquo;attention des techs, côté infrastructure (avec un penchant pour les méthodes SRE/DevOps), concernant la sobriété numérique. J&amp;rsquo;en ai parlé un peu autour de moi pour savoir ce que les pros du domaine aimeraient trouver dans ce type de formation. J&amp;rsquo;ai entendu plein de bonnes idées et j&amp;rsquo;en ai gardé une bonne partie (merci à celles et ceux qui me les ont soufflé). En plus de ces idées, j&amp;rsquo;ai eu droit à des avis sur le sujet, bien entendu. Certains avis m&amp;rsquo;ont interpellé.</description>
+      <link>http://localhost:1313/fr/2021/08/climat-et-num%C3%A9rique-pourquoi-le-mouvement-devops-a-un-r%C3%B4le-%C3%A0-jouer/</link>
+      <pubDate>Mon, 09 Aug 2021 10:02:24 +0200</pubDate>
+      
+      <guid>http://localhost:1313/fr/2021/08/climat-et-num%C3%A9rique-pourquoi-le-mouvement-devops-a-un-r%C3%B4le-%C3%A0-jouer/</guid>
+      
+        <description>En ce moment je travaille sur une formation à l&amp;rsquo;attention des techs, côté infrastructure (avec un penchant pour les méthodes SRE/DevOps), concernant la sobriété numérique. J&amp;rsquo;en ai parlé un peu autour de moi pour savoir ce que les pros du domaine aimeraient trouver dans ce type de formation. J&amp;rsquo;ai entendu plein de bonnes idées et j&amp;rsquo;en ai gardé une bonne partie (merci à celles et ceux qui me les ont soufflé). En plus de ces idées, j&amp;rsquo;ai eu droit à des avis sur le sujet, bien entendu. Certains avis m&amp;rsquo;ont interpellé.</description>
+      
     </item>
+    
     <item>
       <title>Coder ses dashboards Grafana avec Grafonnet</title>
-      <link>https://bpetit.nce.re/fr/2021/03/coder-ses-dashboards-grafana-avec-grafonnet/</link>
-      <pubDate>Mon, 22 Mar 2021 15:40:24 +0200</pubDate><author>bpetit@nce.re (Benoit Petit)</author>
-      <guid>https://bpetit.nce.re/fr/2021/03/coder-ses-dashboards-grafana-avec-grafonnet/</guid>
-      <description>&lt;p&gt;On ne présente plus &lt;a href=&#34;https://grafana.com/&#34;&gt;Grafana&lt;/a&gt; en ce qui concerne la visualisation de graphiques et de données. Cet outil est très largement utilisé pour des besoins de monitoring, de métrologie&amp;hellip;&lt;/p&gt;&#xA;&lt;p&gt;Les avantages sont multiples:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;open-source&lt;/li&gt;&#xA;&lt;li&gt;pratique : on peut créer des dashboards pour divers besoin très simplement&lt;/li&gt;&#xA;&lt;li&gt;flexible : de nombreuses sources de données sont supportées et les plugins répondent aux besoins les plus exotiques&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;Grafana permet également de déclencher des alertes lorsqu&amp;rsquo;une métrique dépasse une certaine valeur (plus besoin de configurer un système d&amp;rsquo;alerte propre à chaque source de donnée). C&amp;rsquo;est devenu un incontournable (en tout cas pour moi).&lt;/p&gt;</description>
+      <link>http://localhost:1313/fr/2021/03/coder-ses-dashboards-grafana-avec-grafonnet/</link>
+      <pubDate>Mon, 22 Mar 2021 15:40:24 +0200</pubDate>
+      
+      <guid>http://localhost:1313/fr/2021/03/coder-ses-dashboards-grafana-avec-grafonnet/</guid>
+      
+        <description>&lt;p&gt;On ne présente plus &lt;a href=&#34;https://grafana.com/&#34;&gt;Grafana&lt;/a&gt; en ce qui concerne la visualisation de graphiques et de données. Cet outil est très largement utilisé pour des besoins de monitoring, de métrologie&amp;hellip;&lt;/p&gt;
+&lt;p&gt;Les avantages sont multiples:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;open-source&lt;/li&gt;
+&lt;li&gt;pratique : on peut créer des dashboards pour divers besoin très simplement&lt;/li&gt;
+&lt;li&gt;flexible : de nombreuses sources de données sont supportées et les plugins répondent aux besoins les plus exotiques&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Grafana permet également de déclencher des alertes lorsqu&amp;rsquo;une métrique dépasse une certaine valeur (plus besoin de configurer un système d&amp;rsquo;alerte propre à chaque source de donnée). C&amp;rsquo;est devenu un incontournable (en tout cas pour moi).&lt;/p&gt;</description>
+      
     </item>
+    
     <item>
       <title>Les pratiques SRE et le climat</title>
-      <link>https://bpetit.nce.re/fr/2021/02/les-pratiques-sre-et-le-climat/</link>
-      <pubDate>Fri, 19 Feb 2021 19:25:24 +0200</pubDate><author>bpetit@nce.re (Benoit Petit)</author>
-      <guid>https://bpetit.nce.re/fr/2021/02/les-pratiques-sre-et-le-climat/</guid>
-      <description>L&amp;rsquo;ingénierie de la fiabilité des sites (Site Reliability Engineering), a pour objectif au sein d&amp;rsquo;une organisation de s&amp;rsquo;assurer que les systèmes et services logiciels qui y sont créés sont évolutifs et surtout &lt;strong&gt;très fiables&lt;/strong&gt;.</description>
+      <link>http://localhost:1313/fr/2021/02/les-pratiques-sre-et-le-climat/</link>
+      <pubDate>Fri, 19 Feb 2021 19:25:24 +0200</pubDate>
+      
+      <guid>http://localhost:1313/fr/2021/02/les-pratiques-sre-et-le-climat/</guid>
+      
+        <description>L&amp;rsquo;ingénierie de la fiabilité des sites (Site Reliability Engineering), a pour objectif au sein d&amp;rsquo;une organisation de s&amp;rsquo;assurer que les systèmes et services logiciels qui y sont créés sont évolutifs et surtout &lt;strong&gt;très fiables&lt;/strong&gt;.</description>
+      
     </item>
+    
     <item>
       <title>Scaphandre v0.1.1: mesurer la consommation d&#39;énergie (des coulisses) du numérique</title>
-      <link>https://bpetit.nce.re/fr/2021/01/scaphandre-v0.1.1-mesurer-la-consommation-d%C3%A9nergie-des-coulisses-du-num%C3%A9rique/</link>
-      <pubDate>Wed, 13 Jan 2021 15:20:24 +0200</pubDate><author>bpetit@nce.re (Benoit Petit)</author>
-      <guid>https://bpetit.nce.re/fr/2021/01/scaphandre-v0.1.1-mesurer-la-consommation-d%C3%A9nergie-des-coulisses-du-num%C3%A9rique/</guid>
-      <description>Comme d&amp;rsquo;autres petites mains de la &amp;ldquo;startup nation&amp;rdquo;, j&amp;rsquo;ai été amené à travailler sur des projets à &amp;ldquo;gros volume&amp;rdquo; (tout est relatif). Je pense par exemple à des projets mettant en oeuvre des modèles de machine learning, bien souvent pour montrer la bonne publicité à la bonne personne, au bon moment. Entraîner ces modèles nécessite beaucoup de ressources (CPU, RAM, GPU, etc.). Il en va de même pour les API qui collectent des données (qui bien souvent vont permettre d&amp;rsquo;entrainer ces mêmes modèles de ML). Ces APIs, selon le nombre de &lt;em&gt;clients&lt;/em&gt; qui les contactent, peuvent recevoir jusqu&amp;rsquo;à quelques milliards de requêtes par jour (voire plus, mais je n&amp;rsquo;ai pas eu l&amp;rsquo;occasion de travailler sur plus &amp;ldquo;gros&amp;rdquo;).</description>
+      <link>http://localhost:1313/fr/2021/01/scaphandre-v0.1.1-mesurer-la-consommation-d%C3%A9nergie-des-coulisses-du-num%C3%A9rique/</link>
+      <pubDate>Wed, 13 Jan 2021 15:20:24 +0200</pubDate>
+      
+      <guid>http://localhost:1313/fr/2021/01/scaphandre-v0.1.1-mesurer-la-consommation-d%C3%A9nergie-des-coulisses-du-num%C3%A9rique/</guid>
+      
+        <description>Comme d&amp;rsquo;autres petites mains de la &amp;ldquo;startup nation&amp;rdquo;, j&amp;rsquo;ai été amené à travailler sur des projets à &amp;ldquo;gros volume&amp;rdquo; (tout est relatif). Je pense par exemple à des projets mettant en oeuvre des modèles de machine learning, bien souvent pour montrer la bonne publicité à la bonne personne, au bon moment. Entraîner ces modèles nécessite beaucoup de ressources (CPU, RAM, GPU, etc.). Il en va de même pour les API qui collectent des données (qui bien souvent vont permettre d&amp;rsquo;entrainer ces mêmes modèles de ML). Ces APIs, selon le nombre de &lt;em&gt;clients&lt;/em&gt; qui les contactent, peuvent recevoir jusqu&amp;rsquo;à quelques milliards de requêtes par jour (voire plus, mais je n&amp;rsquo;ai pas eu l&amp;rsquo;occasion de travailler sur plus &amp;ldquo;gros&amp;rdquo;).</description>
+      
     </item>
+    
     <item>
       <title>Pourquoi j&#39;ai quitté mon job (qui avait tout pour plaire)</title>
-      <link>https://bpetit.nce.re/fr/2020/08/pourquoi-jai-quitt%C3%A9-mon-job-qui-avait-tout-pour-plaire/</link>
-      <pubDate>Wed, 26 Aug 2020 14:30:24 +0200</pubDate><author>bpetit@nce.re (Benoit Petit)</author>
-      <guid>https://bpetit.nce.re/fr/2020/08/pourquoi-jai-quitt%C3%A9-mon-job-qui-avait-tout-pour-plaire/</guid>
-      <description>&lt;p&gt;Voilà maintenant un peu moins d&amp;rsquo;un mois que j&amp;rsquo;ai quitté mon emploi (ingénieur cloud/SRE, dans une scale-up française). Ce travail avait pourtant beaucoup d&amp;rsquo;arguments: le luxe de la croissance, d&amp;rsquo;excellentes conditions de travail, beaucoup d&amp;rsquo;autonomie, un bon salaire, beaucoup de moyens investis pour le bien-être des employés. Ca ne faisait pas tout à fait deux ans que j&amp;rsquo;avais commencé ce travail et je n&amp;rsquo;avais rien à reprocher concrètement à mon employeur. Alors pourquoi partir ?&lt;/p&gt;</description>
+      <link>http://localhost:1313/fr/2020/08/pourquoi-jai-quitt%C3%A9-mon-job-qui-avait-tout-pour-plaire/</link>
+      <pubDate>Wed, 26 Aug 2020 14:30:24 +0200</pubDate>
+      
+      <guid>http://localhost:1313/fr/2020/08/pourquoi-jai-quitt%C3%A9-mon-job-qui-avait-tout-pour-plaire/</guid>
+      
+        <description>&lt;p&gt;Voilà maintenant un peu moins d&amp;rsquo;un mois que j&amp;rsquo;ai quitté mon emploi (ingénieur cloud/SRE, dans une scale-up française). Ce travail avait pourtant beaucoup d&amp;rsquo;arguments: le luxe de la croissance, d&amp;rsquo;excellentes conditions de travail, beaucoup d&amp;rsquo;autonomie, un bon salaire, beaucoup de moyens investis pour le bien-être des employés. Ca ne faisait pas tout à fait deux ans que j&amp;rsquo;avais commencé ce travail et je n&amp;rsquo;avais rien à reprocher concrètement à mon employeur. Alors pourquoi partir ?&lt;/p&gt;</description>
+      
     </item>
+    
     <item>
       <title>Au fait, pourquoi on bosse dans l&#39;IT ?</title>
-      <link>https://bpetit.nce.re/fr/2020/07/au-fait-pourquoi-on-bosse-dans-lit/</link>
-      <pubDate>Sat, 18 Jul 2020 14:30:55 +0200</pubDate><author>bpetit@nce.re (Benoit Petit)</author>
-      <guid>https://bpetit.nce.re/fr/2020/07/au-fait-pourquoi-on-bosse-dans-lit/</guid>
-      <description>Voilà environ deux ans que la perception que j&amp;rsquo;ai de mon métier évolue énormément. Je souhaite partager ici mes réflexions, d&amp;rsquo;abord car écrire les choses permet de mieux les appréhender, puis, si par chance vous lisez ce texte et partager mes questionnements, nous pourrons peut-être en discuter.</description>
+      <link>http://localhost:1313/fr/2020/07/au-fait-pourquoi-on-bosse-dans-lit/</link>
+      <pubDate>Sat, 18 Jul 2020 14:30:55 +0200</pubDate>
+      
+      <guid>http://localhost:1313/fr/2020/07/au-fait-pourquoi-on-bosse-dans-lit/</guid>
+      
+        <description>Voilà environ deux ans que la perception que j&amp;rsquo;ai de mon métier évolue énormément. Je souhaite partager ici mes réflexions, d&amp;rsquo;abord car écrire les choses permet de mieux les appréhender, puis, si par chance vous lisez ce texte et partager mes questionnements, nous pourrons peut-être en discuter.</description>
+      
     </item>
+    
+    <item>
+      <title>About</title>
+      <link>http://localhost:1313/fr/page/about/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/fr/page/about/</guid>
+      
+        <description>&lt;p&gt;Je suis co-fondateur d&amp;rsquo;&lt;a href=&#34;https://hubblo.org&#34;&gt;Hubblo&lt;/a&gt;, une soci
+a&amp;rsquo;m one of the co-founders of , a consulting and a study office specialized in environmental, climate, social and societal effects of the tech industry. In this position, I work especially on topics related to Datacenters, AI, Cloud services and wider ICT infrastrctures.&lt;/p&gt;
+&lt;p&gt;I&amp;rsquo;m also an active contributor to the &lt;a href=&#34;https://boavizta.org&#34;&gt;Boavizta&lt;/a&gt; non-profit, in which I contribute to digital commons helping organizations and individuals to better understand, evaluate and reduce the environmental impacts of digital services.&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>Interventions</title>
+      <link>http://localhost:1313/fr/page/talks/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/fr/page/talks/</guid>
+      
+        <description>&lt;h2 id=&#34;2025&#34;&gt;2025&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.youtube.com/watch?v=J3yT2zXTJH4&#34;&gt;The Cloud Screener - Il accompagne les entreprises dans leurs transformations ecologiques&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;2024&#34;&gt;2024&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.youtube.com/watch?v=fRrDhxuJAiU&#34;&gt;WAX conf - Comment l&amp;rsquo;open-source peut aider à la compréhension des impacts environnementaux du numérique ?&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;2023&#34;&gt;2023&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.youtube.com/watch?v=OnMNyfDEogg&#34;&gt;CTO&amp;rsquo;z - &amp;ldquo;Mirage de la dematerialisation&amp;rdquo;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.ifttd.io/episodes/prendre-la-mesure-de-lurgence&#34;&gt;IFTTD - Prendre la mesure de l&amp;rsquo;urgence, par Bruno Soulez&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;2022&#34;&gt;2022&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.youtube.com/watch?v=cjfcX0h7b8A&#34;&gt;JCSA22 - Méthodologie et outillage d&amp;rsquo;évaluation des impacts environnementaux du numérique&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.youtube.com/watch?v=dFu1mnD5Efc&#34;&gt;Tech Rocks meetup - IT et impact environnemental&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.youtube.com/watch?v=2cGQdsUv2GI&#34;&gt;Electro Monkeys - &amp;ldquo;IT et impact environnemental&amp;rdquo;&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;2021&#34;&gt;2021&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.standblog.org/blog/post/2021/03/05/Second-episode-de-l-Octet-Vert-avec-Benoit-Petit&#34;&gt;L&amp;rsquo;Octet Vert, par Tristan Nitot&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.youtube.com/watch?v=a4S8i3wa-6Y&#34;&gt;Radio DevOps #15 - Hardware et pollution&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>Presse</title>
+      <link>http://localhost:1313/fr/page/press/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/fr/page/press/</guid>
+      
+        <description>&lt;h2 id=&#34;2025&#34;&gt;2025&lt;/h2&gt;
+&lt;h3 id=&#34;aout&#34;&gt;Aout&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://fr.linkedin.com/pulse/interview-de-benoit-petit-est-encore-tr%C3%A8s-loin-dun-bole-richard-knmbe&#34;&gt;Interview: De la Tech a la Terre - &amp;ldquo;On est encore très loin d’un numérique soutenable&amp;rdquo; - par Yannick Bole-Richard&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;janvier&#34;&gt;Janvier&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.greentech-forum.com/media/datacenters-cloud-comment-mieux-evaluer-leur-empreinte-environnementale&#34;&gt;Datacenters, Cloud : comment mieux évaluer leur empreinte environnementale ?, GreenTech Forum, par Remy Marrone&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</description>
+      
+    </item>
+    
   </channel>
 </rss>

@@ -12,14 +12,13 @@ tags:
   - resiliency
   - climate
   - tech
+toc: true
 image: /lizard.cleaned.jpg
 thumbnail: /lizard.cleaned.jpg
 share_img: /lizard.cleaned.jpg
 author: Benoit Petit
 summary: Site Reliability Engineering's goal is to ensure that software systems and services that are created in an organization are made to evolve easily and especially to be **extremely reliable**.
 ---
-
-![A lezard](/lizard.cleaned.jpg)
 
 Site Reliability Engineering's goal is to ensure that software systems and services that are created in an organization are made to evolve easily and especially to be **extremely reliable**.
 

@@ -1,21 +1,30 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Knot on Benoit Petit</title>
-    <link>https://bpetit.nce.re/tags/knot/</link>
-    <description>Recent content in Knot on Benoit Petit</description>
-    <generator>Hugo</generator>
+    <title>Knot on Benoit Petit&#39;s website</title>
+    <link>http://localhost:1313/tags/knot/</link>
+    <description>Recent content in Knot on Benoit Petit&#39;s website</description>
+    <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <managingEditor>bpetit@nce.re (Benoit Petit)</managingEditor>
-    <webMaster>bpetit@nce.re (Benoit Petit)</webMaster>
-    <lastBuildDate>Sat, 17 Mar 2018 20:12:45 +0200</lastBuildDate>
-    <atom:link href="https://bpetit.nce.re/tags/knot/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 17 Mar 2018 20:12:45 +0200</lastBuildDate><atom:link href="http://localhost:1313/tags/knot/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Automating web applications proxying, DNS registration and TLS termination with ansible</title>
-      <link>https://bpetit.nce.re/2018/03/automating-web-applications-proxying-dns-registration-and-tls-termination-with-ansible/</link>
-      <pubDate>Sat, 17 Mar 2018 20:12:45 +0200</pubDate><author>bpetit@nce.re (Benoit Petit)</author>
-      <guid>https://bpetit.nce.re/2018/03/automating-web-applications-proxying-dns-registration-and-tls-termination-with-ansible/</guid>
-      <description>&lt;p&gt;For the needs of an incoming project, that I&amp;rsquo;ll describe in a later post, I needed to automate public access configuration for existing web applications. In other words, I needed to automate, proxy vhost configuration, tls termination and dns registration on a given domain. What is presented here has been used on a simple libvirt/KVM architecture (managed as described in my latest post).&lt;/p&gt;&#xA;&lt;p&gt;The workflow is this one:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;deploy the DNS entry&lt;/li&gt;&#xA;&lt;li&gt;deploy nginx vhost for the given webapp and domain name (allowing access to .well-known directory for letsencrypt http based authentication and authorization)&lt;/li&gt;&#xA;&lt;li&gt;ask for letsencrypt certificate&lt;/li&gt;&#xA;&lt;li&gt;retrieve certificate and configure tcp/443 vhost with tls&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;Here are the components I used:&lt;/p&gt;</description>
+      <link>http://localhost:1313/2018/03/automating-web-applications-proxying-dns-registration-and-tls-termination-with-ansible/</link>
+      <pubDate>Sat, 17 Mar 2018 20:12:45 +0200</pubDate>
+      
+      <guid>http://localhost:1313/2018/03/automating-web-applications-proxying-dns-registration-and-tls-termination-with-ansible/</guid>
+      
+        <description>&lt;p&gt;For the needs of an incoming project, that I&amp;rsquo;ll describe in a later post, I needed to automate public access configuration for existing web applications. In other words, I needed to automate, proxy vhost configuration, tls termination and dns registration on a given domain. What is presented here has been used on a simple libvirt/KVM architecture (managed as described in my latest post).&lt;/p&gt;
+&lt;p&gt;The workflow is this one:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;deploy the DNS entry&lt;/li&gt;
+&lt;li&gt;deploy nginx vhost for the given webapp and domain name (allowing access to .well-known directory for letsencrypt http based authentication and authorization)&lt;/li&gt;
+&lt;li&gt;ask for letsencrypt certificate&lt;/li&gt;
+&lt;li&gt;retrieve certificate and configure tcp/443 vhost with tls&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Here are the components I used:&lt;/p&gt;</description>
+      
     </item>
+    
   </channel>
 </rss>

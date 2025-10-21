@@ -1,6 +1,7 @@
 ---
 title: "Climat et numérique: pourquoi le mouvement DevOps a un rôle à jouer"
 date: 2021-08-09T10:02:24+02:00
+toc: true
 tags:
   - devops
   - climat
@@ -16,7 +17,6 @@ share_img: /bird.jpg
 author: Benoit Petit
 summary: En ce moment je travaille sur une formation à l'attention des techs, côté infrastructure (avec un penchant pour les méthodes SRE/DevOps), concernant la sobriété numérique. J'en ai parlé un peu autour de moi pour savoir ce que les pros du domaine aimeraient trouver dans ce type de formation. J'ai entendu plein de bonnes idées et j'en ai gardé une bonne partie (merci à celles et ceux qui me les ont soufflé). En plus de ces idées, j'ai eu droit à des avis sur le sujet, bien entendu. Certains avis m'ont interpellé.
 ---
-![Un oiseau](/bird.jpg)
 
 En ce moment je travaille sur une formation à l'attention des techs, côté infrastructure (avec un penchant pour les méthodes SRE/DevOps), concernant la sobriété numérique. J'en ai parlé un peu autour de moi pour savoir ce que les pros du domaine aimeraient trouver dans ce type de formation. J'ai entendu plein de bonnes idées et j'en ai gardé une bonne partie (merci à celles et ceux qui me les ont soufflé). En plus de ces idées, j'ai eu droit à des avis sur le sujet, bien entendu. Certains avis m'ont interpellé.
 

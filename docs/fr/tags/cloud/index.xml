@@ -1,21 +1,22 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Cloud on Benoit Petit</title>
-    <link>https://bpetit.nce.re/fr/tags/cloud/</link>
-    <description>Recent content in Cloud on Benoit Petit</description>
-    <generator>Hugo</generator>
+    <title>Cloud on Blog de Benoit Petit</title>
+    <link>http://localhost:1313/fr/tags/cloud/</link>
+    <description>Recent content in Cloud on Blog de Benoit Petit</description>
+    <generator>Hugo -- gohugo.io</generator>
     <language>fr</language>
-    <managingEditor>bpetit@nce.re (Benoit Petit)</managingEditor>
-    <webMaster>bpetit@nce.re (Benoit Petit)</webMaster>
-    <lastBuildDate>Wed, 13 Jan 2021 15:20:24 +0200</lastBuildDate>
-    <atom:link href="https://bpetit.nce.re/fr/tags/cloud/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 13 Jan 2021 15:20:24 +0200</lastBuildDate><atom:link href="http://localhost:1313/fr/tags/cloud/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Scaphandre v0.1.1: mesurer la consommation d&#39;énergie (des coulisses) du numérique</title>
-      <link>https://bpetit.nce.re/fr/2021/01/scaphandre-v0.1.1-mesurer-la-consommation-d%C3%A9nergie-des-coulisses-du-num%C3%A9rique/</link>
-      <pubDate>Wed, 13 Jan 2021 15:20:24 +0200</pubDate><author>bpetit@nce.re (Benoit Petit)</author>
-      <guid>https://bpetit.nce.re/fr/2021/01/scaphandre-v0.1.1-mesurer-la-consommation-d%C3%A9nergie-des-coulisses-du-num%C3%A9rique/</guid>
-      <description>Comme d&amp;rsquo;autres petites mains de la &amp;ldquo;startup nation&amp;rdquo;, j&amp;rsquo;ai été amené à travailler sur des projets à &amp;ldquo;gros volume&amp;rdquo; (tout est relatif). Je pense par exemple à des projets mettant en oeuvre des modèles de machine learning, bien souvent pour montrer la bonne publicité à la bonne personne, au bon moment. Entraîner ces modèles nécessite beaucoup de ressources (CPU, RAM, GPU, etc.). Il en va de même pour les API qui collectent des données (qui bien souvent vont permettre d&amp;rsquo;entrainer ces mêmes modèles de ML). Ces APIs, selon le nombre de &lt;em&gt;clients&lt;/em&gt; qui les contactent, peuvent recevoir jusqu&amp;rsquo;à quelques milliards de requêtes par jour (voire plus, mais je n&amp;rsquo;ai pas eu l&amp;rsquo;occasion de travailler sur plus &amp;ldquo;gros&amp;rdquo;).</description>
+      <link>http://localhost:1313/fr/2021/01/scaphandre-v0.1.1-mesurer-la-consommation-d%C3%A9nergie-des-coulisses-du-num%C3%A9rique/</link>
+      <pubDate>Wed, 13 Jan 2021 15:20:24 +0200</pubDate>
+      
+      <guid>http://localhost:1313/fr/2021/01/scaphandre-v0.1.1-mesurer-la-consommation-d%C3%A9nergie-des-coulisses-du-num%C3%A9rique/</guid>
+      
+        <description>Comme d&amp;rsquo;autres petites mains de la &amp;ldquo;startup nation&amp;rdquo;, j&amp;rsquo;ai été amené à travailler sur des projets à &amp;ldquo;gros volume&amp;rdquo; (tout est relatif). Je pense par exemple à des projets mettant en oeuvre des modèles de machine learning, bien souvent pour montrer la bonne publicité à la bonne personne, au bon moment. Entraîner ces modèles nécessite beaucoup de ressources (CPU, RAM, GPU, etc.). Il en va de même pour les API qui collectent des données (qui bien souvent vont permettre d&amp;rsquo;entrainer ces mêmes modèles de ML). Ces APIs, selon le nombre de &lt;em&gt;clients&lt;/em&gt; qui les contactent, peuvent recevoir jusqu&amp;rsquo;à quelques milliards de requêtes par jour (voire plus, mais je n&amp;rsquo;ai pas eu l&amp;rsquo;occasion de travailler sur plus &amp;ldquo;gros&amp;rdquo;).</description>
+      
     </item>
+    
   </channel>
 </rss>
