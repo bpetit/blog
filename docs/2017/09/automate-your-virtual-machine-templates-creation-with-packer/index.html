@@ -6,7 +6,7 @@
   
     class="html theme--light"
   
-><head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+><head>
   <meta charset="utf-8" />
   <title>
     Benoit Petit
@@ -26,7 +26,7 @@
   />
   
   
-        <link rel="stylesheet" href="/css/anatole.css" />
+        <link rel="stylesheet" href="/scss/main.scss" integrity="" crossorigin="anonymous" />
       
   <link
     rel="stylesheet"
@@ -74,7 +74,7 @@
   <link rel="icon" type="image/png" sizes="32x32" href="/static/favicon.icofavicon-32x32.png" />
   <link rel="icon" type="image/png" sizes="16x16" href="/static/favicon.icofavicon-16x16.png" />
 
-  <link rel="canonical" href="http://localhost:1313/2017/09/automate-your-virtual-machine-templates-creation-with-packer/" />
+  <link rel="canonical" href="https://bpetit.nce.re/2017/09/automate-your-virtual-machine-templates-creation-with-packer/" />
   
   
   
@@ -113,7 +113,7 @@
 
 
   
-  <meta property="og:url" content="http://localhost:1313/2017/09/automate-your-virtual-machine-templates-creation-with-packer/">
+  <meta property="og:url" content="https://bpetit.nce.re/2017/09/automate-your-virtual-machine-templates-creation-with-packer/">
   <meta property="og:site_name" content="Benoit Petit&#39;s website">
   <meta property="og:title" content="Automate your virtual machine templates creation with Packer">
   <meta property="og:description" content="Context If you operate an IaaS infrastructure, either private (OpenStack, OpenNebula, …) or public cloud (AWS, GCP, …), you certainly already wondered how to properly bootstrap your first virtual machines templates. IaaS solutions are often linked to a public repository of basic virtual machines images that can be used to quickly start deploying instances. If this is good for initial tests, it’s not that safe to bootstrap all your instances from a guest operating system someone you don’t has built for you. You then certainly want to build your own images and you want that part to be automated to (why running a fully automated infrastructure and still provisioning guest OS by hand ?). Why not use PXE for this ? Well, you’d have to deploy and maintain a dhcp and http server just for that purpose. Deploying new distributions and their releases on that server is not that cumfortable neither.">
@@ -157,7 +157,7 @@
         "isFamilyFriendly": "true",
         "mainEntityOfPage": {
             "@type": "WebPage",
-            "@id": "http:\/\/localhost:1313\/2017\/09\/automate-your-virtual-machine-templates-creation-with-packer\/"
+            "@id": "https:\/\/bpetit.nce.re\/2017\/09\/automate-your-virtual-machine-templates-creation-with-packer\/"
         },
         "author" : {
             "@type": "Person",
@@ -181,10 +181,10 @@
         "publisher":{
             "@type":"Organization",
             "name": "Benoit Petit",
-            "url": "http://localhost:1313/",
+            "url": "https://bpetit.nce.re/",
             "logo": {
                 "@type": "ImageObject",
-                "url": "http:\/\/localhost:1313\/static\/favicon.icofavicon-32x32.png",
+                "url": "https:\/\/bpetit.nce.re\/static\/favicon.icofavicon-32x32.png",
                 "width":"32",
                 "height":"32"
             }
@@ -194,7 +194,7 @@
       ]
 
     ,
-        "url" : "http:\/\/localhost:1313\/2017\/09\/automate-your-virtual-machine-templates-creation-with-packer\/",
+        "url" : "https:\/\/bpetit.nce.re\/2017\/09\/automate-your-virtual-machine-templates-creation-with-packer\/",
         "wordCount" : "1254",
         "genre" : [ ],
         "keywords" : [ 

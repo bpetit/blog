@@ -37,6 +37,7 @@ author: Benoit Petit
 ### 2024
 
 - [GreenIO - Datacenter sustainability with Stanislava Borisova and Benoit Petit](https://www.youtube.com/watch?v=nSfB4JDJ5DY)
+- [FOSDEM 2024 Energy Devroom - A Journey Across the Environmental Materiality of Digital Services, with David Ekchajzer for Boavizta](https://www.youtube.com/watch?v=x1eReLNLwfk)
 
 ### 2023
 

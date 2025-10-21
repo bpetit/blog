@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on Benoit Petit&#39;s website</title>
-    <link>http://localhost:1313/tags/</link>
+    <link>https://bpetit.nce.re/tags/</link>
     <description>Recent content in Tags on Benoit Petit&#39;s website</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Fri, 12 Mar 2021 10:22:24 +0200</lastBuildDate><atom:link href="http://localhost:1313/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 12 Mar 2021 10:22:24 +0200</lastBuildDate><atom:link href="https://bpetit.nce.re/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Automation</title>
-      <link>http://localhost:1313/tags/automation/</link>
+      <link>https://bpetit.nce.re/tags/automation/</link>
       <pubDate>Fri, 12 Mar 2021 10:22:24 +0200</pubDate>
       
-      <guid>http://localhost:1313/tags/automation/</guid>
+      <guid>https://bpetit.nce.re/tags/automation/</guid>
       
         <description></description>
       
@@ -20,10 +20,10 @@
     
     <item>
       <title>Climate</title>
-      <link>http://localhost:1313/tags/climate/</link>
+      <link>https://bpetit.nce.re/tags/climate/</link>
       <pubDate>Fri, 12 Mar 2021 10:22:24 +0200</pubDate>
       
-      <guid>http://localhost:1313/tags/climate/</guid>
+      <guid>https://bpetit.nce.re/tags/climate/</guid>
       
         <description></description>
       
@@ -31,10 +31,10 @@
     
     <item>
       <title>Devops</title>
-      <link>http://localhost:1313/tags/devops/</link>
+      <link>https://bpetit.nce.re/tags/devops/</link>
       <pubDate>Fri, 12 Mar 2021 10:22:24 +0200</pubDate>
       
-      <guid>http://localhost:1313/tags/devops/</guid>
+      <guid>https://bpetit.nce.re/tags/devops/</guid>
       
         <description></description>
       
@@ -42,10 +42,10 @@
     
     <item>
       <title>Energy</title>
-      <link>http://localhost:1313/tags/energy/</link>
+      <link>https://bpetit.nce.re/tags/energy/</link>
       <pubDate>Fri, 12 Mar 2021 10:22:24 +0200</pubDate>
       
-      <guid>http://localhost:1313/tags/energy/</guid>
+      <guid>https://bpetit.nce.re/tags/energy/</guid>
       
         <description></description>
       
@@ -53,10 +53,10 @@
     
     <item>
       <title>Open-Source</title>
-      <link>http://localhost:1313/tags/open-source/</link>
+      <link>https://bpetit.nce.re/tags/open-source/</link>
       <pubDate>Fri, 12 Mar 2021 10:22:24 +0200</pubDate>
       
-      <guid>http://localhost:1313/tags/open-source/</guid>
+      <guid>https://bpetit.nce.re/tags/open-source/</guid>
       
         <description></description>
       
@@ -64,10 +64,10 @@
     
     <item>
       <title>Resiliency</title>
-      <link>http://localhost:1313/tags/resiliency/</link>
+      <link>https://bpetit.nce.re/tags/resiliency/</link>
       <pubDate>Fri, 12 Mar 2021 10:22:24 +0200</pubDate>
       
-      <guid>http://localhost:1313/tags/resiliency/</guid>
+      <guid>https://bpetit.nce.re/tags/resiliency/</guid>
       
         <description></description>
       
@@ -75,10 +75,10 @@
     
     <item>
       <title>Rust</title>
-      <link>http://localhost:1313/tags/rust/</link>
+      <link>https://bpetit.nce.re/tags/rust/</link>
       <pubDate>Fri, 12 Mar 2021 10:22:24 +0200</pubDate>
       
-      <guid>http://localhost:1313/tags/rust/</guid>
+      <guid>https://bpetit.nce.re/tags/rust/</guid>
       
         <description></description>
       
@@ -86,10 +86,10 @@
     
     <item>
       <title>Scaphandre</title>
-      <link>http://localhost:1313/tags/scaphandre/</link>
+      <link>https://bpetit.nce.re/tags/scaphandre/</link>
       <pubDate>Fri, 12 Mar 2021 10:22:24 +0200</pubDate>
       
-      <guid>http://localhost:1313/tags/scaphandre/</guid>
+      <guid>https://bpetit.nce.re/tags/scaphandre/</guid>
       
         <description></description>
       
@@ -97,10 +97,10 @@
     
     <item>
       <title>Sre</title>
-      <link>http://localhost:1313/tags/sre/</link>
+      <link>https://bpetit.nce.re/tags/sre/</link>
       <pubDate>Fri, 12 Mar 2021 10:22:24 +0200</pubDate>
       
-      <guid>http://localhost:1313/tags/sre/</guid>
+      <guid>https://bpetit.nce.re/tags/sre/</guid>
       
         <description></description>
       
@@ -108,10 +108,10 @@
     
     <item>
       <title>Tech</title>
-      <link>http://localhost:1313/tags/tech/</link>
+      <link>https://bpetit.nce.re/tags/tech/</link>
       <pubDate>Fri, 12 Mar 2021 10:22:24 +0200</pubDate>
       
-      <guid>http://localhost:1313/tags/tech/</guid>
+      <guid>https://bpetit.nce.re/tags/tech/</guid>
       
         <description></description>
       
@@ -119,10 +119,10 @@
     
     <item>
       <title>Cloud</title>
-      <link>http://localhost:1313/tags/cloud/</link>
+      <link>https://bpetit.nce.re/tags/cloud/</link>
       <pubDate>Wed, 20 Jan 2021 11:10:24 +0200</pubDate>
       
-      <guid>http://localhost:1313/tags/cloud/</guid>
+      <guid>https://bpetit.nce.re/tags/cloud/</guid>
       
         <description></description>
       
@@ -130,10 +130,10 @@
     
     <item>
       <title>Ecology</title>
-      <link>http://localhost:1313/tags/ecology/</link>
+      <link>https://bpetit.nce.re/tags/ecology/</link>
       <pubDate>Wed, 20 Jan 2021 11:10:24 +0200</pubDate>
       
-      <guid>http://localhost:1313/tags/ecology/</guid>
+      <guid>https://bpetit.nce.re/tags/ecology/</guid>
       
         <description></description>
       
@@ -141,10 +141,10 @@
     
     <item>
       <title>Ansible</title>
-      <link>http://localhost:1313/tags/ansible/</link>
+      <link>https://bpetit.nce.re/tags/ansible/</link>
       <pubDate>Sat, 17 Mar 2018 20:12:45 +0200</pubDate>
       
-      <guid>http://localhost:1313/tags/ansible/</guid>
+      <guid>https://bpetit.nce.re/tags/ansible/</guid>
       
         <description></description>
       
@@ -152,10 +152,10 @@
     
     <item>
       <title>Cd</title>
-      <link>http://localhost:1313/tags/cd/</link>
+      <link>https://bpetit.nce.re/tags/cd/</link>
       <pubDate>Sat, 17 Mar 2018 20:12:45 +0200</pubDate>
       
-      <guid>http://localhost:1313/tags/cd/</guid>
+      <guid>https://bpetit.nce.re/tags/cd/</guid>
       
         <description></description>
       
@@ -163,10 +163,10 @@
     
     <item>
       <title>Dns</title>
-      <link>http://localhost:1313/tags/dns/</link>
+      <link>https://bpetit.nce.re/tags/dns/</link>
       <pubDate>Sat, 17 Mar 2018 20:12:45 +0200</pubDate>
       
-      <guid>http://localhost:1313/tags/dns/</guid>
+      <guid>https://bpetit.nce.re/tags/dns/</guid>
       
         <description></description>
       
@@ -174,10 +174,10 @@
     
     <item>
       <title>Knot</title>
-      <link>http://localhost:1313/tags/knot/</link>
+      <link>https://bpetit.nce.re/tags/knot/</link>
       <pubDate>Sat, 17 Mar 2018 20:12:45 +0200</pubDate>
       
-      <guid>http://localhost:1313/tags/knot/</guid>
+      <guid>https://bpetit.nce.re/tags/knot/</guid>
       
         <description></description>
       
@@ -185,10 +185,10 @@
     
     <item>
       <title>Letsencrypt</title>
-      <link>http://localhost:1313/tags/letsencrypt/</link>
+      <link>https://bpetit.nce.re/tags/letsencrypt/</link>
       <pubDate>Sat, 17 Mar 2018 20:12:45 +0200</pubDate>
       
-      <guid>http://localhost:1313/tags/letsencrypt/</guid>
+      <guid>https://bpetit.nce.re/tags/letsencrypt/</guid>
       
         <description></description>
       
@@ -196,10 +196,10 @@
     
     <item>
       <title>Tls</title>
-      <link>http://localhost:1313/tags/tls/</link>
+      <link>https://bpetit.nce.re/tags/tls/</link>
       <pubDate>Sat, 17 Mar 2018 20:12:45 +0200</pubDate>
       
-      <guid>http://localhost:1313/tags/tls/</guid>
+      <guid>https://bpetit.nce.re/tags/tls/</guid>
       
         <description></description>
       
@@ -207,10 +207,10 @@
     
     <item>
       <title>Cloud-Init</title>
-      <link>http://localhost:1313/tags/cloud-init/</link>
+      <link>https://bpetit.nce.re/tags/cloud-init/</link>
       <pubDate>Tue, 21 Nov 2017 20:44:12 +0200</pubDate>
       
-      <guid>http://localhost:1313/tags/cloud-init/</guid>
+      <guid>https://bpetit.nce.re/tags/cloud-init/</guid>
       
         <description></description>
       
@@ -218,10 +218,10 @@
     
     <item>
       <title>Kvm</title>
-      <link>http://localhost:1313/tags/kvm/</link>
+      <link>https://bpetit.nce.re/tags/kvm/</link>
       <pubDate>Tue, 21 Nov 2017 20:44:12 +0200</pubDate>
       
-      <guid>http://localhost:1313/tags/kvm/</guid>
+      <guid>https://bpetit.nce.re/tags/kvm/</guid>
       
         <description></description>
       
@@ -229,10 +229,10 @@
     
     <item>
       <title>Libvirt</title>
-      <link>http://localhost:1313/tags/libvirt/</link>
+      <link>https://bpetit.nce.re/tags/libvirt/</link>
       <pubDate>Tue, 21 Nov 2017 20:44:12 +0200</pubDate>
       
-      <guid>http://localhost:1313/tags/libvirt/</guid>
+      <guid>https://bpetit.nce.re/tags/libvirt/</guid>
       
         <description></description>
       
@@ -240,10 +240,10 @@
     
     <item>
       <title>Openvswitch</title>
-      <link>http://localhost:1313/tags/openvswitch/</link>
+      <link>https://bpetit.nce.re/tags/openvswitch/</link>
       <pubDate>Tue, 21 Nov 2017 20:44:12 +0200</pubDate>
       
-      <guid>http://localhost:1313/tags/openvswitch/</guid>
+      <guid>https://bpetit.nce.re/tags/openvswitch/</guid>
       
         <description></description>
       
@@ -251,10 +251,10 @@
     
     <item>
       <title>Qemu</title>
-      <link>http://localhost:1313/tags/qemu/</link>
+      <link>https://bpetit.nce.re/tags/qemu/</link>
       <pubDate>Tue, 21 Nov 2017 20:44:12 +0200</pubDate>
       
-      <guid>http://localhost:1313/tags/qemu/</guid>
+      <guid>https://bpetit.nce.re/tags/qemu/</guid>
       
         <description></description>
       
@@ -262,10 +262,10 @@
     
     <item>
       <title>Debian</title>
-      <link>http://localhost:1313/tags/debian/</link>
+      <link>https://bpetit.nce.re/tags/debian/</link>
       <pubDate>Fri, 01 Sep 2017 19:44:12 +0200</pubDate>
       
-      <guid>http://localhost:1313/tags/debian/</guid>
+      <guid>https://bpetit.nce.re/tags/debian/</guid>
       
         <description></description>
       
@@ -273,10 +273,10 @@
     
     <item>
       <title>Packer</title>
-      <link>http://localhost:1313/tags/packer/</link>
+      <link>https://bpetit.nce.re/tags/packer/</link>
       <pubDate>Fri, 01 Sep 2017 19:44:12 +0200</pubDate>
       
-      <guid>http://localhost:1313/tags/packer/</guid>
+      <guid>https://bpetit.nce.re/tags/packer/</guid>
       
         <description></description>
       
@@ -284,10 +284,10 @@
     
     <item>
       <title>Virtualization</title>
-      <link>http://localhost:1313/tags/virtualization/</link>
+      <link>https://bpetit.nce.re/tags/virtualization/</link>
       <pubDate>Fri, 01 Sep 2017 19:44:12 +0200</pubDate>
       
-      <guid>http://localhost:1313/tags/virtualization/</guid>
+      <guid>https://bpetit.nce.re/tags/virtualization/</guid>
       
         <description></description>
       

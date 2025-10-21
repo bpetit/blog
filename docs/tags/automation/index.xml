@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Automation on Benoit Petit&#39;s website</title>
-    <link>http://localhost:1313/tags/automation/</link>
+    <link>https://bpetit.nce.re/tags/automation/</link>
     <description>Recent content in Automation on Benoit Petit&#39;s website</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Fri, 12 Mar 2021 10:22:24 +0200</lastBuildDate><atom:link href="http://localhost:1313/tags/automation/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 12 Mar 2021 10:22:24 +0200</lastBuildDate><atom:link href="https://bpetit.nce.re/tags/automation/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>SRE methods and climate change</title>
-      <link>http://localhost:1313/2021/03/sre-methods-and-climate-change/</link>
+      <link>https://bpetit.nce.re/2021/03/sre-methods-and-climate-change/</link>
       <pubDate>Fri, 12 Mar 2021 10:22:24 +0200</pubDate>
       
-      <guid>http://localhost:1313/2021/03/sre-methods-and-climate-change/</guid>
+      <guid>https://bpetit.nce.re/2021/03/sre-methods-and-climate-change/</guid>
       
         <description>Site Reliability Engineering&amp;rsquo;s goal is to ensure that software systems and services that are created in an organization are made to evolve easily and especially to be &lt;strong&gt;extremely reliable&lt;/strong&gt;.</description>
       
@@ -20,10 +20,10 @@
     
     <item>
       <title>Automating web applications proxying, DNS registration and TLS termination with ansible</title>
-      <link>http://localhost:1313/2018/03/automating-web-applications-proxying-dns-registration-and-tls-termination-with-ansible/</link>
+      <link>https://bpetit.nce.re/2018/03/automating-web-applications-proxying-dns-registration-and-tls-termination-with-ansible/</link>
       <pubDate>Sat, 17 Mar 2018 20:12:45 +0200</pubDate>
       
-      <guid>http://localhost:1313/2018/03/automating-web-applications-proxying-dns-registration-and-tls-termination-with-ansible/</guid>
+      <guid>https://bpetit.nce.re/2018/03/automating-web-applications-proxying-dns-registration-and-tls-termination-with-ansible/</guid>
       
         <description>&lt;p&gt;For the needs of an incoming project, that I&amp;rsquo;ll describe in a later post, I needed to automate public access configuration for existing web applications. In other words, I needed to automate, proxy vhost configuration, tls termination and dns registration on a given domain. What is presented here has been used on a simple libvirt/KVM architecture (managed as described in my latest post).&lt;/p&gt;
 &lt;p&gt;The workflow is this one:&lt;/p&gt;
@@ -39,10 +39,10 @@
     
     <item>
       <title>How to build a simplistic private cloud piece by piece</title>
-      <link>http://localhost:1313/2017/11/how-to-build-a-simplistic-private-cloud-piece-by-piece/</link>
+      <link>https://bpetit.nce.re/2017/11/how-to-build-a-simplistic-private-cloud-piece-by-piece/</link>
       <pubDate>Tue, 21 Nov 2017 20:44:12 +0200</pubDate>
       
-      <guid>http://localhost:1313/2017/11/how-to-build-a-simplistic-private-cloud-piece-by-piece/</guid>
+      <guid>https://bpetit.nce.re/2017/11/how-to-build-a-simplistic-private-cloud-piece-by-piece/</guid>
       
         <description>&lt;p&gt;I you are, like me, concerned about privacy, you may be the administrator of a few physical servers, either at home or rented to some dedicated server providers. Virtual machine instances (or VPS) bought in public clouds are great, but if you can&amp;rsquo;t configure yourself the underlying network and the hypervisors, where is the fun ? (just kidding, there is so much to do above a cloud-like infrastructure too). Here I&amp;rsquo;ll describe a little configuration I made for my own needs. The purpose is to deploy automatically (via ansible) virtual machines, and the networks they rely on, on multiple debian 9 kvm hypervisors. The result is really basic compared to the feature you can get, either from a public cloud service or from a fully configured and integrated private cloud software suite (let&amp;rsquo;s say OpenStack). The idea here is not to provide a full featured infrastructure, but to build a lightweight IaaS infrastructure, piece by piece. Here we will focus on virtual machines deployment and basic networking, virtual machines disks will be stored on hypervisors local hard drives (yeah, not so good for live migration, but let&amp;rsquo;s keep some fun for later).&lt;/p&gt;</description>
       
@@ -50,10 +50,10 @@
     
     <item>
       <title>Automate your virtual machine templates creation with Packer</title>
-      <link>http://localhost:1313/2017/09/automate-your-virtual-machine-templates-creation-with-packer/</link>
+      <link>https://bpetit.nce.re/2017/09/automate-your-virtual-machine-templates-creation-with-packer/</link>
       <pubDate>Fri, 01 Sep 2017 19:44:12 +0200</pubDate>
       
-      <guid>http://localhost:1313/2017/09/automate-your-virtual-machine-templates-creation-with-packer/</guid>
+      <guid>https://bpetit.nce.re/2017/09/automate-your-virtual-machine-templates-creation-with-packer/</guid>
       
         <description>&lt;h2 id=&#34;context&#34;&gt;Context&lt;/h2&gt;
 &lt;p&gt;If you operate an IaaS infrastructure, either private (OpenStack, OpenNebula, &amp;hellip;) or public cloud (AWS, GCP, &amp;hellip;), you certainly already wondered how to properly bootstrap your first virtual machines templates. IaaS solutions are often linked to a public repository of basic virtual machines images that can be used to quickly start deploying instances. If this is good for initial tests, it&amp;rsquo;s not that safe to bootstrap all your instances from a guest operating system someone you don&amp;rsquo;t has built for you. You then certainly want to build your own images and you want that part to be automated to (why running a fully automated infrastructure and still provisioning guest OS by hand ?). Why not use PXE for this ? Well, you&amp;rsquo;d have to deploy and maintain a dhcp and http server just for that purpose. Deploying new distributions and their releases on that server is not that cumfortable neither.&lt;/p&gt;</description>
