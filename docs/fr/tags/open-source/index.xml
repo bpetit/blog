@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Open-Source on Blog de Benoit Petit</title>
-    <link>http://localhost:1313/fr/tags/open-source/</link>
+    <link>https://bpetit.nce.re/fr/tags/open-source/</link>
     <description>Recent content in Open-Source on Blog de Benoit Petit</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>fr</language>
-    <lastBuildDate>Mon, 22 Mar 2021 15:40:24 +0200</lastBuildDate><atom:link href="http://localhost:1313/fr/tags/open-source/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 22 Mar 2021 15:40:24 +0200</lastBuildDate><atom:link href="https://bpetit.nce.re/fr/tags/open-source/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Coder ses dashboards Grafana avec Grafonnet</title>
-      <link>http://localhost:1313/fr/2021/03/coder-ses-dashboards-grafana-avec-grafonnet/</link>
+      <link>https://bpetit.nce.re/fr/2021/03/coder-ses-dashboards-grafana-avec-grafonnet/</link>
       <pubDate>Mon, 22 Mar 2021 15:40:24 +0200</pubDate>
       
-      <guid>http://localhost:1313/fr/2021/03/coder-ses-dashboards-grafana-avec-grafonnet/</guid>
+      <guid>https://bpetit.nce.re/fr/2021/03/coder-ses-dashboards-grafana-avec-grafonnet/</guid>
       
         <description>&lt;p&gt;On ne présente plus &lt;a href=&#34;https://grafana.com/&#34;&gt;Grafana&lt;/a&gt; en ce qui concerne la visualisation de graphiques et de données. Cet outil est très largement utilisé pour des besoins de monitoring, de métrologie&amp;hellip;&lt;/p&gt;
 &lt;p&gt;Les avantages sont multiples:&lt;/p&gt;
@@ -27,10 +27,10 @@
     
     <item>
       <title>Les pratiques SRE et le climat</title>
-      <link>http://localhost:1313/fr/2021/02/les-pratiques-sre-et-le-climat/</link>
+      <link>https://bpetit.nce.re/fr/2021/02/les-pratiques-sre-et-le-climat/</link>
       <pubDate>Fri, 19 Feb 2021 19:25:24 +0200</pubDate>
       
-      <guid>http://localhost:1313/fr/2021/02/les-pratiques-sre-et-le-climat/</guid>
+      <guid>https://bpetit.nce.re/fr/2021/02/les-pratiques-sre-et-le-climat/</guid>
       
         <description>L&amp;rsquo;ingénierie de la fiabilité des sites (Site Reliability Engineering), a pour objectif au sein d&amp;rsquo;une organisation de s&amp;rsquo;assurer que les systèmes et services logiciels qui y sont créés sont évolutifs et surtout &lt;strong&gt;très fiables&lt;/strong&gt;.</description>
       
@@ -38,10 +38,10 @@
     
     <item>
       <title>Scaphandre v0.1.1: mesurer la consommation d&#39;énergie (des coulisses) du numérique</title>
-      <link>http://localhost:1313/fr/2021/01/scaphandre-v0.1.1-mesurer-la-consommation-d%C3%A9nergie-des-coulisses-du-num%C3%A9rique/</link>
+      <link>https://bpetit.nce.re/fr/2021/01/scaphandre-v0.1.1-mesurer-la-consommation-d%C3%A9nergie-des-coulisses-du-num%C3%A9rique/</link>
       <pubDate>Wed, 13 Jan 2021 15:20:24 +0200</pubDate>
       
-      <guid>http://localhost:1313/fr/2021/01/scaphandre-v0.1.1-mesurer-la-consommation-d%C3%A9nergie-des-coulisses-du-num%C3%A9rique/</guid>
+      <guid>https://bpetit.nce.re/fr/2021/01/scaphandre-v0.1.1-mesurer-la-consommation-d%C3%A9nergie-des-coulisses-du-num%C3%A9rique/</guid>
       
         <description>Comme d&amp;rsquo;autres petites mains de la &amp;ldquo;startup nation&amp;rdquo;, j&amp;rsquo;ai été amené à travailler sur des projets à &amp;ldquo;gros volume&amp;rdquo; (tout est relatif). Je pense par exemple à des projets mettant en oeuvre des modèles de machine learning, bien souvent pour montrer la bonne publicité à la bonne personne, au bon moment. Entraîner ces modèles nécessite beaucoup de ressources (CPU, RAM, GPU, etc.). Il en va de même pour les API qui collectent des données (qui bien souvent vont permettre d&amp;rsquo;entrainer ces mêmes modèles de ML). Ces APIs, selon le nombre de &lt;em&gt;clients&lt;/em&gt; qui les contactent, peuvent recevoir jusqu&amp;rsquo;à quelques milliards de requêtes par jour (voire plus, mais je n&amp;rsquo;ai pas eu l&amp;rsquo;occasion de travailler sur plus &amp;ldquo;gros&amp;rdquo;).</description>
       

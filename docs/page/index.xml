@@ -2,16 +2,16 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Pages on Benoit Petit&#39;s website</title>
-    <link>http://localhost:1313/page/</link>
+    <link>https://bpetit.nce.re/page/</link>
     <description>Recent content in Pages on Benoit Petit&#39;s website</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en</language><atom:link href="http://localhost:1313/page/index.xml" rel="self" type="application/rss+xml" />
+    <language>en</language><atom:link href="https://bpetit.nce.re/page/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>About</title>
-      <link>http://localhost:1313/page/about/</link>
+      <link>https://bpetit.nce.re/page/about/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/page/about/</guid>
+      <guid>https://bpetit.nce.re/page/about/</guid>
       
         <description>&lt;p&gt;I&amp;rsquo;m one of the co-founders of &lt;a href=&#34;https://hubblo.org&#34;&gt;Hubblo&lt;/a&gt;, a consulting and a study office specialized in environmental, climate, social and societal effects of the tech industry. In this position, I work especially on topics related to Datacenters, AI, Cloud services and wider ICT infrastrctures.&lt;/p&gt;
 &lt;p&gt;I&amp;rsquo;m also an active contributor to the &lt;a href=&#34;https://boavizta.org&#34;&gt;Boavizta&lt;/a&gt; non-profit, in which I contribute to digital commons helping organizations and individuals to better understand, evaluate and reduce the environmental impacts of digital services.&lt;/p&gt;</description>
@@ -20,10 +20,10 @@
     
     <item>
       <title>Initiatives d&#39;intérêt</title>
-      <link>http://localhost:1313/page/data/initiatives/</link>
+      <link>https://bpetit.nce.re/page/data/initiatives/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/page/data/initiatives/</guid>
+      <guid>https://bpetit.nce.re/page/data/initiatives/</guid>
       
         <description>&lt;p&gt;Ce jeu de données est alimenté dans le prisme suivant.&lt;/p&gt;
 &lt;p&gt;Les &lt;strong&gt;thématiques&lt;/strong&gt; recherchées sont, de manière non exhaustive :&lt;/p&gt;
@@ -168,10 +168,10 @@ Tabulator.extendModule(&#34;mutator&#34;, &#34;mutators&#34;, {
     
     <item>
       <title>Open-Data</title>
-      <link>http://localhost:1313/page/data/</link>
+      <link>https://bpetit.nce.re/page/data/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/page/data/</guid>
+      <guid>https://bpetit.nce.re/page/data/</guid>
       
         <description>&lt;p&gt;&lt;a href=&#34;initiatives&#34;&gt;Intitatives à encourager&lt;/a&gt;&lt;/p&gt;</description>
       
@@ -179,10 +179,10 @@ Tabulator.extendModule(&#34;mutator&#34;, &#34;mutators&#34;, {
     
     <item>
       <title>Press</title>
-      <link>http://localhost:1313/page/press/</link>
+      <link>https://bpetit.nce.re/page/press/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/page/press/</guid>
+      <guid>https://bpetit.nce.re/page/press/</guid>
       
         <description>&lt;h2 id=&#34;en-français&#34;&gt;En français&lt;/h2&gt;
 &lt;h3 id=&#34;2025&#34;&gt;2025&lt;/h3&gt;
@@ -200,10 +200,10 @@ Tabulator.extendModule(&#34;mutator&#34;, &#34;mutators&#34;, {
     
     <item>
       <title>Talks</title>
-      <link>http://localhost:1313/page/talks/</link>
+      <link>https://bpetit.nce.re/page/talks/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/page/talks/</guid>
+      <guid>https://bpetit.nce.re/page/talks/</guid>
       
         <description>&lt;h2 id=&#34;en-français&#34;&gt;En français&lt;/h2&gt;
 &lt;h3 id=&#34;2025&#34;&gt;2025&lt;/h3&gt;
@@ -237,6 +237,7 @@ Tabulator.extendModule(&#34;mutator&#34;, &#34;mutators&#34;, {
 &lt;h3 id=&#34;2024-1&#34;&gt;2024&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;https://www.youtube.com/watch?v=nSfB4JDJ5DY&#34;&gt;GreenIO - Datacenter sustainability with Stanislava Borisova and Benoit Petit&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.youtube.com/watch?v=x1eReLNLwfk&#34;&gt;FOSDEM 2024 Energy Devroom - A Journey Across the Environmental Materiality of Digital Services, with David Ekchajzer for Boavizta&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h3 id=&#34;2023-1&#34;&gt;2023&lt;/h3&gt;
 &lt;ul&gt;

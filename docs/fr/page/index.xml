@@ -2,16 +2,16 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Pages on Blog de Benoit Petit</title>
-    <link>http://localhost:1313/fr/page/</link>
+    <link>https://bpetit.nce.re/fr/page/</link>
     <description>Recent content in Pages on Blog de Benoit Petit</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>fr</language><atom:link href="http://localhost:1313/fr/page/index.xml" rel="self" type="application/rss+xml" />
+    <language>fr</language><atom:link href="https://bpetit.nce.re/fr/page/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>About</title>
-      <link>http://localhost:1313/fr/page/about/</link>
+      <title>A propos</title>
+      <link>https://bpetit.nce.re/fr/page/about/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/fr/page/about/</guid>
+      <guid>https://bpetit.nce.re/fr/page/about/</guid>
       
         <description>&lt;p&gt;Je suis président et co-fondateur d&amp;rsquo;&lt;a href=&#34;https://hubblo.org&#34;&gt;Hubblo&lt;/a&gt;, un bureau d&amp;rsquo;étude spécialisé dans l&amp;rsquo;analyse des impacts environnementaux du numérique et la transformation des organisations pour être compatible avec les limites planétaires vis-à-vis leur usage et conception des technologies.&lt;/p&gt;
 &lt;p&gt;Au sein d&amp;rsquo;hubblo, j&amp;rsquo;interviens sur les sujets liés aux infrastructures numériques et en particulier les datacenters et l&amp;rsquo;IA générative, dans le cadre d&amp;rsquo;études et/ou d&amp;rsquo;Analyses de Cycle de Vie.&lt;/p&gt;

@@ -6,7 +6,7 @@
   
     class="html theme--light"
   
-><head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+><head>
   <meta charset="utf-8" />
   <title>
     Benoit Petit
@@ -26,7 +26,7 @@
   />
   
   
-        <link rel="stylesheet" href="/css/anatole.css" />
+        <link rel="stylesheet" href="/scss/main.scss" integrity="" crossorigin="anonymous" />
       
   <link
     rel="stylesheet"
@@ -74,7 +74,7 @@
   <link rel="icon" type="image/png" sizes="32x32" href="/static/favicon.icofavicon-32x32.png" />
   <link rel="icon" type="image/png" sizes="16x16" href="/static/favicon.icofavicon-16x16.png" />
 
-  <link rel="canonical" href="http://localhost:1313/2017/11/how-to-build-a-simplistic-private-cloud-piece-by-piece/" />
+  <link rel="canonical" href="https://bpetit.nce.re/2017/11/how-to-build-a-simplistic-private-cloud-piece-by-piece/" />
   
   
   
@@ -113,7 +113,7 @@
 
 
   
-  <meta property="og:url" content="http://localhost:1313/2017/11/how-to-build-a-simplistic-private-cloud-piece-by-piece/">
+  <meta property="og:url" content="https://bpetit.nce.re/2017/11/how-to-build-a-simplistic-private-cloud-piece-by-piece/">
   <meta property="og:site_name" content="Benoit Petit&#39;s website">
   <meta property="og:title" content="How to build a simplistic private cloud piece by piece">
   <meta property="og:description" content="I you are, like me, concerned about privacy, you may be the administrator of a few physical servers, either at home or rented to some dedicated server providers. Virtual machine instances (or VPS) bought in public clouds are great, but if you can’t configure yourself the underlying network and the hypervisors, where is the fun ? (just kidding, there is so much to do above a cloud-like infrastructure too). Here I’ll describe a little configuration I made for my own needs. The purpose is to deploy automatically (via ansible) virtual machines, and the networks they rely on, on multiple debian 9 kvm hypervisors. The result is really basic compared to the feature you can get, either from a public cloud service or from a fully configured and integrated private cloud software suite (let’s say OpenStack). The idea here is not to provide a full featured infrastructure, but to build a lightweight IaaS infrastructure, piece by piece. Here we will focus on virtual machines deployment and basic networking, virtual machines disks will be stored on hypervisors local hard drives (yeah, not so good for live migration, but let’s keep some fun for later).">
@@ -158,7 +158,7 @@
         "isFamilyFriendly": "true",
         "mainEntityOfPage": {
             "@type": "WebPage",
-            "@id": "http:\/\/localhost:1313\/2017\/11\/how-to-build-a-simplistic-private-cloud-piece-by-piece\/"
+            "@id": "https:\/\/bpetit.nce.re\/2017\/11\/how-to-build-a-simplistic-private-cloud-piece-by-piece\/"
         },
         "author" : {
             "@type": "Person",
@@ -182,10 +182,10 @@
         "publisher":{
             "@type":"Organization",
             "name": "Benoit Petit",
-            "url": "http://localhost:1313/",
+            "url": "https://bpetit.nce.re/",
             "logo": {
                 "@type": "ImageObject",
-                "url": "http:\/\/localhost:1313\/static\/favicon.icofavicon-32x32.png",
+                "url": "https:\/\/bpetit.nce.re\/static\/favicon.icofavicon-32x32.png",
                 "width":"32",
                 "height":"32"
             }
@@ -195,7 +195,7 @@
       ]
 
     ,
-        "url" : "http:\/\/localhost:1313\/2017\/11\/how-to-build-a-simplistic-private-cloud-piece-by-piece\/",
+        "url" : "https:\/\/bpetit.nce.re\/2017\/11\/how-to-build-a-simplistic-private-cloud-piece-by-piece\/",
         "wordCount" : "2090",
         "genre" : [ ],
         "keywords" : [ 
