@@ -3,6 +3,14 @@ title: "Press"
 author: Benoit Petit
 ---
 
+## 2026
+
+## En français
+
+#### Études
+
+- [Prospective d'évolution des consommations des data centers à court, moyen et long terme de 2024 à 2060, ADEME](https://librairie.ademe.fr/energies/8910-10774-prospective-d-evolution-des-consommations-des-data-centers-a-court-moyen-et-long-terme-de-2024-a-2060.html#product-presentation)
+
 ## 2025
 
 ### En français
