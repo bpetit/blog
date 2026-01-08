@@ -7,6 +7,7 @@ author: Benoit Petit
 
 ### En français
 
+- [Hubblo Day - À la recherche des Datacenters français](https://videos.lacontrevoie.fr/w/aDUSFPe6X8qhn17tbhKJ6r)
 - [The Cloud Screener - Il accompagne les entreprises dans leurs transformations ecologiques](https://www.youtube.com/watch?v=J3yT2zXTJH4)
 - [Webinar Hubblo - Cloud, Datacenters et environnement : se repérer dans la jungle des référentiels](https://videos.lacontrevoie.fr/w/oU5FFieTfpdMKVVSHSSKC1)
 
