@@ -19,10 +19,16 @@ author: Benoit Petit
 
 ### En français
 
+#### Articles
+
 - [Interview: De la Tech a la Terre - "On est encore très loin d’un numérique soutenable" - par Yannick Bole-Richard](https://fr.linkedin.com/pulse/interview-de-benoit-petit-est-encore-tr%C3%A8s-loin-dun-bole-richard-knmbe)
 - [Datacenters, Cloud : comment mieux évaluer leur empreinte environnementale ?, GreenTech Forum, par Remy Marrone](https://www.greentech-forum.com/media/datacenters-cloud-comment-mieux-evaluer-leur-empreinte-environnementale)
 - [Cloud providers: vers une méthodologie commune pour réduire l'empreinte environnementale des services numériques ?, blog d'Hubblo](https://hubblo.org/fr/articles/gtf2025/)
 - [Ce qui sous-tend les annonces démesurées du sommet de l'IA, blog d'Hubblo](https://hubblo.org/fr/articles/aisummit-datacenters/)
+
+#### Études
+
+- [Référentiel par Catégorie de Produit (RCP) des services d'hébergement informatique en centre de données et de services Cloud, deuxième version, ADEME](https://ecoresponsable.numerique.gouv.fr/docs/2025/RCP_datacenter_services_cloud_FR.pdf)
 
 ## 2023
 
