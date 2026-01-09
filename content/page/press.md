@@ -11,6 +11,10 @@ author: Benoit Petit
 
 - [Prospective d'évolution des consommations des data centers à court, moyen et long terme de 2024 à 2060, ADEME](https://librairie.ademe.fr/energies/8910-10774-prospective-d-evolution-des-consommations-des-data-centers-a-court-moyen-et-long-terme-de-2024-a-2060.html#product-presentation)
 
+#### Articles
+
+- [Datacenters : "l'opacité sur ce sujet est entretenue par beaucoup d'acteurs : il faut y remédier", pour les e-novateurs](https://les-enovateurs.com/datacenters-opacite-entretenue-beaucoup-acteurs-il-faut-y-remedier)
+
 ## 2025
 
 ### En français
