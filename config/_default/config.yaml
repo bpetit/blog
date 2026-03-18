@@ -60,6 +60,9 @@ languages:
         - name: "Talks"
           url: "/page/talks/"
           weight: 5
+        - name: "Slides"
+          url: "/page/slides/"
+          weight: 6
   fr:
     title: "Blog de Benoit Petit"
     description: "This is my personnal website.\nTo know more see About section"
@@ -83,6 +86,9 @@ languages:
         - name: "Média"
           url: "/page/talks/"
           weight: 5
+        - name: "Slides"
+          url: "/page/slides/"
+          weight: 6
 permalinks:
   posts: /:year/:month/:title/
 pygmentsCodeFences: true

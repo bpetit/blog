@@ -235,6 +235,25 @@ Tabulator.extendModule(&#34;mutator&#34;, &#34;mutators&#34;, {
     </item>
     
     <item>
+      <title>Slides</title>
+      <link>https://bpetit.nce.re/page/slides/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://bpetit.nce.re/page/slides/</guid>
+      
+        <description>&lt;h2 id=&#34;2025&#34;&gt;2025&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://sync.nce.re/index.php/s/ztCqjLeFmXPrMWY&#34;&gt;Webinaire - 5 décembre 2024 - Datacenter _ cloud &amp;amp; environnement _ S&amp;rsquo;orienter dans la jungle des référentiels&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://sync.nce.re/index.php/s/SAYPsTLKgbmziPT&#34;&gt;Atelier INSA Rennes: genAI, Datacenters - map them and get data&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;2021&#34;&gt;2021&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://sync.nce.re/index.php/s/Ac2xoDnQyBTDpcb&#34;&gt;Introduction course to containers and virtualization&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</description>
+      
+    </item>
+    
+    <item>
       <title>Talks</title>
       <link>https://bpetit.nce.re/page/talks/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
