@@ -45,9 +45,6 @@ languages:
     weight: 1
     menu:
       main:
-        - name: "Home"
-          url: "/"
-          weight: 1
         - name: "Blog"
           url: "/posts"
           weight: 2
@@ -71,9 +68,6 @@ languages:
     weight: 2
     menu:
       main:
-        - name: "Accueil"
-          url: "/fr"
-          weight: 1
         - name: "Blog"
           url: "/fr/posts"
           weight: 2
