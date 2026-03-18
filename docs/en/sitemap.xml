@@ -239,10 +239,6 @@
                 href="https://bpetit.nce.re/page/about/"
                 />
   </url><url>
-    <loc>https://bpetit.nce.re/page/data/initiatives/</loc>
-  </url><url>
-    <loc>https://bpetit.nce.re/page/data/</loc>
-  </url><url>
     <loc>https://bpetit.nce.re/page/</loc>
     <xhtml:link
                 rel="alternate"
@@ -254,8 +250,6 @@
                 hreflang="en"
                 href="https://bpetit.nce.re/page/"
                 />
-  </url><url>
-    <loc>https://bpetit.nce.re/portfolio/</loc>
   </url><url>
     <loc>https://bpetit.nce.re/page/press/</loc>
   </url><url>
