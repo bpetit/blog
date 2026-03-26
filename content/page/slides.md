@@ -3,6 +3,10 @@ title: "Slides"
 author: Benoit Petit
 ---
 
+## 2026
+
+- [État des lieux et évolution des Datacenters français - pour Enedis](https://sync.nce.re/index.php/s/xm2QAkFyeqt2GXz)
+
 ## 2025
 
 - [Webinaire - 5 décembre 2024 - Datacenter _ cloud & environnement _ S'orienter dans la jungle des référentiels](https://sync.nce.re/index.php/s/ztCqjLeFmXPrMWY)
