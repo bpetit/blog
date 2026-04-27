@@ -13,7 +13,7 @@ author: Benoit Petit
 
 ### In english
 
-- [Talking sustainability, seriously ! Cycloid's GreenIT on a CLouid podcast](https://www.youtube.com/watch?v=YDnjBikPXuA&t=25s)
+- [Talking sustainability, seriously ! Cycloid's 'GreenIT on a Cloud' podcast](https://www.youtube.com/watch?v=YDnjBikPXuA&t=25s)
 
 ## 2024
 
