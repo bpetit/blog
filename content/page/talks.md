@@ -14,6 +14,7 @@ author: Benoit Petit
 ### In english
 
 - [Talking sustainability, seriously ! Cycloid's 'GreenIT on a Cloud' podcast](https://www.youtube.com/watch?v=YDnjBikPXuA&t=25s)
+- [GenAI behind the scenes: concrete, metals, heat and vapor - Pruna AI Webinar](https://www.youtube.com/watch?v=iVtF5F7k2mE)
 
 ## 2024
 
