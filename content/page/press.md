@@ -3,6 +3,8 @@ title: "Press"
 author: Benoit Petit
 ---
 
+The articles and reports I've contributed to.
+
 ## 2026
 
 ## En français
@@ -10,6 +12,7 @@ author: Benoit Petit
 #### Études
 
 - [Prospective d'évolution des consommations des data centers à court, moyen et long terme de 2024 à 2060, ADEME](https://librairie.ademe.fr/energies/8910-10774-prospective-d-evolution-des-consommations-des-data-centers-a-court-moyen-et-long-terme-de-2024-a-2060.html#product-presentation)
+- [Analyse conséquentielle des leviers d'éconception des services numériques, ADEME](https://librairie.ademe.fr/industrie-et-production-durable/9289-analyse-consequentielle-des-leviers-d-ecoconception-des-services-numeriques.html)
 
 #### Articles
 
