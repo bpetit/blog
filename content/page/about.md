@@ -9,7 +9,7 @@ I'm also an active contributor to the [Boavizta](https://boavizta.org) non-profi
 
 Previously I've worked for 10 years in the tech industry, as a system and network engineer, in the contexts of: hosting services provider, Internet Service Providers, Cloud consultancy and Video Game editor.
 
-See the [talks](/talks) section of this website, for an overview of my previous conference talks, and the [press](/press) section for articles I wrote or interviews in medias.
+See the [talks](/page/talks) section of this website, for an overview of my previous conference talks, and the [press](/page/press) section for articles I wrote or interviews in medias.
 
 At the edge of professional and leisure time, I like to work on open-source projects. I maintain the following projects:
 

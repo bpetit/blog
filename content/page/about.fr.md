@@ -11,7 +11,7 @@ Je suis aussi un membre actif de l'association [Boavizta](https://boavizta.org),
 
 Précédemment, j'ai travaillé une dizaine d'années dans la "tech", d'abord comme ingénieur systèmes et réseaux dans différents contextes: fournisseur de service d'hébergements, opérateur télécom, conseil en services cloud et automatisation, éditeur de jeux vidéo.
 
-Mes interventions en conférence et podcasts sont listées dans la section [talks](/talks) de ce site et mes interviews ou contributions à des articles de presse dans [press](/press).
+Mes interventions en conférence et podcasts sont listées dans la section [talks](/press/talks) de ce site et mes interviews ou contributions à des articles de presse dans [press](/page/press).
 
 À la frontière entre mes loisirs et mon travail, j'aime contribuer à des projets open-source. Je maintiens les projets:
 
