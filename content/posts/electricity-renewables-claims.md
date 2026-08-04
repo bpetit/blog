@@ -1,7 +1,7 @@
 ---
 title: "Why the '100% electricity coming from renewables' claims from Cloud, AI and Datacenters providers are not okay, and what could be done instead"
 date: 2026-08-04T16:59:24+02:00
-toc: true
+toc: false
 tags:
   - ghg
   - climate
