@@ -48,11 +48,11 @@ There are mainly 3 issues why such labels are extremely problematic:
 
 - has it reduced the footprint of the electricity consumption ?  
 
-NO, the very same electricity as anyone connected to the grid as been consumed. But reminder: this is how companies are artificially/accountingly lowering "scope 2" emissions figures from their activity (if the data are "market-based" and not "location-based")
+**NO**, the very same electricity as anyone connected to the grid as been consumed. But reminder: this is how companies are artificially/accountingly lowering "scope 2" emissions figures from their activity (if the data are "market-based" and not "location-based")
 
 - has it contributed to make the renewables production market stronger ?
 
-Y.. PROBABLY (why not yes, below)
+Y.. **MAYBE** (why not yes, below)
 
 On paper, saying "we covered 100% of our electricity consumption with equivalent financial investment in renewables production" or something approaching would be completely fine, as long as you don't make magically disappear the GHG emissions of your electricity consumption in your environmental display thanks to those certificates (this is what you get as "market-based" carbon footprint data, look for location based instead). It would display that the provider supports having more renewables globally, while not pretending that the electricity actually consumed comes from something else than the fossil fuel + renewables (+ sometimes nuclear) mix.
 

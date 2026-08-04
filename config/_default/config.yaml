@@ -34,7 +34,7 @@ params:
   contentratio: 0.75
   hidesidebar: false
   readMore: true
-  relatedPosts:  true
+  relatedPosts:  false
   numberOfRelatedPosts: 3
 languages:
   en:
