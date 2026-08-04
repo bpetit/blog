@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Climate on Benoit Petit&#39;s website</title>
-    <link>https://bpetit.nce.re/tags/climate/</link>
-    <description>Recent content in Climate on Benoit Petit&#39;s website</description>
+    <title>Ghgprotocol on Benoit Petit&#39;s website</title>
+    <link>https://bpetit.nce.re/tags/ghgprotocol/</link>
+    <description>Recent content in Ghgprotocol on Benoit Petit&#39;s website</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Tue, 04 Aug 2026 16:59:24 +0200</lastBuildDate><atom:link href="https://bpetit.nce.re/tags/climate/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 04 Aug 2026 16:59:24 +0200</lastBuildDate><atom:link href="https://bpetit.nce.re/tags/ghgprotocol/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Why the &#39;100% electricity coming from renewables&#39; claims from Cloud, AI and Datacenters provides are not okay, and what could be done instead</title>
       <link>https://bpetit.nce.re/2026/08/why-the-100-electricity-coming-from-renewables-claims-from-cloud-ai-and-datacenters-provides-are-not-okay-and-what-could-be-done-instead/</link>
@@ -16,17 +16,6 @@
       
         <description>&lt;p&gt;We get transparency only as good as regulation makes it. Even knowing that, I&amp;rsquo;m still puzzled every time I see a &amp;ldquo;100% renewable energy&amp;rdquo; label regarding the electricity consumption of any service provider.&lt;/p&gt;
 &lt;p&gt;It&amp;rsquo;s not just in the Datacenter industry. Every single provider of service, including the ones that otherwise really try to be a bit more sustainable than the average, intentionally (how handy) or unintentionally fall into this trap (sometimes using the claims of their own providers).&lt;/p&gt;</description>
-      
-    </item>
-    
-    <item>
-      <title>SRE methods and climate change</title>
-      <link>https://bpetit.nce.re/2021/03/sre-methods-and-climate-change/</link>
-      <pubDate>Fri, 12 Mar 2021 10:22:24 +0200</pubDate>
-      
-      <guid>https://bpetit.nce.re/2021/03/sre-methods-and-climate-change/</guid>
-      
-        <description>Site Reliability Engineering&amp;rsquo;s goal is to ensure that software systems and services that are created in an organization are made to evolve easily and especially to be &lt;strong&gt;extremely reliable&lt;/strong&gt;.</description>
       
     </item>
     

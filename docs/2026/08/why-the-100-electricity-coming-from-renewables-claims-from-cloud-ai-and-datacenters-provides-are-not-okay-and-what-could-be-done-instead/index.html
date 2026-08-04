@@ -1,0 +1,615 @@
+<!doctype html>
+<html
+  dir="ltr"
+  lang="en"
+  data-theme=""
+  
+    class="html theme--light"
+  
+><head>
+  <meta charset="utf-8" />
+  <title>
+    Benoit Petit
+        |
+        Why the &#39;100% electricity coming from renewables&#39; claims from Cloud, AI and Datacenters provides are not okay, and what could be done instead
+      
+
+    
+
+  </title>
+
+  <meta name="generator" content="Hugo 0.143.1"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+  <meta name="author" content="Benoit Petit" />
+  <meta
+    name="description"
+    content="Co-founder of Hubblo and active contributor to Boavizta, analyzing the effects of Tech on the environment and society. ICT infrastructures and Datacenters specialist, IT system engineer. Open-Source developer. Read more in the About section."
+  />
+  
+  
+        <link rel="stylesheet" href="/css/anatole.min.fdd6a558ed10ce43235ccbad1e6fb53f696c8d16a787e1303c5e9979d63c1d7b.css" integrity="sha256-/dalWO0QzkMjXMutHm&#43;1P2lsjRanh&#43;EwPF6ZedY8HXs=" crossorigin="anonymous" />
+      
+  <link
+    rel="stylesheet"
+    href="/css/markupHighlight.min.73ccfdf28df555e11009c13c20ced067af3cb021504cba43644c705930428b00.css"
+    integrity="sha256-c8z98o31VeEQCcE8IM7QZ688sCFQTLpDZExwWTBCiwA="
+    crossorigin="anonymous"
+    type="text/css"
+  />
+  
+  
+  <link
+    rel="stylesheet"
+    href="/fontawesome/css/fontawesome.min.137b1cf3cea9a8adb7884343a9a5ddddf4280f59153f74dc782fb7f7bf0d0519.css"
+    integrity="sha256-E3sc886pqK23iENDqaXd3fQoD1kVP3TceC&#43;3978NBRk="
+    crossorigin="anonymous"
+    type="text/css"
+  />
+  
+  <link
+    rel="stylesheet"
+    href="/fontawesome/css/solid.min.e65dc5b48fb5f39b142360c57c3a215744c94e56c755c929cc3e88fe12aab4d3.css"
+    integrity="sha256-5l3FtI&#43;185sUI2DFfDohV0TJTlbHVckpzD6I/hKqtNM="
+    crossorigin="anonymous"
+    type="text/css"
+  />
+  
+  <link
+    rel="stylesheet"
+    href="/fontawesome/css/regular.min.6f4f16d58da1c82c0c3a3436e021a3d39b4742f741192c546e73e947eacfd92f.css"
+    integrity="sha256-b08W1Y2hyCwMOjQ24CGj05tHQvdBGSxUbnPpR&#43;rP2S8="
+    crossorigin="anonymous"
+    type="text/css"
+  />
+  
+  <link
+    rel="stylesheet"
+    href="/fontawesome/css/brands.min.e10425ad768bc98ff1fb272a0ac8420f9d1ba22f0612c08ff1010c95080ffe7e.css"
+    integrity="sha256-4QQlrXaLyY/x&#43;ycqCshCD50boi8GEsCP8QEMlQgP/n4="
+    crossorigin="anonymous"
+    type="text/css"
+  />
+  
+  <link rel="shortcut icon" href="/static/favicon.icofavicon.ico" type="image/x-icon" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/static/favicon.icoapple-touch-icon.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/static/favicon.icofavicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/static/favicon.icofavicon-16x16.png" />
+
+  <link rel="canonical" href="https://bpetit.nce.re/2026/08/why-the-100-electricity-coming-from-renewables-claims-from-cloud-ai-and-datacenters-provides-are-not-okay-and-what-could-be-done-instead/" />
+  
+  
+  
+  
+  <script
+    type="text/javascript"
+    src="/js/anatole-header.min.f9132794301a01ff16550ed66763482bd848f62243d278f5e550229a158bfd32.js"
+    integrity="sha256-&#43;RMnlDAaAf8WVQ7WZ2NIK9hI9iJD0nj15VAimhWL/TI="
+    crossorigin="anonymous"
+  ></script>
+
+  
+    
+    
+    <script
+      type="text/javascript"
+      src="/js/anatole-theme-switcher.min.8724ddf9268dee451060f191961647573c7f592fbccc6d858746236b3f915813.js"
+      integrity="sha256-hyTd&#43;SaN7kUQYPGRlhZHVzx/WS&#43;8zG2Fh0Yjaz&#43;RWBM="
+      crossorigin="anonymous"
+    ></script>
+  
+
+  
+
+  
+
+  
+
+
+  
+  
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Why the &#39;100% electricity coming from renewables&#39; claims from Cloud, AI and Datacenters provides are not okay, and what could be done instead">
+  <meta name="twitter:description" content="We get transparency only as good as regulation makes it. Even knowing that, I’m still puzzled every time I see a “100% renewable energy” label regarding the electricity consumption of any service provider.
+It’s not just in the Datacenter industry. Every single provider of service, including the ones that otherwise really try to be a bit more sustainable than the average, intentionally (how handy) or unintentionally fall into this trap (sometimes using the claims of their own providers).">
+
+
+
+  
+  <meta property="og:url" content="https://bpetit.nce.re/2026/08/why-the-100-electricity-coming-from-renewables-claims-from-cloud-ai-and-datacenters-provides-are-not-okay-and-what-could-be-done-instead/">
+  <meta property="og:site_name" content="Benoit Petit&#39;s website">
+  <meta property="og:title" content="Why the &#39;100% electricity coming from renewables&#39; claims from Cloud, AI and Datacenters provides are not okay, and what could be done instead">
+  <meta property="og:description" content="We get transparency only as good as regulation makes it. Even knowing that, I’m still puzzled every time I see a “100% renewable energy” label regarding the electricity consumption of any service provider.
+It’s not just in the Datacenter industry. Every single provider of service, including the ones that otherwise really try to be a bit more sustainable than the average, intentionally (how handy) or unintentionally fall into this trap (sometimes using the claims of their own providers).">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2026-08-04T16:59:24+02:00">
+    <meta property="article:modified_time" content="2026-08-04T16:59:24+02:00">
+    <meta property="article:tag" content="Ghg">
+    <meta property="article:tag" content="Climate">
+    <meta property="article:tag" content="Ghgprotocol">
+    <meta property="article:tag" content="Datacenters">
+    <meta property="article:tag" content="Scope2">
+    <meta property="article:tag" content="Emissions">
+
+
+
+  
+  
+  
+  
+  <script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "articleSection": "posts",
+        "name": "Why the \u0027100% electricity coming from renewables\u0027 claims from Cloud, AI and Datacenters provides are not okay, and what could be done instead",
+        "headline": "Why the \u0027100% electricity coming from renewables\u0027 claims from Cloud, AI and Datacenters provides are not okay, and what could be done instead",
+        "alternativeHeadline": "",
+        "description": "
+      
+        \u003cp\u003eWe get transparency only as good as regulation makes it. Even knowing that, I\u0026rsquo;m still puzzled every time I see a \u0026ldquo;100% renewable energy\u0026rdquo; label regarding the electricity consumption of any service provider.\u003c\/p\u003e\n\u003cp\u003eIt\u0026rsquo;s not just in the Datacenter industry. Every single provider of service, including the ones that otherwise really try to be a bit more sustainable than the average, intentionally (how handy) or unintentionally fall into this trap (sometimes using the claims of their own providers).\u003c\/p\u003e
+
+
+      
+
+
+    ",
+        "license": "",
+        
+        "inLanguage": "en",
+        "isFamilyFriendly": "true",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https:\/\/bpetit.nce.re\/2026\/08\/why-the-100-electricity-coming-from-renewables-claims-from-cloud-ai-and-datacenters-provides-are-not-okay-and-what-could-be-done-instead\/"
+        },
+        "author" : {
+            "@type": "Person",
+            "name": "Benoit Petit"
+        },
+        "creator" : {
+            "@type": "Person",
+            "name": "Benoit Petit"
+        },
+        "accountablePerson" : {
+            "@type": "Person",
+            "name": "Benoit Petit"
+        },
+        "copyrightHolder" : {
+            "@type": "Person",
+            "name": "Benoit Petit"
+        },
+        "dateCreated": "2026-08-04T16:59:24.00Z",
+        "datePublished": "2026-08-04T16:59:24.00Z",
+        "dateModified": "2026-08-04T16:59:24.00Z",
+        "publisher":{
+            "@type":"Organization",
+            "name": "Benoit Petit",
+            "url": "https://bpetit.nce.re/",
+            "logo": {
+                "@type": "ImageObject",
+                "url": "https:\/\/bpetit.nce.re\/static\/favicon.icofavicon-32x32.png",
+                "width":"32",
+                "height":"32"
+            }
+        },
+        "image": 
+      [
+      ]
+
+    ,
+        "url" : "https:\/\/bpetit.nce.re\/2026\/08\/why-the-100-electricity-coming-from-renewables-claims-from-cloud-ai-and-datacenters-provides-are-not-okay-and-what-could-be-done-instead\/",
+        "wordCount" : "1071",
+        "genre" : [ ],
+        "keywords" : [ 
+      
+      "ghg"
+
+    
+      
+        ,
+
+      
+      "climate"
+
+    
+      
+        ,
+
+      
+      "ghgprotocol"
+
+    
+      
+        ,
+
+      
+      "datacenters"
+
+    
+      
+        ,
+
+      
+      "scope2"
+
+    
+      
+        ,
+
+      
+      "emissions"
+
+    
+      
+        ,
+
+      
+      "electricity"
+
+    
+      
+        ,
+
+      
+      "rec"
+
+    
+      
+        ,
+
+      
+      "ppa"
+
+    
+      
+        ,
+
+      
+      "goo"
+
+    
+      
+        ,
+
+      
+      "market"
+
+    ]
+    }
+  </script>
+
+
+
+
+  
+  
+  
+</head>
+<body class="body">
+    <div class="wrapper">
+      <aside
+        
+          class="wrapper__sidebar"
+        
+      ><div
+  class="sidebar
+    animated fadeInDown
+  "
+>
+  <div class="sidebar__content">
+    <div class="sidebar__introduction">
+      <img
+        class="sidebar__introduction-profileimage"
+        src="/profile.jpeg"
+        alt="profile picture"
+      />
+      
+        <div class="sidebar__introduction-title">
+          <a href="/"></a>
+        </div>
+      
+      <div class="sidebar__introduction-description">
+        <p>Co-founder of Hubblo and active contributor to Boavizta, analyzing the effects of Tech on the environment and society. ICT infrastructures and Datacenters specialist, IT system engineer. Open-Source developer. Read more in the About section.</p>
+      </div>
+    </div>
+    <ul class="sidebar__list">
+      
+        <li class="sidebar__list-item">
+          <a
+            href="https://mastodon.green/@bpetit"
+            target="_blank"
+            rel="noopener me"
+            aria-label="Mastodon"
+            title="Mastodon"
+          >
+            <i class="fab fa-mastodon fa-2x" aria-hidden="true"></i>
+          </a>
+        </li>
+      
+        <li class="sidebar__list-item">
+          <a
+            href="https://linkedin.com/in/bepetit"
+            target="_blank"
+            rel="noopener me"
+            aria-label="Linkedin"
+            title="Linkedin"
+          >
+            <i class="fab fa-linkedin fa-2x" aria-hidden="true"></i>
+          </a>
+        </li>
+      
+        <li class="sidebar__list-item">
+          <a
+            href="https://github.com/bpetit"
+            target="_blank"
+            rel="noopener me"
+            aria-label="Github"
+            title="Github"
+          >
+            <i class="fab fa-github fa-2x" aria-hidden="true"></i>
+          </a>
+        </li>
+      
+        <li class="sidebar__list-item">
+          <a
+            href="https://gitlab.com/bpetit1"
+            target="_blank"
+            rel="noopener me"
+            aria-label="Gitlab"
+            title="Gitlab"
+          >
+            <i class="fab fa-gitlab fa-2x" aria-hidden="true"></i>
+          </a>
+        </li>
+      
+        <li class="sidebar__list-item">
+          <a
+            href="https://bsky.app/profile/did:plc:yrnndxpff3wqc7kedczen335"
+            target="_blank"
+            rel="noopener me"
+            aria-label="Bluesky"
+            title="Bluesky"
+          >
+            <i class="fab fa-bluesky fa-2x" aria-hidden="true"></i>
+          </a>
+        </li>
+      
+        <li class="sidebar__list-item">
+          <a
+            href="mailto:bpetit@nce.re"
+            target="_blank"
+            rel="noopener me"
+            aria-label="e-mail"
+            title="e-mail"
+          >
+            <i class="fas fa-envelope fa-2x" aria-hidden="true"></i>
+          </a>
+        </li>
+      
+    </ul>
+  </div><footer class="footer footer__sidebar">
+  <ul class="footer__list">
+    <li class="footer__item">
+      &copy;
+      
+        Benoit Petit
+        2026
+      
+    </li>
+    
+  </ul>
+</footer>
+  
+  <script
+    type="text/javascript"
+    src="/js/medium-zoom.min.1248fa75275e5ef0cbef27e8c1e27dc507c445ae3a2c7d2ed0be0809555dac64.js"
+    integrity="sha256-Ekj6dSdeXvDL7yfoweJ9xQfERa46LH0u0L4ICVVdrGQ="
+    crossorigin="anonymous"
+  ></script></div>
+</aside>
+      <main
+        
+          class="wrapper__main"
+        
+      >
+        <header class="header"><div
+  class="
+    animated fadeInDown
+  "
+>
+  <a role="button" class="navbar-burger" data-target="navMenu" aria-label="menu" aria-expanded="false">
+    <span aria-hidden="true" class="navbar-burger__line"></span>
+    <span aria-hidden="true" class="navbar-burger__line"></span>
+    <span aria-hidden="true" class="navbar-burger__line"></span>
+  </a>
+  <nav class="nav">
+    <ul class="nav__list" id="navMenu">
+      
+      
+        
+        
+          <li class="nav__list-item">
+            
+            <a
+              
+              href="/posts"
+              
+              title=""
+              >Blog</a
+            >
+          </li>
+        
+
+      
+        
+        
+          <li class="nav__list-item">
+            
+            <a
+              
+              href="/page/about/"
+              
+              title=""
+              >About</a
+            >
+          </li>
+        
+
+      
+        
+        
+          <li class="nav__list-item">
+            
+            <a
+              
+              href="/page/press/"
+              
+              title=""
+              >Press</a
+            >
+          </li>
+        
+
+      
+        
+        
+          <li class="nav__list-item">
+            
+            <a
+              
+              href="/page/talks/"
+              
+              title=""
+              >Talks</a
+            >
+          </li>
+        
+
+      
+        
+        
+          <li class="nav__list-item">
+            
+            <a
+              
+              href="/page/slides/"
+              
+              title=""
+              >Slides</a
+            >
+          </li>
+        
+
+      
+    </ul>
+    <ul class="nav__list nav__list--end">
+      
+      
+        <li class="nav__list-item">
+          <div class="themeswitch">
+            <a title="Switch Theme">
+              <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+            </a>
+          </div>
+        </li>
+      
+    </ul>
+  </nav>
+</div>
+</header>
+  <div
+    class="post 
+      animated fadeInDown
+    "
+  >
+    
+      <div class="post__thumbnail-wrapper">
+        <img class="post__thumbnail" src="/solar_panels.webp" alt="Thumbnail image" />
+      </div>
+    
+    <div class="post__content">
+      
+        <h1>Why the &#39;100% Electricity Coming From Renewables&#39; Claims From Cloud, AI and Datacenters Provides Are Not Okay, and What Could Be Done Instead</h1>
+      
+      <h3>Table of contents</h3>
+<nav id="TableOfContents"></nav>
+<p>We get transparency only as good as regulation makes it. Even knowing that, I&rsquo;m still puzzled every time I see a &ldquo;100% renewable energy&rdquo; label regarding the electricity consumption of any service provider.</p>
+<p>It&rsquo;s not just in the Datacenter industry. Every single provider of service, including the ones that otherwise really try to be a bit more sustainable than the average, intentionally (how handy) or unintentionally fall into this trap (sometimes using the claims of their own providers).</p>
+<p>I&rsquo;m used to discuss about this with people who are well aware, but I feel as this type of claims are still everywhere, that I am one of those people not contributing enough to explain it to a wider audience to contribute to stop this practice.</p>
+<p>To put it simple:</p>
+<ul>
+<li>yes having as much renewables as possible in the electricity you consume for a service is a good thing (but you cant just buy something to make this happen for real)</li>
+<li>no it is currently, absolutely, <strong>not</strong> possible to achieve 100%</li>
+</ul>
+<p>Why ? There is simply no electricity grid on earth that achieved that goal, detailling why is another topic. There is neither any provider, except very few exceptions that are not representative of the services consumed on a day to day basis, that achieved that goal for their own consumption with local renewable based production.</p>
+<p>Every provider that says otherwise is relying on guarantees of origin certificates to justify the origin of its electricity.</p>
+<p>What are Guarantees Of Origins certificates ? You&rsquo;ll find them under different names with nuances of implementation (RECs, PPAs, GoOs, &hellip;) but what you need to have in mind is the base principle:</p>
+<ul>
+<li>the provider of the service buys a certificate for 1 MWh of electricity to a producer, depending on the type of certificate this will either account for a current project actually producing electricity with renewables OR a future project/power plant that remains to be constructed</li>
+<li>if this is a running power plant, it will retribute the producer for electricity already produced, but sometimes also secure some of the future production by financing it at a fixed price (PPAs can do that, see below)</li>
+<li>if this is a future project, the idea is that buying this certificate contributes to finance the new power plant, thus enabling more renewables available on the grid later, which is a good thing, but details matter (see below)</li>
+</ul>
+<p>There are mainly 3 issues why such labels are extremely problematic:</p>
+<p>1/ The most obvious one, and the main reason why I think labeling  &ldquo;100% electricity produced from renewables&rdquo; should be forbidden (except if the provder effectively covers 100% of his absolute value consumption with local renewables), is that this sends the wrong message:</p>
+<ul>
+<li>has it reduced the footprint of the electricity consumption ?</li>
+</ul>
+<p>NO, the very same electricity as anyone connected to the grid as been consumed. But reminder: this is how companies are artificially/accountingly lowering &ldquo;scope 2&rdquo; emissions figures from their activity (if the data are &ldquo;market-based&rdquo; and not &ldquo;location-based&rdquo;)</p>
+<ul>
+<li>has it contributed to make the renewables production market stronger ?</li>
+</ul>
+<p>Y.. PROBABLY (why not yes, below)</p>
+<p>On paper, saying &ldquo;we covered 100% of our electricity consumption with equivalent financial investment in renewables production&rdquo; or something approaching would be completely fine, as long as you don&rsquo;t make magically disappear the GHG emissions of your electricity consumption in your environmental display thanks to those certificates (this is what you get as &ldquo;market-based&rdquo; carbon footprint data, look for location based instead). It would display that the provider supports having more renewables globally, while not pretending that the electricity actually consumed comes from something else than the fossil fuel + renewables (+ sometimes nuclear) mix.</p>
+<p>But this is not that simple, as there is a lot of uncertainty about the real effect of the certificate on the actual renewable production.</p>
+<p>2/ <a href="https://industrydecarbonization.com/news/how-iceland-sold-the-same-green-electricity-twice.html">Double counting happens</a>, meaning having two companies buying the same MWh of electricity from the same renewables-based producer. To understand how and when this happens requires to read a bit more about the different types of certificates and what they imply. The problem with GoOs and RECs (the most permissive types of certificates) is described <a href="https://industrydecarbonization.com/news/the-trouble-with-european-green-electricity-certificates.html">here</a> and <a href="https://industrydecarbonization.com/news/double-counting-and-other-problems-with-green-electricity-certificates.html">here</a>.</p>
+<p>3/ Guarantee of Origins certificates, in their &ldquo;unbundled&rdquo; version may be emitted for existing production capacities (eg. old hydro power plants there for decades), so there is no way the certificate is involved in helping top build new capacity, plus there are other accountability issues that can rigg the game (see sources below for details)</p>
+<p>PPAs are reputed to be a better type of certificate, as they imply conditions that make the act of buying the certificate more likely to be linked to an actual effect for an electicity producer, at least reserving future production at fixed price so the producer survives an electricity price drop, securing the project on a longer term. However, the details matter, this more concrete connection between consumer and producer is not ensured in the same way whether this is an on-site, a sleeved, or virtual PPA. Vitual PPAs being the worst case as the producer can be connected to totally different electricity grid than the consumer.</p>
+<p>As this is already a too long post, I&rsquo;ll finnish with resources to dig deeper, with <a href="https://www.bccas.business-school.ed.ac.uk/research/carbon-accounting-pricing-policy/renewable-energy-purchasing">this very large bibliography on the topic made by the University of Edinburgh</a>, or for french readers, I&rsquo;ve contributed to describe this in the <a href="https://librairie.ademe.fr/energies/8910-prospective-d-evolution-des-consommations-des-data-centers-a-court-moyen-et-long-terme-de-2024-a-2060.html">Ademe&rsquo;s 2024-2060 prospective study on Datacenters consumptions, pages 47-48</a>.</p>
+<p>To conclude, my take on this is that having a label that shows the financial investment of a provied in renewables would be a good thing, as companies are not people and often need to be rewarded in someway to actually do something.</p>
+<p>It should be differenciated from the claim of having renewables in the electricity mix consumed, which depends from the long term investments policy from companies and states, and the political direction regarding greening the grid. Once again politics 1 - 0 market.</p>
+<p>PPAs, excluding virtual PPAs, could be a good thing to help building new renewables (especially regarding the latest developments on time based PPAs, closer to what happens in reality), but the labelling on top of their usage matters and should be reglemented firmly.</p>
+<p>Finally, those claims are the root of some of the <a href="https://www.theguardian.com/technology/2024/sep/15/data-center-gas-emissions-tech">most rigged figures</a> about BigTech&rsquo;s scope 2 / electriciy consumption GHG emissions you can see. Avoid market based data at all cost and challenge labels, always.</p>
+
+
+  <h3>Related Posts</h3>
+  <ul>
+    
+      <li><a href="/2021/03/sre-methods-and-climate-change/">SRE methods and climate change</a></li>
+    
+  </ul>
+
+</div>
+    <div class="post__footer">
+      
+
+      
+        <span><a class="tag" href="/tags/ghg/">ghg</a><a class="tag" href="/tags/climate/">climate</a><a class="tag" href="/tags/ghgprotocol/">ghgprotocol</a><a class="tag" href="/tags/datacenters/">datacenters</a><a class="tag" href="/tags/scope2/">scope2</a><a class="tag" href="/tags/emissions/">emissions</a><a class="tag" href="/tags/electricity/">electricity</a><a class="tag" href="/tags/rec/">rec</a><a class="tag" href="/tags/ppa/">ppa</a><a class="tag" href="/tags/goo/">goo</a><a class="tag" href="/tags/market/">market</a></span>
+
+
+      
+    </div>
+
+    
+  </div>
+
+      </main>
+    </div><footer class="footer footer__base">
+  <ul class="footer__list">
+    <li class="footer__item">
+      &copy;
+      
+        Benoit Petit
+        2026
+      
+    </li>
+    
+  </ul>
+</footer>
+  
+  <script
+    type="text/javascript"
+    src="/js/medium-zoom.min.1248fa75275e5ef0cbef27e8c1e27dc507c445ae3a2c7d2ed0be0809555dac64.js"
+    integrity="sha256-Ekj6dSdeXvDL7yfoweJ9xQfERa46LH0u0L4ICVVdrGQ="
+    crossorigin="anonymous"
+  ></script></body>
+</html>
