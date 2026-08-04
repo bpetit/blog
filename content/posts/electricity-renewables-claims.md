@@ -20,6 +20,8 @@ share_img: /solar_panels.webp
 author: Benoit Petit
 ---
 
+*Image: solar panels reflecting the sun, from [Alex Lang](https://www.flickr.com/photos/40888529@N00/3546825820)*
+
 We get transparency only as good as regulation makes it. Even knowing that, I'm still puzzled every time I see a "100% renewable energy" label regarding the electricity consumption of any service provider.
 
 It's not just in the Datacenter industry. Every single provider of service, including the ones that otherwise really tries to be a bit more sustainable than the average, intentionally (how handy) or unintentionally fall into this trap (sometimes using the claims of their own providers).
@@ -64,7 +66,7 @@ PPAs are reputed to be a better type of certificate, as they imply conditions th
 
 As this is already a too long post, I'll finnish with resources to dig deeper, with [this very large bibliography on the topic made by the University of Edinburgh](https://www.bccas.business-school.ed.ac.uk/research/carbon-accounting-pricing-policy/renewable-energy-purchasing), or for french readers, I've contributed to describe this in the [Ademe's 2024-2060 prospective study on Datacenters consumptions, pages 47-48](https://librairie.ademe.fr/energies/8910-prospective-d-evolution-des-consommations-des-data-centers-a-court-moyen-et-long-terme-de-2024-a-2060.html).
 
-To conclude, my take on this is that having a label that shows the financial investment of a provied in renewables would be a good thing, as companies are not people and often need to be rewarded in someway to actually do something.
+To conclude, my take on this is that having a label that shows the financial investment of a provider in renewables would be a good thing, as companies are not people and often need to be rewarded in someway to actually do something.
 
 It should be differenciated from the claim of having renewables in the electricity mix consumed, which depends from the long term investments policy from companies and states, and the political direction regarding greening the grid. Once again politics 1 - 0 market.
 
