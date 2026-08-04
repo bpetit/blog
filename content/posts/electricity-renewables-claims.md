@@ -44,7 +44,9 @@ What are Guarantees Of Origins certificates ? You'll find them under different n
 
 There are mainly 3 issues why such labels are extremely problematic:
 
-1/ The most obvious one, and the main reason why I think labeling  "100% electricity produced from renewables" should be forbidden (except if the provder effectively covers 100% of his absolute value consumption with local renewables), is that this sends the wrong message:
+## It is simply not true and misleading for the consumer
+
+The most obvious one, and the main reason why I think labeling  "100% electricity produced from renewables" should be forbidden (except if the provder effectively covers 100% of his absolute value consumption with local renewables), is that this sends the wrong message:
 
 - has it reduced the footprint of the electricity consumption ?  
 
@@ -58,17 +60,19 @@ On paper, saying "we covered 100% of our electricity consumption with equivalent
 
 But this is not that simple, as there is a lot of uncertainty about the real effect of the certificate on the actual renewable production.
   
-2/ [Double counting happens](https://industrydecarbonization.com/news/how-iceland-sold-the-same-green-electricity-twice.html), meaning having two companies buying the same MWh of electricity from the same renewables-based producer. To understand how and when this happens requires to read a bit more about the different types of certificates and what they imply. The problem with GoOs and RECs (the most permissive types of certificates) is described [here](https://industrydecarbonization.com/news/the-trouble-with-european-green-electricity-certificates.html) and [here](https://industrydecarbonization.com/news/double-counting-and-other-problems-with-green-electricity-certificates.html).    
+## Double counting happens
+
+Meaning having two companies [buying the same MWh of electricity](https://industrydecarbonization.com/news/how-iceland-sold-the-same-green-electricity-twice.html) from the same renewables-based producer. To understand how and when this happens requires to read a bit more about the different types of certificates and what they imply. The problem with GoOs and RECs (the most permissive types of certificates) is described [here](https://industrydecarbonization.com/news/the-trouble-with-european-green-electricity-certificates.html) and [here](https://industrydecarbonization.com/news/double-counting-and-other-problems-with-green-electricity-certificates.html).    
   
-3/ Guarantee of Origins certificates, in their "unbundled" version may be emitted for existing production capacities (eg. old hydro power plants there for decades), so there is no way the certificate is involved in helping top build new capacity, plus there are other accountability issues that can rigg the game (see sources below for details)
+## Guarantee of Origins certificates, in their "unbundled" version may be emitted for existing production capacities
+
+For example an old hydro power plants there for decades, so there is no way the certificate is involved in helping top build new capacity, plus there are other accountability issues that can rigg the game (see sources below for details).
   
 PPAs are reputed to be a better type of certificate, as they imply conditions that make the act of buying the certificate more likely to be linked to an actual effect for an electicity producer, at least reserving future production at fixed price so the producer survives an electricity price drop, securing the project on a longer term. However, the details matter, this more concrete connection between consumer and producer is not ensured in the same way whether this is an on-site, a sleeved, or virtual PPA. Vitual PPAs being the worst case as the producer can be connected to totally different electricity grid than the consumer.
 
 As this is already a too long post, I'll finnish with resources to dig deeper, with [this very large bibliography on the topic made by the University of Edinburgh](https://www.bccas.business-school.ed.ac.uk/research/carbon-accounting-pricing-policy/renewable-energy-purchasing), or for french readers, I've contributed to describe this in the [Ademe's 2024-2060 prospective study on Datacenters consumptions, pages 47-48](https://librairie.ademe.fr/energies/8910-prospective-d-evolution-des-consommations-des-data-centers-a-court-moyen-et-long-terme-de-2024-a-2060.html).
 
-To conclude, my take on this is that having a label that shows the financial investment of a provider in renewables would be a good thing, as companies are not people and often need to be rewarded in someway to actually do something.
-
-It should be differenciated from the claim of having renewables in the electricity mix consumed, which depends from the long term investments policy from companies and states, and the political direction regarding greening the grid. Once again politics 1 - 0 market.
+To conclude, I think having a label that shows the financial investment of a provider in renewables would be a good thing, as companies are not people and often need to be rewarded in someway to actually do something. However, it should be differenciated from the claim of having renewables in the electricity mix consumed, which depends from the long term investments policy from companies and states, and the political direction regarding greening the grid. Once again in the quest of sustainability, politics 1 - 0 market.
 
 PPAs, excluding virtual PPAs, could be a good thing to help building new renewables (especially regarding the latest developments on time based PPAs, closer to what happens in reality), but the labelling on top of their usage matters and should be reglemented firmly.
 
