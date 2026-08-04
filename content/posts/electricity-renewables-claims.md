@@ -22,7 +22,7 @@ author: Benoit Petit
 
 We get transparency only as good as regulation makes it. Even knowing that, I'm still puzzled every time I see a "100% renewable energy" label regarding the electricity consumption of any service provider.
 
-It's not just in the Datacenter industry. Every single provider of service, including the ones that otherwise really try to be a bit more sustainable than the average, intentionally (how handy) or unintentionally fall into this trap (sometimes using the claims of their own providers).
+It's not just in the Datacenter industry. Every single provider of service, including the ones that otherwise really tries to be a bit more sustainable than the average, intentionally (how handy) or unintentionally fall into this trap (sometimes using the claims of their own providers).
 
 I'm used to discuss about this with people who are well aware, but I feel as this type of claims are still everywhere, that I am one of those people not contributing enough to explain it to a wider audience to contribute to stop this practice.  
 
