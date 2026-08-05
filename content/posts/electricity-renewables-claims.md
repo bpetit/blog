@@ -50,13 +50,13 @@ The most obvious one, and the main reason why I think labeling  "100% electricit
 
 - has it reduced the footprint of the electricity consumption ?
 
-**NO**, the very same electricity as anyone connected to the grid as been consumed. This is also how companies are artificially/accountingly lowering "scope 2" (sometimes zeroing) emissions figures from their activity (if the data are "market-based" and not "location-based").
+**NO**, the electricity consumed is the very same electricity consumed by anyone connected to the grid. This is also how companies are artificially/accountingly lowering "scope 2" (sometimes zeroing) emissions figures from their activity (if the data are "market-based" and not "location-based").
 
 - has it contributed to make the renewables production market stronger ?
 
 Y.. **MAYBE**
 
-On paper, saying "we covered 100% of our electricity consumption with equivalent financial investment in renewables production" or something approaching would be completely fine, as long as the provider doesn't make magically disappear the GHG emissions of the electricity consumed in their environmental accounting thanks to those certificates. It would display that the provider supports having more renewables globally, while not pretending that the electricity actually consumed comes from something else than the fossil fuel + renewables (+ sometimes nuclear) mix.
+On paper, saying "we covered 100% of our electricity consumption with equivalent financial investment in renewables production" or something approaching would be completely fine, as long as the provider doesn't make magically disappear the GHG emissions of the electricity consumed in their environmental accounting thanks to those certificates. It would display that the provider supports having more renewables globally, while not pretending that the electricity actually consumed comes from something else than the fossil fuel + renewables (+ sometimes nuclear) mix of the grid.
 
 But this is not that simple, as there is a lot of uncertainty about the real effect of the certificate on the actual renewable production.
 
@@ -66,9 +66,9 @@ Meaning having two companies [buying the same MWh of electricity](https://indust
 
 ## Guarantee of Origins certificates, in their "unbundled" version may be emitted for existing production capacities
 
-For example an old hydro power plants there for decades, so there is no way the certificate is involved in helping top build new capacity, plus there are other accountability issues that can rigg the game (see sources below for details).
+For example an old hydro power plants there for decades, so there is no way the certificate is involved in helping to build new capacity, plus there are other accountability issues that can rigg the game.
 
-PPAs are reputed to be a better type of certificate, as are supposed to have an actual effect for an electicity producer, at least reserving future production at fixed price so the producer survives an electricity price drop, securing the project on a longer term. However, the details matter, this more concrete connection between consumer and producer is not ensured in the same way whether this is an "on-site", a "sleeved", or "virtual" PPA. Vitual PPAs being the worst case as the producer can be connected to totally different electricity grid, very remote than the consumer.
+PPAs are reputed to be a better type of certificate, as are supposed to have an actual effect for an electicity producer, at least reserving some of the future production at fixed price so the producer survives an electricity price drop, securing the project on a longer term. However, the details matter, this more concrete connection between consumer and producer is not ensured in the same way whether this is an "on-site", a "sleeved", or "virtual" PPA. Vitual PPAs being the worst case as the producer can be connected to totally different electricity grid, very remote from the consumer.
 
 As this is already a too long post, I'll finnish with resources to dig deeper, with [this very large bibliography on the topic made by the University of Edinburgh](https://www.bccas.business-school.ed.ac.uk/research/carbon-accounting-pricing-policy/renewable-energy-purchasing), or for french readers, I've contributed to describe this in the [Ademe's 2024-2060 prospective study on Datacenters consumptions, pages 47-48](https://librairie.ademe.fr/energies/8910-prospective-d-evolution-des-consommations-des-data-centers-a-court-moyen-et-long-terme-de-2024-a-2060.html).
 
