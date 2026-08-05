@@ -74,4 +74,6 @@ As this is already a too long post, I'll finnish with resources to dig deeper, w
 
 To conclude, I think having a label that shows the financial investment of a provider in renewables, through a certificate like a PPA, could be a good thing, as companies are not people and often need to be rewarded in someway to actually do something. However, it should be differenciated from the claim of having renewables available in the grid and being able to consume their production, which depends from the long term investments policy from companies and states, and the political direction regarding greening the grid.
 
+There are ongoing developments for a new version of PPAs, "hourly matching" PPAs, that would enable to make the claims much closer to the actual production. It is certainly a good thing, but I'm looking forward to how this will be implemented. There is already an issue with top 5 cloud providers reserving all the new renewables capacity and there is a chance this could make it worse.
+
 Finally, it is important to note that those claims are the root of some of the [most rigged figures](https://www.theguardian.com/technology/2024/sep/15/data-center-gas-emissions-tech) about BigTech's scope 2 / electriciy consumption GHG emissions you can see. Avoid "market based" data at all cost and challenge labels, always.
