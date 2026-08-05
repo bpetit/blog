@@ -42,21 +42,21 @@ What are Guarantees Of Origins certificates ? You'll find them under different n
 - if this is a running power plant, it will retribute the producer for electricity already produced, but sometimes also secure some of the future production by financing it at a fixed price (PPAs can do that, see below)
 - if this is a future project, the idea is that buying this certificate contributes to finance the new power plant, thus enabling more renewables available on the grid later, which is a good thing, but details matter (see below)
 
-There are mainly 3 issues why such labels are extremely problematic:
+There are mainly 3 reasons why such labels are extremely problematic:
 
-## It is simply not true and misleading for the consumer
+## Saying that electricity consumed comes from the producer is simply not true and misleading for the consumer
 
 The most obvious one, and the main reason why I think labeling  "100% electricity produced from renewables" should be forbidden (except if the provder effectively covers 100% of his absolute value consumption with local renewables), is that this sends the wrong message:
 
 - has it reduced the footprint of the electricity consumption ?
 
-**NO**, the very same electricity as anyone connected to the grid as been consumed. But reminder: this is how companies are artificially/accountingly lowering "scope 2" emissions figures from their activity (if the data are "market-based" and not "location-based")
+**NO**, the very same electricity as anyone connected to the grid as been consumed. This is also how companies are artificially/accountingly lowering "scope 2" (sometimes zeroing) emissions figures from their activity (if the data are "market-based" and not "location-based").
 
 - has it contributed to make the renewables production market stronger ?
 
-Y.. **MAYBE** (why not yes, below)
+Y.. **MAYBE**
 
-On paper, saying "we covered 100% of our electricity consumption with equivalent financial investment in renewables production" or something approaching would be completely fine, as long as you don't make magically disappear the GHG emissions of your electricity consumption in your environmental display thanks to those certificates (this is what you get as "market-based" carbon footprint data, look for location based instead). It would display that the provider supports having more renewables globally, while not pretending that the electricity actually consumed comes from something else than the fossil fuel + renewables (+ sometimes nuclear) mix.
+On paper, saying "we covered 100% of our electricity consumption with equivalent financial investment in renewables production" or something approaching would be completely fine, as long as the provider doesn't make magically disappear the GHG emissions of the electricity consumed in their environmental accounting thanks to those certificates. It would display that the provider supports having more renewables globally, while not pretending that the electricity actually consumed comes from something else than the fossil fuel + renewables (+ sometimes nuclear) mix.
 
 But this is not that simple, as there is a lot of uncertainty about the real effect of the certificate on the actual renewable production.
 
@@ -68,10 +68,10 @@ Meaning having two companies [buying the same MWh of electricity](https://indust
 
 For example an old hydro power plants there for decades, so there is no way the certificate is involved in helping top build new capacity, plus there are other accountability issues that can rigg the game (see sources below for details).
 
-PPAs are reputed to be a better type of certificate, as they imply conditions that make the act of buying the certificate more likely to be linked to an actual effect for an electicity producer, at least reserving future production at fixed price so the producer survives an electricity price drop, securing the project on a longer term. However, the details matter, this more concrete connection between consumer and producer is not ensured in the same way whether this is an on-site, a sleeved, or virtual PPA. Vitual PPAs being the worst case as the producer can be connected to totally different electricity grid than the consumer.
+PPAs are reputed to be a better type of certificate, as are supposed to have an actual effect for an electicity producer, at least reserving future production at fixed price so the producer survives an electricity price drop, securing the project on a longer term. However, the details matter, this more concrete connection between consumer and producer is not ensured in the same way whether this is an "on-site", a "sleeved", or "virtual" PPA. Vitual PPAs being the worst case as the producer can be connected to totally different electricity grid, very remote than the consumer.
 
 As this is already a too long post, I'll finnish with resources to dig deeper, with [this very large bibliography on the topic made by the University of Edinburgh](https://www.bccas.business-school.ed.ac.uk/research/carbon-accounting-pricing-policy/renewable-energy-purchasing), or for french readers, I've contributed to describe this in the [Ademe's 2024-2060 prospective study on Datacenters consumptions, pages 47-48](https://librairie.ademe.fr/energies/8910-prospective-d-evolution-des-consommations-des-data-centers-a-court-moyen-et-long-terme-de-2024-a-2060.html).
 
-To conclude, I think having a label that shows the financial investment of a provider in renewables, through a certificate like a PPA, would be a good thing, as companies are not people and often need to be rewarded in someway to actually do something. However, it should be differenciated from the claim of having renewables available in the grid and being able to consume their production, which depends from the long term investments policy from companies and states, and the political direction regarding greening the grid.
+To conclude, I think having a label that shows the financial investment of a provider in renewables, through a certificate like a PPA, could be a good thing, as companies are not people and often need to be rewarded in someway to actually do something. However, it should be differenciated from the claim of having renewables available in the grid and being able to consume their production, which depends from the long term investments policy from companies and states, and the political direction regarding greening the grid.
 
 Finally, it is important to note that those claims are the root of some of the [most rigged figures](https://www.theguardian.com/technology/2024/sep/15/data-center-gas-emissions-tech) about BigTech's scope 2 / electriciy consumption GHG emissions you can see. Avoid "market based" data at all cost and challenge labels, always.
