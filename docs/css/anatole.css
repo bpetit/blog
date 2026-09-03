@@ -552,6 +552,7 @@ body {
 
 .post {
   margin: 30px;
+  width: 65%;
 }
 .theme--light .post {
   background-color: #fff;
@@ -1210,8 +1211,4 @@ td {
 .theme--dark th,
 .theme--dark td {
   border: 1px solid #464646;
-}
-
-div .post {
-    width: 65%;
 }
