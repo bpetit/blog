@@ -1,0 +1,24 @@
+{
+  "name": "Alef",
+  "family": "Alef",
+  "description": "Alef was born in the screen and designed to the pixel in an attempt to extend the palette of Hebrew fonts available for web design. It challenges the default, Arial. Alef supports both the Hebrew and Latin writing systems. To contribute, see alef.hagilda.com",
+  "author": "Hagilda, Mushon Zer-Aviv",
+  "website": "",
+  "category": "Sans Serif",
+  "tags": [
+    "sans-serif",
+    "google"
+  ],
+  "languages": [
+    "en",
+    "he"
+  ],
+  "styles": [
+    "Bold",
+    "Regular"
+  ],
+  "formats": [
+    "ttf"
+  ],
+  "license": "SIL Open Font License 1.1"
+}

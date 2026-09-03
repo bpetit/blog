@@ -1,0 +1,24 @@
+{
+  "name": "Agdasima",
+  "family": "Agdasima",
+  "description": "Agdasima is a DocRepair font, intended to improve compliance with the ISO/IEC 29500 standard by providing fallback for Agency FB that minimizes text reflow in Office Open XML documents. Agdasima is based on Big Shoulders, a condensed American Gothic sans-serif font family. To contribute, please visit github.com/docrepair-fonts/agdasima-fonts .",
+  "author": "The DocRepair Project, Patric King",
+  "website": "https://github.com/docrepair-fonts/agdasima-fonts",
+  "category": "Sans Serif",
+  "tags": [
+    "sans-serif",
+    "google"
+  ],
+  "languages": [
+    "en",
+    "es"
+  ],
+  "styles": [
+    "Bold",
+    "Regular"
+  ],
+  "formats": [
+    "ttf"
+  ],
+  "license": "SIL Open Font License 1.1"
+}

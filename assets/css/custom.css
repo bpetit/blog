@@ -1,0 +1,6 @@
+@font-face {
+    font-family: "Alef";
+    src: url("/alef/Alef-Regular.woff") format('woff');
+    src: url("/alef/Alef-Regular.woff2") format('woff2');
+    src: url("/alef/Alef-Regular.ttf");
+}

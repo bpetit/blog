@@ -3,6 +3,7 @@ DefaultContentLanguage: en
 languageCode: "en-us"
 languageName: English
 params:
+  #customCss: [ "css/custom.css" ]
   AuthorName: Benoit Petit
   author: Benoit Petit
   GitHubUser: bpetit
@@ -92,6 +93,7 @@ taxonomies:
   tag: tags
   series: "series"
 module:
+  #replacements: "github.com/lxndrblz/anatole -> ../anatole"
   imports:
     path: "github.com/lxndrblz/anatole"
     disable:  false

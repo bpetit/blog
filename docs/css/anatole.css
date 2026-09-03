@@ -1211,3 +1211,7 @@ td {
 .theme--dark td {
   border: 1px solid #464646;
 }
+div .post {
+    width: 65%;
+}
+div .post { width: 65% }
