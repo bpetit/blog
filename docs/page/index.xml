@@ -27,7 +27,11 @@
       
         <description>&lt;p&gt;The articles and reports I&amp;rsquo;ve contributed to.&lt;/p&gt;
 &lt;h2 id=&#34;2026&#34;&gt;2026&lt;/h2&gt;
-&lt;h2 id=&#34;en-français&#34;&gt;En français&lt;/h2&gt;
+&lt;h3 id=&#34;in-english&#34;&gt;In english&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://hubblo.org/en/articles/data-center-water-consumption-assessment/&#34;&gt;Key facts about the water footprint of data centers—What are we talking about? When? How? How Much? - Hubblo&amp;rsquo;s blog&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;en-français&#34;&gt;En français&lt;/h3&gt;
 &lt;h4 id=&#34;études&#34;&gt;Études&lt;/h4&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;https://librairie.ademe.fr/energies/8910-10774-prospective-d-evolution-des-consommations-des-data-centers-a-court-moyen-et-long-terme-de-2024-a-2060.html#product-presentation&#34;&gt;Prospective d&amp;rsquo;évolution des consommations des data centers à court, moyen et long terme de 2024 à 2060, ADEME&lt;/a&gt;&lt;/li&gt;
@@ -35,6 +39,7 @@
 &lt;/ul&gt;
 &lt;h4 id=&#34;articles&#34;&gt;Articles&lt;/h4&gt;
 &lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://hubblo.org/fr/articles/data-center-water-consumption-assessment/&#34;&gt;Points de repère sur l&amp;rsquo;empreinte eau des data centers - de quoi parle t&amp;rsquo;on ? quand ? comment ? combien ? - blog d&amp;rsquo;Hubblo&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;https://les-enovateurs.com/datacenters-opacite-entretenue-beaucoup-acteurs-il-faut-y-remedier&#34;&gt;Datacenters : &amp;ldquo;l&amp;rsquo;opacité sur ce sujet est entretenue par beaucoup d&amp;rsquo;acteurs : il faut y remédier&amp;rdquo;, pour les e-novateurs&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id=&#34;2025&#34;&gt;2025&lt;/h2&gt;
@@ -51,7 +56,7 @@
 &lt;li&gt;&lt;a href=&#34;https://ecoresponsable.numerique.gouv.fr/docs/2025/RCP_datacenter_services_cloud_FR.pdf&#34;&gt;Référentiel par Catégorie de Produit (RCP) des services d&amp;rsquo;hébergement informatique en centre de données et de services Cloud, deuxième version, ADEME&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id=&#34;2023&#34;&gt;2023&lt;/h2&gt;
-&lt;h3 id=&#34;in-english&#34;&gt;In english&lt;/h3&gt;
+&lt;h3 id=&#34;in-english-1&#34;&gt;In english&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;https://www.cncf.io/blog/2023/10/11/the-road-to-scaphandre-v1-0-challenges-and-improvements-to-come-on-it-energy-consumption-evaluation/&#34;&gt;The road to Scaphandre v1.0 : Challenges and improvements to come on IT energy consumption evaluation, on CNCF blog&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;

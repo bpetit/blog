@@ -7,7 +7,11 @@ The articles and reports I've contributed to.
 
 ## 2026
 
-## En français
+### In english
+
+- [Key facts about the water footprint of data centers—What are we talking about? When? How? How Much? - Hubblo's blog](https://hubblo.org/en/articles/data-center-water-consumption-assessment/)
+
+### En français
 
 #### Études
 
@@ -16,6 +20,7 @@ The articles and reports I've contributed to.
 
 #### Articles
 
+- [Points de repère sur l'empreinte eau des data centers - de quoi parle t'on ? quand ? comment ? combien ? - blog d'Hubblo](https://hubblo.org/fr/articles/data-center-water-consumption-assessment/)
 - [Datacenters : "l'opacité sur ce sujet est entretenue par beaucoup d'acteurs : il faut y remédier", pour les e-novateurs](https://les-enovateurs.com/datacenters-opacite-entretenue-beaucoup-acteurs-il-faut-y-remedier)
 
 ## 2025
