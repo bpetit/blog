@@ -195,7 +195,7 @@
 
     ,
         "url" : "https:\/\/bpetit.nce.re\/fr\/2026\/09\/revue-de-la-litt%C3%A9rature-r%C3%A9cente-concernant-les-ilots-de-chaleur-attribu%C3%A9s-aux-data-centers\/",
-        "wordCount" : "773",
+        "wordCount" : "2011",
         "genre" : [ ],
         "keywords" : [ 
       
@@ -485,71 +485,91 @@
       <h3>Table des matières</h3>
 <nav id="TableOfContents">
   <ul>
-    <li>
+    <li><a href="#introduction">Introduction</a></li>
+    <li><a href="#the-data-heat-island-effect-quantifying-the-impact-of-ai-data-centers-in-a-warming-world">The data heat island effect: quantifying the impact of AI data centers in a warming world</a>
       <ul>
-        <li><a href="#the-data-heat-island-effect-quantifying-the-impact-of-ai-data-centers-in-a-warming-world">The Data Heat Island Effect: Quantifying the Impact of AI Data Centers in a Warming World</a></li>
-        <li><a href="#data-center-waste-heat-as-an-emerging-urban-thermal-hazard-first-field-measurements-of-neighborhood-scale-air-temperature-impacts">Data Center Waste Heat as an Emerging Urban Thermal Hazard: First Field Measurements of Neighborhood-Scale Air Temperature Impacts</a></li>
-        <li><a href="#amezana-roboto">Amezana Roboto</a></li>
+        <li><a href="#méthodologie">Méthodologie</a></li>
+        <li><a href="#résultats">Résultats</a></li>
+        <li><a href="#limites">Limites</a></li>
       </ul>
     </li>
-    <li><a href="#quen-retenir-">Qu&rsquo;en retenir ?</a></li>
-    <li><a href="#revue-de-littérature-concernant-les-ilots-de-chaleur-attribuables-aux-data-centers">Revue de littérature concernant les ilots de chaleur attribuables aux data centers</a></li>
-    <li><a href="#definitions">Definitions</a></li>
+    <li><a href="#data-center-waste-heat-as-an-emerging-urban-thermal-hazard-first-field-measurements-of-neighborhood-scale-air-temperature-impacts">Data Center Waste Heat as an Emerging Urban Thermal Hazard: First Field Measurements of Neighborhood-Scale Air Temperature Impacts</a>
+      <ul>
+        <li><a href="#méthodologie-1">Méthodologie</a></li>
+        <li><a href="#résultats-1">Résultats</a></li>
+        <li><a href="#limites-1">Limites</a></li>
+      </ul>
+    </li>
+    <li><a href="#linvestigation-damezana-roboto">L&rsquo;investigation d&rsquo;Amezana Roboto</a>
+      <ul>
+        <li><a href="#méthodologie-2">Méthodologie</a></li>
+        <li><a href="#résultats-2">Résultats</a></li>
+        <li><a href="#limites-2">Limites</a></li>
+      </ul>
+    </li>
+    <li><a href="#quen-retenir--comparaison-des-trois-études">Qu&rsquo;en retenir ? Comparaison des trois études</a></li>
+    <li><a href="#conclusion--des-données-encore-insuffisantes-une-lecture-à-manier-avec-prudence">Conclusion : des données encore insuffisantes, une lecture à manier avec prudence</a></li>
+    <li><a href="#sources">Sources</a></li>
   </ul>
 </nav>
-<p>Le sujet de la production d&rsquo;ilot de chaleur par les data centers a émergé récemment, notamment suite à la sortie d&rsquo;une étude de l&rsquo;Université de Cambridge[^1], relayée notamment par Valérie Masson Delmotte[^2], mais aussi par la presse [^3] [^4].</p>
-<p>Cette étude avance des écarts de température en moyenne de 2C et jusqu&rsquo;à 9C aux abords de grands data centers d&rsquo;IA, aux&hellip; . Un tel écart de température génère naturellement de l&rsquo;inquiétude, surtout au sortir de la canicule historique que nous avons vécu cet été.</p>
-<p>Il se trouve que cette étude a été également vivement critiquée par X, Y et Z. Si la critique brute ne fait qu&rsquo;envenimer le débat, elle peut être le point de départ d&rsquo;une meilleure compréhension des enjeux autour de ce sujet.
-J&rsquo;ai également reçu plusieurs demandes concernant mon avis sur ce sujet, sur lequel je n&rsquo;avais jamais eu l&rsquo;occasion de travailler jusqu&rsquo;à présent. J&rsquo;ai donc commencé comme d&rsquo;habitude, par rassembler les études qui semblent pertinentes concernant le dégagement de chaleur, le phénomène d&rsquo;ilot de chaleur, ou bien le</p>
-<p>Cet article propose un état de lieux rapide (probablement incomplet) des études que j&rsquo;ai pu consulter à ce jour sur le sujet. Les trois premiers chapitres résument les études rencontrées. Le quatrième est une synthèse des enseignements cumulés de ces trois études.</p>
-<h3 id="the-data-heat-island-effect-quantifying-the-impact-of-ai-data-centers-in-a-warming-world">The Data Heat Island Effect: Quantifying the Impact of AI Data Centers in a Warming World</h3>
-<p>Cette étude, de Marinoni et al</p>
-<p>** outside of cities **</p>
-<p><strong>preprint</strong></p>
-<p>method:</p>
+<h1 id="revue-de-la-littérature-récente-concernant-les-îlots-de-chaleur-attribués-aux-data-centers">Revue de la littérature récente concernant les îlots de chaleur attribués aux data centers</h1>
+<h2 id="introduction">Introduction</h2>
+<p>Le sujet de la production d&rsquo;îlots de chaleur par les data centers a émergé récemment dans le débat public, notamment suite à la sortie d&rsquo;une étude menée par Andrea Marinoni et son équipe de l&rsquo;Université de Cambridge <sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup>. Elle a notamment été relayée par Valérie Masson-Delmotte <sup id="fnref:2"><a href="#fn:2" class="footnote-ref" role="doc-noteref">2</a></sup>, mais également par la presse <sup id="fnref:3"><a href="#fn:3" class="footnote-ref" role="doc-noteref">3</a></sup> <sup id="fnref:4"><a href="#fn:4" class="footnote-ref" role="doc-noteref">4</a></sup>.</p>
+<p>Cette étude avance des écarts de température de 2 °C en moyenne, et pouvant atteindre 9 °C, aux abords de grands data centers d&rsquo;IA. Un tel écart de température génère naturellement de l&rsquo;inquiétude, surtout au sortir de la canicule historique que nous avons vécu cet été, et alors que les projets d&rsquo;implantation de nouvelles installations se multiplient, parfois à proximité immédiate de zones résidentielles.</p>
+<p>Il se trouve que cette étude a également été vivement critiquée par certains spécialistes <sup id="fnref:5"><a href="#fn:5" class="footnote-ref" role="doc-noteref">5</a></sup>. Si la critique brute ne fait qu&rsquo;envenimer le débat, elle peut aussi être le point de départ d&rsquo;une meilleure compréhension des enjeux autour de ce sujet. J&rsquo;ai par ailleurs reçu plusieurs demandes concernant mon avis sur cette question, sur laquelle je n&rsquo;avais jamais eu l&rsquo;occasion de travailler jusqu&rsquo;à présent. J&rsquo;ai donc commencé par rassembler les études qui me semblaient pertinentes concernant le dégagement de chaleur, le phénomène d&rsquo;îlot de chaleur et plus largement les interactions thermiques entre les data centers et leur environnement.</p>
+<p>Cet article propose un état des lieux rapide — et probablement incomplet — des études que j&rsquo;ai pu consulter à ce jour sur le sujet. Les trois premiers chapitres résument les études rencontrées. Le quatrième propose une synthèse des enseignements cumulés de ces trois études, appuyée sur un tableau récapitulatif.</p>
+<p>Vous trouverez les sources et mes conclusions à ce stade en fin d&rsquo;article.</p>
+<h2 id="the-data-heat-island-effect-quantifying-the-impact-of-ai-data-centers-in-a-warming-world">The data heat island effect: quantifying the impact of AI data centers in a warming world</h2>
+<p>La première étude, publiée en 2026 par Marinoni et al. <sup id="fnref1:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup>, s&rsquo;est attachée à quantifier l&rsquo;impact des data centers d&rsquo;IA sur la température de surface. Il s&rsquo;agit d&rsquo;un <strong>preprint</strong>, donc d&rsquo;un travail qui n&rsquo;a pas encore passé le filtre de la revue par les pairs.</p>
+<h3 id="méthodologie">Méthodologie</h3>
+<p>L&rsquo;approche repose sur le croisement de données de relevés de température en surface, avec la localisation de grands data centers d&rsquo;IA, sur un vaste jeu de données. Les objectifs affichés sont :</p>
 <ul>
-<li>satellite data crossed with data center locations</li>
+<li>quantifier l&rsquo;augmentation de la température de surface du sol (land surface temperature) liée à l&rsquo;implantation d&rsquo;un datacenter spécialisé pour l&rsquo;IA Générative</li>
+<li>évaluer la zone concernée de cette augmentation</li>
+<li>estimer la population affectée par cette hausse des températures.</li>
 </ul>
-<p>2026</p>
-<p>• Quantification of the land surface temperature increase connected to the establishment of an AI  hyperscalers;
-• Assessment of the region of influence of this increase;
-• Estimation of the population affected by the temperature increase.</p>
-<p>2C average <strong>but</strong> (up to 9C max):</p>
+<h3 id="résultats">Résultats</h3>
+<p>L&rsquo;étude conclut à une augmentation moyenne de 2 °C, avec des maxima atteignant 9 °C. L&rsquo;effet s&rsquo;étendrait jusqu&rsquo;à 10 km autour des sites, avec une intensité décroissante (jusqu&rsquo;à 30 % de l&rsquo;effet subsistant à 7 km).</p>
+<h3 id="limites">Limites</h3>
+<p>Plusieurs limites méthodologiques importantes doivent être signalées :</p>
 <ul>
-<li>doesn&rsquo;t check if because of artificialization or really from the heat coming from servers and cooling system</li>
-<li>doesn&rsquo;t separate from the general trend</li>
-<li>too large resolution to be precise and distinguish from the local area</li>
+<li>l&rsquo;étude ne vérifie pas si l&rsquo;écart observé provient de l&rsquo;artificialisation des sols (bitumage, suppression de végétation, modification de l&rsquo;albédo) ou réellement de la chaleur émise par les serveurs et les systèmes de refroidissement</li>
+<li>elle ne sépare pas l&rsquo;effet du au centre de données de la tendance générale au réchauffement (baseline trend)</li>
+<li>la résolution satellitaire utilisée est trop grossière pour distinguer précisément le site lui-même de son environnement immédiat.</li>
 </ul>
-<h3 id="data-center-waste-heat-as-an-emerging-urban-thermal-hazard-first-field-measurements-of-neighborhood-scale-air-temperature-impacts">Data Center Waste Heat as an Emerging Urban Thermal Hazard: First Field Measurements of Neighborhood-Scale Air Temperature Impacts</h3>
-<p>Sailor D
-Abolhassani S
-Martin E</p>
-<p><strong>communication</strong></p>
-<p>2026</p>
-<p>method:</p>
+<p>Enfin, le contexte d&rsquo;étude porte sur des zones peu denses, éloignées des villes, ce qui limite la transposition des résultats aux zones urbaines.</p>
+<h2 id="data-center-waste-heat-as-an-emerging-urban-thermal-hazard-first-field-measurements-of-neighborhood-scale-air-temperature-impacts">Data Center Waste Heat as an Emerging Urban Thermal Hazard: First Field Measurements of Neighborhood-Scale Air Temperature Impacts</h2>
+<p>La deuxième étude, publiée en 2026 par Sailor, Abolhassani et Martin <sup id="fnref:6"><a href="#fn:6" class="footnote-ref" role="doc-noteref">6</a></sup>, est une <strong>communication</strong> parue dans ASME : il s&rsquo;agit donc d&rsquo;un travail <strong>revu par les pairs</strong>, mais d&rsquo;un format court, à considérer comme des premières mesures de terrain plutôt que comme une démonstration définitive.</p>
+<h3 id="méthodologie-1">Méthodologie</h3>
+<p>Contrairement à la première, cette étude repose sur des <strong>mesures réelles</strong> de la température de l&rsquo;air, réalisées par traversées en véhicule autour du data center, dans des quartiers résidentiels, croisées avec des données météorologiques (notamment la vitesse et la direction du vent).</p>
+<h3 id="résultats-1">Résultats</h3>
+<p>Les auteurs observent des écarts <strong>maximaux de 2 °C</strong>, mais des <strong>moyennes</strong> nettement <strong>plus modestes</strong>, <strong>entre 0,7 et 0,9 °C</strong>. L&rsquo;effet est ressenti jusqu&rsquo;à <strong>environ 500 m autour</strong> des installations. L&rsquo;étude porte sur des data centers de 36 MW à 160 MW, situés dans des <strong>zones urbaines denses</strong>.</p>
+<h3 id="limites-1">Limites</h3>
 <ul>
-<li>vehicle based traverse measurements of air temperature in residential neighborhoods</li>
+<li>les mesures en zone urbaine ne permettent pas une couverture complète du rayon d&rsquo;influence (les mesures sont contraintes au réseau routier)</li>
+<li>le périmètre d&rsquo;étude (quatre data centers) reste limité.</li>
 </ul>
-<p>** in dense cities **</p>
-<p>2c max, average of 0.7 - 0.9</p>
-<p>up to 500m</p>
-<h3 id="amezana-roboto">Amezana Roboto</h3>
-<p>2026</p>
-<p>33 times higher resolution than marioni&rsquo;s</p>
-<p>separates artificialization effect from the actual cooling effect</p>
-<p>2c difference but : 17% only from cooling ~= 0.3 C</p>
-<p>150m radius, different from other kind of facilities
-300m with a decrease</p>
-<h2 id="quen-retenir-">Qu&rsquo;en retenir ?</h2>
-<p>En fin d&rsquo;article se trouve un tableau récapitulatif des différences entre ces études, leurs résultats et leurs méthodologies. Vous pouvez directement consulter ce tableau, pour une vue d&rsquo;ensemble rapide.</p>
-<h2 id="revue-de-littérature-concernant-les-ilots-de-chaleur-attribuables-aux-data-centers">Revue de littérature concernant les ilots de chaleur attribuables aux data centers</h2>
+<p>C&rsquo;est toutefois <strong>la seule des trois études qui repose sur des mesures directes</strong> de la température de l&rsquo;air, en tenant compte des schémas de vent, ce qui en fait un point de comparaison précieux.</p>
+<h2 id="linvestigation-damezana-roboto">L&rsquo;investigation d&rsquo;Amezana Roboto</h2>
+<p>La troisième étude est une <strong>investigation</strong> publiée en 2026 par Amezana Roboto<sup id="fnref:7"><a href="#fn:7" class="footnote-ref" role="doc-noteref">7</a></sup>, également non soumise à la revue par les pairs.</p>
+<h3 id="méthodologie-2">Méthodologie</h3>
+<p>Comme celle de Marinoni et al., elle repose sur des données satellitaires et météorologiques, mais avec une résolution <strong>33 fois supérieure</strong>. Elle porte sur <strong>un seul data center de 11 MW</strong>, en <strong>zone urbaine</strong>, et s&rsquo;appuie sur un jeu de données de 32 000 points de température.</p>
+<h3 id="résultats-2">Résultats</h3>
+<p>L&rsquo;apport principal de cette investigation est la <strong>séparation des causes</strong> : les auteurs distinguent l&rsquo;effet de l&rsquo;artificialisation des sols de l&rsquo;effet propre du refroidissement et des serveurs. Sur un écart total de 2 °C (artificialisation et tendance de fond comprises), seuls environ <strong>17 % seraient attribuables au refroidissement</strong>, soit <strong>environ 0,3 °C</strong>. Le rayon d&rsquo;influence retenu est de <strong>150 m</strong>, avec une décroissance au-delà.</p>
+<h3 id="limites-2">Limites</h3>
+<ul>
+<li>il ne s&rsquo;agit pas de mesures directes, contrairement à l&rsquo;étude de Sailor et al.</li>
+<li>la question centrale est celle de la modélisation utilisée pour séparer l&rsquo;effet de l&rsquo;artificialisation de celui du refroidissement : quelle que soit la finesse de la résolution, cette séparation repose sur un modèle, dont il faut évaluer la robustesse avant d&rsquo;adopter ses conclusions</li>
+</ul>
+<h2 id="quen-retenir--comparaison-des-trois-études">Qu&rsquo;en retenir ? Comparaison des trois études</h2>
+<p>Voici tableau récapitulatif des différences entre ces études, leurs résultats et leurs méthodologies. Vous pouvez directement consulter ce tableau, pour une vue d&rsquo;ensemble rapide.</p>
 <table>
   <thead>
       <tr>
           <th></th>
-          <th><a href="">The Data Heat Island Effect: Quantifying the Impact of AI Data Centers in a Warming World</a></th>
-          <th><a href="">Data Center Waste Heat as an Emerging Urban Thermal Hazard: First Field Measurements of Neighborhood-Scale Air Temperature Impacts</a></th>
-          <th><a href="">Amezana Roboto&rsquo;s investigation</a></th>
+          <th>The Data Heat Island Effect: Quantifying the Impact of AI Data Centers in a Warming World</th>
+          <th>Data Center Waste Heat as an Emerging Urban Thermal Hazard: First Field Measurements of Neighborhood-Scale Air Temperature Impacts</th>
+          <th>Amezana Roboto’s investigation</th>
       </tr>
   </thead>
   <tbody>
@@ -597,7 +617,7 @@ Martin E</p>
       </tr>
       <tr>
           <td>Weaknesses</td>
-          <td>- doesn&rsquo;t differentiate baseline trend, artificialization effect, from servers/cooling effect</td>
+          <td>- doesn’t differentiate baseline trend, artificialization effect, from servers/cooling effect</td>
           <td>- urban area measurements not allowing for a complete radius coverage</td>
           <td>- not actual measurements - how about the modelization for separating artificialization from cooling system ?</td>
       </tr>
@@ -605,7 +625,7 @@ Martin E</p>
           <td>Strength</td>
           <td>- area covered</td>
           <td>- actual measurements, accounting for wind pattern and velocity</td>
-          <td>- Satellite data resolution (30x higher than Marioni&rsquo;s) - Separates artificialization effect, baseline trend, from actual servers/cooling effect - size of the dataset : 32000 temperature data points</td>
+          <td>- Satellite data resolution (30x higher than Marioni’s) - Separates artificialization effect, baseline trend, from actual servers/cooling effect - size of the dataset : 32000 temperature data points</td>
       </tr>
       <tr>
           <td>Context</td>
@@ -615,14 +635,54 @@ Martin E</p>
       </tr>
   </tbody>
 </table>
-<h2 id="definitions">Definitions</h2>
-<p>Thermal plume</p>
-<p>Hot-air reject from the data center into the environment, whose neighbourhood impact must be assessed.</p>
-<p>Heat island</p>
-<p>Local overheating from rejects and built form, near the site.</p>
-<p>Dispersion</p>
-<p>Dilution of the hot plume by the wind, which conditions its impact on the ground and neighbours.</p>
-<p>[]: <a href="https://eolios.eu/data-center/urban-heat-island-impact-study-for-data-centers/">Offre du cabinet eolios pour l&rsquo;analyse</a></p>
+<p>Ce tableau fait ressortir trois points essentiels. Premièrement, les ordres de grandeur divergent fortement : 2 °C en moyenne pour Marinoni et al., moins de 1 °C pour Sailor et al., et environ 0,3 °C attribuables aux serveurs et au refroidissement selon Amezana Roboto.</p>
+<p>Deuxièmement, les contextes ne sont pas comparables : zones peu denses pour la première, zones urbaines denses pour les deux autres, ce qui peut expliquer en partie les écarts de rayon d&rsquo;influence observés (jusqu&rsquo;à 10 km contre 150 à 500 m).</p>
+<p>Troisièmement, seule l&rsquo;étude de Sailor et al. repose sur des mesures de terrain ; les deux autres s&rsquo;appuient sur des données satellitaires, avec des résolutions très différentes.</p>
+<p>Enfin, l&rsquo;investigation d&rsquo;Amezana Roboto soulève un point essentiel: quelle est la part du réchauffement observé qui est effectivement attribuable au centre de données et comment estimer cette part correctement ? Cette question semble cruciale pour les futures recherches sur le sujet, en vue de permettre de répondre à cette quesion plus largement tout en restant juste d&rsquo;un point de vue scientifique.</p>
+<h2 id="conclusion--des-données-encore-insuffisantes-une-lecture-à-manier-avec-prudence">Conclusion : des données encore insuffisantes, une lecture à manier avec prudence</h2>
+<p>Au terme de cette revue, le constat est clair : <strong>il manque aujourd&rsquo;hui des données fiables et des études évaluées par les pairs</strong> pour trancher la question de l&rsquo;ampleur réelle des îlots de chaleur attribuables aux data centers. Sur les trois travaux examinés, un seul a été soumis à la revue par les pairs, et il s&rsquo;agit d&rsquo;une communication courte portant sur quatre sites.</p>
+<p>Les deux autres sont un preprint et une investigation, dont les résultats les plus médiatisés (2 °C en moyenne, jusqu&rsquo;à 9 °C) correspondent précisément à l&rsquo;étude dont la méthodologie est la plus contestée.</p>
+<p>Face à cette situation, plusieurs invitations à la prudence s&rsquo;imposent :</p>
+<ul>
+<li>
+<p><strong>Ne pas confondre les causes.</strong> Un écart de température mesuré autour d&rsquo;un data center peut provenir de l&rsquo;artificialisation des sols (bitume, suppression de végétation, albédo modifié), de la tendance générale au réchauffement, ou de la chaleur réellement rejetée par les serveurs et les systèmes de refroidissement. Ces trois causes doivent être identifiées et quantifiées séparément avant toute conclusion, et c&rsquo;est précisément ce que j&rsquo;espère voir dans les futures études sur le sujet.</p>
+</li>
+<li>
+<p><strong>Interroger les modèles.</strong> Lorsqu&rsquo;une étude affirme séparer l&rsquo;effet de l&rsquo;artificialisation de celui du refroidissement, cette séparation repose nécessairement sur un modèle. La qualité des conclusions dépend donc directement de la qualité, de la transparence et de la validation de ce modèle — un point trop souvent absent des résumés et des articles de presse qui relayent les résultats.</p>
+</li>
+<li>
+<p><strong>Attendre la revue par les pairs avant d&rsquo;extrapoler.</strong> Les résultats actuellement disponibles sont préliminaires, parfois contradictoires, et obtenus dans des contextes (zone urbaine dense ou non, taille du site, climat local) qui ne se transposent pas d&rsquo;un site à l&rsquo;autre.</p>
+</li>
+</ul>
+<p>En l&rsquo;état, rien ne justifie ni l&rsquo;alarmisme ni le déni : la question est légitime et mérite d&rsquo;être étudiée rigoureusement, mais les réponses définitives restent à venir. La prudence méthodologique — sur la classification des causes d&rsquo;émission de chaleur, sur la robustesse des modèles utilisés, et sur le statut de publication des études — est la seule posture tenable en attendant que la littérature scientifique s&rsquo;étoffe et converge.</p>
+<p>Ceci étant dit, il ne faut pas oublier de préciser que le secteur va bien plus vite que la recherche sur ce sujet, alors que les effets du déreglement climatique s&rsquo;accélèrent, notamment concernant les températures en ville. Les manques actuels en terme de recherche ne doivent pas permettre de classer la problématique comme un faux problème.</p>
+<h2 id="sources">Sources</h2>
+<div class="footnotes" role="doc-endnotes">
+<hr>
+<ol>
+<li id="fn:1">
+<p>Marinoni A. et al. (2026), <em>The data heat island effect: quantifying the impact of AI data centers in a warming world</em>, preprint arXiv, Université de Cambridge — <a href="https://arxiv.org/abs/2603.20897">https://arxiv.org/abs/2603.20897</a>&#160;<a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a>&#160;<a href="#fnref1:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:2">
+<p>Masson-Delmotte V., <em>Les enjeux environnementaux des data centers</em> (note de synthèse relayant notamment l&rsquo;étude de Cambridge), juin 2026 — <a href="https://www.elan-savigny-environnement.org/2026/06/04/les-enjeux-environnementaux-des-data-centers/">https://www.elan-savigny-environnement.org/2026/06/04/les-enjeux-environnementaux-des-data-centers/</a>&#160;<a href="#fnref:2" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:3">
+<p><em>AI datacenters create heat islands around them, paper finds</em>, The Register, 1er avril 2026 — <a href="https://www.theregister.com/2026/04/01/ai_datacenter_heat_islands/">https://www.theregister.com/2026/04/01/ai_datacenter_heat_islands/</a>&#160;<a href="#fnref:3" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:4">
+<p><em>Data centers create &lsquo;heat islands,&rsquo; warming local land by up to 16.4°F (9.1°C)</em>, The Independent — <a href="https://www.independent.co.uk/climate-change/ai-data-center-heat-islands-usage-climate-b2949418.html">https://www.independent.co.uk/climate-change/ai-data-center-heat-islands-usage-climate-b2949418.html</a>&#160;<a href="#fnref:4" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:5">
+<p>Masley A., <em>Data centers&rsquo; heat exhaust is not raising the land temperature of nearby areas</em> (critique de l&rsquo;étude de Cambridge) — <a href="https://blog.andymasley.com/p/data-centers-heat-exhaust-is-not">https://blog.andymasley.com/p/data-centers-heat-exhaust-is-not</a>&#160;<a href="#fnref:5" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:6">
+<p>Sailor D. J., Samareh Abolhassani S., Martin E. P. (2026), <em>Data Center Waste Heat as an Emerging Urban Thermal Hazard: First Field Measurements of Neighborhood-Scale Air Temperature Impacts</em>, Journal of Engineering for Sustainable Buildings and Cities, ASME, 7(2) — <a href="https://doi.org/10.1115/1.4071922">https://doi.org/10.1115/1.4071922</a>&#160;<a href="#fnref:6" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:7">
+<p>Amenaza Roboto (2026), <em>The Heat Behind the Cloud</em> (investigation sur le data center Antel de Pando, Uruguay) — <a href="https://amenazaroboto.com/the-heat-behind-the-cloud">https://amenazaroboto.com/the-heat-behind-the-cloud</a>&#160;<a href="#fnref:7" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+</ol>
+</div>
 </div>
     <div class="post__footer">
       
