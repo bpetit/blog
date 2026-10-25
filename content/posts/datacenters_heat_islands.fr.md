@@ -8,12 +8,14 @@ tags:
   - énergie
   - datacenter
   - chaleur
-image:
-thumbnail: 
-share_img: 
+image: /aws_datacenter_sterling.jpg
+thumbnail: /aws_datacenter_sterling.jpg
+share_img: /aws_datacenter_sterling.jpg
 author: Benoit Petit
-summary: .
+summary: Le sujet de la production d'îlots de chaleur par les data centers a émergé récemment dans le débat public. Voici une revue de littérature partielle pour se faire un avis sur le sujet.
 ---
+
+*Photo d'un data center AWS à Sterling, par [Eric Hunsaker](https://www.flickr.com/photos/79616869@N00/5863167909), CC-BY 2.0*
 
 # Revue de la littérature récente concernant les îlots de chaleur attribués aux data centers
 
