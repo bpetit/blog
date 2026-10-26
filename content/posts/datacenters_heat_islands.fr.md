@@ -21,7 +21,7 @@ summary: Le sujet de la production d'îlots de chaleur par les data centers a é
 
 ## Introduction
 
-Le sujet de la production d'îlots de chaleur par les data centers a émergé récemment dans le débat public, notamment suite à la sortie d'une étude menée par Andrea Marinoni et son équipe de l'Université de Cambridge [^1]. Elle a notamment été relayée par Valérie Masson-Delmotte [^2], mais également par la presse [^3] [^4].
+Le sujet de la production d'îlots de chaleur par les data centers a émergé récemment dans le débat public, notamment suite à la sortie d'une étude menée par Andrea Marinoni de l'Université de Cambridge et ses co-auteurs [^1]. Elle a notamment été relayée par Valérie Masson-Delmotte [^2], mais également par la presse [^3] [^4].
 
 Cette étude avance des écarts de température de 2 °C en moyenne, et pouvant atteindre 9 °C, aux abords de grands data centers d'IA. Un tel écart de température génère naturellement de l'inquiétude, surtout au sortir de la canicule historique que nous avons vécu cet été, et alors que les projets d'implantation de nouvelles installations se multiplient, parfois à proximité immédiate de zones résidentielles.
 
